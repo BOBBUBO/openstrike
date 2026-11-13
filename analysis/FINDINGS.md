@@ -319,38 +319,58 @@ HTTP/2, `allow: POST, OPTIONS`; `g83-13` does not resolve from here.
 
 ---
 
-## 2.1 `.MESSIAH` asset container (SOLVED)
+## 2.1 `.MESSIAH` asset container (SOLVED — **expanded: 26,051 records, 4 types**)
 
-The patch index contains 927 **unique** records whose stored payload starts with
-the ASCII magic `.MESSIAH` (1,208 raw hits over the GUID-named records).
-The magic does **not** occur in `libGame.so` ⇒ it is produced by an external
-NetEase asset-pipeline tool, not by the engine.
+The patch archives contain the ASCII magic `.MESSIAH` **26,051 times**
+(raw byte scan of `Patch.mpk` … `Patch7.mpk`, `analysis/messiah_census.py`),
+i.e. **~3,250 per archive** — the earlier “927 unique records” figure came
+from a parser that only understood two of the four payload types.
 
 ```
 offset 0x00  char magic[8]  = ".MESSIAH"
-offset 0x08  u32 kind       = 1 | 2
-offset 0x0c  body…         (body_len = record_len - 12)
+offset 0x08  u32 type_flags = (flags << 16) | type
+offset 0x0c  body…
 ```
 
-| kind | count | body |
-|---|---|---|
-| 1 | 713 | 36-byte float blob, e.g. `e6 90 59 3c 55 92 89 3d 8a fc 0f 3e c5 16 e1 3d 4d 4c 26 3e 1f 10 00 00 c3 05 00 00 00 00 00 00` (material/transform constants) |
-| 2 | 214 | name table: `u16 len + name`, then repeated `(u8 tag=1, u16 len + name)`, then a `u32` counter and a final `u16 len + text` property blob (`NormalEnable=1\ntBaseMap=…\ntNormalMap=…\n`) |
+The `type_flags` decomposition is unambiguous across all 26,051 hits
+(`type = value & 0xFFFF`, `flags = value >> 16`):
 
-Example kind-2 record (`a4/a46e0188-af54-4518-a77a-5fafe8bf3a71`, 248 B):
-```
-"root_whole_models_sublevel_3_proxy_0_material"
-"0941472e-f140-4c2d-8081-5232b15a61c8ProxyDefault"
-```
-Example kind-2 record (`1c/1cbef7fa-1dba-4e03-8a37-2df6c4d0b76e`):
-```
-"0941472e-f140-4c2d-8081-5232b15a61c8layer0"
-```
-⇒ these are **material/mesh hot-patch descriptors**, not Python.
+| type | flags | count | body |
+|---|---|---|---|
+| 1 | 0 | 10,761 | `u32 body_len` + `u32 0x00010000` + **float32 array** (material / transform constants) |
+| 1 | 1 | 7 | extended variant: float header + embedded `ZZZ4` chunk |
+| 2 | 0 | 5,362 | string table: `u16 len + ASCII` entries (uuid + material name + property blob) |
+| 2 | 1 | 3,328 | extended variant: leading `float32` + string table |
+| 4 | 1 | 11 | half-float / packed matrix data (unknown) |
+| 8 | 0 | 6,582 | `u32 body_len`, `u32 0x00010000`, two `u32` counts, then **bone/socket names** + **half-float** vertex data |
 
-Implementation: `analysis/parse_messiah_container.py` (standalone) and the
-`.MESSIAH` branch inside `analysis/mpk_extract.py` (`decode_messiah`),
-which now also reports `names` for kind-2 records.
+A concrete type-2 record (raw):
+
+```
+.MESSIAH | 02000100 | f093043e | 0066 | "f885b986-b4b3-4ebc-bd8a-b97a0e6bed18Br_C01_Build_L_002_07_mat1$" | 0063 | "c2ad3450-…" | 01000000 | 0074 | "tNormalMap=96a59447-…" | …
+```
+
+⇒ the strings are **material / shader-property names** (`tBaseMap`,
+`tNormalMap`, `tMixMap`, `NormalEnable`) and UUIDs.
+
+A concrete type-8 record (raw):
+
+```
+.MESSIAH | 08000000 | 74120000 | 00000100 | 6c000000 | a2000000
+         | 0b00 "P3F_N4B_T2F" | 0700 "T4H_B4H" | 0400 "None" | 0600 f3190608 c0abce07 …
+```
+
+⇒ **bone / socket names** (`P3F_N4B_T2F`, `T4H_B4H`, `None`) followed by
+half-precision (fp16) vertex data.
+
+**⇒ Conclusion (unchanged, now much better evidenced): `.MESSIAH` is a
+NetEase *mesh / material / skeleton* descriptor container produced by an
+external asset-pipeline tool.  It is NOT the encrypted-Python-module
+format.**  The magic does not occur in `libGame.so`.
+
+Implementation: `analysis/parse_messiah_container.py` (standalone),
+`analysis/mpk_extract.py` (`decode_messiah`), and the new full census
+`analysis/messiah_census.py` → `analysis/messiah-census.json`.
 
 ## 2.2 `Resources1.mpk` package structure (SOLVED for the record layer)
 
@@ -1009,28 +1029,53 @@ string table), and the closure object is built at `0x3a68db4`.
 it must be combined with the right *input* to `gen_md5`/the XOR target,
 which is what the binary still owes us.
 
-### 3.8 `Patch.mpkinfo` contains a section in MChecker's `=QH32sBBQ` layout (NEW)
+### 3.8 `Patch.mpkinfo` record layout — CORRECTION (NEW)
 
-MChecker's recovered source uses `struct.unpack('=QH32sBBQ', ...)` =
-`stored_size:u64 | name_len:u16 | md5:32B(binary) | flags:u8 | kind:u8 |
-archive_offset:u64`.  A strict scanner (`analysis/scan_mpkinfo_kind.py`)
-finds **149 records** of that exact layout in `Patch.mpkinfo`, with
-*real* asset paths and GUID names:
+A byte-level dump of `Patch.mpkinfo` shows that the **plain-named asset
+section** uses a very simple layout:
 
 ```
-kind=102 x44   af/af446262-bbe2-4940-a031-a54647b3c080
-kind=48  x22   16/16f98fa3-cced-45a1-bc0f-77b4992401ca.4
-kind=98  x18   Sounds/Default/m1887_media.bnk
-kind=100 x9    3f/3f66c208-3ac5-4df5-942a-54ad14e0f10a
-kind=97  x7    Sounds/HD/m700_v6_tt_media.bnk
-kind=53  x4    Sounds/HD/esm_ui_gm_halloween_tips_level_02.bnk
-kind=54  x3    UIScript/node_vx_og_shop_topup_sg.csb
+record := u64LE stored_size | u16LE name_len | name[name_len]
 ```
 
-The `kind` byte therefore distinguishes payload encodings inside the patch
-archives — exactly the field needed to pick out the encrypted Python
-modules.  (The exact bit-level alignment of `flags` vs `kind` still needs
-one more validation pass against a known-good record.)
+Example (offset `0x105E0`):
+
+```
+6e 6b 57 05 00 00 00 00   u64 = 89,618,542
+1e 00                     u16 = 30
+"Sounds/Default/m1887_media.bnk"
+c3 07 00 00 00 00         u64 = 1,987
+1c 00                     u16 = 28
+"Sounds/Default/sks_media.bnk"
+9e 01 00 00 00 00         u64 = 414
+24 00                     u16 = 36
+"Sounds/Default/doubleblade_media.bnk"
+```
+
+A whole-file run-detector (`u64 | u16 len | printable name`) finds the
+plain-name section as many short runs (max 4 consecutive records per
+run, ~894 named assets total) interleaved with the larger GUID sections,
+whose layout is **different** (name, then `u16 flags`, `u32 md5_index`,
+32-byte **ASCII-hex** md5, `u64 archive_offset`, `u32 logical_size`,
+3 reserved bytes).
+
+**⚠ CORRECTION:** the earlier "149 records validated against MChecker's
+`=QH32sBBQ` layout, with a meaningful `kind` byte" result was a **misparse**
+— the scanner was reading the GUID section with the plain-name field
+offsets, which produced plausible-looking but meaningless `kind` values
+(44, 22, 18, 9, 8, …).  The `kind` byte hypothesis is **withdrawn**; the
+`kind` histogram in `analysis/patch-kind-records.jsonl` must not be
+interpreted as a payload-type field.
+
+What *is* solid about `Patch.mpkinfo`:
+
+* it starts with `u64 0`, `u64 0x80000`, then the magic **`de c0 ef be`**
+  at `0x10`;
+* the plain-named section (894 assets: anim 271, bnk 252, csb 210, `0` 160,
+  motion 1) is `u64 | u16 len | name`;
+* the GUID section carries `u16 len | name | u16 flags | u32 md5_index |
+  32-byte ASCII-hex md5 | u16 flags2 | u64 archive_offset | u32 logical_size
+  | 3 reserved`.
 
 ---
 
@@ -1377,6 +1422,36 @@ recovered from data.
 
 ---
 
+## 4.9 Full app-data census — where the Python modules are **not** (NEW)
+
+Every file under `stock-files/` (631 files) was enumerated.  The
+`LocalData/` tree is:
+
+```
+LocalData/Cache/LocalShaders/**.cache   shader byte-code caches (no Python)
+LocalData/ChatMsg/*.pkl                 1 empty pickle
+LocalData/CloudResCache/<md5>           175 files, ALL RIFF/WAVE = WebP images
+LocalData/Config, Config_bak, Config1, Config_write, Config1_write, LuckyFile
+LocalData/Patch/**                      the 2 GB patch set (§3.1)
+LocalData/RealTimeIcons/*.png           12 PNGs
+LocalData/VideoMoment/, LocalData/lbs/ empty
+```
+
+* `CloudResCache` entries are all `RIFF…WEBPVP8` — cached cloud **images**
+  (their md5 keys appear in `spike_cloud_res.txt`).
+* There is **no** `.py`, `.pyc`, `.pyo` (other than the 36-byte UUID stub),
+  `.zip`, `.pck` or script archive anywhere in the captured app data.
+* The only script-ish file remains
+  `LocalData/Patch/UIScript/4051BDD0000f042.pyo` = the bare UUID
+  `71ad02b5-a3ec-4ec4-9c89-3b0979779444` (36 bytes).
+
+**⇒ The encrypted Python modules are not on disk in this capture.**  Either
+they are downloaded on first run (the `4!|{` prerequisite filelist, §3.4)
+or they are the GUID-named patch entries whose filenames we cannot yet
+reproduce (`filename_encrypt`, §3.7).
+
+---
+
 ## 5. Other engine facts
 
 * `MChecker` (Cython) imports three sibling modules by name: **`MConfig`**,
@@ -1497,6 +1572,9 @@ find_config_codec.py       # hunt the Config codec: 'bf 5b' magic + tag-char clu
 scan_mpkinfo_kind.py       # ★ Patch.mpkinfo section in MChecker's '=QH32sBBQ' layout
 patch-kind-records.jsonl   #   149 validated records with paths + kind byte
 scan_patch_heads.py        # empirical scan for encrypted-module 'head' structures
+messiah_census.py          # ★ full census of .MESSIAH markers in all 8 patch archives
+messiah-census.json        #   26,051 records with type/flags census
+correlate_kind.py          # correlate Patch.mpkinfo record bytes with payload type
 ```
 
 ## 7. Recommended next steps
