@@ -1422,7 +1422,49 @@ recovered from data.
 
 ---
 
-## 4.9 Full app-data census — where the Python modules are **not** (NEW)
+## 4.9 The encrypted-filename scheme (NEW, mostly SOLVED)
+
+The patch archives store most assets under a **content-addressed-looking**
+name:
+
+```
+<xx>/<8-4-4-4-12 hex>            RFC-4122 v4 UUID
+<xx>/<8-4-4-4-12 hex>.<n>        ... plus a variant suffix
+<xx>/<32 hex>                    flat MD5-shaped name
+```
+
+Census over **35,244** `(dlcid_<logical-id> → <xx>/<guid>)` pairs taken from
+`spike_patchlist_android_astc_512_py3.txt`:
+
+* version nibble (hex digit 12): **`4` in 35,112 / 35,244 = 99.64 %**
+* variant nibble (hex digit 16): in `{8,9,a,b}` for **35,164 / 35,244 = 99.78 %**
+
+⇒ **the GUIDs are RFC-4122 version-4 UUIDs**, i.e.
+`uuid.UUID(bytes=<128-bit hash>, version=4)` — the version and variant bits
+are *forced*, so the underlying value is a raw 16-byte hash.
+
+Three attacks, all negative (`analysis/solve_guid_name.py`):
+
+| hypothesis | scope | result |
+|---|---|---|
+| `guid == md5/sha1/sha256(logical-id)` (4 case variants, ± uuid4 patch) | 8 pairs × 6 hashes × 3 cases | **0** |
+| `guid == md5(logical-id) ^ salt` (salt = 1 byte / 16-byte) | 111,210 pairs × 23 path transforms | **0** (byte-0 score ≈ n/256) |
+| `guid == md5(salt ‖ name)` or `md5(name ‖ salt)` | **605,868** candidate salts from `libGame.so` | **0** |
+
+⇒ the 128-bit hash behind the UUID is **not** a plain hash of the logical
+resource id.  The encrypted filename is produced by the asset-pipeline
+tool, not by `MImporter.filename_encrypt` (which only affects *Python*
+module names).
+
+**Useful side-product:** the patch-list section tables
+(`common`, `android_common`, `android_common_32`, `android_astc_512`) map
+**`<xx>/<guid>` → `[content-md5, size]`**, so for every asset we now know
+both its encrypted name *and* the md5 of its bytes — a perfect oracle for
+any bulk extraction (132,661 + 7,005 + 7,005 + 67,581 entries).
+
+---
+
+## 4.10 Full app-data census — where the Python modules are **not** (NEW)
 
 Every file under `stock-files/` (631 files) was enumerated.  The
 `LocalData/` tree is:
@@ -1453,6 +1495,54 @@ reproduce (`filename_encrypt`, §3.7).
 ---
 
 ## 5. Other engine facts
+
+### 5.0 MImporter module-state values are `getattr(obj, name)` (NEW)
+
+The MImporter module-init routine (`0x3a59360`…) fills the module-state
+value slots with a very regular pattern:
+
+```asm
+adrp x8, 73cc000
+ldr  x0, [x8, #OFFSET]      ; an interned string constant (the attribute name)
+bl   3a60150                ; __Pyx_PyObject_GetAttr(obj, name)
+adrp x8, 73cd000
+str  x0, [x8, #OFFSET2]     ; module_state[OFFSET2] = getattr(obj, name)
+```
+
+`3a60150` resolves `getattr` via `tp_getattro` (fast path when the object's
+`tp_getattro` is the generic `PyObject_GenericGetAttr`), so every
+module-state slot of the form *“name → callable”* is really
+**`getattr(<some module>, "<name>")`**.
+
+Resolved so far:
+
+| slot | value | evidence |
+|---|---|---|
+| `0x73cd578` | `NameError()` instance | constant `NameError` @ `0x73ccc40` |
+| `0x73cd7c8` | **`builtins.hex`** | constant `hex` @ `0x73ccfe0` |
+| `0x73cd7d8` | **`builtins.enumerate`** | constant `enumerate` @ `0x73cce40` |
+| `0x73cd740` | the **salt value** (written at `0x3a5f5a4`) | — |
+
+**⇒ correction:** the earlier labels I had given to `0x73cd7c8` / `0x73cd7d8`
+(`replace`, `salt`) were *inferred names*, not facts — the real contents are
+`hex` and `enumerate`.
+
+### 5.0.1 `filename_encrypt` (NEW)
+
+`filename_encrypt` (`0x3a68aa4`…) is a Cython function that
+
+1. builds a 24-byte closure frame from the frame array at `0x73cd7f0`
+   (index in the module-state slot `0x73cd7e8`, element size checked via
+   `tp_basicsize == 0x18`),
+2. takes a **keyword argument named `filename`** (the interned string
+   `filename` @ `0x73cce78` is compared against the call's kwargs with
+   `PyObject_RichCompare(..., Py_EQ)`),
+3. calls **`hex(...)`** on an integer derived from that argument, and
+4. converts the result back into a `str`.
+
+So the encrypted module filename is rendered as a **hexadecimal integer
+string** — consistent with the `uuid`-shaped names seen in the patch
+archives.
 
 * `MChecker` (Cython) imports three sibling modules by name: **`MConfig`**,
   `MImporter`, `MPatch`, plus `MReloadImporter`; its string table also carries
