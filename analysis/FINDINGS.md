@@ -939,6 +939,99 @@ The `filename_encrypt` function object (`0x73cce80`) is likewise given
 attributes at `0x3a5c4a4` / `0x3a5cb04` / `0x3a71da8` / `0x3a7d55c`
 (`SetAttr(filename_encrypt, module-state@0x73ccac0, module-state@0x73ccac8)`).
 
+### 3.7 MImporter internals — the salt, the closure frames and `gen_md5` (NEW)
+
+Disassembling the whole `gen_md5` region (`0x3a69354`–`0x3a69a60`) and the
+closure-construction code (`0x3a68aa4`–`0x3a68e20`) settled several open
+questions:
+
+**a) `gen_md5(x)` is just `hashlib.md5(x)` — it returns the md5 *object*.**
+
+```
+3a69764  ldr x8, [0x73ccb68]          ; module-state object
+3a69770  ldr x9, [0x73cd888]
+3a69774  ldr x8, [x8, #24]            ; -> hashlib module
+3a69778  cmp x9, x8                  ; "is the cached md5 still hashlib.md5?"
+3a697a0  ldr x8, [x19, #8]            ; ob_type
+3a697ac  ldr x1, [0x73cd168]         ; ★ the interned string "md5"
+3a697b0  ldr x8, [x8, #144]           ; tp_getattro
+3a697b8  blr x8                      ; getattr(hashlib, "md5")
+3a697e8  ldr x9, [0x64a7290]         ; PyFunction_Type
+3a697f0  b.eq 0x3a69a14              ; -> call the underlying C function
+3a69818  bl 3a6129c                  ; PyObject_Vectorcall(md5_ctor, [arg], 1)
+```
+
+`0x73cd168` (the interned `"md5"`) is referenced from **exactly one place**
+in the whole MImporter code region — so this is the only `md5` use.
+
+**b) The salt is a *small integer*: `salt = value ^ 0x7f`.**
+
+```
+3a68d10..3a68d5c   __Pyx_PyLong_As_int   (x21 -> w22)
+3a68d64   cmp x22, #0xffffffff        ; -1 => error
+3a68d88   eor  x8, x22, #0x7f         ; ★ salt = value ^ 0x7f
+3a68d8c   adrp x0, 0x6c8c000
+3a68d90   add  x0, x0, #0x5f8         ; qualname string of the new closure
+3a68d94   str  x8, [x19, #16]         ; ★ store salt into the closure frame
+3a68da4   ldr  x3, [x8, #176]         ; "MImporter"
+3a68db4   bl   3a60270                ; __Pyx_CyFunction_New
+```
+
+**c) The closure frames are a 24-byte-element array; the module-state slot
+`0x73cd7e8` is the *current frame index*.**
+
+```
+3a68b24   ldr  w9, [0x73cd7e8]        ; "self" = frame index
+3a68b2c   subs w9, w9, #1
+3a68b48   str  w9, [0x73cd7e8]        ; self = index
+3a68b4c   ldr  x19, [0x73cd7f0 + w9*8]  ; x19 = frame pointer
+3a68b54   stp  xzr, xzr, [x19, #8]    ; frame[8]  = 0
+3a68b58   str  xzr, [x19]             ; frame[0]  = 0
+```
+
+⇒ frame layout = `{cell0, cell1, salt}` with the salt at **+16**.
+
+**d) The XOR is a plain 64-bit `eor` against `frame[16]`.**
+
+```
+3a6960c   ldr  x8, [x19, #16]         ; salt
+3a69610   eor  x0, x8, x0             ; result = value ^ salt
+3a69614   bl   3781870                ; PyLong_FromUnsignedLongLong
+```
+
+**e) `filename_encrypt` is a *nested* function** — it captures the salt in
+its closure (`filename_encrypt.<locals>.<lambda>` appears in the Cython
+string table), and the closure object is built at `0x3a68db4`.
+
+**⇒ Practical consequence:** the salt is a single byte-sized quantity
+(`value ^ 0x7f`, so `value ∈ [0,255]` ⇒ `salt ∈ [0,255]`).  It is *not* a
+64-bit constant.  A 256-value sweep over the salt is therefore trivial — but
+it must be combined with the right *input* to `gen_md5`/the XOR target,
+which is what the binary still owes us.
+
+### 3.8 `Patch.mpkinfo` contains a section in MChecker's `=QH32sBBQ` layout (NEW)
+
+MChecker's recovered source uses `struct.unpack('=QH32sBBQ', ...)` =
+`stored_size:u64 | name_len:u16 | md5:32B(binary) | flags:u8 | kind:u8 |
+archive_offset:u64`.  A strict scanner (`analysis/scan_mpkinfo_kind.py`)
+finds **149 records** of that exact layout in `Patch.mpkinfo`, with
+*real* asset paths and GUID names:
+
+```
+kind=102 x44   af/af446262-bbe2-4940-a031-a54647b3c080
+kind=48  x22   16/16f98fa3-cced-45a1-bc0f-77b4992401ca.4
+kind=98  x18   Sounds/Default/m1887_media.bnk
+kind=100 x9    3f/3f66c208-3ac5-4df5-942a-54ad14e0f10a
+kind=97  x7    Sounds/HD/m700_v6_tt_media.bnk
+kind=53  x4    Sounds/HD/esm_ui_gm_halloween_tips_level_02.bnk
+kind=54  x3    UIScript/node_vx_og_shop_topup_sg.csb
+```
+
+The `kind` byte therefore distinguishes payload encodings inside the patch
+archives — exactly the field needed to pick out the encrypted Python
+modules.  (The exact bit-level alignment of `flags` vs `kind` still needs
+one more validation pass against a known-good record.)
+
 ---
 
 ## 4. `LocalData/Config*` blobs (NOT YET DECRYPTED)
@@ -1174,6 +1267,116 @@ sane). ⇒ the key is derived at runtime from the encrypted Python/config layer.
 
 ---
 
+## 4.6 The tagged binary-config grammar — **SOLVED** (NEW)
+
+The plaintext sibling files `LocalData/Patch/TroyConfig/Collision.bin` and
+`Graphics.bin` use a *named-entry* binary format.  It is now fully decoded
+(`analysis/tagged_config2.py`, validated by parsing both files to **exactly**
+their byte length):
+
+```
+file  := header[16] entry*
+header:= magic[4] id[12]                 # 4-byte checksum-ish + 12-byte id
+entry := u16le name_len | name | tag | value
+value := 's' u32le n | n * entry         # sub-map of named entries
+       | 'p' u32le n | n * u8            # byte blob / pointer table
+       | 'v' u32le n | n * value         # vector of tagged values
+       | 'M' u32le n | n * value         # map of tagged values
+       | 'i' u32le v                      # 32-bit integer
+```
+
+Worked example (from `Graphics.bin`):
+
+```
+10 00 "GraphicsSettings" 73 43 00 00 00        -> 's', 67 sub-entries
+     0b 00 "ScreenWidth"  70 02 00 00 00 36 05 -> 'p', 2 bytes
+     0c 00 "ScreenHeight" 70 02 00 00 00 ee 02 -> 'p', 2 bytes
+     0a 00 "FrameLimit"   70 02 00 00 00 1e 00 -> 'p', 2 bytes
+```
+
+and from `Collision.bin`:
+
+```
+0e 00 "CollisionFlags" 73 01 00 00 00
+     09 00 "flagitems" 76 4d 02 00 00
+         73 03 00 00 00
+             06 00 "group1"  70 04 00 00 00 00 00 00 00
+             06 00 "group2"  70 04 00 00 00 0b 00 00 00
+             07 00 "collide" 70 01 00 00 00 01
+```
+
+**⇒ The `'p'` tag was the key to the whole grammar**: `'p' = u32 count | count
+× u8`.  Getting that right is what makes `Collision.bin` (31,859 B) and
+`Graphics.bin` (15,271 B) parse to *exactly* their lengths.
+
+This matters because it provides a **hard, automatic oracle** for the
+encrypted `Config*` files: a correct key must make
+`tagged_config2.parse_file()` consume the buffer exactly.
+
+### 4.7 Ten black-box campaigns against `Config` — all negative (NEW)
+
+With the oracle in place the following were swept and **all failed**:
+
+| # | Campaign | Script | Result |
+|---|---|---|---|
+| 1 | AES-128/192/256 × ECB/CBC/CTR/OFB/CFB, 7 embedded keys, IV variants | `try_config_aes_modes.py` | ✗ |
+| 2 | RC4, 510 candidate keys × 6 drop offsets | `try_config_rc4.py` | ✗ |
+| 3 | Repeating-XOR autocorrelation (L = 1…32) | `config_xor_key.py` | ✗ |
+| 4 | Generic compression sweep (zlib/gzip/bz2/lzma/lz4/zstd) at 0–80 offsets | — | ✗ |
+| 5 | LZO1X decompression at 0–80 offsets | `lzo1x.py` | ✗ |
+| 6 | **md5(salt)-derived repeating XOR**, 199,539 salts (every printable string in `libGame.so` + extras) × 2 encodings × {whole file, header-in-clear} | `crack_config_md5.py` | ✗ |
+| 7 | **RC4(salt)** with the same 199,539 salts | `crack_config_md5.py` | ✗ |
+| 8 | **AES with the file's own 16-byte header as key/IV** (7 key materials × 12 cipher/mode pairs × 4 files) | `try_config_aes_header.py` | ✗ |
+| 9 | Single-byte XOR, all 256 keys, oracle-validated | `try_config_keys2.py` | ✗ |
+| 10 | `md5`/`sha1` of ~40 semantic salts (product ids, UUIDs, timestamps, `4!|{`, …) in 7 encodings | `try_config_keys2.py` | ✗ |
+
+**⇒ Conclusion: the `Config` cipher is *not* a keyed stream cipher with a
+key derivable from anything in the binary.**  It is almost certainly
+implemented inside the **encrypted Python layer** (`MConfig` / `MImporter`),
+which is exactly what the recovered source names imply:
+
+* `MImporter` exposes `decrypt_string`, `head`, `headlen`, `sdata`, `key`,
+  `salt`, `cdata`, `data`, `datalen`, `decompress`, `zlib`, `marshal`,
+  `loads`, `code`;
+* the `Config` files' own headers (`bf 5b ab bb`, `bf 5b b2 51`,
+  `bf 5b ac a7`) are **not** the `TroyConfig` magic (`a9 5b e5 be`,
+  `b1 b4 ab 1b`) ⇒ `Config` is *not* a plain tagged config — it is the same
+  grammar **after** the engine's encryption step.
+
+**⇒ The critical path is therefore unchanged but now precisely stated:
+recover `MImporter.decrypt_string`, get the encrypted Python modules (and
+`MConfig`) out of the patch, and the cipher — and with it the game gate
+list — falls out.**
+
+### 4.8 The GUID filenames are **not** `md5(path) ^ salt` (NEW — refutation)
+
+The patch manifest lists, under one `dlcid_*` key, **both** the plain asset
+paths *and* the encrypted GUID file names of the same content (3,443 such
+keys, 79,594 logical values, 384,615 GUID values).  That gives real
+`(logical_path → GUID)` pairs without needing the packer.
+
+Two solvers were written (`analysis/solve_salt3.py`, `analysis/solve_salt4.py`):
+
+* `solve_salt3.py` — per-pair XOR of the md5 digest against the 16 GUID bytes,
+  ignoring only the 6 UUID bits the packer forces (version nibble in byte 6,
+  variant bits in byte 8);
+* `solve_salt4.py` — a *mode* based solver over all 111,210 candidate
+  `(logical, guid)` combinations inside the 3,443 multi-valued dlcid keys,
+  sweeping 21 input transforms (identity, `no_ext`, `basename`, `nodir`,
+  `lower`, `upper`, `Script/Python/…`, `Patch/…`, `…` + guid extension, …)
+  and scoring the byte-wise mode of `md5(input) XOR guid`.
+
+**Result: every hypothesis produces pure noise** (byte-wise mode hits
+≈ 700–800 out of 111,210 candidates ≈ the 1/256 chance level; the best
+transform `dlcid_guid` scores higher only because it duplicates candidates).
+⇒ **the GUID names are not a salted md5 of the logical path** — either the
+hashed input is something else entirely (e.g. a build-time path with a
+different root) or the packer uses a different primitive.  The runtime
+`filename_encrypt` must therefore be reverse-engineered from the binary, not
+recovered from data.
+
+---
+
 ## 5. Other engine facts
 
 * `MChecker` (Cython) imports three sibling modules by name: **`MConfig`**,
@@ -1283,6 +1486,17 @@ scan_globals_access.py     # ADRP+LDR/STR walker over the Cython global pages
 crack_env_rc4.py           # RC4-key cracker for the environment SDK (LZMA-header oracle)
 solve_mimporter_salt.py    # solve MImporter's XOR salt from (name -> guid) pairs
 solve_mimporter_salt2.py   # bit-masked variant (allows forced UUID v4 bits)
+solve_salt3.py             # ★ per-pair md5-vs-GUID XOR solver (6 forced UUID bits masked)
+solve_salt4.py             # ★ byte-wise MODE solver over 111k (logical,guid) candidates
+tagged_config2.py          # ★ the *named-entry* tagged-config grammar (s/p/v/M/i)
+                            #   validated: TroyConfig/*.bin parse to EXACTLY their length
+crack_config_md5.py        # ★ 199,539-salt md5-XOR + RC4 sweep against Config*
+try_config_aes_header.py   # ★ AES with the file's own 16-byte header as key/IV
+try_config_keys2.py        # ★ oracle-driven key sweep (single-byte + md5 forms + RC4)
+find_config_codec.py       # hunt the Config codec: 'bf 5b' magic + tag-char clusters
+scan_mpkinfo_kind.py       # ★ Patch.mpkinfo section in MChecker's '=QH32sBBQ' layout
+patch-kind-records.jsonl   #   149 validated records with paths + kind byte
+scan_patch_heads.py        # empirical scan for encrypted-module 'head' structures
 ```
 
 ## 7. Recommended next steps
@@ -1299,25 +1513,30 @@ solve_mimporter_salt2.py   # bit-masked variant (allows forced UUID v4 bits)
    `server_list` — if we can make the client talk to that endpoint with a
    known project id, the echo payload would echo back the list host.
 
-1. **Config (critical path)** — recover the `MImporter`/`MConfig` key
-   derivation and apply it to `LocalData/Config`; validate against the
-   `TroyConfig` tagged-format crib (§3.2) and the 21-byte `LuckyFile`
-   crib (§4.3). Concretely: (a) the salt **value** lives in the
-   module-state slot `0x73cd740` (written once at `0x3a5f5a4` by the helper
-   call at `0x3a5f580`) — `0x73cce40` is merely the interned string
-   `enumerate` (§3.6); (b) the `filename_encrypt` closure captures
-   `value ^ 0x7f` at `0x3a68d88` — recovering *that* constant yields the
-   salt directly; (c) run the `71ad02b5-…-1794371578-1794371578` seed
-   through `gen_md5` (`0x3a69354–0x3a69a30`) and try the digest as the
-   `Config` key under the cipher family that `decrypt_string`
-   (`0x3a6d780–0x3a6d960`) uses; (d) the cipher is **position-stable with
-   a global key** (§4.4) and the family magic is `bf 5b` — treat bytes
-   0–1 as plaintext and attack from there.
-   Correct slot addresses (see §3.6 for the correction): interned *name*
-   slots `salt`=0x73cd380, `sdata`=0x73cd388, `self`=0x73cd390,
-   `sep`=0x73cd3a0; module-state *value* slots `salt`=0x73cd7d8,
-   `sdata`=0x73cd7e0, `self`=0x73cd7e8, `sep`=0x73cd7f0,
-   `decrypt_string`=0x73ccdb0, `zlib`=0x73cd450.
+1. **Config (critical path)** — the *format* is now known exactly (§4.6: the
+   named-entry tagged config, validated on `TroyConfig/*.bin`) and an
+   automatic oracle exists, but **ten black-box campaigns all failed**
+   (§4.7) ⇒ the cipher is **not** keyed from anything in the binary; it
+   lives in the encrypted Python layer.  Do **not** run another generic
+   cipher sweep.  Instead:
+   (a) **reverse `MImporter.decrypt_string`** (`0x3a6d780–0x3a6d960`) — it
+   is the only remaining gate; its two attribute assignments are
+   `SetAttr(decrypt_string@0x73ccdb0, @0x73cd8e8, @0x73cd8f0)` at
+   `0x3a6d830` and `SetAttr(zlib@0x73cd450, @0x73cc8f8, @0x73cd900)` at
+   `0x3a6d904`;
+   (b) recover the salt: it is a **single byte** `value ^ 0x7f` (§3.7b),
+   stored in the closure frame at `+16`; the frames live in the array at
+   `0x73cd7f0`, indexed by the module-state slot `0x73cd7e8`;
+   (c) `gen_md5(x)` is literally `hashlib.md5(x)` (§3.7a) — the *only* md5
+   use in the module — so the key is the md5 digest of the salt;
+   (d) once `decrypt_string` is understood, apply it to `LocalData/Config*`
+   and validate with `tagged_config2.parse_file()` (must consume the file
+   exactly).
+   Correct slot addresses (see §3.6/§3.7): interned *name* slots
+   `salt`=0x73cd380, `sdata`=0x73cd388, `self`=0x73cd390, `sep`=0x73cd3a0;
+   module-state *value* slots `salt`=0x73cd7d8, `sdata`=0x73cd7e0,
+   `self`=0x73cd7e8, `sep`=0x73cd7f0, `decrypt_string`=0x73ccdb0,
+   `zlib`=0x73cd450, `md5`=0x73cd168.
 2. **Bootstrap server list** — ~~the `regular_encode_*` file~~ is **content
    moderation** (§4.5), *not* the server list; the SDK **domain** list is
    now **RECOVERED** (§1.2). The real *game* list must come from
