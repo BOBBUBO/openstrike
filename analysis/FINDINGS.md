@@ -1464,6 +1464,39 @@ any bulk extraction (132,661 + 7,005 + 7,005 + 67,581 entries).
 
 ---
 
+## 4.11 Hard constraints on the `Config` cipher (NEW)
+
+`analysis/config_cipher_structure.py` codifies what the cipher must look
+like.  Everything below is *measured*, not guessed:
+
+| property | measurement |
+|---|---|
+| common prefix | all six blobs start with **`bf 5b`**; `Config`/`Config_bak`/`Config_write` share the first 8 bytes `bf5babbb32909a0a`, `Config1` starts `bf5bb2518e941387`, `LuckyFile` starts `bf5baca76a5a65c0` |
+| `Config` vs `Config_bak` | identical for **148,604 consecutive bytes** (109 … 148,712); 16,069 differing bytes in **171** ranges afterwards |
+| constant-XOR ranges | **60** of the 171 ranges have a *constant* XOR difference; the first is bytes **88..108 (21 bytes, xor = 0xc7)** |
+| byte substitution? | **NO** — all 256 ciphertext bytes map to up to 64 different counterparts |
+| position-class affine? | **NO** for mod 1/2/4/8/16 |
+| long constant runs | `Config` has exactly **one** run ≥ 6 equal bytes (offset 30, six `0xb0`); `Config1` has **none** |
+| tail correlation | `Config`/`Config_bak` share the 5-byte suffix prefix `b9 b9 b8 bf bc`; `Config1`/`LuckyFile` share `b9 b9 b9 b9 b9` |
+
+**⇒ The cipher is a *position-stable keystream* transform** (identical
+plaintext regions ⇒ identical ciphertext, over 148 kB) **that is not a
+byte substitution and not an affine map per position class**.  The
+`0xb9` runs therefore come from the plaintext side (zero padding)
+meeting a keystream that contains `0xb9` at those positions — or from a
+plaintext sentinel byte.
+
+**⚠ The last native lead is exhausted.**  The two “tag-immediate”
+windows found by `analysis/find_config_codec.py` were both false leads:
+`0x04ff2e60` is the Ak audio-stream table, and **`0x0456df60` is
+`std::shared_ptr` / `std::string` error-formatting code** (the `M`,`p`,`s`
+immediates are just ASCII `'p'`=0x70, `'s'`=0x73, `'A'`=0x41 passed to a
+shared-pointer constructor).  **⇒ The `Config` codec is NOT in
+`libGame.so`; it lives in the encrypted `MConfig` Python module.**  Any
+further attempt must first recover `MConfig`.
+
+---
+
 ## 4.10 Full app-data census — where the Python modules are **not** (NEW)
 
 Every file under `stock-files/` (631 files) was enumerated.  The
@@ -1705,6 +1738,18 @@ correlate_kind.py          # correlate Patch.mpkinfo record bytes with payload t
    module-state *value* slots `salt`=0x73cd7d8, `sdata`=0x73cd7e0,
    `self`=0x73cd7e8, `sep`=0x73cd7f0, `decrypt_string`=0x73ccdb0,
    `zlib`=0x73cd450, `md5`=0x73cd168.
+   **⚠ CORRECTION (§5.0):** the module-state *values* are
+   `getattr(obj, name)` results, so `0x73cd7c8` is **`builtins.hex`** and
+   `0x73cd7d8` is **`builtins.enumerate`** — the earlier labels
+   (`replace`, `salt`) for those two slots were inferred names, not
+   observations.  `0x73cd7e8` really is the closure-frame index and
+   `0x73cd7f0` the frame array.  `filename_encrypt` takes a keyword
+   argument named **`filename`** and calls **`hex()`** on an integer
+   derived from it (§5.0.1).
+   **⚠ The native `Config` codec does not exist** (§4.11): both
+   tag-immediate windows were false leads.  The cipher is inside the
+   encrypted `MConfig` module, so `decrypt_string` really is the only
+   way in.
 2. **Bootstrap server list** — ~~the `regular_encode_*` file~~ is **content
    moderation** (§4.5), *not* the server list; the SDK **domain** list is
    now **RECOVERED** (§1.2). The real *game* list must come from
