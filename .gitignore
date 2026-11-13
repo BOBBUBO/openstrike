@@ -1,0 +1,64 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# openstrike — Blood Strike (com.netease.newspike) reverse-engineering repo
+#
+# This repository contains ONLY the analysis tooling and the written findings.
+# No game files (APK splits, MPK archives, extracted assets, textures, maps,
+# patch payloads, captured app data) are committed.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# --- Raw game / APK inputs -------------------------------------------------
+stock-files/
+decompiled/
+*.apk
+*.apks
+*.xapk
+*.aab
+*.mpk
+*.mpkinfo
+*.mpkinfo_
+
+# --- Extracted game assets / bulk binary dumps inside analysis/ -------------
+analysis/apk-split-base/
+analysis/extracted-test/
+analysis/extracted-test2/
+analysis/messiah-records/
+analysis/essential/
+analysis/resources-first-16MiB.bin
+analysis/libGame.so
+analysis/*.so
+
+# --- Large generated indexes (regenerate with the committed scripts) ---------
+analysis/resources.json
+analysis/resources-mpkinfo.jsonl
+analysis/package-index.json
+analysis/package-file-table.jsonl
+analysis/patch-records.jsonl
+analysis/patch-named-records.jsonl
+analysis/resources1-blocks.jsonl
+analysis/patch1-blocks.jsonl
+analysis/libGame.strings.txt
+analysis/libGame.relocs.txt
+analysis/rela-summary.txt
+analysis/ptr-index.json
+analysis/messiah-magic-records.json
+analysis/messiah-records.json
+analysis/resources1-matched.json
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Raw extracted game-asset bytes (metadata/manifests are kept, payloads are not)
+analysis/extracted-messiah/
+analysis/extracted-test-manifest.jsonl
+analysis/extracted-test2-manifest.jsonl
+analysis/extracted-messiah.jsonl

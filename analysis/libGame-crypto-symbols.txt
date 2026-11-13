@@ -1,0 +1,188 @@
+AConfiguration_delete
+AConfiguration_fromAssetManager
+AConfiguration_getCountry
+AConfiguration_getLanguage
+AConfiguration_new
+AES::AES(AESKeyLength)
+AES::AddRoundKey(unsigned char**, unsigned char*)
+AES::ArrayToVector(unsigned char*, unsigned int)
+AES::CheckLength(unsigned int)
+AES::DecryptBlock(unsigned char*, unsigned char*, unsigned char*)
+AES::DecryptCBC(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >)
+AES::DecryptCBC(unsigned char*, unsigned int, unsigned char*, unsigned char*)
+AES::DecryptCFB(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >)
+AES::DecryptCFB(unsigned char*, unsigned int, unsigned char*, unsigned char*)
+AES::DecryptECB(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >)
+AES::DecryptECB(unsigned char*, unsigned int, unsigned char*)
+AES::EncryptBlock(unsigned char*, unsigned char*, unsigned char*)
+AES::EncryptCBC(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >)
+AES::EncryptCBC(unsigned char*, unsigned int, unsigned char*, unsigned char*)
+AES::EncryptCFB(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >)
+AES::EncryptCFB(unsigned char*, unsigned int, unsigned char*, unsigned char*)
+AES::EncryptECB(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >, std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >)
+AES::EncryptECB(unsigned char*, unsigned int, unsigned char*)
+AES::InvMixColumns(unsigned char**)
+AES::InvShiftRows(unsigned char**)
+AES::InvSubBytes(unsigned char**)
+AES::KeyExpansion(unsigned char*, unsigned char*)
+AES::MixColumns(unsigned char**)
+AES::Rcon(unsigned char*, int)
+AES::RotWord(unsigned char*)
+AES::ShiftRow(unsigned char**, int, int)
+AES::ShiftRows(unsigned char**)
+AES::SubBytes(unsigned char**)
+AES::SubWord(unsigned char*)
+AES::VectorToArray(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >)
+AES::XorBlocks(unsigned char*, unsigned char*, unsigned char*, unsigned int)
+AES::XorWords(unsigned char*, unsigned char*, unsigned char*)
+AES::printHexArray(unsigned char*, unsigned int)
+AES::printHexVector(std::__ndk1::vector<unsigned char, std::__ndk1::allocator<unsigned char> >)
+AES::xtime(unsigned char)
+MNN::CV::ImageProcess::ImageProcess(MNN::CV::ImageProcess::Config const&)
+MNN::CV::ImageProcess::create(MNN::CV::ImageProcess::Config const&, MNN::Tensor const*)
+MNN::Interpreter::createMultiPathSession(std::__ndk1::vector<MNN::ScheduleConfig, std::__ndk1::allocator<MNN::ScheduleConfig> > const&)
+MNN::Interpreter::createMultiPathSession(std::__ndk1::vector<MNN::ScheduleConfig, std::__ndk1::allocator<MNN::ScheduleConfig> > const&, std::__ndk1::pair<std::__ndk1::map<MNNForwardType, std::__ndk1::shared_ptr<MNN::Runtime>, std::__ndk1::less<MNNForwardType>, std::__ndk1::allocator<std::__ndk1::pair<MNNForwardType const, std::__ndk1::shared_ptr<MNN::Runtime> > > >, std::__ndk1::shared_ptr<MNN::Runtime> > const&)
+MNN::Interpreter::createRuntime(std::__ndk1::vector<MNN::ScheduleConfig, std::__ndk1::allocator<MNN::ScheduleConfig> > const&)
+MNN::Interpreter::createSession(MNN::ScheduleConfig const&)
+MNN::Interpreter::createSession(MNN::ScheduleConfig const&, std::__ndk1::pair<std::__ndk1::map<MNNForwardType, std::__ndk1::shared_ptr<MNN::Runtime>, std::__ndk1::less<MNNForwardType>, std::__ndk1::allocator<std::__ndk1::pair<MNNForwardType const, std::__ndk1::shared_ptr<MNN::Runtime> > > >, std::__ndk1::shared_ptr<MNN::Runtime> > const&)
+MNN::Schedule::getApprociateType(MNN::ScheduleConfig const&)
+MNN::Schedule::schedule(MNN::Schedule::ScheduleInfo&, MNN::Net const*, std::__ndk1::vector<MNN::ScheduleConfig, std::__ndk1::allocator<MNN::ScheduleConfig> > const&, std::__ndk1::pair<std::__ndk1::map<MNNForwardType, std::__ndk1::shared_ptr<MNN::Runtime>, std::__ndk1::less<MNNForwardType>, std::__ndk1::allocator<std::__ndk1::pair<MNNForwardType const, std::__ndk1::shared_ptr<MNN::Runtime> > > >, std::__ndk1::shared_ptr<MNN::Runtime> > const&)
+WebPConfigInitInternal
+WebPConfigLosslessPreset
+WebPInitDecoderConfigInternal
+WebPValidateConfig
+ak_rpmalloc_config
+ak_rpmalloc_initialize_config
+eglChooseConfig
+eglGetConfigAttrib
+eglGetConfigs
+image2yuvconfig
+ma_audio_buffer_config_init
+ma_biquad_config_init
+ma_biquad_node_config_init
+ma_bpf2_config_init
+ma_bpf_config_init
+ma_bpf_node_config_init
+ma_channel_converter_config_init
+ma_context_config_init
+ma_data_converter_config_init
+ma_data_converter_config_init_default
+ma_data_source_config_init
+ma_data_source_node_config_init
+ma_decoder_config_init
+ma_decoder_config_init_copy(ma_decoder_config const*)
+ma_decoder_config_init_default
+ma_decoding_backend_config_init
+ma_delay_config_init
+ma_delay_node_config_init
+ma_device_config_init
+ma_device_init_not_null(ma_context_config const*, ma_device_config const*, ma_device*)
+ma_device_job_thread_config_init
+ma_encoder_config_init
+ma_encoder_preinit(ma_encoder_config const*, ma_encoder*)
+ma_engine_config_init
+ma_engine_node_config_init
+ma_fader_config_init
+ma_flac_init(ma_result (*)(void*, void*, unsigned long, unsigned long*), ma_result (*)(void*, long long, ma_seek_origin), ma_result (*)(void*, long long*), void*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_flac*)
+ma_flac_init_file(char const*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_flac*)
+ma_flac_init_file_w(wchar_t const*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_flac*)
+ma_flac_init_memory(void const*, unsigned long, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_flac*)
+ma_gainer_config_init
+ma_hishelf2_config_init
+ma_hishelf_node_config_init
+ma_hpf1_config_init
+ma_hpf2_config_init
+ma_hpf_config_init
+ma_hpf_node_config_init
+ma_job_queue_config_init
+ma_linear_resampler_config_init
+ma_loshelf2_config_init
+ma_loshelf_node_config_init
+ma_lpf1_config_init
+ma_lpf2_config_init
+ma_lpf_config_init
+ma_lpf_node_config_init
+ma_mp3_init(ma_result (*)(void*, void*, unsigned long, unsigned long*), ma_result (*)(void*, long long, ma_seek_origin), ma_result (*)(void*, long long*), void*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_mp3*)
+ma_mp3_init_file(char const*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_mp3*)
+ma_mp3_init_file_w(wchar_t const*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_mp3*)
+ma_mp3_init_memory(void const*, unsigned long, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_mp3*)
+ma_node_config_init
+ma_node_graph_config_init
+ma_noise_config_init
+ma_notch2_config_init
+ma_notch_node_config_init
+ma_paged_audio_buffer_config_init
+ma_panner_config_init
+ma_peak2_config_init
+ma_peak_node_config_init
+ma_pulsewave_config_init
+ma_resampler_config_init
+ma_resource_manager_config_init
+ma_resource_manager_data_source_config_init
+ma_slot_allocator_config_init
+ma_sound_config_init
+ma_sound_config_init_2
+ma_sound_group_config_init
+ma_sound_group_config_init_2
+ma_sound_init_from_file_internal(ma_engine*, ma_sound_config const*, ma_sound*)
+ma_spatializer_config_init
+ma_spatializer_listener_config_init
+ma_splitter_node_config_init
+ma_wav_init(ma_result (*)(void*, void*, unsigned long, unsigned long*), ma_result (*)(void*, long long, ma_seek_origin), ma_result (*)(void*, long long*), void*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_wav*)
+ma_wav_init_file(char const*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_wav*)
+ma_wav_init_file_w(wchar_t const*, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_wav*)
+ma_wav_init_memory(void const*, unsigned long, ma_decoding_backend_config const*, ma_allocation_callbacks const*, ma_wav*)
+ma_waveform_config_init
+nbs::AlphaDecoder::SetExtraConfig(nbs::ExtraDecoderConfig const&, unsigned int, std::__ndk1::shared_ptr<nbs::ParallelCropInfo>)
+nbs::AudioDeviceAtom::AudioDeviceAtom(nbs::AudioDeviceAtomType, ma_device_config const&)
+nbs::BaseColorDecoder::SetExtraConfig(nbs::ExtraDecoderConfig const&, unsigned int, std::__ndk1::shared_ptr<nbs::ParallelCropInfo>)
+nbs::DataReaderConfig::GetAlphaImageBufferSize(nbs::MemoryStrategy, int)
+nbs::DataReaderConfig::GetColorImageBufferSize(nbs::MemoryStrategy, int)
+nbs::DataReaderConfig::GetForSkipQueueSize(nbs::MemoryStrategy, bool, int)
+nbs::DataReaderConfig::GetSkipFrameCountThreshold()
+nbs::DataReaderConfig::GetTotalBufferSize(nbs::AlphaMode, nbs::MemoryStrategy, int)
+nbs::DataReaderConfig::GetVideoFrameBufferSize(nbs::AlphaMode, nbs::MemoryStrategy, int)
+nbs::DepthStreamDecoder::SetExtraConfig(nbs::ExtraDecoderConfig const&, nbs::CropInfo const&)
+nbs::Header::AdjustExtraDecoderConfig()
+nbs::HttpReceiver::HttpReceiver(nbs::VodConfig const&, std::__ndk1::shared_ptr<nbs::ConcurrentDataBuffer>, std::__ndk1::shared_ptr<nbs::VodCacher>)
+nbs::NBSDecoderMgr::CreateDecoder(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgr::CreateDecoder(std::__ndk1::function<unsigned int ()> const&, std::__ndk1::function<bool (unsigned int)> const&, std::__ndk1::function<unsigned int (unsigned char*, unsigned int)> const&, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgr::CreateDecoder(void*, unsigned long, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgr::CreateVodDecoderAsync(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&, std::__ndk1::function<void (int, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)> const&)
+nbs::NBSDecoderMgrImpl::CreateDecoder(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgrImpl::CreateDecoder(std::__ndk1::function<unsigned int ()> const&, std::__ndk1::function<bool (unsigned int)> const&, std::__ndk1::function<unsigned int (unsigned char*, unsigned int)> const&, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgrImpl::CreateDecoder(void*, unsigned long, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgrImpl::CreateVodDecoder(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgrInter::CreateDecoder(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgrInter::CreateDecoder(std::__ndk1::function<unsigned int ()> const&, std::__ndk1::function<bool (unsigned int)> const&, std::__ndk1::function<unsigned int (unsigned char*, unsigned int)> const&, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgrInter::CreateDecoder(void*, unsigned long, bool&, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&)
+nbs::NBSDecoderMgrInter::CreateVodDecoderAsync(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&, std::__ndk1::function<void (int, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)> const&)
+nbs::StreamUtil::CreateCustomAudioStream(nbs::ExtraDecoderConfig const&)
+nbs::StreamUtil::CreateCustomStream(std::__ndk1::function<unsigned int ()> const&, std::__ndk1::function<bool (unsigned int)> const&, std::__ndk1::function<unsigned int (unsigned char*, unsigned int)> const&, bool&, bool&, std::__ndk1::shared_ptr<nbs::Header>&, nbs::ExtraDecoderConfig const&)
+nbs::StreamUtil::CreateFileStream(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool&, bool&, std::__ndk1::shared_ptr<nbs::Header>&, nbs::ExtraDecoderConfig const&)
+nbs::StreamUtil::CreateMemoryStream(void*, unsigned long, bool&, bool&, std::__ndk1::shared_ptr<nbs::Header>&, nbs::ExtraDecoderConfig const&)
+nbs::StreamUtil::CreateVodStream(nbs::VodConfig const&, std::__ndk1::shared_ptr<nbs::VodCacher>)
+nbs::StreamUtil::ProbeVodStream(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool&, bool&, std::__ndk1::shared_ptr<nbs::Header>&, nbs::ExtraDecoderConfig const&, std::__ndk1::shared_ptr<nbs::VodCacher>)
+nbs::VP9DecoderInner::SetExtraConfig(nbs::ExtraDecoderConfig const&, unsigned int)
+nbs::VP9DecoderOuter::SetExtraConfig(nbs::ExtraDecoderConfig const&, unsigned int)
+nbs::VodPreparer::VodPreparer(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, bool, nbs::OutAlphaMode, nbs::PlayMode, nbs::ExtraDecoderConfig const&, std::__ndk1::function<void (int, bool, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)> const&)
+nbs::VodStream::VodStream(nbs::VodConfig const&, std::__ndk1::shared_ptr<nbs::VodCacher>)
+nbs::Z10MDepthDecoder::SetExtraConfig(nbs::ExtraDecoderConfig const&, nbs::CropInfo const&)
+ngmodules_get_config
+ngmodules_set_config
+ntes_gzailab::Encryptor::Decrypt(char const*, char*&, int&)
+ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)
+ntes_gzailab::Encryptor::EncryptCore(char const*, int, char*)
+ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)
+ntes_gzailab::Encryptor::~Encryptor()
+ntes_gzailab::TokenDecryptor::IsValidToken(char const*) const
+std::__ndk1::__shared_ptr_emplace<nbs::VodStream, std::__ndk1::allocator<nbs::VodStream> >::__shared_ptr_emplace<nbs::VodConfig const&, std::__ndk1::shared_ptr<nbs::VodCacher>&>(std::__ndk1::allocator<nbs::VodStream>, nbs::VodConfig const&, std::__ndk1::shared_ptr<nbs::VodCacher>&)
+vp9_change_config
+vp9_configure_buffer_updates
+vp9_dump_encoder_config
+vp9_get_encoder_config
+vp9_update_layer_context_change_config
+vpx_codec_build_config
+vpx_codec_enc_config_default
+vpx_codec_enc_config_set
+yuvconfig2image

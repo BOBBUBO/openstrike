@@ -1,0 +1,344 @@
+// Extracted from gate_game.proto in libGame.so
+syntax = "proto2";
+package mobile.server;
+
+import "common.proto";
+import "server_common.proto";
+
+message ClientInfo {
+  optional bytes ip = 1;
+  optional int32 port = 2;
+  required bytes clientid = 3;
+}
+
+message ClientNetInfo {
+  optional bytes ip = 1;
+  optional int32 port = 2;
+  required bytes clientid = 3;
+  optional mobile.server.PropDict netinfo = 4;
+}
+
+message RegistMd5IndexMsg {
+  required bytes routes = 1;
+  required mobile.server.Md5OrIndex md5_idx = 2;
+}
+
+message GameLoad {
+  required double load = 1;
+}
+
+message GateMsg {
+  required mobile.server.ServerInfo serverinfo = 1;
+  required bytes publicip = 2;
+  required int32 publicport = 3;
+  required bool cross_connect = 4;
+  required uint32 hostnum = 5;
+  optional bytes publicipv6 = 6;
+  optional bytes vginfo = 7;
+}
+
+message UserData {
+  required bytes id = 1;
+  required bytes key = 2;
+  optional int32 ivalue = 3;
+  optional float fvalue = 4;
+  optional bytes svalue = 5;
+}
+
+message AreaRoute {
+  required bytes ip = 1;
+  required int32 port = 2;
+  optional bytes id = 3;
+  optional bytes cid = 4;
+}
+
+message AreaTimer {
+  required int32 id = 1;
+  required int32 uid = 2;
+  required uint64 end = 3;
+  optional int32 secs = 4;
+  optional int32 millsecs = 5;
+  optional mobile.server.PropDict udata = 6;
+}
+
+message AreaDBCacheItem {
+  required bytes dip = 1;
+  required int32 dport = 2;
+  required bytes method = 3;
+  required bytes data = 4;
+  required uint32 no = 5;
+}
+
+message AreaDBCache {
+  repeated mobile.server.AreaDBCacheItem items = 1;
+}
+
+message AreaMigrateMsgOptions {
+  optional bool rtsave = 1;
+  optional bytes dip = 2;
+  optional int32 dport = 3;
+  optional bytes db = 4;
+  optional bytes col = 5;
+  optional bytes rip = 6;
+  optional int32 rport = 7;
+}
+
+message AreaMigrateAoiRadius {
+  required uint32 inx = 1;
+  required float radius = 2;
+  optional uint32 aoi_type = 3;
+}
+
+message AreaAoiopts {
+  optional float radius = 1;
+  optional float pradius = 2;
+  optional float vradius = 3;
+  optional uint32 layer = 4;
+  optional uint32 mask = 5;
+  repeated mobile.server.AreaMigrateAoiRadius radiuses = 6;
+  optional bool visible_to_others = 7;
+  optional uint32 type = 8;
+}
+
+message AreaMigrateIncrease {
+  optional mobile.server.AreaAoiopts aoiopts = 1;
+}
+
+message AreaMigrateMsg {
+  required bytes name = 1;
+  required bytes id = 2;
+  required uint64 guid = 3;
+  required bytes cid = 4;
+  required float speed = 5;
+  required bytes srcip = 6;
+  required int32 srcport = 7;
+  required mobile.server.PropDict data = 8;
+  optional mobile.server.PropDict extra = 9;
+  repeated mobile.server.AreaTimer timers = 10;
+  optional bool dbfinished = 11;
+  optional int64 tmid = 12;
+  optional uint32 last_save = 13;
+  optional uint32 save_delay = 14;
+  optional mobile.server.AreaDBRequestInfo db_info = 15;
+  optional mobile.server.AreaDBCache db_cache = 16;
+  optional bool islcid = 17;
+  optional uint32 flag = 18;
+  optional mobile.server.AreaMigrateMsgOptions opts = 19;
+  optional mobile.server.AreaMigrateIncrease incrs = 20;
+}
+
+message AreaMigrateReply {
+  required bytes id = 1;
+  required int32 cmd = 2;
+  required bytes msg = 3;
+  optional bool real = 4;
+}
+
+message AreaMigrateFinish {
+  required bytes id = 1;
+}
+
+message FilterItem {
+  required bytes key = 1;
+  optional int32 otype = 2;
+  optional int32 relation = 3;
+  optional int32 ivalue = 4;
+  optional float fvalue = 5;
+  optional bytes svalue = 6;
+  optional mobile.server.FilterItem sub = 7;
+  optional mobile.server.FilterItem next = 8;
+}
+
+message FilterMessage {
+  required int32 index = 1;
+  optional mobile.server.FilterMessage.FilterOper oper = 2;
+  optional mobile.server.FilterItem filter = 3;
+  enum FilterOper {
+    FO_ADD = 1;
+    FO_DEL = 2;
+  }
+}
+
+message BanClientMessage {
+  required bool ban = 1;
+}
+
+message HasClientInfo {
+  required bytes clientid = 1;
+  required bytes entityid = 2;
+  optional bool client = 3;
+}
+
+message TickGroupLevel {
+  optional uint64 grp = 1;
+  optional bytes id = 2;
+  optional uint32 lvno = 3;
+  optional uint32 typ = 4;
+  optional bytes ip = 5;
+  optional uint32 port = 6;
+  optional uint64 ticket = 7;
+  optional bytes eid = 8;
+  optional uint32 nb = 9;
+}
+
+message TickGroupEntMsg {
+  required bytes id = 1;
+  optional uint32 nb = 2;
+  optional bytes name = 3;
+  optional uint64 guid = 4;
+  optional bytes cid = 5;
+  optional uint32 flag = 6;
+  optional mobile.server.PropDict data = 7;
+  optional mobile.server.PositionInfo pos = 8;
+  optional bytes rip = 9;
+  optional int32 rport = 10;
+  optional mobile.server.AreaAoiopts aoiopts = 11;
+}
+
+message TickGroupErrMsg {
+  required mobile.server.TickGroupErrMsg.EType etype = 1;
+  optional bytes emsg = 2;
+  enum EType {
+    ET_MSG = 1;
+    ET_ENTER = 2;
+    ET_LEAVE = 3;
+    ET_ACK = 4;
+  }
+}
+
+message TickGroupMsg {
+  required mobile.server.TickGroupMsg.TOper oper = 1;
+  optional mobile.server.TickGroupLevel lv = 2;
+  optional mobile.server.TickGroupLevel dst = 3;
+  optional bytes msg = 4;
+  optional mobile.server.PropDict data = 5;
+  repeated mobile.server.TickGroupMsg ntfs = 6;
+  optional bool ghost = 7;
+  optional mobile.server.AoiInfo aoi = 8;
+  optional mobile.server.TickGroupErrMsg emsg = 9;
+  repeated bytes onbs = 10;
+  repeated mobile.server.AreaTimer timers = 11;
+  enum TOper {
+    OP_TICK = 1;
+    OP_SET = 2;
+    OP_ADD = 3;
+    OP_DEL = 4;
+    OP_ACK = 5;
+    OP_ENTER = 6;
+    OP_LEAVE = 7;
+    OP_NOTIFY = 8;
+    OP_ERR = 9;
+    OP_ENTERO = 10;
+    OP_LEAVEO = 11;
+    OP_MISS = 12;
+    OP_SWAP = 13;
+  }
+}
+
+message AoiGuidItem {
+  required uint64 guid = 1;
+  optional bytes id = 2;
+}
+
+message AoiGuidEx {
+  required bytes cid = 1;
+  required bytes id = 2;
+  required uint64 guid = 3;
+  optional uint64 passport = 4;
+  repeated mobile.server.AoiGuidItem init = 5;
+  repeated mobile.server.AoiGuidItem enter = 6;
+  repeated mobile.server.AoiGuidItem leave = 7;
+  repeated mobile.server.AoiGuidItem remove = 8;
+  optional bytes sid = 9;
+  optional uint64 sguid = 10;
+  optional bool ghost = 11;
+  optional bool clear = 12;
+  optional mobile.server.SpaceCenter center = 13;
+}
+
+message BroadcastRoute {
+  required bytes ip = 1;
+  required uint32 port = 2;
+}
+
+message BroadcastRoutes {
+  repeated mobile.server.BroadcastRoute routes = 1;
+}
+
+message BroadcastMessage {
+  required bytes name = 1;
+  required bytes sbson = 2;
+}
+
+message CreateClientProxyMessage {
+  required bytes clientid = 1;
+  required bytes entityid = 2;
+}
+
+service IGameService {
+  rpc connect_server (mobile.server.ConnectServerRequest) returns (mobile.server.Void);
+  rpc entity_message (mobile.server.EntityMessage) returns (mobile.server.Void);
+  rpc client_lose_connection (mobile.server.ClientNetInfo) returns (mobile.server.Void);
+  rpc forward_entity_message (mobile.server.EntityMessage) returns (mobile.server.Void);
+  rpc gate_callback (mobile.server.Gate2GameReturnVal) returns (mobile.server.Void);
+  rpc reg_gateserver (mobile.server.GateMsg) returns (mobile.server.Void);
+  rpc reg_md5_index (mobile.server.RegistMd5IndexMsg) returns (mobile.server.Void);
+  rpc update_pos_info (mobile.server.ForwardPosInfo) returns (mobile.server.Void);
+  rpc interest_entity (mobile.server.InterestInfo) returns (mobile.server.Void);
+  rpc entity_method (mobile.server.AreaMessage) returns (mobile.server.Void);
+  rpc forward_entity_method (mobile.server.AreaMessage) returns (mobile.server.Void);
+  rpc forward_game_method (mobile.server.AreaMessage) returns (mobile.server.Void);
+  rpc migrate_method (mobile.server.AreaMigrateMsg) returns (mobile.server.Void);
+  rpc migrate_reply (mobile.server.AreaMigrateReply) returns (mobile.server.Void);
+  rpc migrate_entity_method (mobile.server.AreaMessage) returns (mobile.server.Void);
+  rpc migrate_db_find_doc (mobile.server.AsioFindDocReply) returns (mobile.server.Void);
+  rpc migrate_db_update_doc (mobile.server.AsioUpdateDocReply) returns (mobile.server.Void);
+  rpc migrate_db_find_and_modify_doc (mobile.server.AsioFindAndModifyDocReply) returns (mobile.server.Void);
+  rpc migrate_db_count_doc (mobile.server.AsioCountDocReply) returns (mobile.server.Void);
+  rpc migrate_db_insert_doc (mobile.server.AsioInsertDocReply) returns (mobile.server.Void);
+  rpc migrate_db_oper_index (mobile.server.AsioOperIndexReply) returns (mobile.server.Void);
+  rpc migrate_db_delete_doc (mobile.server.AsioDeleteDocReply) returns (mobile.server.Void);
+  rpc migrate_db_create_collection (mobile.server.AsioCreateCollectionReply) returns (mobile.server.Void);
+  rpc migrate_on_write_to_db (mobile.server.AsioUpdateDocReply) returns (mobile.server.Void);
+  rpc migrate_db_finished (mobile.server.AreaMigrateFinish) returns (mobile.server.Void);
+  rpc traceroute (mobile.server.TraceRoute) returns (mobile.server.Void);
+  rpc ping (mobile.server.Ping) returns (mobile.server.Void);
+  rpc reg_group_info (mobile.server.GroupInfo) returns (mobile.server.Void);
+  rpc reg_leader_info (mobile.server.GroupInfo) returns (mobile.server.Void);
+  rpc has_client_connection (mobile.server.HasClientInfo) returns (mobile.server.Void);
+  rpc tick_group_msg (mobile.server.TickGroupMsg) returns (mobile.server.Void);
+  rpc rechoice_aoi_method (mobile.server.AoiGuidEx) returns (mobile.server.Void);
+  rpc aoi_offline (mobile.server.AoiGuidEx) returns (mobile.server.Void);
+  rpc forward_broadcast_method (mobile.server.BroadcastMessage) returns (mobile.server.Void);
+  rpc pick_dist_aoi (mobile.server.DistAoi) returns (mobile.server.Void);
+  rpc migrate_db_bulk_write (mobile.server.AsioBulkWriteReply) returns (mobile.server.Void);
+  rpc migrate_db_cache_query (mobile.server.AsioDbCacheQueryReply) returns (mobile.server.Void);
+  rpc migrate_db_aggregate (mobile.server.AsioAggregateReply) returns (mobile.server.Void);
+  rpc create_client_proxy (mobile.server.CreateClientProxyMessage) returns (mobile.server.Void);
+  rpc migrate_db_estimated_count_doc (mobile.server.AsioCountDocReply) returns (mobile.server.Void);
+  rpc upload_net_info (mobile.server.ClientNetInfo) returns (mobile.server.Void);
+}
+
+service IGameClient {
+  rpc connect_reply (mobile.server.ConnectServerReply) returns (mobile.server.Void);
+  rpc create_entity (mobile.server.EntityInfo) returns (mobile.server.Void);
+  rpc destroy_entity (mobile.server.EntityInfo) returns (mobile.server.Void);
+  rpc disconnect_client (mobile.server.ClientInfo) returns (mobile.server.Void);
+  rpc entity_message (mobile.server.EntityMessage) returns (mobile.server.Void);
+  rpc chat_to_client (mobile.server.OutBandInfo) returns (mobile.server.Void);
+  rpc forward_entity_message (mobile.server.EntityMessage) returns (mobile.server.Void);
+  rpc reg_md5_index (mobile.server.RegistMd5IndexMsg) returns (mobile.server.Void);
+  rpc update_game_load (mobile.server.GameLoad) returns (mobile.server.Void);
+  rpc update_aoi_info (mobile.server.ForwardAoiInfo) returns (mobile.server.Void);
+  rpc update_aoi_guid (mobile.server.ForwardAoiGuid) returns (mobile.server.Void);
+  rpc update_aoi_props (mobile.server.ForwardAoiProps) returns (mobile.server.Void);
+  rpc set_userdata (mobile.server.UserData) returns (mobile.server.Void);
+  rpc traceroute (mobile.server.TraceRoute) returns (mobile.server.Void);
+  rpc add_filter (mobile.server.FilterMessage) returns (mobile.server.Void);
+  rpc banclient (mobile.server.BanClientMessage) returns (mobile.server.Void);
+  rpc tick_group_msg (mobile.server.TickGroupMsg) returns (mobile.server.Void);
+  rpc update_aoi_guid_ex (mobile.server.AoiGuidEx) returns (mobile.server.Void);
+  rpc create_client_proxy (mobile.server.CreateClientProxyMessage) returns (mobile.server.Void);
+  rpc reg_string_indexes (mobile.server.StringIndexes) returns (mobile.server.Void);
+}
+

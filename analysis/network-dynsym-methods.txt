@@ -1,0 +1,7 @@
+00000000023914d8 T ZSTD_checkCParams
+0000000003f74b24 T ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)
+0000000003f74e04 T ntes_gzailab::Encryptor::~Encryptor()
+0000000003f74e40 T ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)
+0000000003f76010 T ntes_gzailab::Encryptor::EncryptCore(char const*, int, char*)
+0000000003f760a8 T ntes_gzailab::Encryptor::Decrypt(char const*, char*&, int&)
+00000000043a4c78 T MaskCpuFlags

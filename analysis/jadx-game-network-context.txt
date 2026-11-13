@@ -1,0 +1,1000 @@
+decompiled/jadx/base/sources/android/support/v4/app/DialogFragment.java:6:import android.content.DialogInterface;
+decompiled/jadx/base/sources/android/support/v4/app/DialogFragment.java:12:public class DialogFragment extends Fragment implements DialogInterface.OnCancelListener, DialogInterface.OnDismissListener {
+decompiled/jadx/base/sources/android/support/v4/app/DialogFragment.java:33:    @Override // android.content.DialogInterface.OnCancelListener
+decompiled/jadx/base/sources/android/support/v4/app/DialogFragment.java:34:    public void onCancel(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/android/support/v4/app/DialogFragment.java:187:    @Override // android.content.DialogInterface.OnDismissListener
+decompiled/jadx/base/sources/android/support/v4/app/DialogFragment.java:188:    public void onDismiss(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:5:import android.content.DialogInterface;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:106:        private WeakReference<DialogInterface> mDialog;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:108:        public ButtonHandler(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:109:            this.mDialog = new WeakReference<>(dialogInterface);
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:116:                ((DialogInterface.OnClickListener) message.obj).onClick(this.mDialog.get(), message.what);
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:121:                ((DialogInterface) message.obj).dismiss();
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:227:    public void setButton(int i, CharSequence charSequence, DialogInterface.OnClickListener onClickListener, Message message, Drawable drawable) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:676:        public DialogInterface.OnClickListener mNegativeButtonListener;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:679:        public DialogInterface.OnClickListener mNeutralButtonListener;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:681:        public DialogInterface.OnCancelListener mOnCancelListener;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:682:        public DialogInterface.OnMultiChoiceClickListener mOnCheckboxClickListener;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:683:        public DialogInterface.OnClickListener mOnClickListener;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:684:        public DialogInterface.OnDismissListener mOnDismissListener;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:686:        public DialogInterface.OnKeyListener mOnKeyListener;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertController.java:689:        public DialogInterface.OnClickListener mPositiveButtonListener;
+decompiled/jadx/base/sources/androidx/appcompat/app/AppCompatDialog.java:4:import android.content.DialogInterface;
+decompiled/jadx/base/sources/androidx/appcompat/app/AppCompatDialog.java:61:    protected AppCompatDialog(Context context, boolean z, DialogInterface.OnCancelListener onCancelListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AppCompatDialog.java:127:    @Override // android.app.Dialog, android.content.DialogInterface
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:4:import android.content.DialogInterface;
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:21:public class AlertDialog extends AppCompatDialog implements DialogInterface {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:35:    protected AlertDialog(Context context, boolean z, DialogInterface.OnCancelListener onCancelListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:88:    public void setButton(int i, CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:92:    public void setButton(int i, CharSequence charSequence, Drawable drawable, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:195:        public Builder setPositiveButton(int i, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:202:        public Builder setPositiveButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:213:        public Builder setNegativeButton(int i, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:220:        public Builder setNegativeButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:231:        public Builder setNeutralButton(int i, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:238:        public Builder setNeutralButton(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:254:        public Builder setOnCancelListener(DialogInterface.OnCancelListener onCancelListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:259:        public Builder setOnDismissListener(DialogInterface.OnDismissListener onDismissListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:264:        public Builder setOnKeyListener(DialogInterface.OnKeyListener onKeyListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:269:        public Builder setItems(int i, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:276:        public Builder setItems(CharSequence[] charSequenceArr, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:282:        public Builder setAdapter(ListAdapter listAdapter, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:288:        public Builder setCursor(Cursor cursor, DialogInterface.OnClickListener onClickListener, String str) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:295:        public Builder setMultiChoiceItems(int i, boolean[] zArr, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:304:        public Builder setMultiChoiceItems(CharSequence[] charSequenceArr, boolean[] zArr, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:312:        public Builder setMultiChoiceItems(Cursor cursor, String str, String str2, DialogInterface.OnMultiChoiceClickListener onMultiChoiceClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:321:        public Builder setSingleChoiceItems(int i, int i2, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:330:        public Builder setSingleChoiceItems(Cursor cursor, int i, String str, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:339:        public Builder setSingleChoiceItems(CharSequence[] charSequenceArr, int i, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/app/AlertDialog.java:347:        public Builder setSingleChoiceItems(ListAdapter listAdapter, int i, DialogInterface.OnClickListener onClickListener) {
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:3:import android.content.DialogInterface;
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:14:class MenuDialogHelper implements DialogInterface.OnKeyListener, DialogInterface.OnClickListener, DialogInterface.OnDismissListener, MenuPresenter.Callback {
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:51:    @Override // android.content.DialogInterface.OnKeyListener
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:52:    public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:67:                dialogInterface.dismiss();
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:85:    @Override // android.content.DialogInterface.OnDismissListener
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:86:    public void onDismiss(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:110:    @Override // android.content.DialogInterface.OnClickListener
+decompiled/jadx/base/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:111:    public void onClick(DialogInterface dialogInterface, int i) {
+decompiled/jadx/base/sources/androidx/appcompat/widget/AppCompatSpinner.java:5:import android.content.DialogInterface;
+decompiled/jadx/base/sources/androidx/appcompat/widget/AppCompatSpinner.java:666:    class DialogPopup implements SpinnerPopup, DialogInterface.OnClickListener {
+decompiled/jadx/base/sources/androidx/appcompat/widget/AppCompatSpinner.java:745:        @Override // android.content.DialogInterface.OnClickListener
+decompiled/jadx/base/sources/androidx/appcompat/widget/AppCompatSpinner.java:746:        public void onClick(DialogInterface dialogInterface, int i) {
+decompiled/jadx/base/sources/androidx/browser/browseractions/BrowserActionsFallbackMenuDialog.java:40:    @Override // android.app.Dialog, android.content.DialogInterface
+decompiled/jadx/base/sources/androidx/browser/browseractions/BrowserActionsFallbackMenuUi.java:7:import android.content.DialogInterface;
+decompiled/jadx/base/sources/androidx/browser/browseractions/BrowserActionsFallbackMenuUi.java:85:            this.mBrowserActionsDialog.setOnShowListener(new DialogInterface.OnShowListener() { // from class: androidx.browser.browseractions.BrowserActionsFallbackMenuUi.2
+decompiled/jadx/base/sources/androidx/browser/browseractions/BrowserActionsFallbackMenuUi.java:86:                @Override // android.content.DialogInterface.OnShowListener
+decompiled/jadx/base/sources/androidx/browser/browseractions/BrowserActionsFallbackMenuUi.java:87:                public void onShow(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/camera/camera2/internal/compat/quirk/StillCaptureFlashStopRepeatingQuirk.java:5:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/camera/camera2/internal/compat/quirk/ExcludedSupportedSizesQuirk.java:7:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/camera/camera2/internal/compat/quirk/PreviewStretchWhenVideoCaptureIsBoundQuirk.java:5:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/camera/camera2/internal/compat/quirk/AfRegionFlipHorizontallyQuirk.java:7:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/camera/core/internal/compat/quirk/CaptureFailedRetryQuirk.java:6:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/camera/core/RetryPolicy.java:8:import com.facebook.login.widget.ToolTipPopup;
+decompiled/jadx/base/sources/androidx/camera/extensions/internal/compat/quirk/CrashWhenOnDisableTooSoon.java:5:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/camera/extensions/internal/compat/quirk/GetAvailableKeysNeedsOnInit.java:5:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk.java:5:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk.java:7:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/androidx/core/text/util/FindAddress.java:35:    private static final Pattern sLocationNameRe = Pattern.compile("(?:alley|annex|arcade|ave[.]?|avenue|alameda|bayou|beach|bend|bluffs?|bottom|boulevard|branch|bridge|brooks?|burgs?|bypass|broadway|camino|camp|canyon|cape|causeway|centers?|circles?|cliffs?|club|common|corners?|course|courts?|coves?|creek|crescent|crest|crossing|crossroad|curve|circulo|dale|dam|divide|drives?|estates?|expressway|extensions?|falls?|ferry|fields?|flats?|fords?|forest|forges?|forks?|fort|freeway|gardens?|gateway|glens?|greens?|groves?|harbors?|haven|heights|highway|hills?|hollow|inlet|islands?|isle|junctions?|keys?|knolls?|lakes?|land|landing|lane|lights?|loaf|locks?|lodge|loop|mall|manors?|meadows?|mews|mills?|mission|motorway|mount|mountains?|neck|orchard|oval|overpass|parks?|parkways?|pass|passage|path|pike|pines?|plains?|plaza|points?|ports?|prairie|privada|radial|ramp|ranch|rapids?|rd[.]?|rest|ridges?|river|roads?|route|row|rue|run|shoals?|shores?|skyway|springs?|spurs?|squares?|station|stravenue|stream|st[.]?|streets?|summit|speedway|terrace|throughway|trace|track|trafficway|trail|tunnel|turnpike|underpass|unions?|valleys?|viaduct|views?|villages?|ville|vista|walks?|wall|ways?|wells?|xing|xrd)(?=[,*•\t  \u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006 \u2008\u2009\u200a \u205f\u3000\n\u000b\f\r\u0085\u2028\u2029]|$)", 2);
+decompiled/jadx/base/sources/androidx/core/view/KeyEventDispatcher.java:6:import android.content.DialogInterface;
+decompiled/jadx/base/sources/androidx/core/view/KeyEventDispatcher.java:90:    private static DialogInterface.OnKeyListener getDialogKeyListenerPre28(Dialog dialog) {
+decompiled/jadx/base/sources/androidx/core/view/KeyEventDispatcher.java:105:            return (DialogInterface.OnKeyListener) field.get(dialog);
+decompiled/jadx/base/sources/androidx/core/view/KeyEventDispatcher.java:112:        DialogInterface.OnKeyListener dialogKeyListenerPre28 = getDialogKeyListenerPre28(dialog);
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:7:import android.content.DialogInterface;
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:24:public class DialogFragment extends Fragment implements DialogInterface.OnCancelListener, DialogInterface.OnDismissListener {
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:45:    private DialogInterface.OnCancelListener mOnCancelListener;
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:46:    private DialogInterface.OnDismissListener mOnDismissListener;
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:53:    @Override // android.content.DialogInterface.OnCancelListener
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:54:    public void onCancel(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:64:        this.mOnCancelListener = new DialogInterface.OnCancelListener() { // from class: androidx.fragment.app.DialogFragment.2
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:65:            @Override // android.content.DialogInterface.OnCancelListener
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:66:            public void onCancel(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:73:        this.mOnDismissListener = new DialogInterface.OnDismissListener() { // from class: androidx.fragment.app.DialogFragment.3
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:74:            @Override // android.content.DialogInterface.OnDismissListener
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:75:            public void onDismiss(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:118:        this.mOnCancelListener = new DialogInterface.OnCancelListener() { // from class: androidx.fragment.app.DialogFragment.2
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:119:            @Override // android.content.DialogInterface.OnCancelListener
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:120:            public void onCancel(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:127:        this.mOnDismissListener = new DialogInterface.OnDismissListener() { // from class: androidx.fragment.app.DialogFragment.3
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:128:            @Override // android.content.DialogInterface.OnDismissListener
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:129:            public void onDismiss(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:412:    @Override // android.content.DialogInterface.OnDismissListener
+decompiled/jadx/base/sources/androidx/fragment/app/DialogFragment.java:413:    public void onDismiss(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/com/CCMsgSdk/WebSocketMessageCodeType.java:4:public class WebSocketMessageCodeType {
+decompiled/jadx/base/sources/com/CCMsgSdk/WebSocketMessageType.java:4:public class WebSocketMessageType {
+decompiled/jadx/base/sources/com/CCMsgSdk/AddressManager.java:42:                if (strOptString.equals(WebSocketMessageCodeType.SUC)) {
+decompiled/jadx/base/sources/com/CCMsgSdk/AddressManager.java:87:    public String getWebSocketAddress() {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:8:import com.JavaWebsocket.client.WebSocketClient;
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:9:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:35:    private WebSocketClient mClient;
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:196:                        CCMsgController.this.pushErrorMessage(message.what == 2 ? WebSocketMessageCodeType.DISCONNECT : WebSocketMessageCodeType.CONNECT_ERROR, str);
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:225:                            CCMsgController.this.createWebSocketClient();
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:292:                if (strOptString2.equals(WebSocketMessageCodeType.SUC)) {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:304:            if (strOptString.equals(WebSocketMessageType.KICK)) {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:320:        WebSocketClient webSocketClient = this.mClient;
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:321:        if (webSocketClient != null) {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:323:                webSocketClient.close();
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:332:    public void createWebSocketClient() {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:334:        String webSocketAddress = this.mAddressManager.getWebSocketAddress();
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:335:        if (webSocketAddress == null) {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:338:        if (webSocketAddress.contains("ws:") || webSocketAddress.contains("wss:")) {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:339:            str = String.format("%s/websocket", webSocketAddress);
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:341:            str = String.format("ws://%s/websocket", webSocketAddress);
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:348:            WebSocketClient webSocketClient = new WebSocketClient(new URI(str)) { // from class: com.CCMsgSdk.CCMsgController.3
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:349:                @Override // com.JavaWebsocket.client.WebSocketClient
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:355:                @Override // com.JavaWebsocket.client.WebSocketClient
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:362:                @Override // com.JavaWebsocket.client.WebSocketClient
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:370:                @Override // com.JavaWebsocket.client.WebSocketClient
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:378:            this.mClient = webSocketClient;
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:379:            webSocketClient.connect();
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:403:        sendWebSocketMessage(string);
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:407:    public void sendWebSocketMessage(String str) {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:408:        WebSocketClient webSocketClient;
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:409:        if (!this.mConnected || (webSocketClient = this.mClient) == null) {
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:413:            webSocketClient.send(str);
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:424:            jSONObject.put("cmd", WebSocketMessageType.NOTIFY);
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:446:                            jSONObject.put("cmd", WebSocketMessageType.HEART_BEAT);
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:447:                            CCMsgController.this.sendWebSocketMessage(jSONObject.toString());
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:474:        pushErrorMessage(WebSocketMessageCodeType.RECONNECT, String.format("%s, reconnect in %d ms", str, Integer.valueOf(iAbs)));
+decompiled/jadx/base/sources/com/CCMsgSdk/CCMsgController.java:477:            pushErrorMessage(WebSocketMessageCodeType.CONNECT_FAIL, str);
+decompiled/jadx/base/sources/com/android/billingclient/api/BillingClientImpl.java:2018:                zzbr(billingResult9, zzjd.PBL_FOR_PAYMENTS_GATEWAY_BUYFLOW_NOT_SUPPORTED, 9);
+decompiled/jadx/base/sources/com/JavaWebsocket/WrappedByteChannel.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/exceptions/IncompleteHandshakeException.java:1:package com.JavaWebsocket.exceptions;
+decompiled/jadx/base/sources/com/JavaWebsocket/exceptions/InvalidDataException.java:1:package com.JavaWebsocket.exceptions;
+decompiled/jadx/base/sources/com/JavaWebsocket/exceptions/NotSendableException.java:1:package com.JavaWebsocket.exceptions;
+decompiled/jadx/base/sources/com/JavaWebsocket/exceptions/WebsocketNotConnectedException.java:1:package com.JavaWebsocket.exceptions;
+decompiled/jadx/base/sources/com/JavaWebsocket/exceptions/WebsocketNotConnectedException.java:4:public class WebsocketNotConnectedException extends RuntimeException {
+decompiled/jadx/base/sources/com/JavaWebsocket/exceptions/InvalidFrameException.java:1:package com.JavaWebsocket.exceptions;
+decompiled/jadx/base/sources/com/JavaWebsocket/exceptions/InvalidHandshakeException.java:1:package com.JavaWebsocket.exceptions;
+decompiled/jadx/base/sources/com/JavaWebsocket/exceptions/LimitExedeedException.java:1:package com.JavaWebsocket.exceptions;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/Framedata.java:1:package com.JavaWebsocket.framing;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/Framedata.java:3:import com.JavaWebsocket.exceptions.InvalidFrameException;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrame.java:1:package com.JavaWebsocket.framing;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrame.java:3:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrame.java:4:import com.JavaWebsocket.exceptions.InvalidFrameException;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FrameBuilder.java:1:package com.JavaWebsocket.framing;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FrameBuilder.java:3:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FrameBuilder.java:4:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:1:package com.JavaWebsocket.framing;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:3:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:4:import com.JavaWebsocket.exceptions.InvalidFrameException;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:5:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:6:import com.JavaWebsocket.util.Charsetfunctions;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:33:    @Override // com.JavaWebsocket.framing.Framedata
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:38:    @Override // com.JavaWebsocket.framing.Framedata
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:43:    @Override // com.JavaWebsocket.framing.Framedata
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:48:    @Override // com.JavaWebsocket.framing.Framedata
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:53:    @Override // com.JavaWebsocket.framing.FrameBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:58:    @Override // com.JavaWebsocket.framing.FrameBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:63:    @Override // com.JavaWebsocket.framing.FrameBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:68:    @Override // com.JavaWebsocket.framing.FrameBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/FramedataImpl1.java:73:    @Override // com.JavaWebsocket.framing.Framedata
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:1:package com.JavaWebsocket.framing;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:3:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:4:import com.JavaWebsocket.exceptions.InvalidFrameException;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:5:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:6:import com.JavaWebsocket.util.Charsetfunctions;
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:77:    @Override // com.JavaWebsocket.framing.CloseFrame
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:101:    @Override // com.JavaWebsocket.framing.CloseFrame
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:106:    @Override // com.JavaWebsocket.framing.FramedataImpl1
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:111:    @Override // com.JavaWebsocket.framing.FramedataImpl1, com.JavaWebsocket.framing.FrameBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/framing/CloseFrameBuilder.java:118:    @Override // com.JavaWebsocket.framing.FramedataImpl1, com.JavaWebsocket.framing.Framedata
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/Handshakedata.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/ClientHandshake.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeBuilder.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/ServerHandshake.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakedataImpl1.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakedataImpl1.java:12:    @Override // com.JavaWebsocket.handshake.Handshakedata
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakedataImpl1.java:17:    @Override // com.JavaWebsocket.handshake.Handshakedata
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakedataImpl1.java:23:    @Override // com.JavaWebsocket.handshake.Handshakedata
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakedataImpl1.java:28:    @Override // com.JavaWebsocket.handshake.HandshakeBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakedataImpl1.java:33:    @Override // com.JavaWebsocket.handshake.HandshakeBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakedataImpl1.java:38:    @Override // com.JavaWebsocket.handshake.Handshakedata
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/ClientHandshakeBuilder.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/ServerHandshakeBuilder.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeImpl1Client.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeImpl1Client.java:9:    @Override // com.JavaWebsocket.handshake.ClientHandshakeBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeImpl1Client.java:17:    @Override // com.JavaWebsocket.handshake.ClientHandshake
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeImpl1Server.java:1:package com.JavaWebsocket.handshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeImpl1Server.java:8:    @Override // com.JavaWebsocket.handshake.ServerHandshake
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeImpl1Server.java:13:    @Override // com.JavaWebsocket.handshake.ServerHandshake
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeImpl1Server.java:18:    @Override // com.JavaWebsocket.handshake.ServerHandshakeBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/handshake/HandshakeImpl1Server.java:23:    @Override // com.JavaWebsocket.handshake.ServerHandshakeBuilder
+decompiled/jadx/base/sources/com/JavaWebsocket/util/Base64.java:1:package com.JavaWebsocket.util;
+decompiled/jadx/base/sources/com/JavaWebsocket/util/Base64.java:675:        throw new UnsupportedOperationException("Method not decompiled: com.JavaWebsocket.util.Base64.decode(java.lang.String, int):byte[]");
+decompiled/jadx/base/sources/com/JavaWebsocket/util/Base64.java:706:                    objectInputStream = new ObjectInputStream(byteArrayInputStream) { // from class: com.JavaWebsocket.util.Base64.1
+decompiled/jadx/base/sources/com/JavaWebsocket/util/Charsetfunctions.java:1:package com.JavaWebsocket.util;
+decompiled/jadx/base/sources/com/JavaWebsocket/util/Charsetfunctions.java:3:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/AbstractWrappedByteChannel.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/AbstractWrappedByteChannel.java:41:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/AbstractWrappedByteChannel.java:47:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/AbstractWrappedByteChannel.java:55:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/AbstractWrappedByteChannel.java:61:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/AbstractWrappedByteChannel.java:70:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/SSLSocketChannel2.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/SSLSocketChannel2.java:295:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/SSLSocketChannel2.java:300:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/SSLSocketChannel2.java:305:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/SSLSocketChannel2.java:313:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/SSLSocketChannel2.java:332:    @Override // com.JavaWebsocket.WrappedByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/client/AbstractClientProxyChannel.java:1:package com.JavaWebsocket.client;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/AbstractClientProxyChannel.java:3:import com.JavaWebsocket.AbstractWrappedByteChannel;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/AbstractClientProxyChannel.java:24:    @Override // com.JavaWebsocket.AbstractWrappedByteChannel, java.nio.channels.WritableByteChannel
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:1:package com.JavaWebsocket.client;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:4:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:5:import com.JavaWebsocket.WebSocketAdapter;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:6:import com.JavaWebsocket.WebSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:7:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:8:import com.JavaWebsocket.drafts.Draft_17;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:9:import com.JavaWebsocket.exceptions.InvalidHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:10:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:11:import com.JavaWebsocket.handshake.HandshakeImpl1Client;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:12:import com.JavaWebsocket.handshake.Handshakedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:13:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:27:public abstract class WebSocketClient extends WebSocketAdapter implements Runnable, WebSocket {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:33:    private WebSocketImpl engine;
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:62:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:63:    public final void onWriteDemand(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:66:    public WebSocketClient(URI uri) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:70:    public WebSocketClient(URI uri, Draft draft) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:74:    public WebSocketClient(URI uri, Draft draft, Map<String, String> map, int i) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:86:            throw new IllegalArgumentException("null as draft is permitted for `WebSocketServer` only!");
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:92:        this.engine = new WebSocketImpl(this, draft);
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:99:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:106:            throw new IllegalStateException("WebSocketClient objects are not reuseable");
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:119:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:131:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:136:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:157:            Thread thread = new Thread(new WebsocketWriteThread());
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:160:            byte[] bArr = new byte[WebSocketImpl.RCVBUF];
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:175:            onWebsocketError(this.engine, e2);
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:221:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:222:    public WebSocket.READYSTATE getReadyState() {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:226:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:227:    public final void onWebsocketMessage(WebSocket webSocket, String str) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:231:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:232:    public final void onWebsocketMessage(WebSocket webSocket, ByteBuffer byteBuffer) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:236:    @Override // com.JavaWebsocket.WebSocketAdapter, com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:237:    public void onWebsocketMessageFragment(WebSocket webSocket, Framedata framedata) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:241:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:242:    public final void onWebsocketOpen(WebSocket webSocket, Handshakedata handshakedata) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:247:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:248:    public final void onWebsocketClose(WebSocket webSocket, int i, String str, boolean z) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:261:            onWebsocketError(this, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:266:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:267:    public final void onWebsocketError(WebSocket webSocket, Exception exc) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:271:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:272:    public void onWebsocketCloseInitiated(WebSocket webSocket, int i, String str) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:276:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:277:    public void onWebsocketClosing(WebSocket webSocket, int i, String str, boolean z) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:281:    public WebSocket getConnection() {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:285:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:286:    public InetSocketAddress getLocalSocketAddress(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:294:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:295:    public InetSocketAddress getRemoteSocketAddress(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:303:    private class WebsocketWriteThread implements Runnable {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:304:        private WebsocketWriteThread() {
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:309:            Thread.currentThread().setName("WebsocketWriteThread");
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:312:                    ByteBuffer byteBufferTake = WebSocketClient.this.engine.outQueue.take();
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:313:                    WebSocketClient.this.ostream.write(byteBufferTake.array(), 0, byteBufferTake.limit());
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:314:                    WebSocketClient.this.ostream.flush();
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:316:                    WebSocketClient.this.engine.eot();
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:339:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:344:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:349:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:354:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:359:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:364:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:369:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:374:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:379:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:384:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:389:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:394:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:399:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:404:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/client/WebSocketClient.java:409:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:1:package com.JavaWebsocket.drafts;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:3:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:4:import com.JavaWebsocket.exceptions.IncompleteHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:5:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:6:import com.JavaWebsocket.exceptions.InvalidHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:7:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:8:import com.JavaWebsocket.framing.FramedataImpl1;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:9:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:10:import com.JavaWebsocket.handshake.ClientHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:11:import com.JavaWebsocket.handshake.HandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:12:import com.JavaWebsocket.handshake.HandshakeImpl1Client;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:13:import com.JavaWebsocket.handshake.HandshakeImpl1Server;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:14:import com.JavaWebsocket.handshake.Handshakedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:15:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:16:import com.JavaWebsocket.handshake.ServerHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:17:import com.JavaWebsocket.util.Charsetfunctions;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:30:    protected WebSocket.Role role = null;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:91:    public static HandshakeBuilder translateHandshakeHttp(ByteBuffer byteBuffer, WebSocket.Role role) throws InvalidHandshakeException, IncompleteHandshakeException {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:101:        if (role == WebSocket.Role.CLIENT) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:128:        return handshakedata.getFieldValue(HttpHeaders.UPGRADE).equalsIgnoreCase("websocket") && handshakedata.getFieldValue(HttpHeaders.CONNECTION).toLowerCase(Locale.ENGLISH).contains("upgrade");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:155:    public List<ByteBuffer> createHandshake(Handshakedata handshakedata, WebSocket.Role role) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:159:    public List<ByteBuffer> createHandshake(Handshakedata handshakedata, WebSocket.Role role, boolean z) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:204:    public void setParseMode(WebSocket.Role role) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft.java:208:    public WebSocket.Role getRole() {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:1:package com.JavaWebsocket.drafts;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:3:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:4:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:5:import com.JavaWebsocket.exceptions.InvalidFrameException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:6:import com.JavaWebsocket.exceptions.InvalidHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:7:import com.JavaWebsocket.exceptions.NotSendableException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:8:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:9:import com.JavaWebsocket.framing.FramedataImpl1;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:10:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:11:import com.JavaWebsocket.handshake.ClientHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:12:import com.JavaWebsocket.handshake.HandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:13:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:14:import com.JavaWebsocket.handshake.ServerHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:15:import com.JavaWebsocket.util.Charsetfunctions;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:38:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:40:        return (clientHandshake.getFieldValue("WebSocket-Origin").equals(serverHandshake.getFieldValue(HttpHeaders.ORIGIN)) && basicAccept(serverHandshake)) ? Draft.HandshakeState.MATCHED : Draft.HandshakeState.NOT_MATCHED;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:43:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:51:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:67:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:72:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:86:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:88:        clientHandshakeBuilder.put(HttpHeaders.UPGRADE, "WebSocket");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:96:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:99:        serverHandshakeBuilder.put(HttpHeaders.UPGRADE, "WebSocket");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:101:        serverHandshakeBuilder.put("WebSocket-Origin", clientHandshake.getFieldValue(HttpHeaders.ORIGIN));
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:102:        serverHandshakeBuilder.put("WebSocket-Location", "ws://" + clientHandshake.getFieldValue("Host") + clientHandshake.getResourceDescriptor());
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:148:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:157:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:163:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_75.java:179:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:1:package com.JavaWebsocket.drafts;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:3:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:4:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:5:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:6:import com.JavaWebsocket.exceptions.InvalidFrameException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:7:import com.JavaWebsocket.exceptions.InvalidHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:8:import com.JavaWebsocket.exceptions.LimitExedeedException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:9:import com.JavaWebsocket.exceptions.NotSendableException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:10:import com.JavaWebsocket.framing.CloseFrameBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:11:import com.JavaWebsocket.framing.FrameBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:12:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:13:import com.JavaWebsocket.framing.FramedataImpl1;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:14:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:15:import com.JavaWebsocket.handshake.ClientHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:16:import com.JavaWebsocket.handshake.HandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:17:import com.JavaWebsocket.handshake.Handshakedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:18:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:19:import com.JavaWebsocket.handshake.ServerHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:20:import com.JavaWebsocket.util.Base64;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:21:import com.JavaWebsocket.util.Charsetfunctions;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:54:        String fieldValue = handshakedata.getFieldValue(HttpHeaders.SEC_WEBSOCKET_VERSION);
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:64:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:66:        if (!clientHandshake.hasFieldValue(HttpHeaders.SEC_WEBSOCKET_KEY) || !serverHandshake.hasFieldValue(HttpHeaders.SEC_WEBSOCKET_ACCEPT)) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:69:        if (generateFinalKey(clientHandshake.getFieldValue(HttpHeaders.SEC_WEBSOCKET_KEY)).equals(serverHandshake.getFieldValue(HttpHeaders.SEC_WEBSOCKET_ACCEPT))) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:75:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:84:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:88:        boolean z = this.role == WebSocket.Role.CLIENT;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:119:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:133:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:177:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:179:        clientHandshakeBuilder.put(HttpHeaders.UPGRADE, "websocket");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:181:        clientHandshakeBuilder.put(HttpHeaders.SEC_WEBSOCKET_VERSION, "8");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:184:        clientHandshakeBuilder.put(HttpHeaders.SEC_WEBSOCKET_KEY, Base64.encodeBytes(bArr));
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:188:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:190:        serverHandshakeBuilder.put(HttpHeaders.UPGRADE, "websocket");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:193:        String fieldValue = clientHandshake.getFieldValue(HttpHeaders.SEC_WEBSOCKET_KEY);
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:195:            throw new InvalidHandshakeException("missing Sec-WebSocket-Key");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:197:        serverHandshakeBuilder.put(HttpHeaders.SEC_WEBSOCKET_ACCEPT, generateFinalKey(fieldValue));
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:232:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:345:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:350:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_10.java:355:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:1:package com.JavaWebsocket.drafts;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:3:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:4:import com.JavaWebsocket.exceptions.InvalidHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:5:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:6:import com.JavaWebsocket.handshake.ClientHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:11:    @Override // com.JavaWebsocket.drafts.Draft_10, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:19:    @Override // com.JavaWebsocket.drafts.Draft_10, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:22:        clientHandshakeBuilder.put(HttpHeaders.SEC_WEBSOCKET_VERSION, "13");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_17.java:26:    @Override // com.JavaWebsocket.drafts.Draft_10, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:1:package com.JavaWebsocket.drafts;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:3:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:4:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:5:import com.JavaWebsocket.exceptions.IncompleteHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:6:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:7:import com.JavaWebsocket.exceptions.InvalidFrameException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:8:import com.JavaWebsocket.exceptions.InvalidHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:9:import com.JavaWebsocket.framing.CloseFrameBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:10:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:11:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:12:import com.JavaWebsocket.handshake.ClientHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:13:import com.JavaWebsocket.handshake.HandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:14:import com.JavaWebsocket.handshake.Handshakedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:15:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:16:import com.JavaWebsocket.handshake.ServerHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:68:                throw new InvalidHandshakeException("invalid Sec-WebSocket-Key (/key2/)");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:73:            throw new InvalidHandshakeException("invalid Sec-WebSocket-Key (/key1/ or /key2/)");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:77:    @Override // com.JavaWebsocket.drafts.Draft_75, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:83:            if (serverHandshake.getFieldValue("Sec-WebSocket-Origin").equals(clientHandshake.getFieldValue(HttpHeaders.ORIGIN)) && basicAccept(serverHandshake)) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:88:                if (Arrays.equals(content, createChallenge(clientHandshake.getFieldValue("Sec-WebSocket-Key1"), clientHandshake.getFieldValue("Sec-WebSocket-Key2"), clientHandshake.getContent()))) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:99:    @Override // com.JavaWebsocket.drafts.Draft_75, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:101:        if (clientHandshake.getFieldValue(HttpHeaders.UPGRADE).equals("WebSocket") && clientHandshake.getFieldValue(HttpHeaders.CONNECTION).contains(HttpHeaders.UPGRADE) && clientHandshake.getFieldValue("Sec-WebSocket-Key1").length() > 0 && !clientHandshake.getFieldValue("Sec-WebSocket-Key2").isEmpty() && clientHandshake.hasFieldValue(HttpHeaders.ORIGIN)) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:107:    @Override // com.JavaWebsocket.drafts.Draft_75, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:109:        clientHandshakeBuilder.put(HttpHeaders.UPGRADE, "WebSocket");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:111:        clientHandshakeBuilder.put("Sec-WebSocket-Key1", generateKey());
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:112:        clientHandshakeBuilder.put("Sec-WebSocket-Key2", generateKey());
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:122:    @Override // com.JavaWebsocket.drafts.Draft_75, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:124:        serverHandshakeBuilder.setHttpStatusMessage("WebSocket Protocol Handshake");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:125:        serverHandshakeBuilder.put(HttpHeaders.UPGRADE, "WebSocket");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:127:        serverHandshakeBuilder.put("Sec-WebSocket-Origin", clientHandshake.getFieldValue(HttpHeaders.ORIGIN));
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:128:        serverHandshakeBuilder.put("Sec-WebSocket-Location", "ws://" + clientHandshake.getFieldValue("Host") + clientHandshake.getResourceDescriptor());
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:129:        String fieldValue = clientHandshake.getFieldValue("Sec-WebSocket-Key1");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:130:        String fieldValue2 = clientHandshake.getFieldValue("Sec-WebSocket-Key2");
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:139:    @Override // com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:142:        if ((!handshakeBuilderTranslateHandshakeHttp.hasFieldValue("Sec-WebSocket-Key1") && this.role != WebSocket.Role.CLIENT) || handshakeBuilderTranslateHandshakeHttp.hasFieldValue(HttpHeaders.SEC_WEBSOCKET_VERSION)) {
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:145:        byte[] bArr = new byte[this.role == WebSocket.Role.SERVER ? 8 : 16];
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:155:    @Override // com.JavaWebsocket.drafts.Draft_75, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:184:    @Override // com.JavaWebsocket.drafts.Draft_75, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:192:    @Override // com.JavaWebsocket.drafts.Draft_75, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/drafts/Draft_76.java:197:    @Override // com.JavaWebsocket.drafts.Draft_75, com.JavaWebsocket.drafts.Draft
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocket.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocket.java:3:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocket.java:4:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocket.java:10:public interface WebSocket {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:3:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:4:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:5:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:6:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:7:import com.JavaWebsocket.handshake.Handshakedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:8:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:9:import com.JavaWebsocket.handshake.ServerHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:14:public interface WebSocketListener {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:15:    String getFlashPolicy(WebSocket webSocket) throws InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:17:    InetSocketAddress getLocalSocketAddress(WebSocket webSocket);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:19:    InetSocketAddress getRemoteSocketAddress(WebSocket webSocket);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:21:    void onWebsocketClose(WebSocket webSocket, int i, String str, boolean z);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:23:    void onWebsocketCloseInitiated(WebSocket webSocket, int i, String str);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:25:    void onWebsocketClosing(WebSocket webSocket, int i, String str, boolean z);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:27:    void onWebsocketError(WebSocket webSocket, Exception exc);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:29:    void onWebsocketHandshakeReceivedAsClient(WebSocket webSocket, ClientHandshake clientHandshake, ServerHandshake serverHandshake) throws InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:31:    ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer(WebSocket webSocket, Draft draft, ClientHandshake clientHandshake) throws InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:33:    void onWebsocketHandshakeSentAsClient(WebSocket webSocket, ClientHandshake clientHandshake) throws InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:35:    void onWebsocketMessage(WebSocket webSocket, String str);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:37:    void onWebsocketMessage(WebSocket webSocket, ByteBuffer byteBuffer);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:39:    void onWebsocketMessageFragment(WebSocket webSocket, Framedata framedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:41:    void onWebsocketOpen(WebSocket webSocket, Handshakedata handshakedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:43:    void onWebsocketPing(WebSocket webSocket, Framedata framedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:45:    void onWebsocketPong(WebSocket webSocket, Framedata framedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketListener.java:47:    void onWriteDemand(WebSocket webSocket);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:3:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:4:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:5:import com.JavaWebsocket.exceptions.InvalidHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:6:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:7:import com.JavaWebsocket.framing.FramedataImpl1;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:8:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:9:import com.JavaWebsocket.handshake.HandshakeImpl1Server;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:10:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:11:import com.JavaWebsocket.handshake.ServerHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:15:public abstract class WebSocketAdapter implements WebSocketListener {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:16:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:17:    public void onWebsocketHandshakeReceivedAsClient(WebSocket webSocket, ClientHandshake clientHandshake, ServerHandshake serverHandshake) throws InvalidDataException {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:20:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:21:    public void onWebsocketHandshakeSentAsClient(WebSocket webSocket, ClientHandshake clientHandshake) throws InvalidDataException {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:24:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:25:    public void onWebsocketMessageFragment(WebSocket webSocket, Framedata framedata) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:28:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:29:    public void onWebsocketPong(WebSocket webSocket, Framedata framedata) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:32:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:33:    public ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer(WebSocket webSocket, Draft draft, ClientHandshake clientHandshake) throws InvalidDataException {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:37:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:38:    public void onWebsocketPing(WebSocket webSocket, Framedata framedata) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:41:        webSocket.sendFrame(framedataImpl1);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:44:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:45:    public String getFlashPolicy(WebSocket webSocket) throws InvalidDataException {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketAdapter.java:46:        InetSocketAddress localSocketAddress = webSocket.getLocalSocketAddress();
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketFactory.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketFactory.java:3:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketFactory.java:8:public interface WebSocketFactory {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketFactory.java:9:    WebSocket createWebSocket(WebSocketAdapter webSocketAdapter, Draft draft, Socket socket);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketFactory.java:11:    WebSocket createWebSocket(WebSocketAdapter webSocketAdapter, List<Draft> list, Socket socket);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:3:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:4:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:5:import com.JavaWebsocket.drafts.Draft_10;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:6:import com.JavaWebsocket.drafts.Draft_17;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:7:import com.JavaWebsocket.drafts.Draft_75;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:8:import com.JavaWebsocket.drafts.Draft_76;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:9:import com.JavaWebsocket.exceptions.IncompleteHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:10:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:11:import com.JavaWebsocket.exceptions.InvalidHandshakeException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:12:import com.JavaWebsocket.exceptions.WebsocketNotConnectedException;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:13:import com.JavaWebsocket.framing.CloseFrame;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:14:import com.JavaWebsocket.framing.CloseFrameBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:15:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:16:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:17:import com.JavaWebsocket.handshake.ClientHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:18:import com.JavaWebsocket.handshake.Handshakedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:19:import com.JavaWebsocket.handshake.ServerHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:20:import com.JavaWebsocket.server.WebSocketServer;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:21:import com.JavaWebsocket.util.Charsetfunctions;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:37:public class WebSocketImpl implements WebSocket {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:54:    private WebSocket.READYSTATE readystate;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:56:    private WebSocket.Role role;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:58:    public volatile WebSocketServer.WebSocketWorker workerThread;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:59:    private final WebSocketListener wsl;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:71:    public WebSocketImpl(WebSocketListener webSocketListener, List<Draft> list) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:72:        this(webSocketListener, (Draft) null);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:73:        this.role = WebSocket.Role.SERVER;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:81:    public WebSocketImpl(WebSocketListener webSocketListener, Draft draft) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:83:        this.readystate = WebSocket.READYSTATE.NOT_YET_CONNECTED;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:92:        if (webSocketListener == null || (draft == null && this.role == WebSocket.Role.SERVER)) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:97:        this.wsl = webSocketListener;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:98:        this.role = WebSocket.Role.CLIENT;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:105:    public WebSocketImpl(WebSocketListener webSocketListener, Draft draft, Socket socket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:106:        this(webSocketListener, draft);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:110:    public WebSocketImpl(WebSocketListener webSocketListener, List<Draft> list, Socket socket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:111:        this(webSocketListener, list);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:124:        if (this.readystate != WebSocket.READYSTATE.NOT_YET_CONNECTED) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:177:        if (this.role == WebSocket.Role.SERVER) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:197:                            write(draftCopyInstance.createHandshake(draftCopyInstance.postProcessHandshakeResponseAsServer(clientHandshake, this.wsl.onWebsocketHandshakeReceivedAsServer(this, draftCopyInstance, clientHandshake)), this.role));
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:205:                            this.wsl.onWebsocketError(this, e4);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:229:        if (this.role == WebSocket.Role.CLIENT) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:239:                    this.wsl.onWebsocketHandshakeReceivedAsClient(this, this.handshakerequest, serverHandshake);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:246:                    this.wsl.onWebsocketError(this, e6);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:291:                    if (this.readystate == WebSocket.READYSTATE.CLOSING) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:299:                    this.wsl.onWebsocketPing(this, framedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:301:                    this.wsl.onWebsocketPong(this, framedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:317:                        this.wsl.onWebsocketMessageFragment(this, framedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:319:                        this.wsl.onWebsocketError(this, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:327:                            this.wsl.onWebsocketMessage(this, Charsetfunctions.stringUtf8(framedata.getPayloadData()));
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:329:                            this.wsl.onWebsocketError(this, e2);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:333:                            this.wsl.onWebsocketMessage(this, framedata.getPayloadData());
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:335:                            this.wsl.onWebsocketError(this, e3);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:343:            this.wsl.onWebsocketError(this, e4);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:349:        if (this.readystate == WebSocket.READYSTATE.CLOSING || this.readystate == WebSocket.READYSTATE.CLOSED) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:352:        if (this.readystate == WebSocket.READYSTATE.OPEN) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:354:                this.readystate = WebSocket.READYSTATE.CLOSING;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:362:                            this.wsl.onWebsocketCloseInitiated(this, i, str);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:364:                            this.wsl.onWebsocketError(this, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:369:                    this.wsl.onWebsocketError(this, e2);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:382:        this.readystate = WebSocket.READYSTATE.CLOSING;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:386:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:397:        if (this.readystate == WebSocket.READYSTATE.CLOSED) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:409:                this.wsl.onWebsocketError(this, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:412:                this.wsl.onWebsocketClose(this, i, str, z);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:414:                this.wsl.onWebsocketError(this, e2);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:421:            this.readystate = WebSocket.READYSTATE.CLOSED;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:425:        this.wsl.onWebsocketClose(this, i, str, z);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:430:        this.readystate = WebSocket.READYSTATE.CLOSED;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:446:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:461:            this.wsl.onWebsocketClosing(this, i, str, z);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:463:            this.wsl.onWebsocketError(this, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:473:        if (getReadyState() == WebSocket.READYSTATE.NOT_YET_CONNECTED) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:486:            if (this.role == WebSocket.Role.SERVER) {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:497:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:506:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:507:    public void send(String str) throws WebsocketNotConnectedException {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:509:            throw new IllegalArgumentException("Cannot send 'null' data to a WebSocketImpl.");
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:511:        send(this.draft.createFrames(str, this.role == WebSocket.Role.CLIENT));
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:514:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:515:    public void send(ByteBuffer byteBuffer) throws WebsocketNotConnectedException, IllegalArgumentException {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:517:            throw new IllegalArgumentException("Cannot send 'null' data to a WebSocketImpl.");
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:519:        send(this.draft.createFrames(byteBuffer, this.role == WebSocket.Role.CLIENT));
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:522:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:523:    public void send(byte[] bArr) throws WebsocketNotConnectedException, IllegalArgumentException {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:529:            throw new WebsocketNotConnectedException();
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:537:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:542:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:550:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:578:            this.wsl.onWebsocketHandshakeSentAsClient(this, this.handshakerequest);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:583:            this.wsl.onWebsocketError(this, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:613:        this.readystate = WebSocket.READYSTATE.OPEN;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:615:            this.wsl.onWebsocketOpen(this, handshakedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:617:            this.wsl.onWebsocketError(this, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:621:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:623:        return this.readystate == WebSocket.READYSTATE.CONNECTING;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:626:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:628:        return this.readystate == WebSocket.READYSTATE.OPEN;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:631:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:633:        return this.readystate == WebSocket.READYSTATE.CLOSING;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:636:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:641:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:643:        return this.readystate == WebSocket.READYSTATE.CLOSED;
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:646:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:647:    public WebSocket.READYSTATE getReadyState() {
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:659:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:664:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:669:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:674:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/WebSocketImpl.java:679:    @Override // com.JavaWebsocket.WebSocket
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:1:package com.JavaWebsocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:3:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:10:    public static boolean read(ByteBuffer byteBuffer, WebSocketImpl webSocketImpl, ByteChannel byteChannel) throws IOException {
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:17:        webSocketImpl.eot();
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:21:    public static boolean readMore(ByteBuffer byteBuffer, WebSocketImpl webSocketImpl, WrappedByteChannel wrappedByteChannel) throws IOException {
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:26:            webSocketImpl.eot();
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:36:    public static boolean batch(WebSocketImpl webSocketImpl, ByteChannel byteChannel) throws IOException {
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:38:        ByteBuffer byteBufferPeek = webSocketImpl.outQueue.peek();
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:46:            if (webSocketImpl != null && webSocketImpl.outQueue.isEmpty() && webSocketImpl.isFlushAndClose() && webSocketImpl.getDraft() != null && webSocketImpl.getDraft().getRole() != null && webSocketImpl.getDraft().getRole() == WebSocket.Role.SERVER) {
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:47:                synchronized (webSocketImpl) {
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:48:                    webSocketImpl.closeConnection();
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:58:            webSocketImpl.outQueue.poll();
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:59:            byteBufferPeek = webSocketImpl.outQueue.peek();
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:62:        if (webSocketImpl != null) {
+decompiled/jadx/base/sources/com/JavaWebsocket/SocketChannelIOHelper.java:63:            synchronized (webSocketImpl) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:1:package com.JavaWebsocket.server;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:3:import com.JavaWebsocket.SocketChannelIOHelper;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:4:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:5:import com.JavaWebsocket.WebSocketAdapter;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:6:import com.JavaWebsocket.WebSocketFactory;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:7:import com.JavaWebsocket.WebSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:8:import com.JavaWebsocket.WrappedByteChannel;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:9:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:10:import com.JavaWebsocket.exceptions.InvalidDataException;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:11:import com.JavaWebsocket.framing.Framedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:12:import com.JavaWebsocket.handshake.ClientHandshake;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:13:import com.JavaWebsocket.handshake.Handshakedata;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:14:import com.JavaWebsocket.handshake.ServerHandshakeBuilder;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:43:public abstract class WebSocketServer extends WebSocketAdapter implements Runnable {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:48:    private final Collection<WebSocket> connections;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:49:    private List<WebSocketWorker> decoders;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:51:    private List<WebSocketImpl> iqueue;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:58:    private WebSocketServerFactory wsf;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:60:    public interface WebSocketServerFactory extends WebSocketFactory {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:63:        @Override // com.JavaWebsocket.WebSocketFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:64:        WebSocketImpl createWebSocket(WebSocketAdapter webSocketAdapter, Draft draft, Socket socket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:66:        @Override // com.JavaWebsocket.WebSocketFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:67:        WebSocketImpl createWebSocket(WebSocketAdapter webSocketAdapter, List<Draft> list, Socket socket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:72:    public abstract void onClose(WebSocket webSocket, int i, String str, boolean z);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:74:    public void onCloseInitiated(WebSocket webSocket, int i, String str) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:77:    public void onClosing(WebSocket webSocket, int i, String str, boolean z) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:84:    public abstract void onError(WebSocket webSocket, Exception exc);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:86:    public void onFragment(WebSocket webSocket, Framedata framedata) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:89:    public abstract void onMessage(WebSocket webSocket, String str);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:91:    public void onMessage(WebSocket webSocket, ByteBuffer byteBuffer) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:94:    public abstract void onOpen(WebSocket webSocket, ClientHandshake clientHandshake);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:96:    protected void releaseBuffers(WebSocket webSocket) throws InterruptedException {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:99:    public WebSocketServer() throws UnknownHostException {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:103:    public WebSocketServer(InetSocketAddress inetSocketAddress) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:107:    public WebSocketServer(InetSocketAddress inetSocketAddress, int i) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:111:    public WebSocketServer(InetSocketAddress inetSocketAddress, List<Draft> list) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:115:    public WebSocketServer(InetSocketAddress inetSocketAddress, int i, List<Draft> list) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:119:    public WebSocketServer(InetSocketAddress inetSocketAddress, int i, List<Draft> list, Collection<WebSocket> collection) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:123:        this.wsf = new DefaultWebSocketServerFactory();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:138:            WebSocketWorker webSocketWorker = new WebSocketWorker();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:139:            this.decoders.add(webSocketWorker);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:140:            webSocketWorker.start();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:159:                ((WebSocket) it.next()).close(1001);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:177:    public Collection<WebSocket> connections() {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:198:        WebSocket webSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:201:        WebSocketImpl webSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:210:            this.selectorthread.setName("WebsocketSelector" + this.selectorthread.getId());
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:216:                serverSocketSocket.setReceiveBufferSize(WebSocketImpl.RCVBUF);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:231:                                        webSocket = null;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:235:                                        webSocket = null;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:238:                                    List<WebSocketWorker> list = this.decoders;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:240:                                        Iterator<WebSocketWorker> it2 = list.iterator();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:261:                                    List<WebSocketWorker> list2 = this.decoders;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:263:                                        Iterator<WebSocketWorker> it3 = list2.iterator();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:289:                                            webSocket = null;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:297:                                                webSocketImpl = (WebSocketImpl) next.attachment();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:300:                                                    if (webSocketImpl.channel == null) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:304:                                                        handleIOException(next, webSocketImpl, new IOException());
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:305:                                                        webSocket = webSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:309:                                                            if (SocketChannelIOHelper.read(byteBufferTakeBuffer, webSocketImpl, webSocketImpl.channel) && byteBufferTakeBuffer.hasRemaining()) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:310:                                                                webSocketImpl.inQueue.put(byteBufferTakeBuffer);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:311:                                                                queue(webSocketImpl);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:313:                                                                if ((webSocketImpl.channel instanceof WrappedByteChannel) && ((WrappedByteChannel) webSocketImpl.channel).isNeedRead()) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:314:                                                                    this.iqueue.add(webSocketImpl);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:326:                                                    webSocket = webSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:332:                                                handleIOException(selectionKey, webSocket, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:334:                                                webSocketImpl = null;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:337:                                                WebSocketImpl webSocketImpl2 = (WebSocketImpl) next.attachment();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:339:                                                    if (SocketChannelIOHelper.batch(webSocketImpl2, webSocketImpl2.channel) && next.isValid()) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:343:                                                    webSocket = webSocketImpl2;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:347:                                                    webSocket = webSocketImpl2;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:350:                                                webSocket = webSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:357:                                                WebSocketImpl webSocketImplCreateWebSocket = this.wsf.createWebSocket((WebSocketAdapter) this, this.drafts, socketChannelAccept.socket());
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:358:                                                webSocketImplCreateWebSocket.key = socketChannelAccept.register(this.selector, 1, webSocketImplCreateWebSocket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:360:                                                    webSocketImplCreateWebSocket.channel = this.wsf.wrapChannel(socketChannelAccept, webSocketImplCreateWebSocket.key);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:362:                                                    allocateBuffers(webSocketImplCreateWebSocket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:364:                                                    if (webSocketImplCreateWebSocket.key != null) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:365:                                                        webSocketImplCreateWebSocket.key.cancel();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:367:                                                    handleIOException(webSocketImplCreateWebSocket.key, null, e9);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:374:                                    webSocket = null;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:378:                                    WebSocketImpl webSocketImplRemove = this.iqueue.remove(0);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:380:                                        WrappedByteChannel wrappedByteChannel = (WrappedByteChannel) webSocketImplRemove.channel;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:383:                                            if (SocketChannelIOHelper.readMore(byteBufferTakeBuffer2, webSocketImplRemove, wrappedByteChannel)) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:384:                                                this.iqueue.add(webSocketImplRemove);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:387:                                                webSocketImplRemove.inQueue.put(byteBufferTakeBuffer2);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:388:                                                queue(webSocketImplRemove);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:397:                                        webSocket = webSocketImplRemove;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:407:                            List<WebSocketWorker> list3 = this.decoders;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:409:                                Iterator<WebSocketWorker> it4 = list3.iterator();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:432:                List<WebSocketWorker> list4 = this.decoders;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:434:                    Iterator<WebSocketWorker> it5 = list4.iterator();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:457:    protected void allocateBuffers(WebSocket webSocket) throws InterruptedException {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:466:        return ByteBuffer.allocate(WebSocketImpl.RCVBUF);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:469:    private void queue(WebSocketImpl webSocketImpl) throws InterruptedException {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:470:        if (webSocketImpl.workerThread == null) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:471:            List<WebSocketWorker> list = this.decoders;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:472:            webSocketImpl.workerThread = list.get(this.queueinvokes % list.size());
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:475:        webSocketImpl.workerThread.put(webSocketImpl);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:490:    private void handleIOException(SelectionKey selectionKey, WebSocket webSocket, IOException iOException) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:492:        if (webSocket != null) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:493:            webSocket.closeConnection(1006, iOException.getMessage());
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:503:        if (WebSocketImpl.DEBUG) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:509:    public void handleFatal(WebSocket webSocket, Exception exc) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:510:        onError(webSocket, exc);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:525:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:526:    public final void onWebsocketMessage(WebSocket webSocket, String str) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:527:        onMessage(webSocket, str);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:530:    @Override // com.JavaWebsocket.WebSocketAdapter, com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:532:    public void onWebsocketMessageFragment(WebSocket webSocket, Framedata framedata) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:533:        onFragment(webSocket, framedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:536:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:537:    public final void onWebsocketMessage(WebSocket webSocket, ByteBuffer byteBuffer) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:538:        onMessage(webSocket, byteBuffer);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:541:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:542:    public final void onWebsocketOpen(WebSocket webSocket, Handshakedata handshakedata) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:543:        if (addConnection(webSocket)) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:544:            onOpen(webSocket, (ClientHandshake) handshakedata);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:548:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:549:    public final void onWebsocketClose(WebSocket webSocket, int i, String str, boolean z) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:552:            if (removeConnection(webSocket)) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:553:                onClose(webSocket, i, str, z);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:557:                releaseBuffers(webSocket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:564:    protected boolean removeConnection(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:567:            zRemove = this.connections.remove(webSocket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:575:    @Override // com.JavaWebsocket.WebSocketAdapter, com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:576:    public ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer(WebSocket webSocket, Draft draft, ClientHandshake clientHandshake) throws InvalidDataException {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:577:        return super.onWebsocketHandshakeReceivedAsServer(webSocket, draft, clientHandshake);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:580:    protected boolean addConnection(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:584:                zAdd = this.connections.add(webSocket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:588:        webSocket.close(1001);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:592:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:593:    public final void onWebsocketError(WebSocket webSocket, Exception exc) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:594:        onError(webSocket, exc);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:597:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:598:    public final void onWriteDemand(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:599:        WebSocketImpl webSocketImpl = (WebSocketImpl) webSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:601:            webSocketImpl.key.interestOps(5);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:603:            webSocketImpl.outQueue.clear();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:608:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:609:    public void onWebsocketCloseInitiated(WebSocket webSocket, int i, String str) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:610:        onCloseInitiated(webSocket, i, str);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:613:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:614:    public void onWebsocketClosing(WebSocket webSocket, int i, String str, boolean z) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:615:        onClosing(webSocket, i, str, z);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:618:    public final void setWebSocketFactory(WebSocketServerFactory webSocketServerFactory) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:619:        this.wsf = webSocketServerFactory;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:622:    public final WebSocketFactory getWebSocketFactory() {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:626:    private Socket getSocket(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:627:        return ((SocketChannel) ((WebSocketImpl) webSocket).key.channel()).socket();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:630:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:631:    public InetSocketAddress getLocalSocketAddress(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:632:        return (InetSocketAddress) getSocket(webSocket).getLocalSocketAddress();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:635:    @Override // com.JavaWebsocket.WebSocketListener
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:636:    public InetSocketAddress getRemoteSocketAddress(WebSocket webSocket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:637:        return (InetSocketAddress) getSocket(webSocket).getRemoteSocketAddress();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:640:    public class WebSocketWorker extends Thread {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:642:        private BlockingQueue<WebSocketImpl> iqueue = new LinkedBlockingQueue();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:644:        public WebSocketWorker() {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:645:            setName("WebSocketWorker-" + getId());
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:646:            setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() { // from class: com.JavaWebsocket.server.WebSocketServer.WebSocketWorker.1
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:655:        public void put(WebSocketImpl webSocketImpl) throws InterruptedException {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:656:            this.iqueue.put(webSocketImpl);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:661:            WebSocketImpl webSocketImplTake;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:663:            WebSocketServer webSocketServer;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:664:            WebSocketImpl webSocketImpl = null;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:668:                        webSocketImplTake = this.iqueue.take();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:670:                            ByteBuffer byteBufferPoll = webSocketImplTake.inQueue.poll();
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:673:                                    webSocketImplTake.decode(byteBufferPoll);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:674:                                    webSocketServer = WebSocketServer.this;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:677:                                    webSocketServer = WebSocketServer.this;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:679:                                webSocketServer.pushBuffer(byteBufferPoll);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:680:                                webSocketImpl = webSocketImplTake;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:682:                                WebSocketServer.this.pushBuffer(byteBufferPoll);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:687:                            WebSocketServer.this.handleFatal(webSocketImplTake, e);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/WebSocketServer.java:691:                        webSocketImplTake = webSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:1:package com.JavaWebsocket.server;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:3:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:4:import com.JavaWebsocket.WebSocketAdapter;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:5:import com.JavaWebsocket.WebSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:6:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:7:import com.JavaWebsocket.server.WebSocketServer;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:14:public class DefaultWebSocketServerFactory implements WebSocketServer.WebSocketServerFactory {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:15:    @Override // com.JavaWebsocket.server.WebSocketServer.WebSocketServerFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:19:    @Override // com.JavaWebsocket.server.WebSocketServer.WebSocketServerFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:24:    @Override // com.JavaWebsocket.WebSocketFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:25:    public /* bridge */ /* synthetic */ WebSocket createWebSocket(WebSocketAdapter webSocketAdapter, List list, Socket socket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:26:        return createWebSocket(webSocketAdapter, (List<Draft>) list, socket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:29:    @Override // com.JavaWebsocket.WebSocketFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:30:    public WebSocketImpl createWebSocket(WebSocketAdapter webSocketAdapter, Draft draft, Socket socket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:31:        return new WebSocketImpl(webSocketAdapter, draft);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:34:    @Override // com.JavaWebsocket.server.WebSocketServer.WebSocketServerFactory, com.JavaWebsocket.WebSocketFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:35:    public WebSocketImpl createWebSocket(WebSocketAdapter webSocketAdapter, List<Draft> list, Socket socket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultWebSocketServerFactory.java:36:        return new WebSocketImpl(webSocketAdapter, list);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:1:package com.JavaWebsocket.server;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:3:import com.JavaWebsocket.SSLSocketChannel2;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:4:import com.JavaWebsocket.WebSocket;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:5:import com.JavaWebsocket.WebSocketAdapter;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:6:import com.JavaWebsocket.WebSocketImpl;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:7:import com.JavaWebsocket.drafts.Draft;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:8:import com.JavaWebsocket.server.WebSocketServer;
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:21:public class DefaultSSLWebSocketServerFactory implements WebSocketServer.WebSocketServerFactory {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:25:    @Override // com.JavaWebsocket.WebSocketFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:26:    public /* bridge */ /* synthetic */ WebSocket createWebSocket(WebSocketAdapter webSocketAdapter, List list, Socket socket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:27:        return createWebSocket(webSocketAdapter, (List<Draft>) list, socket);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:30:    public DefaultSSLWebSocketServerFactory(SSLContext sSLContext) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:34:    public DefaultSSLWebSocketServerFactory(SSLContext sSLContext, ExecutorService executorService) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:42:    @Override // com.JavaWebsocket.server.WebSocketServer.WebSocketServerFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:49:    @Override // com.JavaWebsocket.WebSocketFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:50:    public WebSocketImpl createWebSocket(WebSocketAdapter webSocketAdapter, Draft draft, Socket socket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:51:        return new WebSocketImpl(webSocketAdapter, draft);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:54:    @Override // com.JavaWebsocket.server.WebSocketServer.WebSocketServerFactory, com.JavaWebsocket.WebSocketFactory
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:55:    public WebSocketImpl createWebSocket(WebSocketAdapter webSocketAdapter, List<Draft> list, Socket socket) {
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:56:        return new WebSocketImpl(webSocketAdapter, list);
+decompiled/jadx/base/sources/com/JavaWebsocket/server/DefaultSSLWebSocketServerFactory.java:59:    @Override // com.JavaWebsocket.server.WebSocketServer.WebSocketServerFactory
+decompiled/jadx/base/sources/com/appsflyer/AFInAppEventType.java:20:    public static final String LOGIN = "af_login";
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1kSDK.java:19:import com.netease.messiah.SystemInterface;
+decompiled/jadx/base/sources/com/appsflyer/internal/AFe1rSDK.java:19:    private static final List<String> getMediationNetwork = CollectionsKt.listOf((Object[]) new String[]{AFInAppEventType.ACHIEVEMENT_UNLOCKED, AFInAppEventType.AD_CLICK, AFInAppEventType.AD_VIEW, AFInAppEventType.ADD_PAYMENT_INFO, AFInAppEventType.ADD_TO_CART, AFInAppEventType.ADD_TO_WISH_LIST, AFInAppEventType.COMPLETE_REGISTRATION, AFInAppEventType.CONTENT_VIEW, AFInAppEventType.INITIATED_CHECKOUT, AFInAppEventType.INVITE, AFInAppEventType.LEVEL_ACHIEVED, AFInAppEventType.LIST_VIEW, AFInAppEventType.LOGIN, AFInAppEventType.OPENED_FROM_PUSH_NOTIFICATION, AFInAppEventType.PURCHASE, AFInAppEventType.RATE, AFInAppEventType.RE_ENGAGE, AFInAppEventType.SEARCH, AFInAppEventType.SHARE, AFInAppEventType.SPENT_CREDIT, AFInAppEventType.START_TRIAL, AFInAppEventType.SUBSCRIBE, AFInAppEventType.TRAVEL_BOOKING, AFInAppEventType.TUTORIAL_COMPLETION, AFInAppEventType.UPDATE});
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1oSDK.java:4:import com.CCMsgSdk.WebSocketMessageCodeType;
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1oSDK.java:56:                        aFj1oSDK.getMediationNetwork.put("response", WebSocketMessageCodeType.SUC);
+decompiled/jadx/base/sources/com/appsflyer/internal/AFi1aSDK.java:4:import com.CCMsgSdk.WebSocketMessageCodeType;
+decompiled/jadx/base/sources/com/appsflyer/internal/AFi1aSDK.java:110:                this.getMediationNetwork.put("response", WebSocketMessageCodeType.SUC);
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1uSDK.java:12:import com.CCMsgSdk.WebSocketMessageCodeType;
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1uSDK.java:109:                        AFj1uSDK.this.getMediationNetwork.put("response", WebSocketMessageCodeType.SUC);
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1ySDK.java:8:import com.CCMsgSdk.WebSocketMessageCodeType;
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1ySDK.java:183:                        map.put("response", WebSocketMessageCodeType.SUC);
+decompiled/jadx/base/sources/com/appsflyer/internal/AFa1ySDK.java:3844:    public final void validateAndLogInAppPurchase(Context context, String publicKey, String signature, String purchaseData, String price, String currency, Map<String, String> additionalParameters) {
+decompiled/jadx/base/sources/com/appsflyer/internal/AFa1ySDK.java:4093:    public final void validateAndLogInAppPurchase(AFPurchaseDetails afPurchaseDetails, Map<String, String> map, AppsFlyerInAppPurchaseValidationCallback callback) {
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1mSDK.java:7:import com.CCMsgSdk.WebSocketMessageCodeType;
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1mSDK.java:42:                            AFj1mSDK.this.getMediationNetwork.put("response", WebSocketMessageCodeType.SUC);
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1wSDK.java:7:import com.CCMsgSdk.WebSocketMessageCodeType;
+decompiled/jadx/base/sources/com/appsflyer/internal/AFj1wSDK.java:56:                    this.getMediationNetwork.put("response", WebSocketMessageCodeType.SUC);
+decompiled/jadx/base/sources/com/appsflyer/AppsFlyerLib.java:163:    public abstract void validateAndLogInAppPurchase(Context context, String str, String str2, String str3, String str4, String str5, Map<String, String> map);
+decompiled/jadx/base/sources/com/appsflyer/AppsFlyerLib.java:165:    public abstract void validateAndLogInAppPurchase(AFPurchaseDetails aFPurchaseDetails, Map<String, String> map, AppsFlyerInAppPurchaseValidationCallback appsFlyerInAppPurchaseValidationCallback);
+decompiled/jadx/base/sources/com/appsflyer/share/ShareInviteHelper.java:29:    public static void logInvite(Context context, String channel, Map<String, String> eventParameters) {
+decompiled/jadx/base/sources/com/appsflyer/AppsFlyer2dXConversionCallback.java:7:import com.facebook.login.LoginLogger;
+decompiled/jadx/base/sources/com/appsflyer/AppsFlyer2dXConversionCallback.java:62:            jSONObject.put("status", LoginLogger.EVENT_EXTRAS_FAILURE);
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/CommonConstants.java:45:        public static final int CANCEL_LOGIN = 20004;
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/authorize/p008ui/BaseWebAuthorizeActivity.java:8:import android.content.DialogInterface;
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/authorize/p008ui/BaseWebAuthorizeActivity.java:381:            alertDialogCreate.setButton(-1, this.mContext.getString(C1624R.string.aweme_open_ssl_ok), new DialogInterface.OnClickListener() { // from class: com.bytedance.sdk.open.tiktok.authorize.ui.BaseWebAuthorizeActivity.2
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/authorize/p008ui/BaseWebAuthorizeActivity.java:382:                @Override // android.content.DialogInterface.OnClickListener
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/authorize/p008ui/BaseWebAuthorizeActivity.java:383:                public void onClick(DialogInterface dialogInterface, int i) {
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/authorize/p008ui/BaseWebAuthorizeActivity.java:387:            alertDialogCreate.setButton(-2, this.mContext.getString(C1624R.string.aweme_open_ssl_cancel), new DialogInterface.OnClickListener() { // from class: com.bytedance.sdk.open.tiktok.authorize.ui.BaseWebAuthorizeActivity.3
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/authorize/p008ui/BaseWebAuthorizeActivity.java:388:                @Override // android.content.DialogInterface.OnClickListener
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/authorize/p008ui/BaseWebAuthorizeActivity.java:389:                public void onClick(DialogInterface dialogInterface, int i) {
+decompiled/jadx/base/sources/com/bytedance/sdk/open/tiktok/impl/TikTokOpenApiImpl.java:27:    private static final int API_TYPE_LOGIN = 0;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:440:        public static final int com_smart_login_code = 2131099979;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:838:        public static final int com_facebook_login_fragment_progress_bar = 2131296961;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1011:        public static final int com_facebook_login_fragment = 2131493084;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1074:        public static final int com_facebook_loginview_cancel_action = 2131755464;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1075:        public static final int com_facebook_loginview_log_in_button = 2131755465;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1076:        public static final int com_facebook_loginview_log_in_button_continue = 2131755466;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1077:        public static final int com_facebook_loginview_log_in_button_long = 2131755467;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1078:        public static final int com_facebook_loginview_log_out_action = 2131755468;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1079:        public static final int com_facebook_loginview_log_out_button = 2131755469;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1080:        public static final int com_facebook_loginview_logged_in_as = 2131755470;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1081:        public static final int com_facebook_loginview_logged_in_using_facebook = 2131755471;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1086:        public static final int com_facebook_smart_login_confirmation_cancel = 2131755476;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1087:        public static final int com_facebook_smart_login_confirmation_continue_as = 2131755477;
+decompiled/jadx/base/sources/com/facebook/common/C1654R.java:1088:        public static final int com_facebook_smart_login_confirmation_title = 2131755478;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:444:        public static final int com_smart_login_code = 2131099979;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:846:        public static final int com_facebook_login_fragment_progress_bar = 2131296961;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1019:        public static final int com_facebook_login_fragment = 2131493084;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1082:        public static final int com_facebook_loginview_cancel_action = 2131755464;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1083:        public static final int com_facebook_loginview_log_in_button = 2131755465;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1084:        public static final int com_facebook_loginview_log_in_button_continue = 2131755466;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1085:        public static final int com_facebook_loginview_log_in_button_long = 2131755467;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1086:        public static final int com_facebook_loginview_log_out_action = 2131755468;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1087:        public static final int com_facebook_loginview_log_out_button = 2131755469;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1088:        public static final int com_facebook_loginview_logged_in_as = 2131755470;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1089:        public static final int com_facebook_loginview_logged_in_using_facebook = 2131755471;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1094:        public static final int com_facebook_smart_login_confirmation_cancel = 2131755476;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1095:        public static final int com_facebook_smart_login_confirmation_continue_as = 2131755477;
+decompiled/jadx/base/sources/com/facebook/share/C1697R.java:1096:        public static final int com_facebook_smart_login_confirmation_title = 2131755478;
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:7:@Metadata(m5976d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\bX\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010 \u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010'\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010(\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010)\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010*\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010+\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00100\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00101\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00102\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00103\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00104\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00105\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00106\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00107\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00108\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00109\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010:\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010;\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010<\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010=\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010>\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010?\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010@\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010A\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010B\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010C\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010D\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010E\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010F\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010G\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010H\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010I\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010J\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010K\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010L\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010M\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010N\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010O\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010P\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Q\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010R\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010S\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010T\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010U\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010V\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010W\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010X\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Y\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Z\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010[\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000¨\u0006\\"}, m5977d2 = {"Lcom/facebook/internal/AnalyticsEvents;", "", "()V", "EVENT_DEVICE_SHARE_BUTTON_CREATE", "", "EVENT_DEVICE_SHARE_BUTTON_DID_TAP", "EVENT_FOA_DISAMBIGUATION_DIALOG_CANCELLED", "EVENT_FOA_DISAMBIGUATION_DIALOG_FB_DID_TAP", "EVENT_FOA_DISAMBIGUATION_DIALOG_IG_DID_TAP", "EVENT_FOA_FB_LOGIN_BUTTON_CREATE", "EVENT_FOA_FB_LOGIN_BUTTON_DID_TAP", "EVENT_FOA_IG_LOGIN_BUTTON_CREATE", "EVENT_FOA_IG_LOGIN_BUTTON_DID_TAP", "EVENT_FOA_LOGIN_BUTTON_CREATE", "EVENT_FOA_LOGIN_BUTTON_DID_TAP", "EVENT_FRIEND_PICKER_USAGE", "EVENT_LIKE_BUTTON_CREATE", "EVENT_LIKE_BUTTON_DID_TAP", "EVENT_LIKE_VIEW_CANNOT_PRESENT_DIALOG", "EVENT_LIKE_VIEW_DIALOG_DID_SUCCEED", "EVENT_LIKE_VIEW_DID_LIKE", "EVENT_LIKE_VIEW_DID_PRESENT_DIALOG", "EVENT_LIKE_VIEW_DID_PRESENT_FALLBACK", "EVENT_LIKE_VIEW_DID_UNDO_QUICKLY", "EVENT_LIKE_VIEW_DID_UNLIKE", "EVENT_LIKE_VIEW_ERROR", "EVENT_LOGIN_BUTTON_CREATE", "EVENT_LOGIN_BUTTON_DID_TAP", "EVENT_LOGIN_VIEW_USAGE", "EVENT_NATIVE_DIALOG_COMPLETE", "EVENT_NATIVE_DIALOG_START", "EVENT_NATIVE_DIALOG_TYPE_LIKE", "EVENT_NATIVE_DIALOG_TYPE_MESSAGE", "EVENT_NATIVE_DIALOG_TYPE_OG_MESSAGE", "EVENT_NATIVE_DIALOG_TYPE_OG_SHARE", "EVENT_NATIVE_DIALOG_TYPE_PHOTO_MESSAGE", "EVENT_NATIVE_DIALOG_TYPE_PHOTO_SHARE", "EVENT_NATIVE_DIALOG_TYPE_SHARE", "EVENT_NATIVE_DIALOG_TYPE_VIDEO_SHARE", "EVENT_NATIVE_LOGIN_DIALOG_COMPLETE", "EVENT_NATIVE_LOGIN_DIALOG_START", "EVENT_PLACE_PICKER_USAGE", "EVENT_SDK_INITIALIZE", "EVENT_SEND_BUTTON_CREATE", "EVENT_SEND_BUTTON_DID_TAP", "EVENT_SHARE_BUTTON_CREATE", "EVENT_SHARE_BUTTON_DID_TAP", "EVENT_SHARE_DIALOG_SHOW", "EVENT_SHARE_MESSENGER_DIALOG_SHOW", "EVENT_SHARE_RESULT", "EVENT_SMART_LOGIN_SERVICE", "EVENT_USER_SETTINGS_USAGE", "EVENT_WEB_LOGIN_COMPLETE", "PARAMETER_ACTION_ID", "PARAMETER_APP_ID", "PARAMETER_CALL_ID", "PARAMETER_DIALOG_OUTCOME", "PARAMETER_DIALOG_OUTCOME_VALUE_CANCELLED", "PARAMETER_DIALOG_OUTCOME_VALUE_COMPLETED", "PARAMETER_DIALOG_OUTCOME_VALUE_FAILED", "PARAMETER_DIALOG_OUTCOME_VALUE_UNKNOWN", "PARAMETER_LIKE_VIEW_AUXILIARY_POSITION", "PARAMETER_LIKE_VIEW_CURRENT_ACTION", "PARAMETER_LIKE_VIEW_ERROR_JSON", "PARAMETER_LIKE_VIEW_HORIZONTAL_ALIGNMENT", "PARAMETER_LIKE_VIEW_OBJECT_ID", "PARAMETER_LIKE_VIEW_OBJECT_TYPE", "PARAMETER_LIKE_VIEW_STYLE", "PARAMETER_NATIVE_LOGIN_DIALOG_COMPLETE_TIME", "PARAMETER_NATIVE_LOGIN_DIALOG_START_TIME", "PARAMETER_SHARE_DIALOG_CONTENT_PAGE_ID", "PARAMETER_SHARE_DIALOG_CONTENT_PHOTO", "PARAMETER_SHARE_DIALOG_CONTENT_STATUS", "PARAMETER_SHARE_DIALOG_CONTENT_TYPE", "PARAMETER_SHARE_DIALOG_CONTENT_UNKNOWN", "PARAMETER_SHARE_DIALOG_CONTENT_UUID", "PARAMETER_SHARE_DIALOG_CONTENT_VIDEO", "PARAMETER_SHARE_DIALOG_SHOW", "PARAMETER_SHARE_DIALOG_SHOW_AUTOMATIC", "PARAMETER_SHARE_DIALOG_SHOW_NATIVE", "PARAMETER_SHARE_DIALOG_SHOW_UNKNOWN", "PARAMETER_SHARE_DIALOG_SHOW_WEB", "PARAMETER_SHARE_ERROR_MESSAGE", "PARAMETER_SHARE_MESSENGER_GENERIC_TEMPLATE", "PARAMETER_SHARE_MESSENGER_MEDIA_TEMPLATE", "PARAMETER_SHARE_OUTCOME", "PARAMETER_SHARE_OUTCOME_CANCELLED", "PARAMETER_SHARE_OUTCOME_ERROR", "PARAMETER_SHARE_OUTCOME_SUCCEEDED", "PARAMETER_SHARE_OUTCOME_UNKNOWN", "PARAMETER_WEB_LOGIN_E2E", "PARAMETER_WEB_LOGIN_SWITCHBACK_TIME", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:14:    public static final String EVENT_FOA_FB_LOGIN_BUTTON_CREATE = "foa_fb_login_button_create";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:15:    public static final String EVENT_FOA_FB_LOGIN_BUTTON_DID_TAP = "foa_fb_login_button_did_tap";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:16:    public static final String EVENT_FOA_IG_LOGIN_BUTTON_CREATE = "foa_ig_login_button_create";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:17:    public static final String EVENT_FOA_IG_LOGIN_BUTTON_DID_TAP = "foa_ig_login_button_did_tap";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:18:    public static final String EVENT_FOA_LOGIN_BUTTON_CREATE = "foa_login_button_create";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:19:    public static final String EVENT_FOA_LOGIN_BUTTON_DID_TAP = "foa_login_button_did_tap";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:31:    public static final String EVENT_LOGIN_BUTTON_CREATE = "fb_login_button_create";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:32:    public static final String EVENT_LOGIN_BUTTON_DID_TAP = "fb_login_button_did_tap";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:33:    public static final String EVENT_LOGIN_VIEW_USAGE = "fb_login_view_usage";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:44:    public static final String EVENT_NATIVE_LOGIN_DIALOG_COMPLETE = "fb_dialogs_native_login_dialog_complete";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:45:    public static final String EVENT_NATIVE_LOGIN_DIALOG_START = "fb_dialogs_native_login_dialog_start";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:55:    public static final String EVENT_SMART_LOGIN_SERVICE = "fb_smart_login_service";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:57:    public static final String EVENT_WEB_LOGIN_COMPLETE = "fb_dialogs_web_login_dialog_complete";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:74:    public static final String PARAMETER_NATIVE_LOGIN_DIALOG_COMPLETE_TIME = "fb_native_login_dialog_complete_time";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:75:    public static final String PARAMETER_NATIVE_LOGIN_DIALOG_START_TIME = "fb_native_login_dialog_start_time";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:96:    public static final String PARAMETER_WEB_LOGIN_E2E = "fb_web_login_e2e";
+decompiled/jadx/base/sources/com/facebook/internal/AnalyticsEvents.java:97:    public static final String PARAMETER_WEB_LOGIN_SWITCHBACK_TIME = "fb_web_login_switchback_time";
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:10:/* JADX INFO: compiled from: SmartLoginOption.kt */
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:12:@Metadata(m5976d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\t\n\u0002\b\b\b\u0086\u0001\u0018\u0000 \n2\b\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\nB\u000f\b\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\t¨\u0006\u000b"}, m5977d2 = {"Lcom/facebook/internal/SmartLoginOption;", "", "value", "", "(Ljava/lang/String;IJ)V", "getValue", "()J", "None", "Enabled", "RequireConfirm", "Companion", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:13:public enum SmartLoginOption {
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:18:    private static final EnumSet<SmartLoginOption> ALL;
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:25:    public static final EnumSet<SmartLoginOption> parseOptions(long j) {
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:29:    SmartLoginOption(long j) {
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:38:        EnumSet<SmartLoginOption> enumSetAllOf = EnumSet.allOf(SmartLoginOption.class);
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:39:        Intrinsics.checkNotNullExpressionValue(enumSetAllOf, "allOf(SmartLoginOption::class.java)");
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:43:    /* JADX INFO: compiled from: SmartLoginOption.kt */
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:44:    @Metadata(m5976d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0000\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0016\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\u0007\u001a\u00020\bH\u0007R\u0014\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\t"}, m5977d2 = {"Lcom/facebook/internal/SmartLoginOption$Companion;", "", "()V", "ALL", "Ljava/util/EnumSet;", "Lcom/facebook/internal/SmartLoginOption;", "parseOptions", "bitmask", "", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:54:        public final EnumSet<SmartLoginOption> parseOptions(long bitmask) {
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:55:            EnumSet<SmartLoginOption> result = EnumSet.noneOf(SmartLoginOption.class);
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:56:            for (SmartLoginOption smartLoginOption : SmartLoginOption.ALL) {
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:57:                if ((smartLoginOption.getValue() & bitmask) != 0) {
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:58:                    result.add(smartLoginOption);
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:67:    public static SmartLoginOption[] valuesCustom() {
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:68:        SmartLoginOption[] smartLoginOptionArrValuesCustom = values();
+decompiled/jadx/base/sources/com/facebook/internal/SmartLoginOption.java:69:        return (SmartLoginOption[]) Arrays.copyOf(smartLoginOptionArrValuesCustom, smartLoginOptionArrValuesCustom.length);
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:18:import com.facebook.login.DefaultAudience;
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:19:import com.facebook.login.LoginTargetApp;
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:40:@Metadata(m5976d1 = {"\u0000 \u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b;\n\u0002\u0010\u0011\n\u0002\u0010\b\n\u0002\b;\n\u0002\u0010$\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0015\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u001e\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0011\n\u0002\u0010\u0002\n\u0002\b\f\bÇ\u0002\u0018\u00002\u00020\u0001:\u000eÕ\u0001Ö\u0001×\u0001Ø\u0001Ù\u0001Ú\u0001Û\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u001b\u0010\u0084\u0001\u001a\u0014\u0012\u0004\u0012\u00020\u0004\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u007f0~0}H\u0002J\u000f\u0010\u0085\u0001\u001a\b\u0012\u0004\u0012\u00020\u007f0~H\u0002J\u000f\u0010\u0086\u0001\u001a\b\u0012\u0004\u0012\u00020\u007f0~H\u0002J\u0013\u0010\u0087\u0001\u001a\u00030\u0088\u00012\u0007\u0010\u0089\u0001\u001a\u00020\u007fH\u0002J.\u0010\u008a\u0001\u001a\u00020A2\u0010\u0010\u008b\u0001\u001a\u000b\u0012\u0004\u0012\u00020A\u0018\u00010\u008c\u00012\u0007\u0010\u008d\u0001\u001a\u00020A2\b\u0010\u008e\u0001\u001a\u00030\u008f\u0001H\u0007J\u0018\u0010\u0090\u0001\u001a\u0005\u0018\u00010\u0091\u00012\n\u0010\u0092\u0001\u001a\u0005\u0018\u00010\u0093\u0001H\u0007J\u0093\u0001\u0010\u0094\u0001\u001a\u0005\u0018\u00010\u0095\u00012\b\u0010\u0096\u0001\u001a\u00030\u0097\u00012\u0007\u0010\u0098\u0001\u001a\u00020\u00042\u0010\u0010\u0099\u0001\u001a\u000b\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u009a\u00012\u0007\u0010\u009b\u0001\u001a\u00020\u00042\b\u0010\u009c\u0001\u001a\u00030\u009d\u00012\b\u0010\u009e\u0001\u001a\u00030\u009d\u00012\b\u0010\u009f\u0001\u001a\u00030 \u00012\u0007\u0010¡\u0001\u001a\u00020\u00042\u0007\u0010¢\u0001\u001a\u00020\u00042\t\u0010£\u0001\u001a\u0004\u0018\u00010\u00042\b\u0010¤\u0001\u001a\u00030\u009d\u00012\b\u0010¥\u0001\u001a\u00030\u009d\u00012\b\u0010¦\u0001\u001a\u00030\u009d\u0001H\u0007J½\u0001\u0010§\u0001\u001a\u0005\u0018\u00010\u0095\u00012\u0007\u0010\u0089\u0001\u001a\u00020\u007f2\u0007\u0010\u0098\u0001\u001a\u00020\u00042\u0010\u0010\u0099\u0001\u001a\u000b\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u009a\u00012\u0007\u0010\u009b\u0001\u001a\u00020\u00042\b\u0010\u009e\u0001\u001a\u00030\u009d\u00012\b\u0010\u009f\u0001\u001a\u00030 \u00012\u0007\u0010¡\u0001\u001a\u00020\u00042\u0007\u0010¢\u0001\u001a\u00020\u00042\b\u0010¨\u0001\u001a\u00030\u009d\u00012\t\u0010£\u0001\u001a\u0004\u0018\u00010\u00042\b\u0010¤\u0001\u001a\u00030\u009d\u00012\b\u0010©\u0001\u001a\u00030ª\u00012\b\u0010¥\u0001\u001a\u00030\u009d\u00012\b\u0010¦\u0001\u001a\u00030\u009d\u00012\t\u0010«\u0001\u001a\u0004\u0018\u00010\u00042\t\u0010¬\u0001\u001a\u0004\u0018\u00010\u00042\t\u0010\u00ad\u0001\u001a\u0004\u0018\u00010\u0004H\u0002JD\u0010®\u0001\u001a\u0005\u0018\u00010\u0095\u00012\b\u0010\u0096\u0001\u001a\u00030\u0097\u00012\t\u0010¯\u0001\u001a\u0004\u0018\u00010\u00042\t\u0010°\u0001\u001a\u0004\u0018\u00010\u00042\n\u0010±\u0001\u001a\u0005\u0018\u00010²\u00012\n\u0010³\u0001\u001a\u0005\u0018\u00010\u0091\u0001H\u0007J\u0016\u0010´\u0001\u001a\u0005\u0018\u00010\u0095\u00012\b\u0010\u0096\u0001\u001a\u00030\u0097\u0001H\u0007J.\u0010µ\u0001\u001a\u0005\u0018\u00010\u0095\u00012\b\u0010¶\u0001\u001a\u00030\u0095\u00012\n\u0010·\u0001\u001a\u0005\u0018\u00010\u0091\u00012\n\u0010¸\u0001\u001a\u0005\u0018\u00010\u0093\u0001H\u0007JÆ\u0001\u0010¹\u0001\u001a\t\u0012\u0005\u0012\u00030\u0095\u00010~2\n\u0010\u0096\u0001\u001a\u0005\u0018\u00010\u0097\u00012\u0007\u0010\u0098\u0001\u001a\u00020\u00042\u0010\u0010\u0099\u0001\u001a\u000b\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u009a\u00012\u0007\u0010\u009b\u0001\u001a\u00020\u00042\b\u0010\u009c\u0001\u001a\u00030\u009d\u00012\b\u0010\u009e\u0001\u001a\u00030\u009d\u00012\b\u0010\u009f\u0001\u001a\u00030 \u00012\u0007\u0010¡\u0001\u001a\u00020\u00042\u0007\u0010¢\u0001\u001a\u00020\u00042\b\u0010¨\u0001\u001a\u00030\u009d\u00012\t\u0010£\u0001\u001a\u0004\u0018\u00010\u00042\b\u0010¤\u0001\u001a\u00030\u009d\u00012\b\u0010¥\u0001\u001a\u00030\u009d\u00012\b\u0010¦\u0001\u001a\u00030\u009d\u00012\t\u0010«\u0001\u001a\u0004\u0018\u00010\u00042\t\u0010¬\u0001\u001a\u0004\u0018\u00010\u00042\u000b\b\u0002\u0010\u00ad\u0001\u001a\u0004\u0018\u00010\u0004H\u0007J\u0019\u0010º\u0001\u001a\t\u0012\u0004\u0012\u00020A0\u008c\u00012\u0007\u0010\u0089\u0001\u001a\u00020\u007fH\u0002J\u0016\u0010»\u0001\u001a\u0005\u0018\u00010\u0091\u00012\b\u0010¼\u0001\u001a\u00030\u0095\u0001H\u0007J\u0018\u0010½\u0001\u001a\u0005\u0018\u00010¾\u00012\n\u0010¼\u0001\u001a\u0005\u0018\u00010\u0095\u0001H\u0007J\u0016\u0010¿\u0001\u001a\u0005\u0018\u00010\u0091\u00012\b\u0010À\u0001\u001a\u00030\u0095\u0001H\u0007J\u0018\u0010Á\u0001\u001a\u0005\u0018\u00010\u0093\u00012\n\u0010Â\u0001\u001a\u0005\u0018\u00010\u0091\u0001H\u0007J\u001d\u0010Ã\u0001\u001a\u00030²\u00012\u0007\u0010°\u0001\u001a\u00020\u00042\b\u0010\u008e\u0001\u001a\u00030\u008f\u0001H\u0007J%\u0010Ä\u0001\u001a\u00030²\u00012\u000f\u0010Å\u0001\u001a\n\u0012\u0004\u0012\u00020\u007f\u0018\u00010~2\b\u0010\u008e\u0001\u001a\u00030\u008f\u0001H\u0002J\u0012\u0010Æ\u0001\u001a\u00020A2\u0007\u0010Ç\u0001\u001a\u00020AH\u0007J\t\u0010È\u0001\u001a\u00020AH\u0007J\u0016\u0010É\u0001\u001a\u0005\u0018\u00010\u0091\u00012\b\u0010¼\u0001\u001a\u00030\u0095\u0001H\u0007J\u0013\u0010Ê\u0001\u001a\u00020A2\b\u0010¼\u0001\u001a\u00030\u0095\u0001H\u0007J\u0016\u0010Ë\u0001\u001a\u0005\u0018\u00010\u0091\u00012\b\u0010À\u0001\u001a\u00030\u0095\u0001H\u0007J\u0014\u0010Ì\u0001\u001a\u00030\u009d\u00012\b\u0010À\u0001\u001a\u00030\u0095\u0001H\u0007J\u0013\u0010Í\u0001\u001a\u00030\u009d\u00012\u0007\u0010Î\u0001\u001a\u00020AH\u0007J?\u0010Ï\u0001\u001a\u00030Ð\u00012\b\u0010¼\u0001\u001a\u00030\u0095\u00012\t\u0010¯\u0001\u001a\u0004\u0018\u00010\u00042\t\u0010°\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010Î\u0001\u001a\u00020A2\n\u0010Ñ\u0001\u001a\u0005\u0018\u00010\u0091\u0001H\u0007J\n\u0010Ò\u0001\u001a\u00030Ð\u0001H\u0007J-\u0010Ó\u0001\u001a\u0005\u0018\u00010\u0095\u00012\b\u0010\u0096\u0001\u001a\u00030\u0097\u00012\n\u0010¼\u0001\u001a\u0005\u0018\u00010\u0095\u00012\t\u0010\u0089\u0001\u001a\u0004\u0018\u00010\u007fH\u0007J-\u0010Ô\u0001\u001a\u0005\u0018\u00010\u0095\u00012\b\u0010\u0096\u0001\u001a\u00030\u0097\u00012\n\u0010¼\u0001\u001a\u0005\u0018\u00010\u0095\u00012\t\u0010\u0089\u0001\u001a\u0004\u0018\u00010\u007fH\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010 \u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010'\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010(\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010)\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010*\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010+\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00100\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00101\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00102\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00103\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00104\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00105\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u00106\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00107\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00108\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00109\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010:\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010;\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010<\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010=\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010>\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u0016\u0010?\u001a\b\u0012\u0004\u0012\u00020A0@X\u0082\u0004¢\u0006\u0004\n\u0002\u0010BR\u000e\u0010C\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010D\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010E\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010F\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010G\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010H\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010I\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010J\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010K\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010L\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010M\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010N\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010O\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010P\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Q\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010R\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010S\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010T\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010U\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010V\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010W\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010X\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Y\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Z\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010[\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\\\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010]\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010^\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010_\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010`\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010a\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010b\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010c\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010d\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010e\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010f\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010g\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010h\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010i\u001a\u00020AX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010j\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010k\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010l\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010m\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010n\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010o\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010p\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010q\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010r\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010s\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010t\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010u\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u0016\u0010v\u001a\n w*\u0004\u0018\u00010\u00040\u0004X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010x\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010y\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010z\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010{\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R \u0010|\u001a\u0014\u0012\u0004\u0012\u00020\u0004\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u007f0~0}X\u0082\u0004¢\u0006\u0002\n\u0000R\u0015\u0010\u0080\u0001\u001a\b\u0012\u0004\u0012\u00020\u007f0~X\u0082\u0004¢\u0006\u0002\n\u0000R\u0015\u0010\u0081\u0001\u001a\b\u0012\u0004\u0012\u00020\u007f0~X\u0082\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0082\u0001\u001a\u00030\u0083\u0001X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006Ü\u0001"}, m5977d2 = {"Lcom/facebook/internal/NativeProtocol;", "", "()V", "ACTION_APPINVITE_DIALOG", "", "ACTION_CAMERA_EFFECT", "ACTION_FEED_DIALOG", "ACTION_LIKE_DIALOG", "ACTION_MESSAGE_DIALOG", "ACTION_OGACTIONPUBLISH_DIALOG", "ACTION_OGMESSAGEPUBLISH_DIALOG", "ACTION_SHARE_STORY", "AUDIENCE_EVERYONE", "AUDIENCE_FRIENDS", "AUDIENCE_ME", "BRIDGE_ARG_ACTION_ID_STRING", "BRIDGE_ARG_APP_NAME_STRING", "BRIDGE_ARG_ERROR_BUNDLE", "BRIDGE_ARG_ERROR_CODE", "BRIDGE_ARG_ERROR_DESCRIPTION", "BRIDGE_ARG_ERROR_JSON", "BRIDGE_ARG_ERROR_SUBCODE", "BRIDGE_ARG_ERROR_TYPE", "CONTENT_SCHEME", "ERROR_APPLICATION_ERROR", "ERROR_NETWORK_ERROR", "ERROR_PERMISSION_DENIED", "ERROR_PROTOCOL_ERROR", "ERROR_SERVICE_DISABLED", "ERROR_UNKNOWN_ERROR", "ERROR_USER_CANCELED", "EXTRA_ACCESS_TOKEN", "EXTRA_APPLICATION_ID", "EXTRA_APPLICATION_NAME", "EXTRA_AUTHENTICATION_TOKEN", "EXTRA_DATA_ACCESS_EXPIRATION_TIME", "EXTRA_DIALOG_COMPLETE_KEY", "EXTRA_DIALOG_COMPLETION_GESTURE_KEY", "EXTRA_EXPIRES_SECONDS_SINCE_EPOCH", "EXTRA_GET_INSTALL_DATA_PACKAGE", "EXTRA_GRAPH_API_VERSION", "EXTRA_LOGGER_REF", "EXTRA_NONCE", "EXTRA_PERMISSIONS", "EXTRA_PROTOCOL_ACTION", "EXTRA_PROTOCOL_BRIDGE_ARGS", "EXTRA_PROTOCOL_CALL_ID", "EXTRA_PROTOCOL_METHOD_ARGS", "EXTRA_PROTOCOL_METHOD_RESULTS", "EXTRA_PROTOCOL_VERSION", "EXTRA_PROTOCOL_VERSIONS", "EXTRA_TOAST_DURATION_MS", "EXTRA_USER_ID", "FACEBOOK_PROXY_AUTH_ACTIVITY", "FACEBOOK_PROXY_AUTH_APP_ID_KEY", "FACEBOOK_PROXY_AUTH_E2E_KEY", "FACEBOOK_PROXY_AUTH_PERMISSIONS_KEY", "FACEBOOK_SDK_VERSION_KEY", "FACEBOOK_TOKEN_REFRESH_ACTIVITY", "IMAGE_URL_KEY", "IMAGE_USER_GENERATED_KEY", "INTENT_ACTION_PLATFORM_ACTIVITY", "INTENT_ACTION_PLATFORM_SERVICE", "KNOWN_PROTOCOL_VERSIONS", "", "", "[Ljava/lang/Integer;", "MESSAGE_GET_ACCESS_TOKEN_REPLY", "MESSAGE_GET_ACCESS_TOKEN_REQUEST", "MESSAGE_GET_AK_SEAMLESS_TOKEN_REPLY", "MESSAGE_GET_AK_SEAMLESS_TOKEN_REQUEST", "MESSAGE_GET_INSTALL_DATA_REPLY", "MESSAGE_GET_INSTALL_DATA_REQUEST", "MESSAGE_GET_LIKE_STATUS_REPLY", "MESSAGE_GET_LIKE_STATUS_REQUEST", "MESSAGE_GET_LOGIN_STATUS_REPLY", "MESSAGE_GET_LOGIN_STATUS_REQUEST", "MESSAGE_GET_PROTOCOL_VERSIONS_REPLY", "MESSAGE_GET_PROTOCOL_VERSIONS_REQUEST", "NO_PROTOCOL_AVAILABLE", "OPEN_GRAPH_CREATE_OBJECT_KEY", "PLATFORM_PROVIDER", "PLATFORM_PROVIDER_VERSIONS", "PLATFORM_PROVIDER_VERSION_COLUMN", "PROTOCOL_VERSION_20121101", "PROTOCOL_VERSION_20130502", "PROTOCOL_VERSION_20130618", "PROTOCOL_VERSION_20131024", "PROTOCOL_VERSION_20131107", "PROTOCOL_VERSION_20140204", "PROTOCOL_VERSION_20140313", "PROTOCOL_VERSION_20140324", "PROTOCOL_VERSION_20140701", "PROTOCOL_VERSION_20141001", "PROTOCOL_VERSION_20141028", "PROTOCOL_VERSION_20141107", "PROTOCOL_VERSION_20141218", "PROTOCOL_VERSION_20150401", "PROTOCOL_VERSION_20150702", "PROTOCOL_VERSION_20160327", "PROTOCOL_VERSION_20161017", "PROTOCOL_VERSION_20170213", "PROTOCOL_VERSION_20170411", "PROTOCOL_VERSION_20170417", "PROTOCOL_VERSION_20171115", "PROTOCOL_VERSION_20210906", "RESULT_ARGS_ACCESS_TOKEN", "RESULT_ARGS_DIALOG_COMPLETE_KEY", "RESULT_ARGS_DIALOG_COMPLETION_GESTURE_KEY", "RESULT_ARGS_EXPIRES_SECONDS_SINCE_EPOCH", "RESULT_ARGS_GRAPH_DOMAIN", "RESULT_ARGS_PERMISSIONS", "RESULT_ARGS_SIGNED_REQUEST", "STATUS_ERROR_CODE", "STATUS_ERROR_DESCRIPTION", "STATUS_ERROR_JSON", "STATUS_ERROR_SUBCODE", "STATUS_ERROR_TYPE", "TAG", "kotlin.jvm.PlatformType", "WEB_DIALOG_ACTION", "WEB_DIALOG_IS_FALLBACK", "WEB_DIALOG_PARAMS", "WEB_DIALOG_URL", "actionToAppInfoMap", "", "", "Lcom/facebook/internal/NativeProtocol$NativeAppInfo;", "effectCameraAppInfoList", "facebookAppInfoList", "protocolVersionsAsyncUpdating", "Ljava/util/concurrent/atomic/AtomicBoolean;", "buildActionToAppInfoMap", "buildEffectCameraAppInfoList", "buildFacebookAppList", "buildPlatformProviderVersionURI", "Landroid/net/Uri;", "appInfo", "computeLatestAvailableVersionFromVersionSpec", "allAvailableFacebookAppVersions", "Ljava/util/TreeSet;", "latestSdkVersion", "versionSpec", "", "createBundleForException", "Landroid/os/Bundle;", "e", "Lcom/facebook/FacebookException;", "createInstagramIntent", "Landroid/content/Intent;", "context", "Landroid/content/Context;", "applicationId", "permissions", "", "e2e", "isRerequest", "", "isForPublish", "defaultAudience", "Lcom/facebook/login/DefaultAudience;", "clientState", "authType", "messengerPageId", "resetMessengerState", "isFamilyLogin", "shouldSkipAccountDedupe", "createNativeAppIntent", "ignoreAppSwitchToLoggedOut", "targetApp", "Lcom/facebook/login/LoginTargetApp;", "nonce", "codeChallenge", "codeChallengeMethod", "createPlatformActivityIntent", "callId", "action", "versionResult", "Lcom/facebook/internal/NativeProtocol$ProtocolVersionQueryResult;", "extras", "createPlatformServiceIntent", "createProtocolResultIntent", "requestIntent", "results", "error", "createProxyAuthIntents", "fetchAllAvailableProtocolVersionsForAppInfo", "getBridgeArgumentsFromIntent", "intent", "getCallIdFromIntent", "Ljava/util/UUID;", "getErrorDataFromResultIntent", "resultIntent", "getExceptionFromErrorData", "errorData", "getLatestAvailableProtocolVersionForAction", "getLatestAvailableProtocolVersionForAppInfoList", "appInfoList", "getLatestAvailableProtocolVersionForService", "minimumVersion", "getLatestKnownVersion", "getMethodArgumentsFromIntent", "getProtocolVersionFromIntent", "getSuccessResultsFromIntent", "isErrorResult", "isVersionCompatibleWithBucketedIntent", "version", "setupProtocolRequestIntent", "", "params", "updateAllAvailableProtocolVersionsAsync", "validateActivityIntent", "validateServiceIntent", "EffectTestAppInfo", "InstagramAppInfo", "KatanaAppInfo", "MessengerAppInfo", "NativeAppInfo", "ProtocolVersionQueryResult", "WakizashiAppInfo", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:109:    public static final int MESSAGE_GET_LOGIN_STATUS_REPLY = 65547;
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:110:    public static final int MESSAGE_GET_LOGIN_STATUS_REQUEST = 65546;
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:165:    @Metadata(m5976d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\b\u0002\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\b\u0010\u0003\u001a\u00020\u0004H\u0016J\b\u0010\u0005\u001a\u00020\u0004H\u0016J\b\u0010\u0006\u001a\u00020\u0004H\u0016¨\u0006\u0007"}, m5977d2 = {"Lcom/facebook/internal/NativeProtocol$InstagramAppInfo;", "Lcom/facebook/internal/NativeProtocol$NativeAppInfo;", "()V", "getLoginActivity", "", "getPackage", "getResponseType", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:168:        public String getLoginActivity() {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:184:    @Metadata(m5976d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\b\u0002\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\b\u0010\u0003\u001a\u00020\u0004H\u0016J\b\u0010\u0005\u001a\u00020\u0004H\u0016¨\u0006\u0006"}, m5977d2 = {"Lcom/facebook/internal/NativeProtocol$WakizashiAppInfo;", "Lcom/facebook/internal/NativeProtocol$NativeAppInfo;", "()V", "getLoginActivity", "", "getPackage", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:187:        public String getLoginActivity() {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:316:    public static final Intent createInstagramIntent(Context context, String applicationId, Collection<String> permissions, String e2e, boolean isRerequest, boolean isForPublish, DefaultAudience defaultAudience, String clientState, String authType, String messengerPageId, boolean resetMessengerState, boolean isFamilyLogin, boolean shouldSkipAccountDedupe) {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:329:            Intent intentCreateNativeAppIntent = INSTANCE.createNativeAppIntent(instagramAppInfo, applicationId, permissions, e2e, isForPublish, defaultAudience, clientState, authType, false, messengerPageId, resetMessengerState, LoginTargetApp.INSTAGRAM, isFamilyLogin, shouldSkipAccountDedupe, "", null, null);
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:338:    private final Intent createNativeAppIntent(NativeAppInfo appInfo, String applicationId, Collection<String> permissions, String e2e, boolean isForPublish, DefaultAudience defaultAudience, String clientState, String authType, boolean ignoreAppSwitchToLoggedOut, String messengerPageId, boolean resetMessengerState, LoginTargetApp targetApp, boolean isFamilyLogin, boolean shouldSkipAccountDedupe, String nonce, String codeChallenge, String codeChallengeMethod) {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:343:            String loginActivity = appInfo.getLoginActivity();
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:344:            if (loginActivity == null) {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:347:            Intent intentPutExtra = new Intent().setClassName(appInfo.getPackage(), loginActivity).putExtra("client_id", applicationId);
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:374:            if (isFamilyLogin) {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:400:    public static final List<Intent> createProxyAuthIntents(Context context, String applicationId, Collection<String> permissions, String e2e, boolean isRerequest, boolean isForPublish, DefaultAudience defaultAudience, String clientState, String authType, boolean ignoreAppSwitchToLoggedOut, String messengerPageId, boolean resetMessengerState, boolean isFamilyLogin, boolean shouldSkipAccountDedupe, String nonce, String codeChallenge, String codeChallengeMethod) {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:416:                Intent intentCreateNativeAppIntent = INSTANCE.createNativeAppIntent((NativeAppInfo) it.next(), applicationId, permissions, e2e, isForPublish, defaultAudience, clientState, authType, ignoreAppSwitchToLoggedOut, messengerPageId, resetMessengerState, LoginTargetApp.FACEBOOK, isFamilyLogin, shouldSkipAccountDedupe, nonce, codeChallenge, codeChallengeMethod);
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1035:    @Metadata(m5976d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\b&\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u000e\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tJ\u000e\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\u0004J\n\u0010\u000b\u001a\u0004\u0018\u00010\fH&J\b\u0010\r\u001a\u00020\fH&J\b\u0010\u000e\u001a\u00020\fH\u0016J\b\u0010\u000f\u001a\u00020\u0007H\u0016R\u0016\u0010\u0003\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\u0004X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u0010"}, m5977d2 = {"Lcom/facebook/internal/NativeProtocol$NativeAppInfo;", "", "()V", "availableVersions", "Ljava/util/TreeSet;", "", "fetchAvailableVersions", "", "force", "", "getAvailableVersions", "getLoginActivity", "", "getPackage", "getResponseType", "onAvailableVersionsNullOrEmpty", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1039:        public abstract String getLoginActivity();
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1095:    @Metadata(m5976d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0000\b\u0002\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\b\u0010\u0003\u001a\u00020\u0004H\u0016J\b\u0010\u0005\u001a\u00020\u0004H\u0016J\b\u0010\u0006\u001a\u00020\u0007H\u0002J\b\u0010\b\u001a\u00020\tH\u0016¨\u0006\n"}, m5977d2 = {"Lcom/facebook/internal/NativeProtocol$KatanaAppInfo;", "Lcom/facebook/internal/NativeProtocol$NativeAppInfo;", "()V", "getLoginActivity", "", "getPackage", "isAndroidAPIVersionNotLessThan30", "", "onAvailableVersionsNullOrEmpty", "", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1098:        public String getLoginActivity() {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1121:    @Metadata(m5976d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0001\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u0002\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\n\u0010\u0003\u001a\u0004\u0018\u00010\u0004H\u0016J\b\u0010\u0005\u001a\u00020\u0006H\u0016¨\u0006\u0007"}, m5977d2 = {"Lcom/facebook/internal/NativeProtocol$MessengerAppInfo;", "Lcom/facebook/internal/NativeProtocol$NativeAppInfo;", "()V", "getLoginActivity", "", "getPackage", "", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1123:        /* JADX INFO: renamed from: getLoginActivity, reason: collision with other method in class */
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1124:        public Void m6511getLoginActivity() {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1134:        public /* bridge */ /* synthetic */ String getLoginActivity() {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1135:            return (String) m6511getLoginActivity();
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1140:    @Metadata(m5976d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0001\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u0002\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\n\u0010\u0003\u001a\u0004\u0018\u00010\u0004H\u0016J\b\u0010\u0005\u001a\u00020\u0006H\u0016¨\u0006\u0007"}, m5977d2 = {"Lcom/facebook/internal/NativeProtocol$EffectTestAppInfo;", "Lcom/facebook/internal/NativeProtocol$NativeAppInfo;", "()V", "getLoginActivity", "", "getPackage", "", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1142:        /* JADX INFO: renamed from: getLoginActivity, reason: collision with other method in class */
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1143:        public Void m6510getLoginActivity() {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1153:        public /* bridge */ /* synthetic */ String getLoginActivity() {
+decompiled/jadx/base/sources/com/facebook/internal/NativeProtocol.java:1154:            return (String) m6510getLoginActivity();
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:8:import android.content.DialogInterface;
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:48:import com.facebook.login.LoginTargetApp;
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:72:@Metadata(m5976d1 = {"\u0000\u0082\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\n\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0007\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u0003\n\u0002\b\f\b\u0016\u0018\u0000 N2\u00020\u0001:\u0006MNOPQRB\u0017\b\u0014\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006B\u001f\b\u0012\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\tB=\b\u0012\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u0005\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\f\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u0010¢\u0006\u0002\u0010\u0011J\b\u0010,\u001a\u00020-H\u0016J\b\u0010.\u001a\u00020-H\u0002J\b\u0010/\u001a\u00020-H\u0016J(\u00100\u001a\u00020\b2\u0006\u00101\u001a\u00020\b2\u0006\u00102\u001a\u0002032\u0006\u00104\u001a\u00020\b2\u0006\u00105\u001a\u00020\bH\u0002J\b\u00106\u001a\u00020-H\u0016J\u0012\u00107\u001a\u00020-2\b\u00108\u001a\u0004\u0018\u00010\fH\u0014J\b\u00109\u001a\u00020-H\u0016J\u0018\u0010:\u001a\u00020\u00182\u0006\u0010;\u001a\u00020\b2\u0006\u0010<\u001a\u00020=H\u0016J\b\u0010>\u001a\u00020-H\u0014J\b\u0010?\u001a\u00020-H\u0014J\u0010\u0010@\u001a\u00020-2\u0006\u0010A\u001a\u00020+H\u0016J\u0012\u0010B\u001a\u00020\f2\b\u0010C\u001a\u0004\u0018\u00010\u0005H\u0017J\u0006\u0010D\u001a\u00020-J\u0012\u0010E\u001a\u00020-2\b\u0010F\u001a\u0004\u0018\u00010GH\u0004J\u0012\u0010H\u001a\u00020-2\b\u0010I\u001a\u0004\u0018\u00010\fH\u0004J\u0010\u0010J\u001a\u00020-2\u0006\u0010\u0016\u001a\u00020\u0005H\u0004J\u0010\u0010K\u001a\u00020-2\u0006\u0010L\u001a\u00020\bH\u0003R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0082\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0005X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e¢\u0006\u0002\n\u0000R\u001e\u0010\u001a\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0018@BX\u0084\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u001a\u0010\u001bR\u001e\u0010\u001c\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0018@BX\u0084\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u001c\u0010\u001bR\u001c\u0010\u001d\u001a\u0004\u0018\u00010\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001e\u0010\u001f\"\u0004\b \u0010!R\u0010\u0010\"\u001a\u0004\u0018\u00010#X\u0082\u000e¢\u0006\u0002\n\u0000R\u0014\u0010$\u001a\b\u0018\u00010%R\u00020\u0000X\u0082\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0082\u000e¢\u0006\u0002\n\u0000R\"\u0010'\u001a\u0004\u0018\u00010&2\b\u0010\u0019\u001a\u0004\u0018\u00010&@BX\u0084\u000e¢\u0006\b\n\u0000\u001a\u0004\b(\u0010)R\u0010\u0010*\u001a\u0004\u0018\u00010+X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006S"}, m5977d2 = {"Lcom/facebook/internal/WebDialog;", "Landroid/app/Dialog;", "context", "Landroid/content/Context;", "url", "", "(Landroid/content/Context;Ljava/lang/String;)V", "theme", "", "(Landroid/content/Context;Ljava/lang/String;I)V", "action", "parameters", "Landroid/os/Bundle;", "targetApp", "Lcom/facebook/login/LoginTargetApp;", ServiceSpecificExtraArgs.CastExtraArgs.LISTENER, "Lcom/facebook/internal/WebDialog$OnCompleteListener;", "(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILcom/facebook/login/LoginTargetApp;Lcom/facebook/internal/WebDialog$OnCompleteListener;)V", "contentFrameLayout", "Landroid/widget/FrameLayout;", "crossImageView", "Landroid/widget/ImageView;", "expectedRedirectUrl", "isDetached", "", "<set-?>", "isListenerCalled", "()Z", "isPageFinished", "onCompleteListener", "getOnCompleteListener", "()Lcom/facebook/internal/WebDialog$OnCompleteListener;", "setOnCompleteListener", "(Lcom/facebook/internal/WebDialog$OnCompleteListener;)V", "spinner", "Landroid/app/ProgressDialog;", "uploadTask", "Lcom/facebook/internal/WebDialog$UploadStagingResourcesTask;", "Landroid/webkit/WebView;", "webView", "getWebView", "()Landroid/webkit/WebView;", "windowParams", "Landroid/view/WindowManager$LayoutParams;", "cancel", "", "createCrossImage", "dismiss", "getScaledSize", "screenSize", "density", "", "noPaddingSize", "maxPaddingSize", "onAttachedToWindow", "onCreate", "savedInstanceState", "onDetachedFromWindow", "onKeyDown", "keyCode", "event", "Landroid/view/KeyEvent;", "onStart", "onStop", "onWindowAttributesChanged", "params", "parseResponseUri", "urlString", "resize", "sendErrorToListener", "error", "", "sendSuccessToListener", "values", "setExpectedRedirectUrl", "setUpWebView", "margin", "Builder", "Companion", "DialogWebViewClient", "InitCallback", "OnCompleteListener", "UploadStagingResourcesTask", "facebook-common_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:122:            int[] iArr = new int[LoginTargetApp.valuesCustom().length];
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:123:            iArr[LoginTargetApp.INSTAGRAM.ordinal()] = 1;
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:128:    public /* synthetic */ WebDialog(Context context, String str, Bundle bundle, int i, LoginTargetApp loginTargetApp, OnCompleteListener onCompleteListener, DefaultConstructorMarker defaultConstructorMarker) {
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:129:        this(context, str, bundle, i, loginTargetApp, onCompleteListener);
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:148:    public static final WebDialog newInstance(Context context, String str, Bundle bundle, int i, LoginTargetApp loginTargetApp, OnCompleteListener onCompleteListener) {
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:149:        return INSTANCE.newInstance(context, str, bundle, i, loginTargetApp, onCompleteListener);
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:197:    private WebDialog(Context context, String str, Bundle bundle, int i, LoginTargetApp loginTargetApp, OnCompleteListener onCompleteListener) {
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:221:        if (WhenMappings.$EnumSwitchMapping$0[loginTargetApp.ordinal()] == 1) {
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:258:    @Override // android.app.Dialog, android.content.DialogInterface
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:362:            progressDialog4.setOnCancelListener(new DialogInterface.OnCancelListener() { // from class: com.facebook.internal.-$$Lambda$WebDialog$HnzQ0YdPwTiJLF01zwL9-4pTRmw
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:363:                @Override // android.content.DialogInterface.OnCancelListener
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:364:                public final void onCancel(DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:365:                    WebDialog.m6517onCreate$lambda4(this.f$0, dialogInterface);
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:401:    public static final void m6517onCreate$lambda4(WebDialog this$0, DialogInterface dialogInterface) {
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:486:    @Override // android.app.Dialog, android.content.DialogInterface
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:1089:    @Metadata(m5976d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u0006\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\b\u0010\u0016\u001a\u00020\u0004H\u0007J\u0012\u0010\u0017\u001a\u00020\u00182\b\u0010\u0019\u001a\u0004\u0018\u00010\u001aH\u0005J6\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u0019\u001a\u00020\u001a2\b\u0010\u001d\u001a\u0004\u0018\u00010\n2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001f2\u0006\u0010 \u001a\u00020\u00042\b\u0010!\u001a\u0004\u0018\u00010\"H\u0007J>\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u0019\u001a\u00020\u001a2\b\u0010\u001d\u001a\u0004\u0018\u00010\n2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001f2\u0006\u0010 \u001a\u00020\u00042\u0006\u0010#\u001a\u00020$2\b\u0010!\u001a\u0004\u0018\u00010\"H\u0007J\u0012\u0010%\u001a\u00020\u00182\b\u0010&\u001a\u0004\u0018\u00010\u0014H\u0007J\u0010\u0010'\u001a\u00020\u00182\u0006\u0010 \u001a\u00020\u0004H\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\nX\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\nX\u0082T¢\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0004X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006("}, m5977d2 = {"Lcom/facebook/internal/WebDialog$Companion;", "", "()V", "API_EC_DIALOG_CANCEL", "", "BACKGROUND_GRAY", "DEFAULT_THEME", "DISABLE_SSL_CHECK_FOR_TESTING", "", "DISPLAY_TOUCH", "", "LOG_TAG", "MAX_PADDING_SCREEN_HEIGHT", "MAX_PADDING_SCREEN_WIDTH", "MIN_SCALE_FACTOR", "", "NO_PADDING_SCREEN_HEIGHT", "NO_PADDING_SCREEN_WIDTH", "PLATFORM_DIALOG_PATH_REGEX", "initCallback", "Lcom/facebook/internal/WebDialog$InitCallback;", "webDialogTheme", "getWebDialogTheme", "initDefaultTheme", "", "context", "Landroid/content/Context;", "newInstance", "Lcom/facebook/internal/WebDialog;", "action", "parameters", "Landroid/os/Bundle;", "theme", ServiceSpecificExtraArgs.CastExtraArgs.LISTENER, "Lcom/facebook/internal/WebDialog$OnCompleteListener;", "targetApp", "Lcom/facebook/login/LoginTargetApp;", "setInitCallback", "callback", "setWebDialogTheme", "facebook-common_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:1116:            return new WebDialog(context, action, parameters, theme, LoginTargetApp.FACEBOOK, listener, null);
+decompiled/jadx/base/sources/com/facebook/internal/WebDialog.java:1120:        public final WebDialog newInstance(Context context, String action, Bundle parameters, int theme, LoginTargetApp targetApp, OnCompleteListener listener) {
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:20:@Metadata(m5976d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010$\n\u0002\u0010\b\n\u0002\u0010\"\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0004\u0018\u0000 \u00192\u00020\u0001:\u0001\u0019B\u007f\b\u0000\u0012\u001c\u0010\u0002\u001a\u0018\u0012\u0004\u0012\u00020\u0004\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0005\u0018\u00010\u0003\u0012\u001c\u0010\u0006\u001a\u0018\u0012\u0004\u0012\u00020\u0004\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0005\u0018\u00010\u0003\u0012\u001c\u0010\u0007\u001a\u0018\u0012\u0004\u0012\u00020\u0004\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0005\u0018\u00010\u0003\u0012\b\u0010\b\u001a\u0004\u0018\u00010\t\u0012\b\u0010\n\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\t¢\u0006\u0002\u0010\fJ\u001e\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u00042\u0006\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u0016J\u0012\u0010\u0017\u001a\u0004\u0018\u00010\t2\b\u0010\u0018\u001a\u0004\u0018\u00010\u0012R'\u0010\u0007\u001a\u0018\u0012\u0004\u0012\u00020\u0004\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0005\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0010\u0010\u000b\u001a\u0004\u0018\u00010\tX\u0082\u0004¢\u0006\u0002\n\u0000R'\u0010\u0002\u001a\u0018\u0012\u0004\u0012\u00020\u0004\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0005\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u000eR\u0010\u0010\b\u001a\u0004\u0018\u00010\tX\u0082\u0004¢\u0006\u0002\n\u0000R'\u0010\u0006\u001a\u0018\u0012\u0004\u0012\u00020\u0004\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0005\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u000eR\u0010\u0010\n\u001a\u0004\u0018\u00010\tX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u001a"}, m5977d2 = {"Lcom/facebook/internal/FacebookRequestErrorClassification;", "", "otherErrors", "", "", "", "transientErrors", "loginRecoverableErrors", "otherRecoveryMessage", "", "transientRecoveryMessage", "loginRecoverableRecoveryMessage", "(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "getLoginRecoverableErrors", "()Ljava/util/Map;", "getOtherErrors", "getTransientErrors", "classify", "Lcom/facebook/FacebookRequestError$Category;", "errorCode", "errorSubCode", "isTransient", "", "getRecoveryMessage", "category", "Companion", "facebook-core_release"}, m5978k = 1, m5979mv = {1, 5, 1}, m5981xi = 48)
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:35:    public static final String KEY_LOGIN_RECOVERABLE = "login_recoverable";
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:41:    private final Map<Integer, Set<Integer>> loginRecoverableErrors;
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:42:    private final String loginRecoverableRecoveryMessage;
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:56:            iArr[FacebookRequestError.Category.LOGIN_RECOVERABLE.ordinal()] = 2;
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:75:        this.loginRecoverableErrors = map3;
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:78:        this.loginRecoverableRecoveryMessage = str3;
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:89:    public final Map<Integer, Set<Integer>> getLoginRecoverableErrors() {
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:90:        return this.loginRecoverableErrors;
+decompiled/jadx/base/sources/com/facebook/internal/FacebookRequestErrorClassification.java:99:            return this.loginRecoverableRecoveryMessage;

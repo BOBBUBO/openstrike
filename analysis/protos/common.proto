@@ -1,0 +1,298 @@
+// Extracted from common.proto in libGame.so
+syntax = "proto2";
+package mobile.server;
+
+message Void {
+}
+
+message ConnectServerRequest {
+  optional bytes routes = 1;
+  required mobile.server.ConnectServerRequest.RequestType type = 2;
+  optional bytes clientid = 3;
+  optional bytes entityid = 4;
+  optional bytes reconnectkey = 5;
+  optional uint32 opt = 6;
+  enum RequestType {
+    NEW_CONNECTION = 0;
+    RE_CONNECTION = 1;
+  }
+}
+
+message ConnectServerReply {
+  optional bytes routes = 1;
+  required mobile.server.ConnectServerReply.ReplyType type = 2;
+  optional mobile.server.StringIndexes sindexes = 3;
+  enum ReplyType {
+    BUSY = 0;
+    CONNECTED = 1;
+    RECONNECT_SUCCEEDED = 2;
+    RECONNECT_FAILED = 3;
+    FORBIDDEN = 4;
+    MAX_CONNECTION = 5;
+    CONNECTION_OVER = 6;
+  }
+}
+
+message Gate2GameReturnVal {
+  required mobile.server.Gate2GameReturnVal.CallbackType type = 1;
+  required int32 callback_id = 2;
+  optional bool return_status = 3;
+  optional bytes return_val = 4;
+  optional bytes error_msg = 5;
+  enum CallbackType {
+    NO_SUCH_CALLBACK = 0;
+    GATE2GAME_ENTITY_MSG = 1;
+  }
+}
+
+message Md5OrIndex {
+  optional bytes md5 = 1;
+  optional sint32 index = 2;
+}
+
+message EntityMessage {
+  optional bytes routes = 1;
+  required bytes id = 2;
+  required mobile.server.Md5OrIndex method = 3;
+  optional bytes parameters = 4;
+}
+
+message EntityInfo {
+  optional bytes routes = 1;
+  optional mobile.server.Md5OrIndex type = 2;
+  optional bytes id = 3;
+  optional bytes info = 4;
+}
+
+message OutBandInfo {
+  optional bytes routes = 1;
+  required bytes message = 2;
+}
+
+message ServerInfo {
+  optional uint32 sid = 1;
+  optional bytes ip = 2;
+  optional uint32 port = 3;
+  optional uint32 grp = 4;
+  optional bytes extra = 5;
+  optional double timestamp = 6;
+}
+
+message EntityMailbox {
+  required bytes entityid = 1;
+  optional mobile.server.ServerInfo serverinfo = 2;
+}
+
+message SpaceCenter {
+  required int32 x = 1;
+  required int32 y = 2;
+  required int32 z = 3;
+  optional int32 range = 4;
+}
+
+message Position {
+  optional float x = 1;
+  optional float y = 2;
+  optional float z = 3;
+  optional double dx = 4;
+  optional double dy = 5;
+  optional double dz = 6;
+}
+
+message Direction {
+  optional float yaw = 1;
+  optional float roll = 2;
+  optional float pitch = 3;
+}
+
+message PositionInfo {
+  optional uint64 guid = 1;
+  optional bytes posxz = 2;
+  optional bytes posxyz = 3;
+  optional mobile.server.Position pos = 4;
+  optional mobile.server.Direction dir = 5;
+  optional float speed = 6;
+  optional uint32 stamp = 7;
+  optional bytes sextra = 8;
+  optional bytes eid = 9;
+  optional bool upaoi = 10;
+  optional bool upself = 11;
+  optional uint64 from = 12;
+  optional bool ghost = 13;
+  optional mobile.server.SpaceCenter center = 14;
+}
+
+message ForwardPosInfo {
+  required bytes entityid = 1;
+  optional mobile.server.PositionInfo pos = 2;
+  optional bytes sender = 3;
+}
+
+message AoiInfo {
+  repeated mobile.server.PositionInfo pos = 1;
+}
+
+message ForwardAoiInfo {
+  required bytes entityid = 1;
+  required mobile.server.AoiInfo info = 2;
+}
+
+message InterestInfo {
+  required bytes entityid = 1;
+  repeated uint64 guids = 2;
+}
+
+message DistAoiItem {
+  required uint64 guid = 1;
+  required bytes id = 2;
+  required bytes name = 3;
+}
+
+message DistAoi {
+  repeated mobile.server.DistAoiItem aois = 1;
+  optional bytes eid = 2;
+}
+
+message AoiGuid {
+  required uint64 guid = 1;
+  repeated uint64 init = 2;
+  repeated uint64 enter = 3;
+  repeated uint64 leave = 4;
+  repeated uint64 remove = 5;
+  optional mobile.server.DistAoi dist_aoi = 6;
+  optional mobile.server.SpaceCenter center = 7;
+}
+
+message ForwardAoiGuid {
+  required bytes entityid = 1;
+  required mobile.server.AoiGuid guid = 2;
+}
+
+message PropValue {
+  optional int64 ivalue = 1;
+  optional float fvalue = 2;
+  optional double dvalue = 3;
+  optional bytes svalue = 4;
+  optional uint32 flag = 5;
+  optional int32 itype = 6;
+  optional bool isbyte = 7;
+  optional uint32 sindex = 8;
+}
+
+message PropItem {
+  optional uint32 oper = 1;
+  optional mobile.server.PropValue name = 2;
+  optional mobile.server.PropValue value = 3;
+  optional mobile.server.PropDict dict = 4;
+  optional mobile.server.AreaMessage msg = 5;
+  repeated mobile.server.PropValue path = 6;
+  optional bytes eid = 7;
+  optional bool ghost = 8;
+  optional uint32 flag = 9;
+  optional uint32 sindex = 10;
+}
+
+message PropDict {
+  repeated mobile.server.PropValue path = 1;
+  repeated mobile.server.PropItem item = 2;
+}
+
+message AoiProp {
+  optional uint64 guid = 1;
+  optional mobile.server.PositionInfo pos = 2;
+  repeated mobile.server.PropItem props = 3;
+  optional mobile.server.AoiInfo aoi_info = 4;
+}
+
+message AreaMessage {
+  optional bytes id = 1;
+  optional uint64 guid = 2;
+  required mobile.server.Md5OrIndex method = 3;
+  optional mobile.server.PropItem param = 4;
+  optional bytes caller = 5;
+  optional mobile.server.AreaMessage.MsgType type = 6;
+  optional bool self = 7;
+  optional bytes sbson = 8;
+  optional bool isarray = 9;
+  optional uint32 flag = 10;
+  optional bytes sender = 11;
+  optional bytes smsgpack = 12;
+  enum MsgType {
+    MT_GAME_CLIENT = 1;
+    MT_CLIENT_GAME = 2;
+    MT_GAME_GAME = 3;
+  }
+}
+
+message SpaceData {
+  optional mobile.server.PropItem key = 1;
+  optional mobile.server.PropItem value = 2;
+  optional mobile.server.PropDict dict = 3;
+}
+
+message ForwardAoiProps {
+  required bytes entityid = 1;
+  required mobile.server.AoiProp props = 2;
+}
+
+message AreaMailBox {
+  optional bytes id = 1;
+  optional bytes ip = 2;
+  optional int32 port = 3;
+  optional int32 callback = 4;
+  optional bool client = 5;
+  optional bytes callid = 6;
+  optional bytes callent = 7;
+  optional bytes method = 8;
+  optional uint64 stamp = 9;
+  optional uint32 opt = 10;
+  optional uint64 sguid = 11;
+  optional uint64 passport = 12;
+}
+
+message AreaCreateEntityMsg {
+  required bytes name = 1;
+  required bytes id = 2;
+  required uint64 guid = 3;
+  optional mobile.server.AreaCreateEntityMsg.CreateType type = 4;
+  optional mobile.server.PropItem param = 5;
+  optional mobile.server.AoiProp props = 6;
+  optional bytes bind_name = 7;
+  optional bytes bind_entity = 8;
+  optional uint64 depend = 9;
+  enum CreateType {
+    CT_ENTITY = 0;
+    CT_GLOBAL = 1;
+  }
+}
+
+message TraceRoute {
+  optional bytes clientid = 1;
+  optional uint64 sclient = 2;
+  optional uint64 sgate = 3;
+  optional uint64 sgame = 4;
+  optional uint64 rgame = 5;
+  optional uint64 rgate = 6;
+  optional uint64 rclient = 7;
+  optional uint64 pclient = 8;
+  optional uint64 wclient = 9;
+}
+
+message Ping {
+  required bytes clientid = 1;
+  required bytes entityid = 2;
+  required uint64 stamp = 3;
+  optional bytes data = 4;
+}
+
+message SpectateMessage {
+  required bytes data = 1;
+  required uint32 id = 2;
+}
+
+message StringIndexes {
+  repeated bytes sindexes = 1;
+  required uint32 preset = 2;
+  required uint64 hash = 3;
+}
+

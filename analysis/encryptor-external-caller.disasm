@@ -1,0 +1,531 @@
+
+decompiled/native/lib/arm64-v8a/libGame.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000003f7ae00 <_ZN5Timer9get_totalE14time_unit_type@@Base+0x48>:
+ 3f7ae00:	1e611800 	fdiv	d0, d0, d1
+ 3f7ae04:	a8c24ff4 	ldp	x20, x19, [sp], #32
+ 3f7ae08:	d65f03c0 	ret
+
+0000000003f7ae0c <_ZN5Timer5printEv@@Base>:
+ 3f7ae0c:	a9be4ff4 	stp	x20, x19, [sp, #-32]!
+ 3f7ae10:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 3f7ae14:	910043fd 	add	x29, sp, #0x10
+ 3f7ae18:	aa0003e8 	mov	x8, x0
+ 3f7ae1c:	38420d09 	ldrb	w9, [x8, #32]!
+ 3f7ae20:	aa0003f4 	mov	x20, x0
+ 3f7ae24:	370000c9 	tbnz	w9, #0, 3f7ae3c <_ZN5Timer5printEv@@Base+0x30>
+ 3f7ae28:	91000513 	add	x19, x8, #0x1
+ 3f7ae2c:	3940e288 	ldrb	w8, [x20, #56]
+ 3f7ae30:	340000c8 	cbz	w8, 3f7ae48 <_ZN5Timer5printEv@@Base+0x3c>
+ 3f7ae34:	9476190f 	bl	5d01270 <_ZNSt6__ndk16chrono12steady_clock3nowEv@plt>
+ 3f7ae38:	14000005 	b	3f7ae4c <_ZN5Timer5printEv@@Base+0x40>
+ 3f7ae3c:	f9401a93 	ldr	x19, [x20, #48]
+ 3f7ae40:	3940e288 	ldrb	w8, [x20, #56]
+ 3f7ae44:	35ffff88 	cbnz	w8, 3f7ae34 <_ZN5Timer5printEv@@Base+0x28>
+ 3f7ae48:	f9400680 	ldr	x0, [x20, #8]
+ 3f7ae4c:	f9400288 	ldr	x8, [x20]
+ 3f7ae50:	b0fe3d09 	adrp	x9, 71b000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1b277>
+ 3f7ae54:	fd452d20 	ldr	d0, [x9, #2648]
+ 3f7ae58:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 3f7ae5c:	cb080008 	sub	x8, x0, x8
+ 3f7ae60:	9e620101 	scvtf	d1, x8
+ 3f7ae64:	b0fe31c0 	adrp	x0, 5b3000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x183277>
+ 3f7ae68:	1e601820 	fdiv	d0, d1, d0
+ 3f7ae6c:	911ad400 	add	x0, x0, #0x6b5
+ 3f7ae70:	aa1303e1 	mov	x1, x19
+ 3f7ae74:	a8c24ff4 	ldp	x20, x19, [sp], #32
+ 3f7ae78:	1476186a 	b	5d01020 <printf@plt>
+
+0000000003f7ae7c <_ZN5Timer21get_current_timestampEv@@Base>:
+ 3f7ae7c:	147618fd 	b	5d01270 <_ZNSt6__ndk16chrono12steady_clock3nowEv@plt>
+
+0000000003f7ae80 <_ZN5Timer12get_time_gapERKNSt6__ndk16chrono10time_pointINS1_12steady_clockENS1_8durationIxNS0_5ratioILl1ELl1000000000EEEEEEESA_14time_unit_type@@Base>:
+ 3f7ae80:	f9400048 	ldr	x8, [x2]
+ 3f7ae84:	f9400029 	ldr	x9, [x1]
+ 3f7ae88:	b0fe3d0a 	adrp	x10, 71b000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1b277>
+ 3f7ae8c:	fd452d40 	ldr	d0, [x10, #2648]
+ 3f7ae90:	cb090108 	sub	x8, x8, x9
+ 3f7ae94:	9e620101 	scvtf	d1, x8
+ 3f7ae98:	1e601820 	fdiv	d0, d1, d0
+ 3f7ae9c:	1e620061 	scvtf	d1, w3
+ 3f7aea0:	1e611800 	fdiv	d0, d0, d1
+ 3f7aea4:	d65f03c0 	ret
+
+0000000003f7aea8 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base>:
+ 3f7aea8:	d10743ff 	sub	sp, sp, #0x1d0
+ 3f7aeac:	a91867fc 	stp	x28, x25, [sp, #384]
+ 3f7aeb0:	a9195ff8 	stp	x24, x23, [sp, #400]
+ 3f7aeb4:	a91a57f6 	stp	x22, x21, [sp, #416]
+ 3f7aeb8:	a91b4ff4 	stp	x20, x19, [sp, #432]
+ 3f7aebc:	a91c7bfd 	stp	x29, x30, [sp, #448]
+ 3f7aec0:	910703fd 	add	x29, sp, #0x1c0
+ 3f7aec4:	f0012969 	adrp	x9, 64a9000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0xa430>
+ 3f7aec8:	d53bd059 	mrs	x25, tpidr_el0
+ 3f7aecc:	f940e929 	ldr	x9, [x9, #464]
+ 3f7aed0:	f940172a 	ldr	x10, [x25, #40]
+ 3f7aed4:	910083e8 	add	x8, sp, #0x20
+ 3f7aed8:	6f00e400 	movi	v0.2d, #0x0
+ 3f7aedc:	9102e113 	add	x19, x8, #0xb8
+ 3f7aee0:	91004114 	add	x20, x8, #0x10
+ 3f7aee4:	91010128 	add	x8, x9, #0x40
+ 3f7aee8:	91006129 	add	x9, x9, #0x18
+ 3f7aeec:	aa0103f6 	mov	x22, x1
+ 3f7aef0:	aa0003f5 	mov	x21, x0
+ 3f7aef4:	4e081d20 	mov	v0.d[0], x9
+ 3f7aef8:	f81b83aa 	stur	x10, [x29, #-72]
+ 3f7aefc:	f9006fe8 	str	x8, [sp, #216]
+ 3f7af00:	3d800be0 	str	q0, [sp, #32]
+ 3f7af04:	aa1303e0 	mov	x0, x19
+ 3f7af08:	aa1403e1 	mov	x1, x20
+ 3f7af0c:	94761831 	bl	5d00fd0 <_ZNSt6__ndk18ios_base4initEPv@plt>
+ 3f7af10:	f900b3ff 	str	xzr, [sp, #352]
+ 3f7af14:	d0012958 	adrp	x24, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3f7af18:	f9428f18 	ldr	x24, [x24, #1304]
+ 3f7af1c:	12800008 	mov	w8, #0xffffffff            	// #-1
+ 3f7af20:	b9016be8 	str	w8, [sp, #360]
+ 3f7af24:	91006308 	add	x8, x24, #0x18
+ 3f7af28:	91010309 	add	x9, x24, #0x40
+ 3f7af2c:	f90013e8 	str	x8, [sp, #32]
+ 3f7af30:	f9006fe9 	str	x9, [sp, #216]
+ 3f7af34:	aa1403e0 	mov	x0, x20
+ 3f7af38:	94762f2a 	bl	5d06be0 <_ZNSt6__ndk113basic_filebufIcNS_11char_traitsIcEEEC2Ev@plt>
+ 3f7af3c:	f94057e8 	ldr	x8, [sp, #168]
+ 3f7af40:	b4000128 	cbz	x8, 3f7af64 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0xbc>
+ 3f7af44:	f94013e8 	ldr	x8, [sp, #32]
+ 3f7af48:	910083e9 	add	x9, sp, #0x20
+ 3f7af4c:	f85e8108 	ldur	x8, [x8, #-24]
+ 3f7af50:	8b080120 	add	x0, x9, x8
+ 3f7af54:	b9402008 	ldr	w8, [x0, #32]
+ 3f7af58:	321e0101 	orr	w1, w8, #0x4
+ 3f7af5c:	94761839 	bl	5d01040 <_ZNSt6__ndk18ios_base5clearEj@plt>
+ 3f7af60:	1400000c 	b	3f7af90 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0xe8>
+ 3f7af64:	394002c8 	ldrb	w8, [x22]
+ 3f7af68:	f9400ac9 	ldr	x9, [x22, #16]
+ 3f7af6c:	d0fe3861 	adrp	x1, 688000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xae277>
+ 3f7af70:	91117421 	add	x1, x1, #0x45d
+ 3f7af74:	7200011f 	tst	w8, #0x1
+ 3f7af78:	9a961520 	csinc	x0, x9, x22, ne	// ne = any
+ 3f7af7c:	94761879 	bl	5d01160 <fopen@plt>
+ 3f7af80:	f90057e0 	str	x0, [sp, #168]
+ 3f7af84:	b4fffe00 	cbz	x0, 3f7af44 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x9c>
+ 3f7af88:	321d03e8 	orr	w8, wzr, #0x8
+ 3f7af8c:	b900cbe8 	str	w8, [sp, #200]
+ 3f7af90:	f94013e8 	ldr	x8, [sp, #32]
+ 3f7af94:	910083e9 	add	x9, sp, #0x20
+ 3f7af98:	f85e8108 	ldur	x8, [x8, #-24]
+ 3f7af9c:	8b080128 	add	x8, x9, x8
+ 3f7afa0:	b9402108 	ldr	w8, [x8, #32]
+ 3f7afa4:	35000588 	cbnz	w8, 3f7b054 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x1ac>
+ 3f7afa8:	910083e0 	add	x0, sp, #0x20
+ 3f7afac:	321f03e2 	orr	w2, wzr, #0x2
+ 3f7afb0:	aa1f03e1 	mov	x1, xzr
+ 3f7afb4:	9476284b 	bl	5d050e0 <_ZNSt6__ndk113basic_istreamIcNS_11char_traitsIcEEE5seekgExNS_8ios_base7seekdirE@plt>
+ 3f7afb8:	910083e0 	add	x0, sp, #0x20
+ 3f7afbc:	94762139 	bl	5d034a0 <_ZNSt6__ndk113basic_istreamIcNS_11char_traitsIcEEE5tellgEv@plt>
+ 3f7afc0:	aa0103f6 	mov	x22, x1
+ 3f7afc4:	910083e0 	add	x0, sp, #0x20
+ 3f7afc8:	aa1f03e1 	mov	x1, xzr
+ 3f7afcc:	2a1f03e2 	mov	w2, wzr
+ 3f7afd0:	94762844 	bl	5d050e0 <_ZNSt6__ndk113basic_istreamIcNS_11char_traitsIcEEE5seekgExNS_8ios_base7seekdirE@plt>
+ 3f7afd4:	93407ed7 	sxtw	x23, w22
+ 3f7afd8:	aa1703e0 	mov	x0, x23
+ 3f7afdc:	9476186d 	bl	5d01190 <_Znam@plt>
+ 3f7afe0:	aa0003f6 	mov	x22, x0
+ 3f7afe4:	910083e0 	add	x0, sp, #0x20
+ 3f7afe8:	aa1603e1 	mov	x1, x22
+ 3f7afec:	aa1703e2 	mov	x2, x23
+ 3f7aff0:	947618a4 	bl	5d01280 <_ZNSt6__ndk113basic_istreamIcNS_11char_traitsIcEEE4readEPcl@plt>
+ 3f7aff4:	aa1503e0 	mov	x0, x21
+ 3f7aff8:	aa1603e1 	mov	x1, x22
+ 3f7affc:	94762e4d 	bl	5d06930 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@plt>
+ 3f7b000:	aa1603e0 	mov	x0, x22
+ 3f7b004:	94761873 	bl	5d011d0 <_ZdaPv@plt>
+ 3f7b008:	91006308 	add	x8, x24, #0x18
+ 3f7b00c:	91010309 	add	x9, x24, #0x40
+ 3f7b010:	aa1403e0 	mov	x0, x20
+ 3f7b014:	f90013e8 	str	x8, [sp, #32]
+ 3f7b018:	f9006fe9 	str	x9, [sp, #216]
+ 3f7b01c:	94762ef5 	bl	5d06bf0 <_ZNSt6__ndk113basic_filebufIcNS_11char_traitsIcEEED2Ev@plt>
+ 3f7b020:	aa1303e0 	mov	x0, x19
+ 3f7b024:	94762dff 	bl	5d06820 <_ZNSt6__ndk18ios_baseD2Ev@plt>
+ 3f7b028:	f9401728 	ldr	x8, [x25, #40]
+ 3f7b02c:	f85b83a9 	ldur	x9, [x29, #-72]
+ 3f7b030:	eb09011f 	cmp	x8, x9
+ 3f7b034:	540004a1 	b.ne	3f7b0c8 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x220>  // b.any
+ 3f7b038:	a95c7bfd 	ldp	x29, x30, [sp, #448]
+ 3f7b03c:	a95b4ff4 	ldp	x20, x19, [sp, #432]
+ 3f7b040:	a95a57f6 	ldp	x22, x21, [sp, #416]
+ 3f7b044:	a9595ff8 	ldp	x24, x23, [sp, #400]
+ 3f7b048:	a95867fc 	ldp	x28, x25, [sp, #384]
+ 3f7b04c:	910743ff 	add	sp, sp, #0x1d0
+ 3f7b050:	d65f03c0 	ret
+ 3f7b054:	321c03e0 	orr	w0, wzr, #0x10
+ 3f7b058:	947616aa 	bl	5d00b00 <__cxa_allocate_exception@plt>
+ 3f7b05c:	aa0003f5 	mov	x21, x0
+ 3f7b060:	a9007fff 	stp	xzr, xzr, [sp]
+ 3f7b064:	f9000bff 	str	xzr, [sp, #16]
+ 3f7b068:	321b03e0 	orr	w0, wzr, #0x20
+ 3f7b06c:	94761671 	bl	5d00a30 <_Znwm@plt>
+ 3f7b070:	f0fe3329 	adrp	x9, 5e2000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x154277>
+ 3f7b074:	b0fe3c28 	adrp	x8, 700000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x36277>
+ 3f7b078:	910af929 	add	x9, x9, #0x2be
+ 3f7b07c:	3dc2fd00 	ldr	q0, [x8, #3056]
+ 3f7b080:	3cc09121 	ldur	q1, [x9, #9]
+ 3f7b084:	3dc00122 	ldr	q2, [x9]
+ 3f7b088:	320003f7 	orr	w23, wzr, #0x1
+ 3f7b08c:	f9000be0 	str	x0, [sp, #16]
+ 3f7b090:	3900641f 	strb	wzr, [x0, #25]
+ 3f7b094:	3d8003e0 	str	q0, [sp]
+ 3f7b098:	3c809001 	stur	q1, [x0, #9]
+ 3f7b09c:	3d800002 	str	q2, [x0]
+ 3f7b0a0:	910003e1 	mov	x1, sp
+ 3f7b0a4:	aa1503e0 	mov	x0, x21
+ 3f7b0a8:	94762e62 	bl	5d06a30 <_ZNSt13runtime_errorC1ERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE@plt>
+ 3f7b0ac:	b0012941 	adrp	x1, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3f7b0b0:	b0012942 	adrp	x2, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3f7b0b4:	f9408821 	ldr	x1, [x1, #272]
+ 3f7b0b8:	f943a842 	ldr	x2, [x2, #1872]
+ 3f7b0bc:	aa1503e0 	mov	x0, x21
+ 3f7b0c0:	2a1f03f7 	mov	w23, wzr
+ 3f7b0c4:	94761697 	bl	5d00b20 <__cxa_throw@plt>
+ 3f7b0c8:	94761676 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3f7b0cc:	aa0003f6 	mov	x22, x0
+ 3f7b0d0:	14000009 	b	3f7b0f4 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x24c>
+ 3f7b0d4:	394003e8 	ldrb	w8, [sp]
+ 3f7b0d8:	aa0003f6 	mov	x22, x0
+ 3f7b0dc:	37000068 	tbnz	w8, #0, 3f7b0e8 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x240>
+ 3f7b0e0:	350000b7 	cbnz	w23, 3f7b0f4 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x24c>
+ 3f7b0e4:	14000011 	b	3f7b128 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x280>
+ 3f7b0e8:	f9400be0 	ldr	x0, [sp, #16]
+ 3f7b0ec:	94761669 	bl	5d00a90 <_ZdlPv@plt>
+ 3f7b0f0:	360001d7 	tbz	w23, #0, 3f7b128 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x280>
+ 3f7b0f4:	aa1503e0 	mov	x0, x21
+ 3f7b0f8:	9476168e 	bl	5d00b30 <__cxa_free_exception@plt>
+ 3f7b0fc:	1400000b 	b	3f7b128 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x280>
+ 3f7b100:	aa0003f6 	mov	x22, x0
+ 3f7b104:	1400000d 	b	3f7b138 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x290>
+ 3f7b108:	14000007 	b	3f7b124 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x27c>
+ 3f7b10c:	14000006 	b	3f7b124 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x27c>
+ 3f7b110:	14000005 	b	3f7b124 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x27c>
+ 3f7b114:	aa0003f6 	mov	x22, x0
+ 3f7b118:	1400000a 	b	3f7b140 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x298>
+ 3f7b11c:	aa0003f6 	mov	x22, x0
+ 3f7b120:	14000008 	b	3f7b140 <_ZN12ntes_gzailab15MNNMaskComputer4InitENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@@Base+0x298>
+ 3f7b124:	aa0003f6 	mov	x22, x0
+ 3f7b128:	91006308 	add	x8, x24, #0x18
+ 3f7b12c:	91010309 	add	x9, x24, #0x40
+ 3f7b130:	f90013e8 	str	x8, [sp, #32]
+ 3f7b134:	f9006fe9 	str	x9, [sp, #216]
+ 3f7b138:	aa1403e0 	mov	x0, x20
+ 3f7b13c:	94762ead 	bl	5d06bf0 <_ZNSt6__ndk113basic_filebufIcNS_11char_traitsIcEEED2Ev@plt>
+ 3f7b140:	aa1303e0 	mov	x0, x19
+ 3f7b144:	94762db7 	bl	5d06820 <_ZNSt6__ndk18ios_baseD2Ev@plt>
+ 3f7b148:	aa1603e0 	mov	x0, x22
+ 3f7b14c:	94760570 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+
+0000000003f7b150 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base>:
+ 3f7b150:	d10583ff 	sub	sp, sp, #0x160
+ 3f7b154:	a91167fc 	stp	x28, x25, [sp, #272]
+ 3f7b158:	a9125ff8 	stp	x24, x23, [sp, #288]
+ 3f7b15c:	a91357f6 	stp	x22, x21, [sp, #304]
+ 3f7b160:	a9144ff4 	stp	x20, x19, [sp, #320]
+ 3f7b164:	a9157bfd 	stp	x29, x30, [sp, #336]
+ 3f7b168:	910543fd 	add	x29, sp, #0x150
+ 3f7b16c:	d53bd058 	mrs	x24, tpidr_el0
+ 3f7b170:	f9401708 	ldr	x8, [x24, #40]
+ 3f7b174:	5286462a 	mov	w10, #0x3231                	// #12849
+ 3f7b178:	aa0103f4 	mov	x20, x1
+ 3f7b17c:	aa0003f3 	mov	x19, x0
+ 3f7b180:	321f07e9 	orr	w9, wzr, #0x6
+ 3f7b184:	72a0070a 	movk	w10, #0x38, lsl #16
+ 3f7b188:	f81b83a8 	stur	x8, [x29, #-72]
+ 3f7b18c:	a904ffff 	stp	xzr, xzr, [sp, #72]
+ 3f7b190:	f9002fff 	str	xzr, [sp, #88]
+ 3f7b194:	390123e9 	strb	w9, [sp, #72]
+ 3f7b198:	b80493ea 	stur	w10, [sp, #73]
+ 3f7b19c:	910183e0 	add	x0, sp, #0x60
+ 3f7b1a0:	910123e1 	add	x1, sp, #0x48
+ 3f7b1a4:	94762ea7 	bl	5d06c40 <_ZN12ntes_gzailab9EncryptorC1ENSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>
+ 3f7b1a8:	394123e8 	ldrb	w8, [sp, #72]
+ 3f7b1ac:	36000068 	tbz	w8, #0, 3f7b1b8 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x68>
+ 3f7b1b0:	f9402fe0 	ldr	x0, [sp, #88]
+ 3f7b1b4:	94761637 	bl	5d00a90 <_ZdlPv@plt>
+ 3f7b1b8:	910183e0 	add	x0, sp, #0x60
+ 3f7b1bc:	9101c3e2 	add	x2, sp, #0x70
+ 3f7b1c0:	9101f3e3 	add	x3, sp, #0x7c
+ 3f7b1c4:	aa1403e1 	mov	x1, x20
+ 3f7b1c8:	94762e9a 	bl	5d06c30 <_ZN12ntes_gzailab9Encryptor7DecryptEPKcRPcRi@plt>
+ 3f7b1cc:	a9097fff 	stp	xzr, xzr, [sp, #144]
+ 3f7b1d0:	f90047ff 	str	xzr, [sp, #136]
+ 3f7b1d4:	b900dbff 	str	wzr, [sp, #216]
+ 3f7b1d8:	a90cffff 	stp	xzr, xzr, [sp, #200]
+ 3f7b1dc:	a90bffff 	stp	xzr, xzr, [sp, #184]
+ 3f7b1e0:	a90affff 	stp	xzr, xzr, [sp, #168]
+ 3f7b1e4:	b900e3ff 	str	wzr, [sp, #224]
+ 3f7b1e8:	b9402268 	ldr	w8, [x19, #32]
+ 3f7b1ec:	f9403be0 	ldr	x0, [sp, #112]
+ 3f7b1f0:	b9807fe1 	ldrsw	x1, [sp, #124]
+ 3f7b1f4:	9100c3e9 	add	x9, sp, #0x30
+ 3f7b1f8:	291423ff 	stp	wzr, w8, [sp, #160]
+ 3f7b1fc:	f90077e9 	str	x9, [sp, #232]
+ 3f7b200:	f90023ff 	str	xzr, [sp, #64]
+ 3f7b204:	b9003bff 	str	wzr, [sp, #56]
+ 3f7b208:	f9001bff 	str	xzr, [sp, #48]
+ 3f7b20c:	9476258d 	bl	5d04840 <_ZN3MNN11Interpreter16createFromBufferEPKvm@plt>
+ 3f7b210:	aa0003f4 	mov	x20, x0
+ 3f7b214:	321b03e0 	orr	w0, wzr, #0x20
+ 3f7b218:	94761606 	bl	5d00a30 <_Znwm@plt>
+ 3f7b21c:	d0012968 	adrp	x8, 64a9000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0xa430>
+ 3f7b220:	f940f908 	ldr	x8, [x8, #496]
+ 3f7b224:	a901501f 	stp	xzr, x20, [x0, #16]
+ 3f7b228:	91004108 	add	x8, x8, #0x10
+ 3f7b22c:	a9007c08 	stp	x8, xzr, [x0]
+ 3f7b230:	f9400675 	ldr	x21, [x19, #8]
+ 3f7b234:	a9000274 	stp	x20, x0, [x19]
+ 3f7b238:	b40000f5 	cbz	x21, 3f7b254 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x104>
+ 3f7b23c:	910022a8 	add	x8, x21, #0x8
+ 3f7b240:	c85ffd09 	ldaxr	x9, [x8]
+ 3f7b244:	d100052a 	sub	x10, x9, #0x1
+ 3f7b248:	c80bfd0a 	stlxr	w11, x10, [x8]
+ 3f7b24c:	35ffffab 	cbnz	w11, 3f7b240 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0xf0>
+ 3f7b250:	b4001389 	cbz	x9, 3f7b4c0 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x370>
+ 3f7b254:	f9400a61 	ldr	x1, [x19, #16]
+ 3f7b258:	b4000061 	cbz	x1, 3f7b264 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x114>
+ 3f7b25c:	f9400260 	ldr	x0, [x19]
+ 3f7b260:	947625a8 	bl	5d04900 <_ZN3MNN11Interpreter14releaseSessionEPNS_7SessionE@plt>
+ 3f7b264:	f9400260 	ldr	x0, [x19]
+ 3f7b268:	910223e1 	add	x1, sp, #0x88
+ 3f7b26c:	947625a1 	bl	5d048f0 <_ZN3MNN11Interpreter13createSessionERKNS_14ScheduleConfigE@plt>
+ 3f7b270:	aa0003e1 	mov	x1, x0
+ 3f7b274:	f9400260 	ldr	x0, [x19]
+ 3f7b278:	f9000a61 	str	x1, [x19, #16]
+ 3f7b27c:	947625bd 	bl	5d04970 <_ZNK3MNN11Interpreter18getSessionInputAllEPKNS_7SessionE@plt>
+ 3f7b280:	910063e8 	add	x8, sp, #0x18
+ 3f7b284:	91002114 	add	x20, x8, #0x8
+ 3f7b288:	aa0003f5 	mov	x21, x0
+ 3f7b28c:	a9027fff 	stp	xzr, xzr, [sp, #32]
+ 3f7b290:	f9000ff4 	str	x20, [sp, #24]
+ 3f7b294:	f84086b9 	ldr	x25, [x21], #8
+ 3f7b298:	eb15033f 	cmp	x25, x21
+ 3f7b29c:	54000d20 	b.eq	3f7b440 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x2f0>  // b.none
+ 3f7b2a0:	91008337 	add	x23, x25, #0x20
+ 3f7b2a4:	910063e0 	add	x0, sp, #0x18
+ 3f7b2a8:	910003e2 	mov	x2, sp
+ 3f7b2ac:	910203e3 	add	x3, sp, #0x80
+ 3f7b2b0:	aa1403e1 	mov	x1, x20
+ 3f7b2b4:	aa1703e4 	mov	x4, x23
+ 3f7b2b8:	94762ed2 	bl	5d06e00 <_ZNSt6__ndk16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPN3MNN6TensorEEENS_19__map_value_compareIS7_SB_NS_4lessIS7_EELb1EEENS5_ISB_EEE12__find_equalIS7_EERPNS_16__tree_node_baseIPvEENS_21__tree_const_iteratorISB_PNS_11__tree_nodeISB_SK_EElEERPNS_15__tree_end_nodeISM_EESN_RKT_@plt>
+ 3f7b2bc:	f9400008 	ldr	x8, [x0]
+ 3f7b2c0:	aa0003f6 	mov	x22, x0
+ 3f7b2c4:	b4000088 	cbz	x8, 3f7b2d4 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x184>
+ 3f7b2c8:	f9400728 	ldr	x8, [x25, #8]
+ 3f7b2cc:	b50002e8 	cbnz	x8, 3f7b328 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x1d8>
+ 3f7b2d0:	1400001a 	b	3f7b338 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x1e8>
+ 3f7b2d4:	d10183a8 	sub	x8, x29, #0x60
+ 3f7b2d8:	910063e0 	add	x0, sp, #0x18
+ 3f7b2dc:	aa1703e1 	mov	x1, x23
+ 3f7b2e0:	94762ed0 	bl	5d06e20 <_ZNSt6__ndk16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPN3MNN6TensorEEENS_19__map_value_compareIS7_SB_NS_4lessIS7_EELb1EEENS5_ISB_EEE16__construct_nodeIJRKNS_4pairIKS7_SA_EEEEENS_10unique_ptrINS_11__tree_nodeISB_PvEENS_22__tree_node_destructorINS5_ISR_EEEEEEDpOT_@plt>
+ 3f7b2e4:	f85a03a1 	ldur	x1, [x29, #-96]
+ 3f7b2e8:	f94003e8 	ldr	x8, [sp]
+ 3f7b2ec:	a9007c3f 	stp	xzr, xzr, [x1]
+ 3f7b2f0:	f9000828 	str	x8, [x1, #16]
+ 3f7b2f4:	f90002c1 	str	x1, [x22]
+ 3f7b2f8:	f9400fe8 	ldr	x8, [sp, #24]
+ 3f7b2fc:	f9400108 	ldr	x8, [x8]
+ 3f7b300:	b4000068 	cbz	x8, 3f7b30c <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x1bc>
+ 3f7b304:	f9000fe8 	str	x8, [sp, #24]
+ 3f7b308:	f94002c1 	ldr	x1, [x22]
+ 3f7b30c:	f94013e0 	ldr	x0, [sp, #32]
+ 3f7b310:	977c629d 	bl	1e93d84 <_ZN5physx6pvdsdk15PvdUserRenderer6createEj@@Base+0xbfec>
+ 3f7b314:	f94017e8 	ldr	x8, [sp, #40]
+ 3f7b318:	91000508 	add	x8, x8, #0x1
+ 3f7b31c:	f90017e8 	str	x8, [sp, #40]
+ 3f7b320:	f9400728 	ldr	x8, [x25, #8]
+ 3f7b324:	b40000a8 	cbz	x8, 3f7b338 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x1e8>
+ 3f7b328:	aa0803f9 	mov	x25, x8
+ 3f7b32c:	f9400108 	ldr	x8, [x8]
+ 3f7b330:	b5ffffc8 	cbnz	x8, 3f7b328 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x1d8>
+ 3f7b334:	1400000c 	b	3f7b364 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x214>
+ 3f7b338:	aa1903e8 	mov	x8, x25
+ 3f7b33c:	f8410d09 	ldr	x9, [x8, #16]!
+ 3f7b340:	f940012a 	ldr	x10, [x9]
+ 3f7b344:	eb19015f 	cmp	x10, x25
+ 3f7b348:	54000140 	b.eq	3f7b370 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x220>  // b.none
+ 3f7b34c:	f9400109 	ldr	x9, [x8]
+ 3f7b350:	aa0903e8 	mov	x8, x9
+ 3f7b354:	f8410d19 	ldr	x25, [x8, #16]!
+ 3f7b358:	f940032a 	ldr	x10, [x25]
+ 3f7b35c:	eb09015f 	cmp	x10, x9
+ 3f7b360:	54ffff61 	b.ne	3f7b34c <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x1fc>  // b.any
+ 3f7b364:	eb15033f 	cmp	x25, x21
+ 3f7b368:	54fff9c1 	b.ne	3f7b2a0 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x150>  // b.any
+ 3f7b36c:	14000004 	b	3f7b37c <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x22c>
+ 3f7b370:	aa0903f9 	mov	x25, x9
+ 3f7b374:	eb15033f 	cmp	x25, x21
+ 3f7b378:	54fff941 	b.ne	3f7b2a0 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x150>  // b.any
+ 3f7b37c:	f9400ff7 	ldr	x23, [sp, #24]
+ 3f7b380:	a93a7fbf 	stp	xzr, xzr, [x29, #-96]
+ 3f7b384:	f81b03bf 	stur	xzr, [x29, #-80]
+ 3f7b388:	eb1402ff 	cmp	x23, x20
+ 3f7b38c:	540005e0 	b.eq	3f7b448 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x2f8>  // b.none
+ 3f7b390:	910003e8 	mov	x8, sp
+ 3f7b394:	90fe3135 	adrp	x21, 59f000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x197277>
+ 3f7b398:	b2400116 	orr	x22, x8, #0x1
+ 3f7b39c:	91318ab5 	add	x21, x21, #0xc62
+ 3f7b3a0:	910082e0 	add	x0, x23, #0x20
+ 3f7b3a4:	910003e8 	mov	x8, sp
+ 3f7b3a8:	aa1503e1 	mov	x1, x21
+ 3f7b3ac:	97ffa5c7 	bl	3f64ac8 <_ZN6AixLog11SinkAndroid3logERKNS_8MetadataERKNSt6__ndk112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEE@@Base+0x3a8>
+ 3f7b3b0:	394003e8 	ldrb	w8, [sp]
+ 3f7b3b4:	a940a7ea 	ldp	x10, x9, [sp, #8]
+ 3f7b3b8:	7200011f 	tst	w8, #0x1
+ 3f7b3bc:	d341fd0b 	lsr	x11, x8, #1
+ 3f7b3c0:	9a8902c1 	csel	x1, x22, x9, eq	// eq = none
+ 3f7b3c4:	9a8a0162 	csel	x2, x11, x10, eq	// eq = none
+ 3f7b3c8:	d10183a0 	sub	x0, x29, #0x60
+ 3f7b3cc:	9476283d 	bl	5d054c0 <_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm@plt>
+ 3f7b3d0:	394003e8 	ldrb	w8, [sp]
+ 3f7b3d4:	36000068 	tbz	w8, #0, 3f7b3e0 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x290>
+ 3f7b3d8:	f9400be0 	ldr	x0, [sp, #16]
+ 3f7b3dc:	947615ad 	bl	5d00a90 <_ZdlPv@plt>
+ 3f7b3e0:	f94006e8 	ldr	x8, [x23, #8]
+ 3f7b3e4:	b40000a8 	cbz	x8, 3f7b3f8 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x2a8>
+ 3f7b3e8:	aa0803f7 	mov	x23, x8
+ 3f7b3ec:	f9400108 	ldr	x8, [x8]
+ 3f7b3f0:	b5ffffc8 	cbnz	x8, 3f7b3e8 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x298>
+ 3f7b3f4:	1400000c 	b	3f7b424 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x2d4>
+ 3f7b3f8:	aa1703e8 	mov	x8, x23
+ 3f7b3fc:	f8410d09 	ldr	x9, [x8, #16]!
+ 3f7b400:	f940012a 	ldr	x10, [x9]
+ 3f7b404:	eb17015f 	cmp	x10, x23
+ 3f7b408:	54000140 	b.eq	3f7b430 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x2e0>  // b.none
+ 3f7b40c:	f9400109 	ldr	x9, [x8]
+ 3f7b410:	aa0903e8 	mov	x8, x9
+ 3f7b414:	f8410d17 	ldr	x23, [x8, #16]!
+ 3f7b418:	f94002ea 	ldr	x10, [x23]
+ 3f7b41c:	eb09015f 	cmp	x10, x9
+ 3f7b420:	54ffff61 	b.ne	3f7b40c <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x2bc>  // b.any
+ 3f7b424:	eb1402ff 	cmp	x23, x20
+ 3f7b428:	54fffbc1 	b.ne	3f7b3a0 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x250>  // b.any
+ 3f7b42c:	14000007 	b	3f7b448 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x2f8>
+ 3f7b430:	aa0903f7 	mov	x23, x9
+ 3f7b434:	eb1402ff 	cmp	x23, x20
+ 3f7b438:	54fffb41 	b.ne	3f7b3a0 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x250>  // b.any
+ 3f7b43c:	14000003 	b	3f7b448 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x2f8>
+ 3f7b440:	a93a7fbf 	stp	xzr, xzr, [x29, #-96]
+ 3f7b444:	f81b03bf 	stur	xzr, [x29, #-80]
+ 3f7b448:	b9802e68 	ldrsw	x8, [x19, #44]
+ 3f7b44c:	d37ef509 	lsl	x9, x8, #2
+ 3f7b450:	eb48fbff 	cmp	xzr, x8, lsr #62
+ 3f7b454:	da9f0120 	csinv	x0, x9, xzr, eq	// eq = none
+ 3f7b458:	9476174e 	bl	5d01190 <_Znam@plt>
+ 3f7b45c:	320003e8 	orr	w8, wzr, #0x1
+ 3f7b460:	f9000e60 	str	x0, [x19, #24]
+ 3f7b464:	3903c268 	strb	w8, [x19, #240]
+ 3f7b468:	385a03a8 	ldurb	w8, [x29, #-96]
+ 3f7b46c:	36000068 	tbz	w8, #0, 3f7b478 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x328>
+ 3f7b470:	f85b03a0 	ldur	x0, [x29, #-80]
+ 3f7b474:	94761587 	bl	5d00a90 <_ZdlPv@plt>
+ 3f7b478:	f94013e1 	ldr	x1, [sp, #32]
+ 3f7b47c:	910063e0 	add	x0, sp, #0x18
+ 3f7b480:	979482fe 	bl	249c078 <_ZN3MNN11Interpreter14getSessionInfoEPKNS_7SessionENS0_15SessionInfoCodeEPv@@Base+0x10674>
+ 3f7b484:	910223e0 	add	x0, sp, #0x88
+ 3f7b488:	97943d88 	bl	248aaa8 <_ZN3MNN11Interpreter13createSessionERKNS_14ScheduleConfigE@@Base+0x1d0>
+ 3f7b48c:	910183e0 	add	x0, sp, #0x60
+ 3f7b490:	94762df0 	bl	5d06c50 <_ZN12ntes_gzailab9EncryptorD1Ev@plt>
+ 3f7b494:	f9401708 	ldr	x8, [x24, #40]
+ 3f7b498:	f85b83a9 	ldur	x9, [x29, #-72]
+ 3f7b49c:	eb09011f 	cmp	x8, x9
+ 3f7b4a0:	54000221 	b.ne	3f7b4e4 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x394>  // b.any
+ 3f7b4a4:	a9557bfd 	ldp	x29, x30, [sp, #336]
+ 3f7b4a8:	a9544ff4 	ldp	x20, x19, [sp, #320]
+ 3f7b4ac:	a95357f6 	ldp	x22, x21, [sp, #304]
+ 3f7b4b0:	a9525ff8 	ldp	x24, x23, [sp, #288]
+ 3f7b4b4:	a95167fc 	ldp	x28, x25, [sp, #272]
+ 3f7b4b8:	910583ff 	add	sp, sp, #0x160
+ 3f7b4bc:	d65f03c0 	ret
+ 3f7b4c0:	f94002a8 	ldr	x8, [x21]
+ 3f7b4c4:	aa1503e0 	mov	x0, x21
+ 3f7b4c8:	f9400908 	ldr	x8, [x8, #16]
+ 3f7b4cc:	d63f0100 	blr	x8
+ 3f7b4d0:	aa1503e0 	mov	x0, x21
+ 3f7b4d4:	9476176f 	bl	5d01290 <_ZNSt6__ndk119__shared_weak_count14__release_weakEv@plt>
+ 3f7b4d8:	f9400a61 	ldr	x1, [x19, #16]
+ 3f7b4dc:	b5ffec01 	cbnz	x1, 3f7b25c <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x10c>
+ 3f7b4e0:	17ffff61 	b	3f7b264 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x114>
+ 3f7b4e4:	9476156f 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3f7b4e8:	1400001f 	b	3f7b564 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x414>
+ 3f7b4ec:	aa0003f3 	mov	x19, x0
+ 3f7b4f0:	14000028 	b	3f7b590 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x440>
+ 3f7b4f4:	aa0003f3 	mov	x19, x0
+ 3f7b4f8:	b40004d4 	cbz	x20, 3f7b590 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x440>
+ 3f7b4fc:	aa1403e0 	mov	x0, x20
+ 3f7b500:	94762544 	bl	5d04a10 <_ZN3MNN11InterpreterD1Ev@plt>
+ 3f7b504:	aa1403e0 	mov	x0, x20
+ 3f7b508:	94761562 	bl	5d00a90 <_ZdlPv@plt>
+ 3f7b50c:	14000021 	b	3f7b590 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x440>
+ 3f7b510:	aa0003f3 	mov	x19, x0
+ 3f7b514:	1400001f 	b	3f7b590 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x440>
+ 3f7b518:	aa0003f3 	mov	x19, x0
+ 3f7b51c:	1400001f 	b	3f7b598 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x448>
+ 3f7b520:	394123e8 	ldrb	w8, [sp, #72]
+ 3f7b524:	aa0003f3 	mov	x19, x0
+ 3f7b528:	360003c8 	tbz	w8, #0, 3f7b5a0 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x450>
+ 3f7b52c:	f9402fe0 	ldr	x0, [sp, #88]
+ 3f7b530:	94761558 	bl	5d00a90 <_ZdlPv@plt>
+ 3f7b534:	aa1303e0 	mov	x0, x19
+ 3f7b538:	94760475 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f7b53c:	aa0003f3 	mov	x19, x0
+ 3f7b540:	14000014 	b	3f7b590 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x440>
+ 3f7b544:	394003e8 	ldrb	w8, [sp]
+ 3f7b548:	aa0003f3 	mov	x19, x0
+ 3f7b54c:	360000e8 	tbz	w8, #0, 3f7b568 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x418>
+ 3f7b550:	f9400be0 	ldr	x0, [sp, #16]
+ 3f7b554:	9476154f 	bl	5d00a90 <_ZdlPv@plt>
+ 3f7b558:	385a03a8 	ldurb	w8, [x29, #-96]
+ 3f7b55c:	370000a8 	tbnz	w8, #0, 3f7b570 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x420>
+ 3f7b560:	14000006 	b	3f7b578 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x428>
+ 3f7b564:	aa0003f3 	mov	x19, x0
+ 3f7b568:	385a03a8 	ldurb	w8, [x29, #-96]
+ 3f7b56c:	36000068 	tbz	w8, #0, 3f7b578 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x428>
+ 3f7b570:	f85b03a0 	ldur	x0, [x29, #-80]
+ 3f7b574:	94761547 	bl	5d00a90 <_ZdlPv@plt>
+ 3f7b578:	f94013e1 	ldr	x1, [sp, #32]
+ 3f7b57c:	14000003 	b	3f7b588 <_ZN12ntes_gzailab15MNNMaskComputer4InitEPKc@@Base+0x438>
+ 3f7b580:	f94013e1 	ldr	x1, [sp, #32]
+ 3f7b584:	aa0003f3 	mov	x19, x0
+ 3f7b588:	910063e0 	add	x0, sp, #0x18
+ 3f7b58c:	979482bb 	bl	249c078 <_ZN3MNN11Interpreter14getSessionInfoEPKNS_7SessionENS0_15SessionInfoCodeEPv@@Base+0x10674>
+ 3f7b590:	910223e0 	add	x0, sp, #0x88
+ 3f7b594:	97943d45 	bl	248aaa8 <_ZN3MNN11Interpreter13createSessionERKNS_14ScheduleConfigE@@Base+0x1d0>
+ 3f7b598:	910183e0 	add	x0, sp, #0x60
+ 3f7b59c:	94762dad 	bl	5d06c50 <_ZN12ntes_gzailab9EncryptorD1Ev@plt>
+ 3f7b5a0:	aa1303e0 	mov	x0, x19
+ 3f7b5a4:	9476045a 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+
+0000000003f7b5a8 <_ZNSt6__ndk110shared_ptrIN3MNN11InterpreterEED2Ev@@Base>:
+ 3f7b5a8:	f81e0ff3 	str	x19, [sp, #-32]!
+ 3f7b5ac:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 3f7b5b0:	910043fd 	add	x29, sp, #0x10
+ 3f7b5b4:	f9400413 	ldr	x19, [x0, #8]
+ 3f7b5b8:	b40000f3 	cbz	x19, 3f7b5d4 <_ZNSt6__ndk110shared_ptrIN3MNN11InterpreterEED2Ev@@Base+0x2c>
+ 3f7b5bc:	91002268 	add	x8, x19, #0x8
+ 3f7b5c0:	c85ffd09 	ldaxr	x9, [x8]
+ 3f7b5c4:	d100052a 	sub	x10, x9, #0x1
+ 3f7b5c8:	c80bfd0a 	stlxr	w11, x10, [x8]
+ 3f7b5cc:	35ffffab 	cbnz	w11, 3f7b5c0 <_ZNSt6__ndk110shared_ptrIN3MNN11InterpreterEED2Ev@@Base+0x18>
+ 3f7b5d0:	b4000089 	cbz	x9, 3f7b5e0 <_ZNSt6__ndk110shared_ptrIN3MNN11InterpreterEED2Ev@@Base+0x38>
+ 3f7b5d4:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 3f7b5d8:	f84207f3 	ldr	x19, [sp], #32
+ 3f7b5dc:	d65f03c0 	ret
+ 3f7b5e0:	f9400268 	ldr	x8, [x19]
+ 3f7b5e4:	aa1303e0 	mov	x0, x19
+ 3f7b5e8:	f9400908 	ldr	x8, [x8, #16]
+ 3f7b5ec:	d63f0100 	blr	x8
+ 3f7b5f0:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 3f7b5f4:	aa1303e0 	mov	x0, x19
+ 3f7b5f8:	f84207f3 	ldr	x19, [sp], #32
+ 3f7b5fc:	14761725 	b	5d01290 <_ZNSt6__ndk119__shared_weak_count14__release_weakEv@plt>

@@ -1,0 +1,482 @@
+total xref sites: 577
+bucket 0x3a57000 : 387 refs
+bucket 0x3a58000 : 189 refs
+bucket 0x3a56000 : 186 refs
+bucket 0x3a5e000 : 21 refs
+bucket 0x3a5f000 : 18 refs
+bucket 0x3a69000 : 16 refs
+bucket 0x3a70000 : 16 refs
+bucket 0x3a6b000 : 14 refs
+bucket 0x3a76000 : 14 refs
+bucket 0x3a82000 : 13 refs
+bucket 0x3a85000 : 13 refs
+bucket 0x3a6f000 : 12 refs
+bucket 0x3a81000 : 12 refs
+bucket 0x3a6e000 : 10 refs
+bucket 0x3a6a000 : 8 refs
+bucket 0x3a72000 : 8 refs
+bucket 0x3a73000 : 8 refs
+bucket 0x3a77000 : 8 refs
+bucket 0x3a84000 : 8 refs
+bucket 0x3a79000 : 7 refs
+bucket 0x3a7a000 : 7 refs
+bucket 0x3a7f000 : 7 refs
+bucket 0x3a86000 : 7 refs
+bucket 0x3a66000 : 6 refs
+bucket 0x3a68000 : 6 refs
+bucket 0x3a75000 : 6 refs
+bucket 0x3a83000 : 6 refs
+bucket 0x3a63000 : 5 refs
+bucket 0x3a67000 : 5 refs
+bucket 0x3a7b000 : 5 refs
+bucket 0x3a80000 : 5 refs
+bucket 0x3a59000 : 4 refs
+bucket 0x3a71000 : 4 refs
+bucket 0x3a87000 : 4 refs
+bucket 0x3a07000 : 3 refs
+bucket 0x3a64000 : 3 refs
+bucket 0x3a5a000 : 2 refs
+bucket 0x3a5d000 : 2 refs
+bucket 0x3a6d000 : 2 refs
+bucket 0x3a78000 : 2 refs
+
+--- per-site detail (top 200 by bucket) ---
+
+== bucket 0x3a57000 (143 sites)
+  3a57004 -> a76505, a76516, a76527
+  3a57018 -> a76516, a76527, a76537
+  3a5702c -> a76527, a76537, a76540
+  3a57040 -> a76537, a76540, a7654a
+  3a57054 -> a76540, a7654a, a76553
+  3a57068 -> a7654a, a76553, a7655e
+  3a5707c -> a76553, a7655e, a76e02
+  3a57090 -> a7655e, a76e02, a761df
+  3a570ac -> a76e02, a761df, a76596
+  3a570c0 -> a761df, a76596, a765a0
+  3a570d4 -> a76596, a765a0, a76ce8
+  3a570e8 -> a765a0, a76ce8, a765a9
+  3a570fc -> a76ce8, a765a9
+  3a57110 -> a765a9, a76e72
+  3a57134 -> a76e72, a76d8b, a76d95
+  3a57148 -> a76d8b, a76d95, a76dab
+  3a5715c -> a76d95, a76dab, a76dc0
+  3a57170 -> a76dab, a76dc0, a76ddb
+  3a57184 -> a76dc0, a76ddb, a765d1
+  3a57198 -> a76ddb, a765d1, a765d8
+  3a571ac -> a765d1, a765d8, a765e8
+  3a571c0 -> a765d8, a765e8, a76612
+  3a571d4 -> a765e8, a76612
+  3a571f0 -> a76612, a76e1e
+  3a57218 -> a76e1e, a76e0e, a76d4d
+  3a5722c -> a76e0e, a76d4d, a76d41
+  3a57240 -> a76d4d, a76d41, a76d5a
+  3a57254 -> a76d41, a76d5a, a76d30
+  3a57268 -> a76d5a, a76d30, a767d5
+  3a5727c -> a76d30, a767d5, a767da
+  3a57290 -> a767d5, a767da, a767e2
+  3a572a4 -> a767da, a767e2, a767e6
+  3a572b8 -> a767e2, a767e6, a767f0
+  3a572cc -> a767e6, a767f0, a767f2
+  3a572e0 -> a767f0, a767f2, a767f6
+  3a572f4 -> a767f2, a767f6, a767fb
+  3a57308 -> a767f6, a767fb, a76806
+  3a5731c -> a767fb, a76806, a76e63
+  3a57330 -> a76806, a76e63, a76813
+  3a57344 -> a76e63, a76813, a76817
+  3a57358 -> a76813, a76817, a7681d
+  3a5736c -> a76817, a7681d, a76d1b
+  3a57380 -> a7681d, a76d1b, a76824
+  3a57394 -> a76d1b, a76824, a7682e
+  3a573a8 -> a76824, a7682e, a7683b
+  3a573bc -> a7682e, a7683b, a7684d
+  3a573d0 -> a7683b, a7684d, a7685d
+  3a573e4 -> a7684d, a7685d, a7686b
+  3a573f8 -> a7685d, a7686b, a76873
+  3a5740c -> a7686b, a76873, a76e7e
+  3a57420 -> a76873, a76e7e, a7687b
+  3a57434 -> a76e7e, a7687b, a7687f
+  3a57448 -> a7687b, a7687f, a76889
+  3a5745c -> a7687f, a76889, a76893
+  3a57470 -> a76889, a76893, a76249
+  3a57484 -> a76893, a76249, a7689e
+  3a57498 -> a76249, a7689e, a768a8
+  3a574ac -> a7689e, a768a8, a768b3
+  3a574c0 -> a768a8, a768b3, a768bc
+  3a574d4 -> a768b3, a768bc, a768c3
+  3a574e8 -> a768bc, a768c3, a768cd
+  3a574fc -> a768c3, a768cd, a768d6
+  3a57510 -> a768cd, a768d6, a768dc
+  3a57524 -> a768d6, a768dc, a768e1
+  3a57538 -> a768dc, a768e1, a768e5
+  3a5754c -> a768e1, a768e5, a76e4f
+  3a57560 -> a768e5, a76e4f, a768e7
+  3a57574 -> a76e4f, a768e7, a768f4
+  3a57588 -> a768e7, a768f4, a7690d
+  3a5759c -> a768f4, a7690d
+  3a575b0 -> a7690d
+  3a575cc -> a76305
+  3a5778c -> a76434, a7643a, a76459
+  3a577a0 -> a7643a, a76459, a7646c
+  3a577bc -> a76459, a7646c, a76471
+  3a577d0 -> a7646c, a76471, a76476
+  3a577e4 -> a76471, a76476, a76e29
+  3a577f8 -> a76476, a76e29, a76df4
+  3a5780c -> a76e29, a76df4, a76481
+  3a57820 -> a76df4, a76481, a764c1
+  3a5783c -> a76481, a764c1, a765cc, a765fe
+  3a57848 -> a764c1, a765cc, a765fe, a76628
+  3a5785c -> a765cc, a765fe, a76628, a76643
+  3a57868 -> a765fe, a76628, a76643, a76661
+  3a5787c -> a76628, a76643, a76661
+  3a57890 -> a76643, a76661, a766d3
+  3a5789c -> a76661, a766d3, a766f5
+  3a578b8 -> a766d3, a766f5, a76715
+  3a578cc -> a766f5, a76715
+  3a578e8 -> a76715, a76737
+  3a57908 -> a76737, a76749
+  3a57928 -> a76749, a76760
+  3a57944 -> a76760
+  3a57950 -> a76790, a76797
+  3a57980 -> a76797, a767a9
+  3a579a4 -> a767a9, a767c4
+  3a579b4 -> a76a9e, a761e8
+  3a579c8 -> a767c4, a767ce
+  3a579dc -> a761e8, a76a9c
+  3a579f0 -> a767ce
+  3a57a04 -> a76a9c, a761d8
+  3a57a18 -> a7669a, a76689
+  3a57a2c -> a76cf9
+  3a57a38 -> a761d8, a76a96
+  3a57a44 -> a76689, a76676
+  3a57a60 -> a76676, a76447
+  3a57a6c -> a76a96
+  3a57a78 -> a767d1
+  3a57a8c -> a76447, a7647c
+  3a57ab4 -> a7647c
+  3a57ac0 -> a76773
+  3a57acc -> a76d70
+  3a57ad8 -> a76a7e
+  3a57b60 -> a7692b, a76e38, a761cd
+  3a57b74 -> a76e38, a761cd, a76941
+  3a57b88 -> a761cd, a76941, a76947
+  3a57b9c -> a76941, a76947, a76952
+  3a57bb0 -> a76947, a76952, a76959
+  3a57bc4 -> a76952, a76959, a76962
+  3a57bd8 -> a76959, a76962, a76966
+  3a57bec -> a76962, a76966, a7696e
+  3a57c00 -> a76966, a7696e, a76973
+  3a57c14 -> a7696e, a76973, a76977
+  3a57c28 -> a76973, a76977, a7698b
+  3a57c3c -> a76977, a7698b, a76999
+  3a57c50 -> a7698b, a76999, a769ab
+  3a57c64 -> a76999, a769ab, a769ba
+  3a57c78 -> a769ab, a769ba, a769c6
+  3a57c8c -> a769ba, a769c6, a769d0
+  3a57ca0 -> a769c6, a769d0, a769de
+  3a57cb4 -> a769d0, a769de, a769e2
+  3a57cc8 -> a769de, a769e2, a769eb
+  3a57cdc -> a769e2, a769eb, a76217
+  3a57cf0 -> a769eb, a76217, a769f3
+  3a57d04 -> a76217, a769f3, a769fa
+  3a57d18 -> a769f3, a769fa, a76a02
+  3a57d2c -> a769fa, a76a02, a761c8
+  3a57d40 -> a76a02, a761c8, a7622a
+  3a57d54 -> a761c8, a7622a, a76a12
+  3a57d68 -> a7622a, a76a12, a76a19
+  3a57d7c -> a76a12, a76a19, a76d01
+  3a57d90 -> a76a19, a76d01
+  3a57da4 -> a76d01
+
+== bucket 0x3a56000 (71 sites)
+  3a564ac -> a761c8
+  3a56514 -> a761cd, a761d8
+  3a56548 -> a761d8, a761df
+  3a56560 -> a761df, a761e8
+  3a56594 -> a761e8, a76dbf
+  3a56608 -> a761ef
+  3a567c8 -> a761f8
+  3a56820 -> a761be
+  3a56874 -> a76205
+  3a56890 -> a76205
+  3a56abc -> a76257
+  3a56ad8 -> a76259, a76268, a76278
+  3a56af0 -> a76268, a76278, a7628f
+  3a56b08 -> a76278, a7628f, a762a1
+  3a56b20 -> a7628f, a762a1, a762ac
+  3a56b38 -> a762a1, a762ac
+  3a56b50 -> a762ac, a762bf
+  3a56b74 -> a766b7
+  3a56b84 -> a762bf, a762d0
+  3a56ba8 -> a762d0, a762df, a762f3
+  3a56bc0 -> a762df, a762f3
+  3a56bd8 -> a762f3
+  3a56bf8 -> a7630a, a761be, a76206
+  3a56c0c -> a761be, a76206, a76314
+  3a56c20 -> a76206, a76314, a7631b
+  3a56c34 -> a76314, a7631b, a7632f
+  3a56c48 -> a7631b, a7632f, a7633a
+  3a56c5c -> a7632f, a7633a, a76344
+  3a56c70 -> a7633a, a76344, a7634e
+  3a56c84 -> a76344, a7634e, a76358
+  3a56c98 -> a7634e, a76358, a76363
+  3a56cac -> a76358, a76363, a7636c
+  3a56cc0 -> a76363, a7636c, a7637a
+  3a56cd4 -> a7636c, a7637a, a76383
+  3a56ce8 -> a7637a, a76383, a7638c
+  3a56cfc -> a76383, a7638c, a7639e
+  3a56d10 -> a7638c, a7639e, a763a8
+  3a56d24 -> a7639e, a763a8, a763b8
+  3a56d38 -> a763a8, a763b8, a763ba
+  3a56d4c -> a763b8, a763ba, a763bf
+  3a56d60 -> a763ba, a763bf, a763c4
+  3a56d74 -> a763bf, a763c4, a763c7
+  3a56d88 -> a763c4, a763c7, a763c9
+  3a56da4 -> a763c7, a763c9, a763cc
+  3a56dbc -> a763c9, a763cc, a763d0
+  3a56dd0 -> a763cc, a763d0, a763db
+  3a56de4 -> a763d0, a763db, a763dd
+  3a56df8 -> a763db, a763dd, a763df
+  3a56e14 -> a763dd, a763df, a763e1
+  3a56e28 -> a763df, a763e1, a763e8
+  3a56e40 -> a763e1, a763e8, a763ef
+  3a56e54 -> a763e8, a763ef, a76402
+  3a56e68 -> a763ef, a76402, a7640c
+  3a56e7c -> a76402, a7640c, a76415
+  3a56e90 -> a7640c, a76415, a7642a
+  3a56ea4 -> a76415, a7642a
+  3a56ec0 -> a7642a, a7649d, a764a5
+  3a56ee0 -> a7649d, a764a5, a76d0c
+  3a56ef4 -> a764a5, a76d0c, a76d24
+  3a56f08 -> a76d0c, a76d24, a76240
+  3a56f1c -> a76d24, a76240, a764b0
+  3a56f30 -> a76240, a764b0, a764b9
+  3a56f44 -> a764b0, a764b9, a76222
+  3a56f58 -> a764b9, a76222, a764d8
+  3a56f6c -> a76222, a764d8, a764dc
+  3a56f88 -> a764d8, a764dc, a764de
+  3a56f9c -> a764dc, a764de, a764e4
+  3a56fb0 -> a764de, a764e4, a764eb
+  3a56fc4 -> a764e4, a764eb, a764f3
+  3a56fdc -> a764eb, a764f3, a76505
+  3a56ff0 -> a764f3, a76505, a76516
+
+== bucket 0x3a58000 (68 sites)
+  3a58054 -> a76a23, a76a2a, a76a30
+  3a58068 -> a76a2a, a76a30, a76ccd
+  3a5807c -> a76a30, a76ccd, a76cd9
+  3a58090 -> a76ccd, a76cd9, a76a39
+  3a580a4 -> a76cd9, a76a39, a76a3c
+  3a580b8 -> a76a39, a76a3c, a76a43
+  3a580d8 -> a76a3c, a76a43, a76a55
+  3a580ec -> a76a43, a76a55, a76a64
+  3a58100 -> a76a55, a76a64, a76aac
+  3a58114 -> a76a64, a76aac, a76ab8
+  3a58130 -> a76aac, a76ab8, a76ac4
+  3a58144 -> a76ab8, a76ac4, a76acf
+  3a58158 -> a76ac4, a76acf, a76ad4
+  3a5816c -> a76acf, a76ad4, a761ef
+  3a58180 -> a76ad4, a761ef, a76ada
+  3a58194 -> a761ef, a76ada, a76af1
+  3a581a8 -> a76ada, a76af1, a76b06
+  3a581bc -> a76af1, a76b06, a76b0f
+  3a581d0 -> a76b06, a76b0f, a76b15
+  3a581e4 -> a76b0f, a76b15, a76b1e
+  3a581f8 -> a76b15, a76b1e, a76b26
+  3a5820c -> a76b1e, a76b26, a76b33
+  3a58220 -> a76b26, a76b33
+  3a58234 -> a76b33, a76b49
+  3a58254 -> a76b63
+  3a58268 -> a76b49
+  3a584d4 -> a76c95, a76c99, a76ca0
+  3a584e8 -> a76c99, a76ca0, a76ca9
+  3a584fc -> a76ca0, a76ca9, a76cb2
+  3a58510 -> a76ca9, a76cb2, a76cb9
+  3a58524 -> a76cb2, a76cb9
+  3a58538 -> a76cb9
+  3a58594 -> a76cbb
+  3a587b4 -> a76b7c, a76b93, a76bab
+  3a587c8 -> a76b93, a76bab, a76bc4
+  3a587dc -> a76bab, a76bc4, a76bc8
+  3a587f0 -> a76bc4, a76bc8, a76bce
+  3a58804 -> a76bc8, a76bce, a76bd5
+  3a58818 -> a76bce, a76bd5, a76be1
+  3a5882c -> a76bd5, a76be1, a76bea
+  3a58840 -> a76be1, a76bea, a76233
+  3a58854 -> a76bea, a76233, a76bee
+  3a58868 -> a76233, a76bee, a76bf8
+  3a5887c -> a76bee, a76bf8, a76c00
+  3a58890 -> a76bf8, a76c00, a76c0f
+  3a588a4 -> a76c00, a76c0f, a76c17
+  3a588b8 -> a76c0f, a76c17, a76c1d
+  3a588cc -> a76c17, a76c1d, a76c22
+  3a588e0 -> a76c1d, a76c22, a76c28
+  3a588f4 -> a76c22, a76c28, a76c2d
+  3a58908 -> a76c28, a76c2d, a76c37
+  3a5891c -> a76c2d, a76c37, a76e8f
+  3a58930 -> a76c37, a76e8f, a76e9f
+  3a58944 -> a76e8f, a76e9f, a76c3b
+  3a58958 -> a76e9f, a76c3b, a76c48
+  3a5896c -> a76c3b, a76c48, a76c4e
+  3a58980 -> a76c48, a76c4e, a76c53
+  3a58994 -> a76c4e, a76c53, a76c5c
+  3a589a8 -> a76c53, a76c5c, a76c6d
+  3a589bc -> a76c5c, a76c6d, a76c77
+  3a589d0 -> a76c6d, a76c77, a76cc2
+  3a589e4 -> a76c77, a76cc2, a76c7d
+  3a589f8 -> a76cc2, a76c7d, a76eb4
+  3a58a0c -> a76c7d, a76eb4, a76c88
+  3a58a20 -> a76eb4, a76c88
+  3a58a34 -> a76c88, a76c8e
+  3a58a4c -> a76cbd, a76ab9, a76aa9
+  3a58a64 -> a76c8e
+
+== bucket 0x3a5e000 (21 sites)
+  3a5e048 -> a76205
+  3a5e108 -> a76205
+  3a5e1fc -> a76205
+  3a5e2ac -> a76205
+  3a5e358 -> a76205
+  3a5e408 -> a76205
+  3a5e4cc -> a76205
+  3a5e5b4 -> a76205
+  3a5e668 -> a76205
+  3a5e748 -> a76205
+  3a5e830 -> a76205
+  3a5e90c -> a76205
+  3a5e9c0 -> a76205
+  3a5ea78 -> a76205
+  3a5eb34 -> a76205
+  3a5ec00 -> a76205
+  3a5ecbc -> a76205
+  3a5ed8c -> a76205
+  3a5ee6c -> a76205
+  3a5ef1c -> a76205
+  3a5efa0 -> a76205
+
+== bucket 0x3a5f000 (18 sites)
+  3a5f060 -> a76205
+  3a5f114 -> a76205
+  3a5f1e4 -> a76205
+  3a5f2a0 -> a76205
+  3a5f358 -> a76205
+  3a5f450 -> a76205
+  3a5f52c -> a76205
+  3a5f604 -> a76205
+  3a5f6b8 -> a76205
+  3a5f748 -> a76205
+  3a5f7d8 -> a76205
+  3a5f868 -> a76205
+  3a5f928 -> a76205
+  3a5f9ac -> a76205
+  3a5fa68 -> a76205
+  3a5fb1c -> a76205
+  3a5fbcc -> a76205
+  3a5fc50 -> a76205
+
+== bucket 0x3a69000 (16 sites)
+  3a690a0 -> a76ce8
+  3a690f4 -> a76206
+  3a69238 -> a76206
+  3a692cc -> a76206
+  3a69570 -> a76205
+  3a69594 -> a76206
+  3a698e0 -> a76cf9
+  3a698f0 -> a76205
+  3a69914 -> a76206
+  3a69974 -> a76cf9
+  3a69a04 -> a76206
+  3a69c50 -> a76d01
+  3a69c60 -> a76205
+  3a69c84 -> a76206
+  3a69ce4 -> a76d01
+  3a69db4 -> a76206
+
+== bucket 0x3a70000 (15 sites)
+  3a7000c -> a76d4d
+  3a70198 -> a76206
+  3a701dc -> a76206
+  3a70310 -> a76206
+  3a704e4 -> a76d5a
+  3a70640 -> a76d5a
+  3a7066c -> a76206
+  3a709e4 -> a76206
+  3a70aa8 -> a76206
+  3a70b08 -> a76206, a76206
+  3a70b38 -> a76206
+  3a70b4c -> a76d5a
+  3a70cfc -> a76d70
+  3a70e68 -> a76d70
+  3a70e98 -> a76206
+
+== bucket 0x3a76000 (14 sites)
+  3a760a0 -> a76dc0
+  3a761fc -> a76dc0
+  3a76228 -> a76206
+  3a763c0 -> a76206
+  3a763d8 -> a76dc0
+  3a7657c -> a76ddb
+  3a766d8 -> a76ddb
+  3a76704 -> a76206
+  3a7689c -> a76206
+  3a768b4 -> a76ddb
+  3a76d30 -> a76df4
+  3a76f54 -> a76df4
+  3a76f88 -> a76206
+  3a76fbc -> a76df4
+
+== bucket 0x3a6b000 (13 sites)
+  3a6b118 -> a76d1b
+  3a6b15c -> a76206
+  3a6b434 -> a76d24
+  3a6b4e4 -> a76d24
+  3a6b518 -> a76206
+  3a6b578 -> a76d24
+  3a6b5b8 -> a76206
+  3a6b5f4 -> a76206, a76206
+  3a6b618 -> a76206
+  3a6bd64 -> a76d30
+  3a6bee4 -> a76d30
+  3a6bf1c -> a76206
+  3a6bf50 -> a76d30
+
+== bucket 0x3a81000 (12 sites)
+  3a811c0 -> a76206
+  3a81648 -> a76206
+  3a816cc -> a76d1b
+  3a816dc -> a76205
+  3a81700 -> a76206
+  3a81760 -> a76d1b
+  3a81c64 -> a76d41
+  3a81dc8 -> a76d41
+  3a81dfc -> a76206
+  3a81e5c -> a76d41
+  3a81f28 -> a76206
+  3a81fe8 -> a76206
+
+== bucket 0x3a82000 (12 sites)
+  3a82048 -> a76206, a76206
+  3a82074 -> a76206
+  3a823d0 -> a76d4d
+  3a82744 -> a76d4d
+  3a82778 -> a76206
+  3a827dc -> a76d4d
+  3a82968 -> a76206
+  3a829ac -> a76206
+  3a82ae0 -> a76206
+  3a82db0 -> a76d8b
+  3a82ee4 -> a76d8b
+  3a82f10 -> a76206
+
+== bucket 0x3a85000 (12 sites)
+  3a85284 -> a76e7e
+  3a85294 -> a76205
+  3a852b8 -> a76206
+  3a8533c -> a76e7e
+  3a85370 -> a76206
+  3a85404 -> a76206, a76206
+  3a85438 -> a76206
+  3a85604 -> a76e8f
+  3a85724 -> a76e8f
+  3a8575c -> a76206
+  3a85bf0 -> a76206
+  3a85c78 -> a76e8f

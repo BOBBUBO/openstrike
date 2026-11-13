@@ -1,0 +1,167 @@
+// Extracted from server_common.proto in libGame.so
+syntax = "proto2";
+package mobile.server;
+
+message AsioDBOperator {
+  optional mobile.server.AsioDBOperator.TYPE type = 1;
+  optional bytes entityid = 2;
+  optional int32 callback_id = 3;
+  optional bytes method = 4;
+  optional uint32 no = 5;
+  optional bool unreliable = 6;
+  optional bool rtsave = 7;
+  optional bytes dip = 8;
+  optional int32 dport = 9;
+  optional bytes ename = 10;
+  optional uint32 delay = 11;
+  optional bytes db = 12;
+  optional bytes col = 13;
+  optional bytes doc = 14;
+  optional bytes rip = 15;
+  optional int32 rport = 16;
+  optional bool flush = 17;
+  optional bool rts_release = 18;
+  optional bool db_local = 19;
+  optional bytes transaction = 20;
+  enum TYPE {
+    NORMAL = 0;
+    SAVE_ENTITY = 1;
+    LOAD_ENTITY = 2;
+    REPLY_ENTITY = 3;
+    QUERY_LOAD_ENTITY = 4;
+  }
+}
+
+message AsioFindDocReply {
+  required mobile.server.AsioDBOperator oper = 1;
+  optional bytes msg = 2;
+  optional bytes result = 3;
+  optional bytes db = 4;
+  optional bytes col = 5;
+}
+
+message AsioUpdateDocReply {
+  required mobile.server.AsioDBOperator oper = 1;
+  optional bytes msg = 2;
+}
+
+message AsioFindAndModifyDocReply {
+  required mobile.server.AsioDBOperator oper = 1;
+  optional bytes msg = 2;
+  optional bytes result = 3;
+}
+
+message AsioCountDocReply {
+  required mobile.server.AsioDBOperator oper = 1;
+  optional bytes msg = 2;
+  required int32 count = 3;
+}
+
+message AsioInsertDocReply {
+  required mobile.server.AsioDBOperator oper = 1;
+  optional bytes msg = 2;
+}
+
+message AsioOperIndexReply {
+  required mobile.server.AsioDBOperator oper = 1;
+  optional bytes msg = 2;
+}
+
+message AsioDeleteDocReply {
+  required mobile.server.AsioDBOperator oper = 1;
+  optional bytes msg = 2;
+}
+
+message AsioCreateCollectionReply {
+  required mobile.server.AsioDBOperator oper = 1;
+  required mobile.server.AsioCreateCollectionReply.Status status = 2;
+  enum Status {
+    CREATE_SUCC = 0;
+    ALREADY_EXISTED = 1;
+    CREATE_FAILED = 2;
+  }
+}
+
+message AreaDBRequest {
+  required uint32 no = 1;
+  required bytes dip = 2;
+  required int32 dport = 3;
+  optional bytes method = 4;
+}
+
+message AreaDBRequestInfo {
+  required uint32 no = 1;
+  repeated mobile.server.AreaDBRequest request = 2;
+}
+
+message AreaDBQueryItem {
+  required bytes dip = 1;
+  required int32 dport = 2;
+}
+
+message AreaDBQuery {
+  required bytes id = 1;
+  required bytes eip = 2;
+  required int32 eport = 3;
+  repeated mobile.server.AreaDBQueryItem dbs = 4;
+  required uint64 stamp = 5;
+}
+
+message AreaDBReply {
+  required bytes id = 1;
+  required int32 status = 2;
+  optional bytes dip = 3;
+  optional int32 dport = 4;
+  optional bytes eip = 5;
+  optional int32 eport = 6;
+  required uint64 stamp = 7;
+}
+
+message AreaDBQueryDB {
+  required bytes id = 1;
+  optional bytes dip = 2;
+  optional int32 dport = 3;
+  optional bytes eip = 4;
+  optional int32 eport = 5;
+  required uint64 stamp = 6;
+}
+
+message GroupInfo {
+  required uint32 sid = 1;
+  required bytes ip = 2;
+  required uint32 port = 3;
+  required uint32 grp = 4;
+  optional uint32 term = 5;
+  optional uint32 delay = 6;
+}
+
+message AsioDbCacheQueryReply {
+  optional mobile.server.AsioDBOperator oper = 1;
+  optional bytes msg = 2;
+  optional bytes result = 3;
+}
+
+message AsioBulkWriteReply {
+  optional mobile.server.AsioDBOperator oper = 1;
+  optional bool status = 2;
+  optional bytes msg = 3;
+  optional int32 insert_cnt = 4;
+  optional int32 delete_cnt = 5;
+  optional int32 upsert_cnt = 6;
+}
+
+message AsioAggregateReply {
+  optional mobile.server.AsioDBOperator oper = 1;
+  optional bool status = 2;
+  optional bytes msg = 3;
+  optional bytes result = 4;
+}
+
+message AsioCallCustomMethodReply {
+  optional mobile.server.AsioDBOperator oper = 1;
+  optional bool status = 2;
+  optional bytes msg = 3;
+  required bytes args = 4;
+  required bytes kwargs = 5;
+}
+

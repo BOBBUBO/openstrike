@@ -1,0 +1,1440 @@
+
+decompiled/native/lib/arm64-v8a/libGame.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000003f74b24 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base>:
+ 3f74b24:	d10183ff 	sub	sp, sp, #0x60
+ 3f74b28:	a9025ff8 	stp	x24, x23, [sp, #32]
+ 3f74b2c:	a90357f6 	stp	x22, x21, [sp, #48]
+ 3f74b30:	a9044ff4 	stp	x20, x19, [sp, #64]
+ 3f74b34:	a9057bfd 	stp	x29, x30, [sp, #80]
+ 3f74b38:	910143fd 	add	x29, sp, #0x50
+ 3f74b3c:	d53bd055 	mrs	x21, tpidr_el0
+ 3f74b40:	f94016a8 	ldr	x8, [x21, #40]
+ 3f74b44:	aa0103f4 	mov	x20, x1
+ 3f74b48:	aa0003f3 	mov	x19, x0
+ 3f74b4c:	f9000fe8 	str	x8, [sp, #24]
+ 3f74b50:	39400036 	ldrb	w22, [x1]
+ 3f74b54:	37000096 	tbnz	w22, #0, 3f74b64 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x40>
+ 3f74b58:	d341fed7 	lsr	x23, x22, #1
+ 3f74b5c:	91000680 	add	x0, x20, #0x1
+ 3f74b60:	14000002 	b	3f74b68 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x44>
+ 3f74b64:	a9408297 	ldp	x23, x0, [x20, #8]
+ 3f74b68:	f1000eff 	cmp	x23, #0x3
+ 3f74b6c:	320007e8 	orr	w8, wzr, #0x3
+ 3f74b70:	9a978102 	csel	x2, x8, x23, hi	// hi = pmore
+ 3f74b74:	b40001e2 	cbz	x2, 3f74bb0 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x8c>
+ 3f74b78:	b0fe3701 	adrp	x1, 655000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0xe1277>
+ 3f74b7c:	f1000eff 	cmp	x23, #0x3
+ 3f74b80:	91395421 	add	x1, x1, #0xe55
+ 3f74b84:	1a9f97f8 	cset	w24, hi	// hi = pmore
+ 3f74b88:	947631d2 	bl	5d012d0 <memcmp@plt>
+ 3f74b8c:	f1000aff 	cmp	x23, #0x2
+ 3f74b90:	1a9f97e8 	cset	w8, hi	// hi = pmore
+ 3f74b94:	6b08031f 	cmp	w24, w8
+ 3f74b98:	54000180 	b.eq	3f74bc8 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xa4>  // b.none
+ 3f74b9c:	35000160 	cbnz	w0, 3f74bc8 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xa4>
+ 3f74ba0:	370002f6 	tbnz	w22, #0, 3f74bfc <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xd8>
+ 3f74ba4:	d341fed7 	lsr	x23, x22, #1
+ 3f74ba8:	91000680 	add	x0, x20, #0x1
+ 3f74bac:	14000015 	b	3f74c00 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xdc>
+ 3f74bb0:	f1000eff 	cmp	x23, #0x3
+ 3f74bb4:	1a9f97e8 	cset	w8, hi	// hi = pmore
+ 3f74bb8:	f1000aff 	cmp	x23, #0x2
+ 3f74bbc:	1a9f97e9 	cset	w9, hi	// hi = pmore
+ 3f74bc0:	4a090108 	eor	w8, w8, w9
+ 3f74bc4:	3707fee8 	tbnz	w8, #0, 3f74ba0 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7c>
+ 3f74bc8:	321c03e0 	orr	w0, wzr, #0x10
+ 3f74bcc:	94762f99 	bl	5d00a30 <operator new(unsigned long)@plt>
+ 3f74bd0:	aa0003f4 	mov	x20, x0
+ 3f74bd4:	2a1f03e1 	mov	w1, wzr
+ 3f74bd8:	9476482a 	bl	5d06c80 <AES::AES(AESKeyLength)@plt>
+ 3f74bdc:	321c03e0 	orr	w0, wzr, #0x10
+ 3f74be0:	f9000674 	str	x20, [x19, #8]
+ 3f74be4:	9476316b 	bl	5d01190 <operator new[](unsigned long)@plt>
+ 3f74be8:	90fe3ca8 	adrp	x8, 708000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x2e277>
+ 3f74bec:	91104108 	add	x8, x8, #0x410
+ 3f74bf0:	3dc00100 	ldr	q0, [x8]
+ 3f74bf4:	f9000260 	str	x0, [x19]
+ 3f74bf8:	14000028 	b	3f74c98 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x174>
+ 3f74bfc:	a9408297 	ldp	x23, x0, [x20, #8]
+ 3f74c00:	f1000eff 	cmp	x23, #0x3
+ 3f74c04:	320007e8 	orr	w8, wzr, #0x3
+ 3f74c08:	9a978102 	csel	x2, x8, x23, hi	// hi = pmore
+ 3f74c0c:	b40001e2 	cbz	x2, 3f74c48 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x124>
+ 3f74c10:	d0fe3301 	adrp	x1, 5d6000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x160277>
+ 3f74c14:	f1000eff 	cmp	x23, #0x3
+ 3f74c18:	91153c21 	add	x1, x1, #0x54f
+ 3f74c1c:	1a9f97f8 	cset	w24, hi	// hi = pmore
+ 3f74c20:	947631ac 	bl	5d012d0 <memcmp@plt>
+ 3f74c24:	f1000aff 	cmp	x23, #0x2
+ 3f74c28:	1a9f97e8 	cset	w8, hi	// hi = pmore
+ 3f74c2c:	6b08031f 	cmp	w24, w8
+ 3f74c30:	54000180 	b.eq	3f74c60 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x13c>  // b.none
+ 3f74c34:	35000160 	cbnz	w0, 3f74c60 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x13c>
+ 3f74c38:	37000356 	tbnz	w22, #0, 3f74ca0 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x17c>
+ 3f74c3c:	d3417ed6 	ubfx	x22, x22, #1, #31
+ 3f74c40:	91000680 	add	x0, x20, #0x1
+ 3f74c44:	14000018 	b	3f74ca4 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x180>
+ 3f74c48:	f1000eff 	cmp	x23, #0x3
+ 3f74c4c:	1a9f97e8 	cset	w8, hi	// hi = pmore
+ 3f74c50:	f1000aff 	cmp	x23, #0x2
+ 3f74c54:	1a9f97e9 	cset	w9, hi	// hi = pmore
+ 3f74c58:	4a090108 	eor	w8, w8, w9
+ 3f74c5c:	3707fee8 	tbnz	w8, #0, 3f74c38 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x114>
+ 3f74c60:	321c03e0 	orr	w0, wzr, #0x10
+ 3f74c64:	94762f73 	bl	5d00a30 <operator new(unsigned long)@plt>
+ 3f74c68:	aa0003f4 	mov	x20, x0
+ 3f74c6c:	320003e1 	orr	w1, wzr, #0x1
+ 3f74c70:	94764804 	bl	5d06c80 <AES::AES(AESKeyLength)@plt>
+ 3f74c74:	321d07e0 	orr	w0, wzr, #0x18
+ 3f74c78:	f9000674 	str	x20, [x19, #8]
+ 3f74c7c:	94763145 	bl	5d01190 <operator new[](unsigned long)@plt>
+ 3f74c80:	90fe5a68 	adrp	x8, ac0000 <typeinfo name for void (void*, void*)@@Base+0xa352>
+ 3f74c84:	912f8108 	add	x8, x8, #0xbe0
+ 3f74c88:	f9400909 	ldr	x9, [x8, #16]
+ 3f74c8c:	3dc00100 	ldr	q0, [x8]
+ 3f74c90:	f9000260 	str	x0, [x19]
+ 3f74c94:	f9000809 	str	x9, [x0, #16]
+ 3f74c98:	3d800000 	str	q0, [x0]
+ 3f74c9c:	1400003b 	b	3f74d88 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x264>
+ 3f74ca0:	a9408296 	ldp	x22, x0, [x20, #8]
+ 3f74ca4:	f1000edf 	cmp	x22, #0x3
+ 3f74ca8:	320007e8 	orr	w8, wzr, #0x3
+ 3f74cac:	9a968102 	csel	x2, x8, x22, hi	// hi = pmore
+ 3f74cb0:	b4000462 	cbz	x2, 3f74d3c <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x218>
+ 3f74cb4:	90fe3141 	adrp	x1, 59c000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x19a277>
+ 3f74cb8:	f1000edf 	cmp	x22, #0x3
+ 3f74cbc:	911d6821 	add	x1, x1, #0x75a
+ 3f74cc0:	1a9f97f4 	cset	w20, hi	// hi = pmore
+ 3f74cc4:	94763183 	bl	5d012d0 <memcmp@plt>
+ 3f74cc8:	f1000adf 	cmp	x22, #0x2
+ 3f74ccc:	1a9f97e8 	cset	w8, hi	// hi = pmore
+ 3f74cd0:	6b08029f 	cmp	w20, w8
+ 3f74cd4:	54000400 	b.eq	3f74d54 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x230>  // b.none
+ 3f74cd8:	350003e0 	cbnz	w0, 3f74d54 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x230>
+ 3f74cdc:	321c03e0 	orr	w0, wzr, #0x10
+ 3f74ce0:	94762f88 	bl	5d00b00 <__cxa_allocate_exception@plt>
+ 3f74ce4:	b0fe3549 	adrp	x9, 61d000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x119277>
+ 3f74ce8:	910a0129 	add	x9, x9, #0x280
+ 3f74cec:	3dc00120 	ldr	q0, [x9]
+ 3f74cf0:	aa0003f3 	mov	x19, x0
+ 3f74cf4:	52800488 	mov	w8, #0x24                  	// #36
+ 3f74cf8:	528cae09 	mov	w9, #0x6570                	// #25968
+ 3f74cfc:	320003f5 	orr	w21, wzr, #0x1
+ 3f74d00:	a9007fff 	stp	xzr, xzr, [sp]
+ 3f74d04:	f9000bff 	str	xzr, [sp, #16]
+ 3f74d08:	390003e8 	strb	w8, [sp]
+ 3f74d0c:	780113e9 	sturh	w9, [sp, #17]
+ 3f74d10:	3c8013e0 	stur	q0, [sp, #1]
+ 3f74d14:	39004fff 	strb	wzr, [sp, #19]
+ 3f74d18:	910003e1 	mov	x1, sp
+ 3f74d1c:	94764745 	bl	5d06a30 <std::runtime_error::runtime_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)@plt>
+ 3f74d20:	90012981 	adrp	x1, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f74d24:	90012982 	adrp	x2, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f74d28:	f9408821 	ldr	x1, [x1, #272]
+ 3f74d2c:	f943a842 	ldr	x2, [x2, #1872]
+ 3f74d30:	aa1303e0 	mov	x0, x19
+ 3f74d34:	2a1f03f5 	mov	w21, wzr
+ 3f74d38:	94762f7a 	bl	5d00b20 <__cxa_throw@plt>
+ 3f74d3c:	f1000edf 	cmp	x22, #0x3
+ 3f74d40:	1a9f97e8 	cset	w8, hi	// hi = pmore
+ 3f74d44:	f1000adf 	cmp	x22, #0x2
+ 3f74d48:	1a9f97e9 	cset	w9, hi	// hi = pmore
+ 3f74d4c:	4a090108 	eor	w8, w8, w9
+ 3f74d50:	3707fc68 	tbnz	w8, #0, 3f74cdc <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x1b8>
+ 3f74d54:	321c03e0 	orr	w0, wzr, #0x10
+ 3f74d58:	94762f36 	bl	5d00a30 <operator new(unsigned long)@plt>
+ 3f74d5c:	aa0003f4 	mov	x20, x0
+ 3f74d60:	321f03e1 	orr	w1, wzr, #0x2
+ 3f74d64:	947647c7 	bl	5d06c80 <AES::AES(AESKeyLength)@plt>
+ 3f74d68:	321b03e0 	orr	w0, wzr, #0x20
+ 3f74d6c:	f9000674 	str	x20, [x19, #8]
+ 3f74d70:	94763108 	bl	5d01190 <operator new[](unsigned long)@plt>
+ 3f74d74:	f0fe3ca8 	adrp	x8, 70b000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x2b277>
+ 3f74d78:	910fc108 	add	x8, x8, #0x3f0
+ 3f74d7c:	ad400500 	ldp	q0, q1, [x8]
+ 3f74d80:	f9000260 	str	x0, [x19]
+ 3f74d84:	ad000400 	stp	q0, q1, [x0]
+ 3f74d88:	f94016a8 	ldr	x8, [x21, #40]
+ 3f74d8c:	f9400fe9 	ldr	x9, [sp, #24]
+ 3f74d90:	eb09011f 	cmp	x8, x9
+ 3f74d94:	540000e1 	b.ne	3f74db0 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x28c>  // b.any
+ 3f74d98:	a9457bfd 	ldp	x29, x30, [sp, #80]
+ 3f74d9c:	a9444ff4 	ldp	x20, x19, [sp, #64]
+ 3f74da0:	a94357f6 	ldp	x22, x21, [sp, #48]
+ 3f74da4:	a9425ff8 	ldp	x24, x23, [sp, #32]
+ 3f74da8:	910183ff 	add	sp, sp, #0x60
+ 3f74dac:	d65f03c0 	ret
+ 3f74db0:	94762f3c 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3f74db4:	394003e8 	ldrb	w8, [sp]
+ 3f74db8:	aa0003f4 	mov	x20, x0
+ 3f74dbc:	37000068 	tbnz	w8, #0, 3f74dc8 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2a4>
+ 3f74dc0:	350000b5 	cbnz	w21, 3f74dd4 <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2b0>
+ 3f74dc4:	14000006 	b	3f74ddc <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2b8>
+ 3f74dc8:	f9400be0 	ldr	x0, [sp, #16]
+ 3f74dcc:	94762f31 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f74dd0:	36000075 	tbz	w21, #0, 3f74ddc <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2b8>
+ 3f74dd4:	aa1303e0 	mov	x0, x19
+ 3f74dd8:	94762f56 	bl	5d00b30 <__cxa_free_exception@plt>
+ 3f74ddc:	aa1403e0 	mov	x0, x20
+ 3f74de0:	94761e4b 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f74de4:	14000002 	b	3f74dec <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2c8>
+ 3f74de8:	14000001 	b	3f74dec <ntes_gzailab::Encryptor::Encryptor(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2c8>
+ 3f74dec:	aa1403e8 	mov	x8, x20
+ 3f74df0:	aa0003f4 	mov	x20, x0
+ 3f74df4:	aa0803e0 	mov	x0, x8
+ 3f74df8:	94762f26 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f74dfc:	aa1403e0 	mov	x0, x20
+ 3f74e00:	94761e43 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+
+0000000003f74e04 <ntes_gzailab::Encryptor::~Encryptor()@@Base>:
+ 3f74e04:	f81e0ff3 	str	x19, [sp, #-32]!
+ 3f74e08:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 3f74e0c:	910043fd 	add	x29, sp, #0x10
+ 3f74e10:	aa0003f3 	mov	x19, x0
+ 3f74e14:	f9400400 	ldr	x0, [x0, #8]
+ 3f74e18:	b4000060 	cbz	x0, 3f74e24 <ntes_gzailab::Encryptor::~Encryptor()@@Base+0x20>
+ 3f74e1c:	94762f1d 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f74e20:	f900067f 	str	xzr, [x19, #8]
+ 3f74e24:	f9400260 	ldr	x0, [x19]
+ 3f74e28:	b4000060 	cbz	x0, 3f74e34 <ntes_gzailab::Encryptor::~Encryptor()@@Base+0x30>
+ 3f74e2c:	947630e9 	bl	5d011d0 <operator delete[](void*)@plt>
+ 3f74e30:	f900027f 	str	xzr, [x19]
+ 3f74e34:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 3f74e38:	f84207f3 	ldr	x19, [sp], #32
+ 3f74e3c:	d65f03c0 	ret
+
+0000000003f74e40 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base>:
+ 3f74e40:	a9ba6ffc 	stp	x28, x27, [sp, #-96]!
+ 3f74e44:	a90167fa 	stp	x26, x25, [sp, #16]
+ 3f74e48:	a9025ff8 	stp	x24, x23, [sp, #32]
+ 3f74e4c:	a90357f6 	stp	x22, x21, [sp, #48]
+ 3f74e50:	a9044ff4 	stp	x20, x19, [sp, #64]
+ 3f74e54:	a9057bfd 	stp	x29, x30, [sp, #80]
+ 3f74e58:	910143fd 	add	x29, sp, #0x50
+ 3f74e5c:	d10e43ff 	sub	sp, sp, #0x390
+ 3f74e60:	b00129a9 	adrp	x9, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f74e64:	d53bd053 	mrs	x19, tpidr_el0
+ 3f74e68:	f940e929 	ldr	x9, [x9, #464]
+ 3f74e6c:	f940166a 	ldr	x10, [x19, #40]
+ 3f74e70:	910883e8 	add	x8, sp, #0x220
+ 3f74e74:	6f00e400 	movi	v0.2d, #0x0
+ 3f74e78:	9100612b 	add	x11, x9, #0x18
+ 3f74e7c:	aa0203f5 	mov	x21, x2
+ 3f74e80:	aa0103f7 	mov	x23, x1
+ 3f74e84:	aa0003f6 	mov	x22, x0
+ 3f74e88:	4e081d60 	mov	v0.d[0], x11
+ 3f74e8c:	9102e11b 	add	x27, x8, #0xb8
+ 3f74e90:	91004114 	add	x20, x8, #0x10
+ 3f74e94:	91010128 	add	x8, x9, #0x40
+ 3f74e98:	f90007ea 	str	x10, [sp, #8]
+ 3f74e9c:	f9016fe8 	str	x8, [sp, #728]
+ 3f74ea0:	3d808be0 	str	q0, [sp, #544]
+ 3f74ea4:	aa1b03e0 	mov	x0, x27
+ 3f74ea8:	aa1403e1 	mov	x1, x20
+ 3f74eac:	94763049 	bl	5d00fd0 <std::__ndk1::ios_base::init(void*)@plt>
+ 3f74eb0:	f901b3ff 	str	xzr, [sp, #864]
+ 3f74eb4:	90012989 	adrp	x9, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f74eb8:	f9428d29 	ldr	x9, [x9, #1304]
+ 3f74ebc:	12800008 	mov	w8, #0xffffffff            	// #-1
+ 3f74ec0:	b9036be8 	str	w8, [sp, #872]
+ 3f74ec4:	91006128 	add	x8, x9, #0x18
+ 3f74ec8:	91010129 	add	x9, x9, #0x40
+ 3f74ecc:	f90113e8 	str	x8, [sp, #544]
+ 3f74ed0:	f9016fe9 	str	x9, [sp, #728]
+ 3f74ed4:	aa1403e0 	mov	x0, x20
+ 3f74ed8:	94764742 	bl	5d06be0 <std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char> >::basic_filebuf()@plt>
+ 3f74edc:	f94157e8 	ldr	x8, [sp, #680]
+ 3f74ee0:	910006f8 	add	x24, x23, #0x1
+ 3f74ee4:	f90003fb 	str	x27, [sp]
+ 3f74ee8:	b4000f68 	cbz	x8, 3f750d4 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x294>
+ 3f74eec:	f94113e8 	ldr	x8, [sp, #544]
+ 3f74ef0:	910883e9 	add	x9, sp, #0x220
+ 3f74ef4:	f85e8108 	ldur	x8, [x8, #-24]
+ 3f74ef8:	8b080120 	add	x0, x9, x8
+ 3f74efc:	b9402008 	ldr	w8, [x0, #32]
+ 3f74f00:	321e0101 	orr	w1, w8, #0x4
+ 3f74f04:	9476304f 	bl	5d01040 <std::__ndk1::ios_base::clear(unsigned int)@plt>
+ 3f74f08:	f94157e8 	ldr	x8, [sp, #680]
+ 3f74f0c:	b5000fa8 	cbnz	x8, 3f75100 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2c0>
+ 3f74f10:	528000a8 	mov	w8, #0x5                   	// #5
+ 3f74f14:	390123e8 	strb	w8, [sp, #72]
+ 3f74f18:	910123e0 	add	x0, sp, #0x48
+ 3f74f1c:	940002cc 	bl	3f75a4c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xc0c>
+ 3f74f20:	b00129b9 	adrp	x25, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f74f24:	f940c739 	ldr	x25, [x25, #392]
+ 3f74f28:	320003e8 	orr	w8, wzr, #0x1
+ 3f74f2c:	a9067fff 	stp	xzr, xzr, [sp, #96]
+ 3f74f30:	3901c3e8 	strb	w8, [sp, #112]
+ 3f74f34:	91004329 	add	x9, x25, #0x10
+ 3f74f38:	a9057fe9 	stp	x9, xzr, [sp, #80]
+ 3f74f3c:	390167ff 	strb	wzr, [sp, #89]
+ 3f74f40:	910143e0 	add	x0, sp, #0x50
+ 3f74f44:	94000282 	bl	3f7594c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xb0c>
+ 3f74f48:	94763fba 	bl	5d04e30 <std::__ndk1::chrono::system_clock::now()@plt>
+ 3f74f4c:	b00129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f74f50:	f940d108 	ldr	x8, [x8, #416]
+ 3f74f54:	3902a3ff 	strb	wzr, [sp, #168]
+ 3f74f58:	91004108 	add	x8, x8, #0x10
+ 3f74f5c:	a90983e8 	stp	x8, x0, [sp, #152]
+ 3f74f60:	910263e0 	add	x0, sp, #0x98
+ 3f74f64:	94000216 	bl	3f757bc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x97c>
+ 3f74f68:	321f0be9 	orr	w9, wzr, #0xe
+ 3f74f6c:	90fe35ac 	adrp	x12, 628000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x10e277>
+ 3f74f70:	a90c7fff 	stp	xzr, xzr, [sp, #192]
+ 3f74f74:	f9006bff 	str	xzr, [sp, #208]
+ 3f74f78:	d28dc8aa 	mov	x10, #0x6e45                	// #28229
+ 3f74f7c:	911a298c 	add	x12, x12, #0x68a
+ 3f74f80:	390303e9 	strb	w9, [sp, #192]
+ 3f74f84:	b00129ba 	adrp	x26, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f74f88:	f2ae4c6a 	movk	x10, #0x7263, lsl #16
+ 3f74f8c:	f940cf5a 	ldr	x26, [x26, #408]
+ 3f74f90:	f840e189 	ldur	x9, [x12, #14]
+ 3f74f94:	3dc00180 	ldr	q0, [x12]
+ 3f74f98:	f2ce0f2a 	movk	x10, #0x7079, lsl #32
+ 3f74f9c:	910303e8 	add	x8, sp, #0xc0
+ 3f74fa0:	f2e00e8a 	movk	x10, #0x74, lsl #48
+ 3f74fa4:	f800110a 	stur	x10, [x8, #1]
+ 3f74fa8:	f803f3e9 	stur	x9, [sp, #63]
+ 3f74fac:	3c8313e0 	stur	q0, [sp, #49]
+ 3f74fb0:	3dc033e0 	ldr	q0, [sp, #192]
+ 3f74fb4:	5280058b 	mov	w11, #0x2c                  	// #44
+ 3f74fb8:	39011fff 	strb	wzr, [sp, #71]
+ 3f74fbc:	3900c3eb 	strb	w11, [sp, #48]
+ 3f74fc0:	9100434a 	add	x10, x26, #0x10
+ 3f74fc4:	f94023e9 	ldr	x9, [sp, #64]
+ 3f74fc8:	f9406beb 	ldr	x11, [sp, #208]
+ 3f74fcc:	a90d2bff 	stp	xzr, x10, [sp, #208]
+ 3f74fd0:	3c820100 	stur	q0, [x8, #32]
+ 3f74fd4:	3dc00fe0 	ldr	q0, [sp, #48]
+ 3f74fd8:	f90087e9 	str	x9, [sp, #264]
+ 3f74fdc:	321a03e9 	orr	w9, wzr, #0x40
+ 3f74fe0:	f9007beb 	str	x11, [sp, #240]
+ 3f74fe4:	a90c7fff 	stp	xzr, xzr, [sp, #192]
+ 3f74fe8:	a9037fff 	stp	xzr, xzr, [sp, #48]
+ 3f74fec:	f90023ff 	str	xzr, [sp, #64]
+ 3f74ff0:	3c838100 	stur	q0, [x8, #56]
+ 3f74ff4:	f9008be9 	str	x9, [sp, #272]
+ 3f74ff8:	390463ff 	strb	wzr, [sp, #280]
+ 3f74ffc:	910363e0 	add	x0, sp, #0xd8
+ 3f75000:	940001a4 	bl	3f75690 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x850>
+ 3f75004:	900129a0 	adrp	x0, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75008:	f9409c00 	ldr	x0, [x0, #312]
+ 3f7500c:	f0fe34c1 	adrp	x1, 610000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x126277>
+ 3f75010:	91361821 	add	x1, x1, #0xd86
+ 3f75014:	528001a2 	mov	w2, #0xd                   	// #13
+ 3f75018:	947645d2 	bl	5d06760 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char> >(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&, char const*, unsigned long)@plt>
+ 3f7501c:	394002e8 	ldrb	w8, [x23]
+ 3f75020:	a940a6ea 	ldp	x10, x9, [x23, #8]
+ 3f75024:	7200011f 	tst	w8, #0x1
+ 3f75028:	d341fd0b 	lsr	x11, x8, #1
+ 3f7502c:	9a890301 	csel	x1, x24, x9, eq	// eq = none
+ 3f75030:	9a8a0162 	csel	x2, x11, x10, eq	// eq = none
+ 3f75034:	947645cb 	bl	5d06760 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char> >(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&, char const*, unsigned long)@plt>
+ 3f75038:	f9400008 	ldr	x8, [x0]
+ 3f7503c:	aa0003f7 	mov	x23, x0
+ 3f75040:	f85e8108 	ldur	x8, [x8, #-24]
+ 3f75044:	8b080000 	add	x0, x0, x8
+ 3f75048:	910043e8 	add	x8, sp, #0x10
+ 3f7504c:	94763005 	bl	5d01060 <std::__ndk1::ios_base::getloc() const@plt>
+ 3f75050:	f0012961 	adrp	x1, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f75054:	f9412021 	ldr	x1, [x1, #576]
+ 3f75058:	910043e0 	add	x0, sp, #0x10
+ 3f7505c:	94763005 	bl	5d01070 <std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const@plt>
+ 3f75060:	f9400008 	ldr	x8, [x0]
+ 3f75064:	f9401d08 	ldr	x8, [x8, #56]
+ 3f75068:	52800141 	mov	w1, #0xa                   	// #10
+ 3f7506c:	d63f0100 	blr	x8
+ 3f75070:	2a0003f8 	mov	w24, w0
+ 3f75074:	910043e0 	add	x0, sp, #0x10
+ 3f75078:	94763002 	bl	5d01080 <std::__ndk1::locale::~locale()@plt>
+ 3f7507c:	aa1703e0 	mov	x0, x23
+ 3f75080:	2a1803e1 	mov	w1, w24
+ 3f75084:	947634af 	bl	5d02340 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::put(char)@plt>
+ 3f75088:	aa1703e0 	mov	x0, x23
+ 3f7508c:	94763505 	bl	5d024a0 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::flush()@plt>
+ 3f75090:	91004348 	add	x8, x26, #0x10
+ 3f75094:	f9006fe8 	str	x8, [sp, #216]
+ 3f75098:	3943e3e8 	ldrb	w8, [sp, #248]
+ 3f7509c:	36000068 	tbz	w8, #0, 3f750a8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x268>
+ 3f750a0:	f94087e0 	ldr	x0, [sp, #264]
+ 3f750a4:	94762e7b 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f750a8:	394383e8 	ldrb	w8, [sp, #224]
+ 3f750ac:	36000068 	tbz	w8, #0, 3f750b8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x278>
+ 3f750b0:	f9407be0 	ldr	x0, [sp, #240]
+ 3f750b4:	94762e77 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f750b8:	394163e8 	ldrb	w8, [sp, #88]
+ 3f750bc:	91004329 	add	x9, x25, #0x10
+ 3f750c0:	f9002be9 	str	x9, [sp, #80]
+ 3f750c4:	360001e8 	tbz	w8, #0, 3f75100 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2c0>
+ 3f750c8:	f94037e0 	ldr	x0, [sp, #104]
+ 3f750cc:	94762e71 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f750d0:	1400000c 	b	3f75100 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x2c0>
+ 3f750d4:	394002e8 	ldrb	w8, [x23]
+ 3f750d8:	f9400ae9 	ldr	x9, [x23, #16]
+ 3f750dc:	f0fe3881 	adrp	x1, 688000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0xae277>
+ 3f750e0:	91117421 	add	x1, x1, #0x45d
+ 3f750e4:	7200011f 	tst	w8, #0x1
+ 3f750e8:	9a890300 	csel	x0, x24, x9, eq	// eq = none
+ 3f750ec:	9476301d 	bl	5d01160 <fopen@plt>
+ 3f750f0:	f90157e0 	str	x0, [sp, #680]
+ 3f750f4:	b4ffefc0 	cbz	x0, 3f74eec <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xac>
+ 3f750f8:	321d03e8 	orr	w8, wzr, #0x8
+ 3f750fc:	b902cbe8 	str	w8, [sp, #712]
+ 3f75100:	910883e0 	add	x0, sp, #0x220
+ 3f75104:	321f03e2 	orr	w2, wzr, #0x2
+ 3f75108:	aa1f03e1 	mov	x1, xzr
+ 3f7510c:	94763ff5 	bl	5d050e0 <std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::seekg(long long, std::__ndk1::ios_base::seekdir)@plt>
+ 3f75110:	910883e0 	add	x0, sp, #0x220
+ 3f75114:	947638e3 	bl	5d034a0 <std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::tellg()@plt>
+ 3f75118:	aa0103f7 	mov	x23, x1
+ 3f7511c:	910883e0 	add	x0, sp, #0x220
+ 3f75120:	aa1f03e1 	mov	x1, xzr
+ 3f75124:	2a1f03e2 	mov	w2, wzr
+ 3f75128:	94763fee 	bl	5d050e0 <std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::seekg(long long, std::__ndk1::ios_base::seekdir)@plt>
+ 3f7512c:	93407ef9 	sxtw	x25, w23
+ 3f75130:	aa1903e0 	mov	x0, x25
+ 3f75134:	94763017 	bl	5d01190 <operator new[](unsigned long)@plt>
+ 3f75138:	aa0003f8 	mov	x24, x0
+ 3f7513c:	910883e0 	add	x0, sp, #0x220
+ 3f75140:	aa1803e1 	mov	x1, x24
+ 3f75144:	aa1903e2 	mov	x2, x25
+ 3f75148:	9476304e 	bl	5d01280 <std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::read(char*, long)@plt>
+ 3f7514c:	d3607ee8 	lsl	x8, x23, #32
+ 3f75150:	b25e03e9 	orr	x9, xzr, #0x400000000
+ 3f75154:	8b090108 	add	x8, x8, x9
+ 3f75158:	9360fd1a 	asr	x26, x8, #32
+ 3f7515c:	aa1a03e0 	mov	x0, x26
+ 3f75160:	9476300c 	bl	5d01190 <operator new[](unsigned long)@plt>
+ 3f75164:	aa0003fb 	mov	x27, x0
+ 3f75168:	b8004777 	str	w23, [x27], #4
+ 3f7516c:	aa0003f9 	mov	x25, x0
+ 3f75170:	a94002c3 	ldp	x3, x0, [x22]
+ 3f75174:	11003ee8 	add	w8, w23, #0xf
+ 3f75178:	710002ff 	cmp	w23, #0x0
+ 3f7517c:	1a97b108 	csel	w8, w8, w23, lt	// lt = tstop
+ 3f75180:	121c6d16 	and	w22, w8, #0xfffffff0
+ 3f75184:	aa1803e1 	mov	x1, x24
+ 3f75188:	2a1603e2 	mov	w2, w22
+ 3f7518c:	947646b9 	bl	5d06c70 <AES::EncryptECB(unsigned char*, unsigned int, unsigned char*)@plt>
+ 3f75190:	aa0003fc 	mov	x28, x0
+ 3f75194:	4b1602f7 	sub	w23, w23, w22
+ 3f75198:	93407ed6 	sxtw	x22, w22
+ 3f7519c:	aa1b03e0 	mov	x0, x27
+ 3f751a0:	aa1c03e1 	mov	x1, x28
+ 3f751a4:	aa1603e2 	mov	x2, x22
+ 3f751a8:	94762e72 	bl	5d00b70 <memcpy@plt>
+ 3f751ac:	b400007c 	cbz	x28, 3f751b8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x378>
+ 3f751b0:	aa1c03e0 	mov	x0, x28
+ 3f751b4:	94763007 	bl	5d011d0 <operator delete[](void*)@plt>
+ 3f751b8:	340000b7 	cbz	w23, 3f751cc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x38c>
+ 3f751bc:	8b160360 	add	x0, x27, x22
+ 3f751c0:	8b160301 	add	x1, x24, x22
+ 3f751c4:	93407ee2 	sxtw	x2, w23
+ 3f751c8:	94762e6a 	bl	5d00b70 <memcpy@plt>
+ 3f751cc:	900129a9 	adrp	x9, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f751d0:	f940ed29 	ldr	x9, [x9, #472]
+ 3f751d4:	910363e8 	add	x8, sp, #0xd8
+ 3f751d8:	9102c116 	add	x22, x8, #0xb0
+ 3f751dc:	91002117 	add	x23, x8, #0x8
+ 3f751e0:	91006128 	add	x8, x9, #0x18
+ 3f751e4:	91010129 	add	x9, x9, #0x40
+ 3f751e8:	f9006fe8 	str	x8, [sp, #216]
+ 3f751ec:	f900c7e9 	str	x9, [sp, #392]
+ 3f751f0:	aa1603e0 	mov	x0, x22
+ 3f751f4:	aa1703e1 	mov	x1, x23
+ 3f751f8:	94762f76 	bl	5d00fd0 <std::__ndk1::ios_base::init(void*)@plt>
+ 3f751fc:	f9010bff 	str	xzr, [sp, #528]
+ 3f75200:	f001297c 	adrp	x28, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f75204:	f945679c 	ldr	x28, [x28, #2760]
+ 3f75208:	12800008 	mov	w8, #0xffffffff            	// #-1
+ 3f7520c:	b9021be8 	str	w8, [sp, #536]
+ 3f75210:	91006388 	add	x8, x28, #0x18
+ 3f75214:	91010389 	add	x9, x28, #0x40
+ 3f75218:	f9006fe8 	str	x8, [sp, #216]
+ 3f7521c:	f900c7e9 	str	x9, [sp, #392]
+ 3f75220:	aa1703e0 	mov	x0, x23
+ 3f75224:	9476466f 	bl	5d06be0 <std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char> >::basic_filebuf()@plt>
+ 3f75228:	f940afe8 	ldr	x8, [sp, #344]
+ 3f7522c:	910006bb 	add	x27, x21, #0x1
+ 3f75230:	b4000fe8 	cbz	x8, 3f7542c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x5ec>
+ 3f75234:	f9406fe8 	ldr	x8, [sp, #216]
+ 3f75238:	910363e9 	add	x9, sp, #0xd8
+ 3f7523c:	f85e8108 	ldur	x8, [x8, #-24]
+ 3f75240:	8b080120 	add	x0, x9, x8
+ 3f75244:	b9402008 	ldr	w8, [x0, #32]
+ 3f75248:	321e0101 	orr	w1, w8, #0x4
+ 3f7524c:	94762f7d 	bl	5d01040 <std::__ndk1::ios_base::clear(unsigned int)@plt>
+ 3f75250:	f940afe8 	ldr	x8, [sp, #344]
+ 3f75254:	b5001028 	cbnz	x8, 3f75458 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x618>
+ 3f75258:	528000a8 	mov	w8, #0x5                   	// #5
+ 3f7525c:	3900b3e8 	strb	w8, [sp, #44]
+ 3f75260:	9100b3e0 	add	x0, sp, #0x2c
+ 3f75264:	940001fa 	bl	3f75a4c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xc0c>
+ 3f75268:	900129a9 	adrp	x9, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f7526c:	f940c529 	ldr	x9, [x9, #392]
+ 3f75270:	320003e8 	orr	w8, wzr, #0x1
+ 3f75274:	a90affff 	stp	xzr, xzr, [sp, #168]
+ 3f75278:	3902e3e8 	strb	w8, [sp, #184]
+ 3f7527c:	91004129 	add	x9, x9, #0x10
+ 3f75280:	a909ffe9 	stp	x9, xzr, [sp, #152]
+ 3f75284:	390287ff 	strb	wzr, [sp, #161]
+ 3f75288:	910263e0 	add	x0, sp, #0x98
+ 3f7528c:	940001b0 	bl	3f7594c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xb0c>
+ 3f75290:	94763ee8 	bl	5d04e30 <std::__ndk1::chrono::system_clock::now()@plt>
+ 3f75294:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75298:	f940d108 	ldr	x8, [x8, #416]
+ 3f7529c:	390343ff 	strb	wzr, [sp, #208]
+ 3f752a0:	91004108 	add	x8, x8, #0x10
+ 3f752a4:	a90c03e8 	stp	x8, x0, [sp, #192]
+ 3f752a8:	910303e0 	add	x0, sp, #0xc0
+ 3f752ac:	94000144 	bl	3f757bc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x97c>
+ 3f752b0:	321f0be8 	orr	w8, wzr, #0xe
+ 3f752b4:	f0fe358b 	adrp	x11, 628000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x10e277>
+ 3f752b8:	a9037fff 	stp	xzr, xzr, [sp, #48]
+ 3f752bc:	f90023ff 	str	xzr, [sp, #64]
+ 3f752c0:	d28dc8a9 	mov	x9, #0x6e45                	// #28229
+ 3f752c4:	911a296b 	add	x11, x11, #0x68a
+ 3f752c8:	3900c3e8 	strb	w8, [sp, #48]
+ 3f752cc:	900129ac 	adrp	x12, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f752d0:	f2ae4c69 	movk	x9, #0x7263, lsl #16
+ 3f752d4:	f940cd8c 	ldr	x12, [x12, #408]
+ 3f752d8:	f840e168 	ldur	x8, [x11, #14]
+ 3f752dc:	3dc00160 	ldr	q0, [x11]
+ 3f752e0:	f2ce0f29 	movk	x9, #0x7079, lsl #32
+ 3f752e4:	f2e00e89 	movk	x9, #0x74, lsl #48
+ 3f752e8:	f80313e9 	stur	x9, [sp, #49]
+ 3f752ec:	f801f3e8 	stur	x8, [sp, #31]
+ 3f752f0:	3c8113e0 	stur	q0, [sp, #17]
+ 3f752f4:	3dc00fe0 	ldr	q0, [sp, #48]
+ 3f752f8:	5280058a 	mov	w10, #0x2c                  	// #44
+ 3f752fc:	39009fff 	strb	wzr, [sp, #39]
+ 3f75300:	390043ea 	strb	w10, [sp, #16]
+ 3f75304:	f94013e8 	ldr	x8, [sp, #32]
+ 3f75308:	3c8583e0 	stur	q0, [sp, #88]
+ 3f7530c:	3dc007e0 	ldr	q0, [sp, #16]
+ 3f75310:	91004189 	add	x9, x12, #0x10
+ 3f75314:	aa1f03ea 	mov	x10, xzr
+ 3f75318:	f90043e8 	str	x8, [sp, #128]
+ 3f7531c:	52800a28 	mov	w8, #0x51                  	// #81
+ 3f75320:	f9002be9 	str	x9, [sp, #80]
+ 3f75324:	f90037ea 	str	x10, [sp, #104]
+ 3f75328:	a9037fff 	stp	xzr, xzr, [sp, #48]
+ 3f7532c:	f90023ff 	str	xzr, [sp, #64]
+ 3f75330:	a9017fff 	stp	xzr, xzr, [sp, #16]
+ 3f75334:	f90013ff 	str	xzr, [sp, #32]
+ 3f75338:	3d801fe0 	str	q0, [sp, #112]
+ 3f7533c:	f90047e8 	str	x8, [sp, #136]
+ 3f75340:	390243ff 	strb	wzr, [sp, #144]
+ 3f75344:	910143e0 	add	x0, sp, #0x50
+ 3f75348:	940000d2 	bl	3f75690 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x850>
+ 3f7534c:	900129a0 	adrp	x0, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75350:	f9409c00 	ldr	x0, [x0, #312]
+ 3f75354:	f0fe34c1 	adrp	x1, 610000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x126277>
+ 3f75358:	91361821 	add	x1, x1, #0xd86
+ 3f7535c:	528001a2 	mov	w2, #0xd                   	// #13
+ 3f75360:	94764500 	bl	5d06760 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char> >(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&, char const*, unsigned long)@plt>
+ 3f75364:	394002a8 	ldrb	w8, [x21]
+ 3f75368:	a940a6aa 	ldp	x10, x9, [x21, #8]
+ 3f7536c:	7200011f 	tst	w8, #0x1
+ 3f75370:	d341fd0b 	lsr	x11, x8, #1
+ 3f75374:	9a890361 	csel	x1, x27, x9, eq	// eq = none
+ 3f75378:	9a8a0162 	csel	x2, x11, x10, eq	// eq = none
+ 3f7537c:	947644f9 	bl	5d06760 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char> >(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&, char const*, unsigned long)@plt>
+ 3f75380:	f9400008 	ldr	x8, [x0]
+ 3f75384:	aa0003f5 	mov	x21, x0
+ 3f75388:	f85e8108 	ldur	x8, [x8, #-24]
+ 3f7538c:	8b080000 	add	x0, x0, x8
+ 3f75390:	910123e8 	add	x8, sp, #0x48
+ 3f75394:	94762f33 	bl	5d01060 <std::__ndk1::ios_base::getloc() const@plt>
+ 3f75398:	f0012961 	adrp	x1, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f7539c:	f9412021 	ldr	x1, [x1, #576]
+ 3f753a0:	910123e0 	add	x0, sp, #0x48
+ 3f753a4:	94762f33 	bl	5d01070 <std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const@plt>
+ 3f753a8:	f9400008 	ldr	x8, [x0]
+ 3f753ac:	f9401d08 	ldr	x8, [x8, #56]
+ 3f753b0:	52800141 	mov	w1, #0xa                   	// #10
+ 3f753b4:	d63f0100 	blr	x8
+ 3f753b8:	2a0003fb 	mov	w27, w0
+ 3f753bc:	910123e0 	add	x0, sp, #0x48
+ 3f753c0:	94762f30 	bl	5d01080 <std::__ndk1::locale::~locale()@plt>
+ 3f753c4:	aa1503e0 	mov	x0, x21
+ 3f753c8:	2a1b03e1 	mov	w1, w27
+ 3f753cc:	947633dd 	bl	5d02340 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::put(char)@plt>
+ 3f753d0:	aa1503e0 	mov	x0, x21
+ 3f753d4:	94763433 	bl	5d024a0 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::flush()@plt>
+ 3f753d8:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f753dc:	f940cd08 	ldr	x8, [x8, #408]
+ 3f753e0:	91004108 	add	x8, x8, #0x10
+ 3f753e4:	f9002be8 	str	x8, [sp, #80]
+ 3f753e8:	3941c3e8 	ldrb	w8, [sp, #112]
+ 3f753ec:	36000068 	tbz	w8, #0, 3f753f8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x5b8>
+ 3f753f0:	f94043e0 	ldr	x0, [sp, #128]
+ 3f753f4:	94762da7 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f753f8:	394163e8 	ldrb	w8, [sp, #88]
+ 3f753fc:	36000068 	tbz	w8, #0, 3f75408 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x5c8>
+ 3f75400:	f94037e0 	ldr	x0, [sp, #104]
+ 3f75404:	94762da3 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75408:	900129a9 	adrp	x9, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f7540c:	394283e8 	ldrb	w8, [sp, #160]
+ 3f75410:	f940c529 	ldr	x9, [x9, #392]
+ 3f75414:	91004129 	add	x9, x9, #0x10
+ 3f75418:	f9004fe9 	str	x9, [sp, #152]
+ 3f7541c:	360001e8 	tbz	w8, #0, 3f75458 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x618>
+ 3f75420:	f9405be0 	ldr	x0, [sp, #176]
+ 3f75424:	94762d9b 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75428:	1400000c 	b	3f75458 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x618>
+ 3f7542c:	394002a8 	ldrb	w8, [x21]
+ 3f75430:	f9400aa9 	ldr	x9, [x21, #16]
+ 3f75434:	d0fe3201 	adrp	x1, 5b7000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x17f277>
+ 3f75438:	91025c21 	add	x1, x1, #0x97
+ 3f7543c:	7200011f 	tst	w8, #0x1
+ 3f75440:	9a890360 	csel	x0, x27, x9, eq	// eq = none
+ 3f75444:	94762f47 	bl	5d01160 <fopen@plt>
+ 3f75448:	f900afe0 	str	x0, [sp, #344]
+ 3f7544c:	b4ffef40 	cbz	x0, 3f75234 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x3f4>
+ 3f75450:	52800288 	mov	w8, #0x14                  	// #20
+ 3f75454:	b9017be8 	str	w8, [sp, #376]
+ 3f75458:	910363e0 	add	x0, sp, #0xd8
+ 3f7545c:	aa1903e1 	mov	x1, x25
+ 3f75460:	aa1a03e2 	mov	x2, x26
+ 3f75464:	94762f93 	bl	5d012b0 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::write(char const*, long)@plt>
+ 3f75468:	aa1803e0 	mov	x0, x24
+ 3f7546c:	94762f59 	bl	5d011d0 <operator delete[](void*)@plt>
+ 3f75470:	aa1903e0 	mov	x0, x25
+ 3f75474:	94762f57 	bl	5d011d0 <operator delete[](void*)@plt>
+ 3f75478:	91006388 	add	x8, x28, #0x18
+ 3f7547c:	91010389 	add	x9, x28, #0x40
+ 3f75480:	aa1703e0 	mov	x0, x23
+ 3f75484:	f9006fe8 	str	x8, [sp, #216]
+ 3f75488:	f900c7e9 	str	x9, [sp, #392]
+ 3f7548c:	947645d9 	bl	5d06bf0 <std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char> >::~basic_filebuf()@plt>
+ 3f75490:	aa1603e0 	mov	x0, x22
+ 3f75494:	947644e3 	bl	5d06820 <std::__ndk1::ios_base::~ios_base()@plt>
+ 3f75498:	f0012968 	adrp	x8, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f7549c:	f9428d08 	ldr	x8, [x8, #1304]
+ 3f754a0:	aa1403e0 	mov	x0, x20
+ 3f754a4:	aa0803e9 	mov	x9, x8
+ 3f754a8:	91006108 	add	x8, x8, #0x18
+ 3f754ac:	91010129 	add	x9, x9, #0x40
+ 3f754b0:	f90113e8 	str	x8, [sp, #544]
+ 3f754b4:	f9016fe9 	str	x9, [sp, #728]
+ 3f754b8:	947645ce 	bl	5d06bf0 <std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char> >::~basic_filebuf()@plt>
+ 3f754bc:	f94003e0 	ldr	x0, [sp]
+ 3f754c0:	947644d8 	bl	5d06820 <std::__ndk1::ios_base::~ios_base()@plt>
+ 3f754c4:	f9401668 	ldr	x8, [x19, #40]
+ 3f754c8:	f94007e9 	ldr	x9, [sp, #8]
+ 3f754cc:	eb09011f 	cmp	x8, x9
+ 3f754d0:	54000121 	b.ne	3f754f4 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x6b4>  // b.any
+ 3f754d4:	910e43ff 	add	sp, sp, #0x390
+ 3f754d8:	a9457bfd 	ldp	x29, x30, [sp, #80]
+ 3f754dc:	a9444ff4 	ldp	x20, x19, [sp, #64]
+ 3f754e0:	a94357f6 	ldp	x22, x21, [sp, #48]
+ 3f754e4:	a9425ff8 	ldp	x24, x23, [sp, #32]
+ 3f754e8:	a94167fa 	ldp	x26, x25, [sp, #16]
+ 3f754ec:	a8c66ffc 	ldp	x28, x27, [sp], #96
+ 3f754f0:	d65f03c0 	ret
+ 3f754f4:	94762d6b 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3f754f8:	aa0003f5 	mov	x21, x0
+ 3f754fc:	14000034 	b	3f755cc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x78c>
+ 3f75500:	aa0003f5 	mov	x21, x0
+ 3f75504:	14000032 	b	3f755cc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x78c>
+ 3f75508:	14000015 	b	3f7555c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x71c>
+ 3f7550c:	aa0003f5 	mov	x21, x0
+ 3f75510:	1400004b 	b	3f7563c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7fc>
+ 3f75514:	aa0003f5 	mov	x21, x0
+ 3f75518:	14000049 	b	3f7563c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7fc>
+ 3f7551c:	1400004f 	b	3f75658 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x818>
+ 3f75520:	aa0003f5 	mov	x21, x0
+ 3f75524:	910123e0 	add	x0, sp, #0x48
+ 3f75528:	94762ed6 	bl	5d01080 <std::__ndk1::locale::~locale()@plt>
+ 3f7552c:	1400001c 	b	3f7559c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x75c>
+ 3f75530:	aa0003f5 	mov	x21, x0
+ 3f75534:	910043e0 	add	x0, sp, #0x10
+ 3f75538:	94762ed2 	bl	5d01080 <std::__ndk1::locale::~locale()@plt>
+ 3f7553c:	14000036 	b	3f75614 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7d4>
+ 3f75540:	aa0003f5 	mov	x21, x0
+ 3f75544:	1400002e 	b	3f755fc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7bc>
+ 3f75548:	aa0003f5 	mov	x21, x0
+ 3f7554c:	aa1403e0 	mov	x0, x20
+ 3f75550:	947645a8 	bl	5d06bf0 <std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char> >::~basic_filebuf()@plt>
+ 3f75554:	aa1b03e0 	mov	x0, x27
+ 3f75558:	1400004b 	b	3f75684 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x844>
+ 3f7555c:	aa0003f5 	mov	x21, x0
+ 3f75560:	14000023 	b	3f755ec <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7ac>
+ 3f75564:	aa0003f5 	mov	x21, x0
+ 3f75568:	14000027 	b	3f75604 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7c4>
+ 3f7556c:	aa0003f5 	mov	x21, x0
+ 3f75570:	14000025 	b	3f75604 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7c4>
+ 3f75574:	14000039 	b	3f75658 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x818>
+ 3f75578:	14000038 	b	3f75658 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x818>
+ 3f7557c:	14000037 	b	3f75658 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x818>
+ 3f75580:	14000036 	b	3f75658 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x818>
+ 3f75584:	14000035 	b	3f75658 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x818>
+ 3f75588:	14000001 	b	3f7558c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x74c>
+ 3f7558c:	aa0003f5 	mov	x21, x0
+ 3f75590:	aa1b03e0 	mov	x0, x27
+ 3f75594:	1400003c 	b	3f75684 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x844>
+ 3f75598:	aa0003f5 	mov	x21, x0
+ 3f7559c:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f755a0:	f940cd08 	ldr	x8, [x8, #408]
+ 3f755a4:	91004108 	add	x8, x8, #0x10
+ 3f755a8:	f9002be8 	str	x8, [sp, #80]
+ 3f755ac:	3941c3e8 	ldrb	w8, [sp, #112]
+ 3f755b0:	36000068 	tbz	w8, #0, 3f755bc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x77c>
+ 3f755b4:	f94043e0 	ldr	x0, [sp, #128]
+ 3f755b8:	94762d36 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f755bc:	394163e8 	ldrb	w8, [sp, #88]
+ 3f755c0:	36000068 	tbz	w8, #0, 3f755cc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x78c>
+ 3f755c4:	f94037e0 	ldr	x0, [sp, #104]
+ 3f755c8:	94762d32 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f755cc:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f755d0:	f940c508 	ldr	x8, [x8, #392]
+ 3f755d4:	91004108 	add	x8, x8, #0x10
+ 3f755d8:	f9004fe8 	str	x8, [sp, #152]
+ 3f755dc:	394283e8 	ldrb	w8, [sp, #160]
+ 3f755e0:	36000068 	tbz	w8, #0, 3f755ec <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7ac>
+ 3f755e4:	f9405be0 	ldr	x0, [sp, #176]
+ 3f755e8:	94762d2a 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f755ec:	91006388 	add	x8, x28, #0x18
+ 3f755f0:	91010389 	add	x9, x28, #0x40
+ 3f755f4:	f9006fe8 	str	x8, [sp, #216]
+ 3f755f8:	f900c7e9 	str	x9, [sp, #392]
+ 3f755fc:	aa1703e0 	mov	x0, x23
+ 3f75600:	9476457c 	bl	5d06bf0 <std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char> >::~basic_filebuf()@plt>
+ 3f75604:	aa1603e0 	mov	x0, x22
+ 3f75608:	94764486 	bl	5d06820 <std::__ndk1::ios_base::~ios_base()@plt>
+ 3f7560c:	14000014 	b	3f7565c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x81c>
+ 3f75610:	aa0003f5 	mov	x21, x0
+ 3f75614:	91004348 	add	x8, x26, #0x10
+ 3f75618:	f9006fe8 	str	x8, [sp, #216]
+ 3f7561c:	3943e3e8 	ldrb	w8, [sp, #248]
+ 3f75620:	36000068 	tbz	w8, #0, 3f7562c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7ec>
+ 3f75624:	f94087e0 	ldr	x0, [sp, #264]
+ 3f75628:	94762d1a 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f7562c:	394383e8 	ldrb	w8, [sp, #224]
+ 3f75630:	36000068 	tbz	w8, #0, 3f7563c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x7fc>
+ 3f75634:	f9407be0 	ldr	x0, [sp, #240]
+ 3f75638:	94762d16 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f7563c:	91004328 	add	x8, x25, #0x10
+ 3f75640:	f9002be8 	str	x8, [sp, #80]
+ 3f75644:	394163e8 	ldrb	w8, [sp, #88]
+ 3f75648:	360000a8 	tbz	w8, #0, 3f7565c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x81c>
+ 3f7564c:	f94037e0 	ldr	x0, [sp, #104]
+ 3f75650:	94762d10 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75654:	14000002 	b	3f7565c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x81c>
+ 3f75658:	aa0003f5 	mov	x21, x0
+ 3f7565c:	f0012968 	adrp	x8, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f75660:	f9428d08 	ldr	x8, [x8, #1304]
+ 3f75664:	aa1403e0 	mov	x0, x20
+ 3f75668:	aa0803e9 	mov	x9, x8
+ 3f7566c:	91006108 	add	x8, x8, #0x18
+ 3f75670:	91010129 	add	x9, x9, #0x40
+ 3f75674:	f90113e8 	str	x8, [sp, #544]
+ 3f75678:	f9016fe9 	str	x9, [sp, #728]
+ 3f7567c:	9476455d 	bl	5d06bf0 <std::__ndk1::basic_filebuf<char, std::__ndk1::char_traits<char> >::~basic_filebuf()@plt>
+ 3f75680:	f94003e0 	ldr	x0, [sp]
+ 3f75684:	94764467 	bl	5d06820 <std::__ndk1::ios_base::~ios_base()@plt>
+ 3f75688:	aa1503e0 	mov	x0, x21
+ 3f7568c:	94761c20 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f75690:	f81d0ff5 	str	x21, [sp, #-48]!
+ 3f75694:	a9014ff4 	stp	x20, x19, [sp, #16]
+ 3f75698:	a9027bfd 	stp	x29, x30, [sp, #32]
+ 3f7569c:	910083fd 	add	x29, sp, #0x20
+ 3f756a0:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f756a4:	f9409d08 	ldr	x8, [x8, #312]
+ 3f756a8:	aa0003f3 	mov	x19, x0
+ 3f756ac:	f9400109 	ldr	x9, [x8]
+ 3f756b0:	f85e8129 	ldur	x9, [x9, #-24]
+ 3f756b4:	8b090108 	add	x8, x8, x9
+ 3f756b8:	f9401508 	ldr	x8, [x8, #40]
+ 3f756bc:	b4000568 	cbz	x8, 3f75768 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x928>
+ 3f756c0:	90012981 	adrp	x1, 64a5000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x6430>
+ 3f756c4:	900129a2 	adrp	x2, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f756c8:	f9437821 	ldr	x1, [x1, #1776]
+ 3f756cc:	f940a842 	ldr	x2, [x2, #336]
+ 3f756d0:	aa0803e0 	mov	x0, x8
+ 3f756d4:	aa1f03e3 	mov	x3, xzr
+ 3f756d8:	94763ef2 	bl	5d052a0 <__dynamic_cast@plt>
+ 3f756dc:	b4000460 	cbz	x0, 3f75768 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x928>
+ 3f756e0:	91046014 	add	x20, x0, #0x118
+ 3f756e4:	aa0003f5 	mov	x21, x0
+ 3f756e8:	aa1403e0 	mov	x0, x20
+ 3f756ec:	9476440d 	bl	5d06720 <std::__ndk1::recursive_mutex::lock()@plt>
+ 3f756f0:	910262a8 	add	x8, x21, #0x98
+ 3f756f4:	eb13011f 	cmp	x8, x19
+ 3f756f8:	54000260 	b.eq	3f75744 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x904>  // b.none
+ 3f756fc:	39402269 	ldrb	w9, [x19, #8]
+ 3f75700:	a9412e6a 	ldp	x10, x11, [x19, #16]
+ 3f75704:	91002268 	add	x8, x19, #0x8
+ 3f75708:	910282a0 	add	x0, x21, #0xa0
+ 3f7570c:	7200013f 	tst	w9, #0x1
+ 3f75710:	d341fd2c 	lsr	x12, x9, #1
+ 3f75714:	9a881561 	csinc	x1, x11, x8, ne	// ne = any
+ 3f75718:	9a8a0182 	csel	x2, x12, x10, eq	// eq = none
+ 3f7571c:	977cf1a1 	bl	1eb1da0 <physx::pvdsdk::PvdUserRenderer::create(unsigned int)@@Base+0x2a008>
+ 3f75720:	39408268 	ldrb	w8, [x19, #32]
+ 3f75724:	a942aa69 	ldp	x9, x10, [x19, #40]
+ 3f75728:	9100866b 	add	x11, x19, #0x21
+ 3f7572c:	9102e2a0 	add	x0, x21, #0xb8
+ 3f75730:	7200011f 	tst	w8, #0x1
+ 3f75734:	d341fd0c 	lsr	x12, x8, #1
+ 3f75738:	9a8a0161 	csel	x1, x11, x10, eq	// eq = none
+ 3f7573c:	9a890182 	csel	x2, x12, x9, eq	// eq = none
+ 3f75740:	977cf198 	bl	1eb1da0 <physx::pvdsdk::PvdUserRenderer::create(unsigned int)@@Base+0x2a008>
+ 3f75744:	39410268 	ldrb	w8, [x19, #64]
+ 3f75748:	f9401e69 	ldr	x9, [x19, #56]
+ 3f7574c:	aa1403e0 	mov	x0, x20
+ 3f75750:	390362a8 	strb	w8, [x21, #216]
+ 3f75754:	f9006aa9 	str	x9, [x21, #208]
+ 3f75758:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 3f7575c:	a9414ff4 	ldp	x20, x19, [sp, #16]
+ 3f75760:	f84307f5 	ldr	x21, [sp], #48
+ 3f75764:	147643f3 	b	5d06730 <std::__ndk1::recursive_mutex::unlock()@plt>
+ 3f75768:	39410268 	ldrb	w8, [x19, #64]
+ 3f7576c:	35000168 	cbnz	w8, 3f75798 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x958>
+ 3f75770:	39402268 	ldrb	w8, [x19, #8]
+ 3f75774:	a9412a69 	ldp	x9, x10, [x19, #16]
+ 3f75778:	900129a0 	adrp	x0, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f7577c:	f9409c00 	ldr	x0, [x0, #312]
+ 3f75780:	9100266b 	add	x11, x19, #0x9
+ 3f75784:	d341fd0c 	lsr	x12, x8, #1
+ 3f75788:	7200011f 	tst	w8, #0x1
+ 3f7578c:	9a8a0161 	csel	x1, x11, x10, eq	// eq = none
+ 3f75790:	9a890182 	csel	x2, x12, x9, eq	// eq = none
+ 3f75794:	947643f3 	bl	5d06760 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char> >(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&, char const*, unsigned long)@plt>
+ 3f75798:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 3f7579c:	a9414ff4 	ldp	x20, x19, [sp, #16]
+ 3f757a0:	f84307f5 	ldr	x21, [sp], #48
+ 3f757a4:	d65f03c0 	ret
+ 3f757a8:	aa0003f3 	mov	x19, x0
+ 3f757ac:	aa1403e0 	mov	x0, x20
+ 3f757b0:	947643e0 	bl	5d06730 <std::__ndk1::recursive_mutex::unlock()@plt>
+ 3f757b4:	aa1303e0 	mov	x0, x19
+ 3f757b8:	94761bd5 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f757bc:	d101c3ff 	sub	sp, sp, #0x70
+ 3f757c0:	a90457f6 	stp	x22, x21, [sp, #64]
+ 3f757c4:	a9054ff4 	stp	x20, x19, [sp, #80]
+ 3f757c8:	a9067bfd 	stp	x29, x30, [sp, #96]
+ 3f757cc:	910183fd 	add	x29, sp, #0x60
+ 3f757d0:	d53bd056 	mrs	x22, tpidr_el0
+ 3f757d4:	f94016c8 	ldr	x8, [x22, #40]
+ 3f757d8:	aa0003f3 	mov	x19, x0
+ 3f757dc:	f81d83a8 	stur	x8, [x29, #-40]
+ 3f757e0:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f757e4:	f9409d08 	ldr	x8, [x8, #312]
+ 3f757e8:	f9400109 	ldr	x9, [x8]
+ 3f757ec:	f85e8129 	ldur	x9, [x9, #-24]
+ 3f757f0:	8b090108 	add	x8, x8, x9
+ 3f757f4:	f9401508 	ldr	x8, [x8, #40]
+ 3f757f8:	b4000288 	cbz	x8, 3f75848 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xa08>
+ 3f757fc:	90012981 	adrp	x1, 64a5000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x6430>
+ 3f75800:	900129a2 	adrp	x2, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75804:	f9437821 	ldr	x1, [x1, #1776]
+ 3f75808:	f940a842 	ldr	x2, [x2, #336]
+ 3f7580c:	aa0803e0 	mov	x0, x8
+ 3f75810:	aa1f03e3 	mov	x3, xzr
+ 3f75814:	94763ea3 	bl	5d052a0 <__dynamic_cast@plt>
+ 3f75818:	b4000180 	cbz	x0, 3f75848 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xa08>
+ 3f7581c:	91046015 	add	x21, x0, #0x118
+ 3f75820:	aa0003f4 	mov	x20, x0
+ 3f75824:	aa1503e0 	mov	x0, x21
+ 3f75828:	947643be 	bl	5d06720 <std::__ndk1::recursive_mutex::lock()@plt>
+ 3f7582c:	39404268 	ldrb	w8, [x19, #16]
+ 3f75830:	f9400669 	ldr	x9, [x19, #8]
+ 3f75834:	aa1503e0 	mov	x0, x21
+ 3f75838:	3903c288 	strb	w8, [x20, #240]
+ 3f7583c:	f9007689 	str	x9, [x20, #232]
+ 3f75840:	947643bc 	bl	5d06730 <std::__ndk1::recursive_mutex::unlock()@plt>
+ 3f75844:	14000025 	b	3f758d8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xa98>
+ 3f75848:	39404268 	ldrb	w8, [x19, #16]
+ 3f7584c:	35000468 	cbnz	w8, 3f758d8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xa98>
+ 3f75850:	90fe3a48 	adrp	x8, 6bd000 <typeinfo name for nv::cloth::ClothFabricCooker@@Base-0x79277>
+ 3f75854:	9114d108 	add	x8, x8, #0x534
+ 3f75858:	f840d109 	ldur	x9, [x8, #13]
+ 3f7585c:	3dc00100 	ldr	q0, [x8]
+ 3f75860:	52800548 	mov	w8, #0x2a                  	// #42
+ 3f75864:	a900ffff 	stp	xzr, xzr, [sp, #8]
+ 3f75868:	f9000fff 	str	xzr, [sp, #24]
+ 3f7586c:	390023e8 	strb	w8, [sp, #8]
+ 3f75870:	f80163e9 	stur	x9, [sp, #22]
+ 3f75874:	3c8093e0 	stur	q0, [sp, #9]
+ 3f75878:	39007bff 	strb	wzr, [sp, #30]
+ 3f7587c:	910083e8 	add	x8, sp, #0x20
+ 3f75880:	910023e1 	add	x1, sp, #0x8
+ 3f75884:	aa1303e0 	mov	x0, x19
+ 3f75888:	910083f4 	add	x20, sp, #0x20
+ 3f7588c:	94764379 	bl	5d06670 <AixLog::Timestamp::to_string(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&) const@plt>
+ 3f75890:	394083e8 	ldrb	w8, [sp, #32]
+ 3f75894:	a942a7ea 	ldp	x10, x9, [sp, #40]
+ 3f75898:	b240028b 	orr	x11, x20, #0x1
+ 3f7589c:	7200011f 	tst	w8, #0x1
+ 3f758a0:	d341fd0c 	lsr	x12, x8, #1
+ 3f758a4:	9a890161 	csel	x1, x11, x9, eq	// eq = none
+ 3f758a8:	9a8a0182 	csel	x2, x12, x10, eq	// eq = none
+ 3f758ac:	900129a0 	adrp	x0, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f758b0:	f9409c00 	ldr	x0, [x0, #312]
+ 3f758b4:	947643ab 	bl	5d06760 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char> >(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&, char const*, unsigned long)@plt>
+ 3f758b8:	394083e8 	ldrb	w8, [sp, #32]
+ 3f758bc:	36000068 	tbz	w8, #0, 3f758c8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xa88>
+ 3f758c0:	f9401be0 	ldr	x0, [sp, #48]
+ 3f758c4:	94762c73 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f758c8:	394023e8 	ldrb	w8, [sp, #8]
+ 3f758cc:	36000068 	tbz	w8, #0, 3f758d8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xa98>
+ 3f758d0:	f9400fe0 	ldr	x0, [sp, #24]
+ 3f758d4:	94762c6f 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f758d8:	f94016c8 	ldr	x8, [x22, #40]
+ 3f758dc:	f85d83a9 	ldur	x9, [x29, #-40]
+ 3f758e0:	eb09011f 	cmp	x8, x9
+ 3f758e4:	540000c1 	b.ne	3f758fc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xabc>  // b.any
+ 3f758e8:	a9467bfd 	ldp	x29, x30, [sp, #96]
+ 3f758ec:	a9454ff4 	ldp	x20, x19, [sp, #80]
+ 3f758f0:	a94457f6 	ldp	x22, x21, [sp, #64]
+ 3f758f4:	9101c3ff 	add	sp, sp, #0x70
+ 3f758f8:	d65f03c0 	ret
+ 3f758fc:	94762c69 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3f75900:	394083e8 	ldrb	w8, [sp, #32]
+ 3f75904:	aa0003f3 	mov	x19, x0
+ 3f75908:	370000a8 	tbnz	w8, #0, 3f7591c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xadc>
+ 3f7590c:	394023e8 	ldrb	w8, [sp, #8]
+ 3f75910:	37000168 	tbnz	w8, #0, 3f7593c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xafc>
+ 3f75914:	aa1303e0 	mov	x0, x19
+ 3f75918:	94761b7d 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f7591c:	f9401be0 	ldr	x0, [sp, #48]
+ 3f75920:	94762c5c 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75924:	394023e8 	ldrb	w8, [sp, #8]
+ 3f75928:	3607ff68 	tbz	w8, #0, 3f75914 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xad4>
+ 3f7592c:	14000004 	b	3f7593c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xafc>
+ 3f75930:	aa0003f3 	mov	x19, x0
+ 3f75934:	394023e8 	ldrb	w8, [sp, #8]
+ 3f75938:	3607fee8 	tbz	w8, #0, 3f75914 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xad4>
+ 3f7593c:	f9400fe0 	ldr	x0, [sp, #24]
+ 3f75940:	94762c54 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75944:	aa1303e0 	mov	x0, x19
+ 3f75948:	94761b71 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f7594c:	f81d0ff5 	str	x21, [sp, #-48]!
+ 3f75950:	a9014ff4 	stp	x20, x19, [sp, #16]
+ 3f75954:	a9027bfd 	stp	x29, x30, [sp, #32]
+ 3f75958:	910083fd 	add	x29, sp, #0x20
+ 3f7595c:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75960:	f9409d08 	ldr	x8, [x8, #312]
+ 3f75964:	aa0003f3 	mov	x19, x0
+ 3f75968:	f9400109 	ldr	x9, [x8]
+ 3f7596c:	f85e8129 	ldur	x9, [x9, #-24]
+ 3f75970:	8b090108 	add	x8, x8, x9
+ 3f75974:	f9401508 	ldr	x8, [x8, #40]
+ 3f75978:	b4000408 	cbz	x8, 3f759f8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xbb8>
+ 3f7597c:	90012981 	adrp	x1, 64a5000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x6430>
+ 3f75980:	900129a2 	adrp	x2, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75984:	f9437821 	ldr	x1, [x1, #1776]
+ 3f75988:	f940a842 	ldr	x2, [x2, #336]
+ 3f7598c:	aa0803e0 	mov	x0, x8
+ 3f75990:	aa1f03e3 	mov	x3, xzr
+ 3f75994:	94763e43 	bl	5d052a0 <__dynamic_cast@plt>
+ 3f75998:	b4000300 	cbz	x0, 3f759f8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xbb8>
+ 3f7599c:	91046014 	add	x20, x0, #0x118
+ 3f759a0:	aa0003f5 	mov	x21, x0
+ 3f759a4:	aa1403e0 	mov	x0, x20
+ 3f759a8:	9476435e 	bl	5d06720 <std::__ndk1::recursive_mutex::lock()@plt>
+ 3f759ac:	9101c2a8 	add	x8, x21, #0x70
+ 3f759b0:	eb13011f 	cmp	x8, x19
+ 3f759b4:	54000140 	b.eq	3f759dc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xb9c>  // b.none
+ 3f759b8:	39402269 	ldrb	w9, [x19, #8]
+ 3f759bc:	a9412e6a 	ldp	x10, x11, [x19, #16]
+ 3f759c0:	91002268 	add	x8, x19, #0x8
+ 3f759c4:	9101e2a0 	add	x0, x21, #0x78
+ 3f759c8:	7200013f 	tst	w9, #0x1
+ 3f759cc:	d341fd2c 	lsr	x12, x9, #1
+ 3f759d0:	9a881561 	csinc	x1, x11, x8, ne	// ne = any
+ 3f759d4:	9a8a0182 	csel	x2, x12, x10, eq	// eq = none
+ 3f759d8:	977cf0f2 	bl	1eb1da0 <physx::pvdsdk::PvdUserRenderer::create(unsigned int)@@Base+0x2a008>
+ 3f759dc:	39408268 	ldrb	w8, [x19, #32]
+ 3f759e0:	aa1403e0 	mov	x0, x20
+ 3f759e4:	390242a8 	strb	w8, [x21, #144]
+ 3f759e8:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 3f759ec:	a9414ff4 	ldp	x20, x19, [sp, #16]
+ 3f759f0:	f84307f5 	ldr	x21, [sp], #48
+ 3f759f4:	1476434f 	b	5d06730 <std::__ndk1::recursive_mutex::unlock()@plt>
+ 3f759f8:	39408268 	ldrb	w8, [x19, #32]
+ 3f759fc:	35000168 	cbnz	w8, 3f75a28 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xbe8>
+ 3f75a00:	39402268 	ldrb	w8, [x19, #8]
+ 3f75a04:	a9412a69 	ldp	x9, x10, [x19, #16]
+ 3f75a08:	900129a0 	adrp	x0, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75a0c:	f9409c00 	ldr	x0, [x0, #312]
+ 3f75a10:	9100266b 	add	x11, x19, #0x9
+ 3f75a14:	d341fd0c 	lsr	x12, x8, #1
+ 3f75a18:	7200011f 	tst	w8, #0x1
+ 3f75a1c:	9a8a0161 	csel	x1, x11, x10, eq	// eq = none
+ 3f75a20:	9a890182 	csel	x2, x12, x9, eq	// eq = none
+ 3f75a24:	9476434f 	bl	5d06760 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char> >(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&, char const*, unsigned long)@plt>
+ 3f75a28:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 3f75a2c:	a9414ff4 	ldp	x20, x19, [sp, #16]
+ 3f75a30:	f84307f5 	ldr	x21, [sp], #48
+ 3f75a34:	d65f03c0 	ret
+ 3f75a38:	aa0003f3 	mov	x19, x0
+ 3f75a3c:	aa1403e0 	mov	x0, x20
+ 3f75a40:	9476433c 	bl	5d06730 <std::__ndk1::recursive_mutex::unlock()@plt>
+ 3f75a44:	aa1303e0 	mov	x0, x19
+ 3f75a48:	94761b31 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f75a4c:	d106c3ff 	sub	sp, sp, #0x1b0
+ 3f75a50:	a9156ffc 	stp	x28, x27, [sp, #336]
+ 3f75a54:	a91667fa 	stp	x26, x25, [sp, #352]
+ 3f75a58:	a9175ff8 	stp	x24, x23, [sp, #368]
+ 3f75a5c:	a91857f6 	stp	x22, x21, [sp, #384]
+ 3f75a60:	a9194ff4 	stp	x20, x19, [sp, #400]
+ 3f75a64:	a91a7bfd 	stp	x29, x30, [sp, #416]
+ 3f75a68:	910683fd 	add	x29, sp, #0x1a0
+ 3f75a6c:	d53bd058 	mrs	x24, tpidr_el0
+ 3f75a70:	f9401708 	ldr	x8, [x24, #40]
+ 3f75a74:	aa0003f5 	mov	x21, x0
+ 3f75a78:	f81a03a8 	stur	x8, [x29, #-96]
+ 3f75a7c:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75a80:	f9409d08 	ldr	x8, [x8, #312]
+ 3f75a84:	f9400109 	ldr	x9, [x8]
+ 3f75a88:	f85e8129 	ldur	x9, [x9, #-24]
+ 3f75a8c:	8b090108 	add	x8, x8, x9
+ 3f75a90:	f9401508 	ldr	x8, [x8, #40]
+ 3f75a94:	b4000648 	cbz	x8, 3f75b5c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xd1c>
+ 3f75a98:	90012981 	adrp	x1, 64a5000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x6430>
+ 3f75a9c:	900129a2 	adrp	x2, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75aa0:	f9437821 	ldr	x1, [x1, #1776]
+ 3f75aa4:	f940a842 	ldr	x2, [x2, #336]
+ 3f75aa8:	aa0803e0 	mov	x0, x8
+ 3f75aac:	aa1f03e3 	mov	x3, xzr
+ 3f75ab0:	94763dfc 	bl	5d052a0 <__dynamic_cast@plt>
+ 3f75ab4:	b4000540 	cbz	x0, 3f75b5c <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xd1c>
+ 3f75ab8:	91046013 	add	x19, x0, #0x118
+ 3f75abc:	aa0003f4 	mov	x20, x0
+ 3f75ac0:	aa1303e0 	mov	x0, x19
+ 3f75ac4:	94764317 	bl	5d06720 <std::__ndk1::recursive_mutex::lock()@plt>
+ 3f75ac8:	3941a288 	ldrb	w8, [x20, #104]
+ 3f75acc:	394002a9 	ldrb	w9, [x21]
+ 3f75ad0:	6b09011f 	cmp	w8, w9
+ 3f75ad4:	54002040 	b.eq	3f75edc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x109c>  // b.none
+ 3f75ad8:	f9400288 	ldr	x8, [x20]
+ 3f75adc:	f9401908 	ldr	x8, [x8, #48]
+ 3f75ae0:	aa1403e0 	mov	x0, x20
+ 3f75ae4:	d63f0100 	blr	x8
+ 3f75ae8:	394002ab 	ldrb	w11, [x21]
+ 3f75aec:	f900769f 	str	xzr, [x20, #232]
+ 3f75af0:	900129b5 	adrp	x21, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75af4:	f940c6b5 	ldr	x21, [x21, #392]
+ 3f75af8:	910083e9 	add	x9, sp, #0x20
+ 3f75afc:	9101c28a 	add	x10, x20, #0x70
+ 3f75b00:	320003e8 	orr	w8, wzr, #0x1
+ 3f75b04:	eb0a013f 	cmp	x9, x10
+ 3f75b08:	910042aa 	add	x10, x21, #0x10
+ 3f75b0c:	3903c288 	strb	w8, [x20, #240]
+ 3f75b10:	3901a28b 	strb	w11, [x20, #104]
+ 3f75b14:	a9027fea 	stp	x10, xzr, [sp, #32]
+ 3f75b18:	a9037fff 	stp	xzr, xzr, [sp, #48]
+ 3f75b1c:	3900a7ff 	strb	wzr, [sp, #41]
+ 3f75b20:	390103e8 	strb	w8, [sp, #64]
+ 3f75b24:	540017e0 	b.eq	3f75e20 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfe0>  // b.none
+ 3f75b28:	91002521 	add	x1, x9, #0x9
+ 3f75b2c:	9101e280 	add	x0, x20, #0x78
+ 3f75b30:	aa1f03e2 	mov	x2, xzr
+ 3f75b34:	977cf09b 	bl	1eb1da0 <physx::pvdsdk::PvdUserRenderer::create(unsigned int)@@Base+0x2a008>
+ 3f75b38:	394103e8 	ldrb	w8, [sp, #64]
+ 3f75b3c:	3940a3e9 	ldrb	w9, [sp, #40]
+ 3f75b40:	910042aa 	add	x10, x21, #0x10
+ 3f75b44:	39024288 	strb	w8, [x20, #144]
+ 3f75b48:	f90013ea 	str	x10, [sp, #32]
+ 3f75b4c:	360016e9 	tbz	w9, #0, 3f75e28 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfe8>
+ 3f75b50:	f9401fe0 	ldr	x0, [sp, #56]
+ 3f75b54:	94762bcf 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75b58:	140000b4 	b	3f75e28 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfe8>
+ 3f75b5c:	394002b6 	ldrb	w22, [x21]
+ 3f75b60:	71001adf 	cmp	w22, #0x6
+ 3f75b64:	540004c8 	b.hi	3f75bfc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xdbc>  // b.pmore
+ 3f75b68:	f0fe5a48 	adrp	x8, ac0000 <typeinfo name for void (void*, void*)@@Base+0xa352>
+ 3f75b6c:	912f1108 	add	x8, x8, #0xbc4
+ 3f75b70:	b8b67909 	ldrsw	x9, [x8, x22, lsl #2]
+ 3f75b74:	8b080128 	add	x8, x9, x8
+ 3f75b78:	d61f0100 	br	x8
+ 3f75b7c:	528e4a8c 	mov	w12, #0x7254                	// #29268
+ 3f75b80:	aa1f03e8 	mov	x8, xzr
+ 3f75b84:	aa1f03e9 	mov	x9, xzr
+ 3f75b88:	5280014a 	mov	w10, #0xa                   	// #10
+ 3f75b8c:	910023eb 	add	x11, sp, #0x8
+ 3f75b90:	72ac6c2c 	movk	w12, #0x6361, lsl #16
+ 3f75b94:	52800cad 	mov	w13, #0x65                  	// #101
+ 3f75b98:	a900ffff 	stp	xzr, xzr, [sp, #8]
+ 3f75b9c:	f9000fff 	str	xzr, [sp, #24]
+ 3f75ba0:	14000090 	b	3f75de0 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfa0>
+ 3f75ba4:	528dc92c 	mov	w12, #0x6e49                	// #28233
+ 3f75ba8:	aa1f03e8 	mov	x8, xzr
+ 3f75bac:	aa1f03e9 	mov	x9, xzr
+ 3f75bb0:	321d03ea 	orr	w10, wzr, #0x8
+ 3f75bb4:	910023eb 	add	x11, sp, #0x8
+ 3f75bb8:	72adeccc 	movk	w12, #0x6f66, lsl #16
+ 3f75bbc:	a900ffff 	stp	xzr, xzr, [sp, #8]
+ 3f75bc0:	f9000fff 	str	xzr, [sp, #24]
+ 3f75bc4:	14000009 	b	3f75be8 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xda8>
+ 3f75bc8:	528c2aec 	mov	w12, #0x6157                	// #24919
+ 3f75bcc:	aa1f03e8 	mov	x8, xzr
+ 3f75bd0:	aa1f03e9 	mov	x9, xzr
+ 3f75bd4:	a900ffff 	stp	xzr, xzr, [sp, #8]
+ 3f75bd8:	f9000fff 	str	xzr, [sp, #24]
+ 3f75bdc:	321d03ea 	orr	w10, wzr, #0x8
+ 3f75be0:	910023eb 	add	x11, sp, #0x8
+ 3f75be4:	72adce4c 	movk	w12, #0x6e72, lsl #16
+ 3f75be8:	390023ea 	strb	w10, [sp, #8]
+ 3f75bec:	b240016b 	orr	x11, x11, #0x1
+ 3f75bf0:	b80093ec 	stur	w12, [sp, #9]
+ 3f75bf4:	390037ff 	strb	wzr, [sp, #13]
+ 3f75bf8:	1400007e 	b	3f75df0 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfb0>
+ 3f75bfc:	f0012979 	adrp	x25, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f75c00:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75c04:	f9428339 	ldr	x25, [x25, #1280]
+ 3f75c08:	f940a508 	ldr	x8, [x8, #328]
+ 3f75c0c:	910083f4 	add	x20, sp, #0x20
+ 3f75c10:	6f00e400 	movi	v0.2d, #0x0
+ 3f75c14:	91020280 	add	x0, x20, #0x80
+ 3f75c18:	91010109 	add	x9, x8, #0x40
+ 3f75c1c:	91006108 	add	x8, x8, #0x18
+ 3f75c20:	91010333 	add	x19, x25, #0x40
+ 3f75c24:	91006295 	add	x21, x20, #0x18
+ 3f75c28:	4e081d00 	mov	v0.d[0], x8
+ 3f75c2c:	f9001bf3 	str	x19, [sp, #48]
+ 3f75c30:	f90053e9 	str	x9, [sp, #160]
+ 3f75c34:	3d800be0 	str	q0, [sp, #32]
+ 3f75c38:	aa1503e1 	mov	x1, x21
+ 3f75c3c:	f90003e0 	str	x0, [sp]
+ 3f75c40:	94762ce4 	bl	5d00fd0 <std::__ndk1::ios_base::init(void*)@plt>
+ 3f75c44:	f90097ff 	str	xzr, [sp, #296]
+ 3f75c48:	900129a9 	adrp	x9, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75c4c:	f940d929 	ldr	x9, [x9, #432]
+ 3f75c50:	12800008 	mov	w8, #0xffffffff            	// #-1
+ 3f75c54:	91004297 	add	x23, x20, #0x10
+ 3f75c58:	9e670260 	fmov	d0, x19
+ 3f75c5c:	b90133e8 	str	w8, [sp, #304]
+ 3f75c60:	91004128 	add	x8, x9, #0x10
+ 3f75c64:	91008294 	add	x20, x20, #0x20
+ 3f75c68:	9100633b 	add	x27, x25, #0x18
+ 3f75c6c:	9101a33c 	add	x28, x25, #0x68
+ 3f75c70:	4e181d00 	mov	v0.d[1], x8
+ 3f75c74:	aa1403e0 	mov	x0, x20
+ 3f75c78:	13001ed6 	sxtb	w22, w22
+ 3f75c7c:	f90013fb 	str	x27, [sp, #32]
+ 3f75c80:	f90053fc 	str	x28, [sp, #160]
+ 3f75c84:	3d800fe0 	str	q0, [sp, #48]
+ 3f75c88:	9476319a 	bl	5d022f0 <std::__ndk1::locale::locale()@plt>
+ 3f75c8c:	6f00e400 	movi	v0.2d, #0x0
+ 3f75c90:	3c8683e0 	stur	q0, [sp, #104]
+ 3f75c94:	3c8583e0 	stur	q0, [sp, #88]
+ 3f75c98:	3c8483e0 	stur	q0, [sp, #72]
+ 3f75c9c:	f001297a 	adrp	x26, 64a4000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0x5430>
+ 3f75ca0:	f9411f5a 	ldr	x26, [x26, #568]
+ 3f75ca4:	321d07e8 	orr	w8, wzr, #0x18
+ 3f75ca8:	3c8883e0 	stur	q0, [sp, #136]
+ 3f75cac:	3c8783e0 	stur	q0, [sp, #120]
+ 3f75cb0:	91004353 	add	x19, x26, #0x10
+ 3f75cb4:	f9001ff3 	str	x19, [sp, #56]
+ 3f75cb8:	b9009be8 	str	w8, [sp, #152]
+ 3f75cbc:	aa1703e0 	mov	x0, x23
+ 3f75cc0:	2a1603e1 	mov	w1, w22
+ 3f75cc4:	94762ccb 	bl	5d00ff0 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::operator<<(int)@plt>
+ 3f75cc8:	910023e8 	add	x8, sp, #0x8
+ 3f75ccc:	aa1503e0 	mov	x0, x21
+ 3f75cd0:	9476426c 	bl	5d06680 <std::__ndk1::basic_stringbuf<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::str() const@plt>
+ 3f75cd4:	91006328 	add	x8, x25, #0x18
+ 3f75cd8:	f90013e8 	str	x8, [sp, #32]
+ 3f75cdc:	3941e3e8 	ldrb	w8, [sp, #120]
+ 3f75ce0:	9101a329 	add	x9, x25, #0x68
+ 3f75ce4:	9101032a 	add	x10, x25, #0x40
+ 3f75ce8:	9100434b 	add	x11, x26, #0x10
+ 3f75cec:	f90053e9 	str	x9, [sp, #160]
+ 3f75cf0:	a9032fea 	stp	x10, x11, [sp, #48]
+ 3f75cf4:	36000068 	tbz	w8, #0, 3f75d00 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xec0>
+ 3f75cf8:	f94047e0 	ldr	x0, [sp, #136]
+ 3f75cfc:	94762b65 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75d00:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75d04:	f940d908 	ldr	x8, [x8, #432]
+ 3f75d08:	aa1403e0 	mov	x0, x20
+ 3f75d0c:	91004108 	add	x8, x8, #0x10
+ 3f75d10:	f9001fe8 	str	x8, [sp, #56]
+ 3f75d14:	94762cdb 	bl	5d01080 <std::__ndk1::locale::~locale()@plt>
+ 3f75d18:	f94003e0 	ldr	x0, [sp]
+ 3f75d1c:	947642c1 	bl	5d06820 <std::__ndk1::ios_base::~ios_base()@plt>
+ 3f75d20:	394023ea 	ldrb	w10, [sp, #8]
+ 3f75d24:	a94127e8 	ldp	x8, x9, [sp, #16]
+ 3f75d28:	910023eb 	add	x11, sp, #0x8
+ 3f75d2c:	b240016b 	orr	x11, x11, #0x1
+ 3f75d30:	14000030 	b	3f75df0 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfb0>
+ 3f75d34:	528ca88c 	mov	w12, #0x6544                	// #25924
+ 3f75d38:	aa1f03e8 	mov	x8, xzr
+ 3f75d3c:	aa1f03e9 	mov	x9, xzr
+ 3f75d40:	a900ffff 	stp	xzr, xzr, [sp, #8]
+ 3f75d44:	f9000fff 	str	xzr, [sp, #24]
+ 3f75d48:	5280014a 	mov	w10, #0xa                   	// #10
+ 3f75d4c:	910023eb 	add	x11, sp, #0x8
+ 3f75d50:	72aeac4c 	movk	w12, #0x7562, lsl #16
+ 3f75d54:	52800ced 	mov	w13, #0x67                  	// #103
+ 3f75d58:	14000022 	b	3f75de0 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfa0>
+ 3f75d5c:	910023eb 	add	x11, sp, #0x8
+ 3f75d60:	528de9cd 	mov	w13, #0x6f4e                	// #28494
+ 3f75d64:	aa1f03e8 	mov	x8, xzr
+ 3f75d68:	aa1f03e9 	mov	x9, xzr
+ 3f75d6c:	321e07ea 	orr	w10, wzr, #0xc
+ 3f75d70:	528cac6c 	mov	w12, #0x6563                	// #25955
+ 3f75d74:	72ad2e8d 	movk	w13, #0x6974, lsl #16
+ 3f75d78:	b240016b 	orr	x11, x11, #0x1
+ 3f75d7c:	a9017fff 	stp	xzr, xzr, [sp, #16]
+ 3f75d80:	390023ea 	strb	w10, [sp, #8]
+ 3f75d84:	7800d3ec 	sturh	w12, [sp, #13]
+ 3f75d88:	b80093ed 	stur	w13, [sp, #9]
+ 3f75d8c:	39003fff 	strb	wzr, [sp, #15]
+ 3f75d90:	14000018 	b	3f75df0 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfb0>
+ 3f75d94:	528e48ac 	mov	w12, #0x7245                	// #29253
+ 3f75d98:	aa1f03e8 	mov	x8, xzr
+ 3f75d9c:	aa1f03e9 	mov	x9, xzr
+ 3f75da0:	a900ffff 	stp	xzr, xzr, [sp, #8]
+ 3f75da4:	f9000fff 	str	xzr, [sp, #24]
+ 3f75da8:	5280014a 	mov	w10, #0xa                   	// #10
+ 3f75dac:	910023eb 	add	x11, sp, #0x8
+ 3f75db0:	72adee4c 	movk	w12, #0x6f72, lsl #16
+ 3f75db4:	52800e4d 	mov	w13, #0x72                  	// #114
+ 3f75db8:	1400000a 	b	3f75de0 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0xfa0>
+ 3f75dbc:	528c28cc 	mov	w12, #0x6146                	// #24902
+ 3f75dc0:	aa1f03e8 	mov	x8, xzr
+ 3f75dc4:	aa1f03e9 	mov	x9, xzr
+ 3f75dc8:	a900ffff 	stp	xzr, xzr, [sp, #8]
+ 3f75dcc:	f9000fff 	str	xzr, [sp, #24]
+ 3f75dd0:	5280014a 	mov	w10, #0xa                   	// #10
+ 3f75dd4:	910023eb 	add	x11, sp, #0x8
+ 3f75dd8:	72ac2e8c 	movk	w12, #0x6174, lsl #16
+ 3f75ddc:	52800d8d 	mov	w13, #0x6c                  	// #108
+ 3f75de0:	390023ea 	strb	w10, [sp, #8]
+ 3f75de4:	b240016b 	orr	x11, x11, #0x1
+ 3f75de8:	b80093ec 	stur	w12, [sp, #9]
+ 3f75dec:	7800d3ed 	sturh	w13, [sp, #13]
+ 3f75df0:	7200015f 	tst	w10, #0x1
+ 3f75df4:	53017d4c 	lsr	w12, w10, #1
+ 3f75df8:	9a890161 	csel	x1, x11, x9, eq	// eq = none
+ 3f75dfc:	9a880182 	csel	x2, x12, x8, eq	// eq = none
+ 3f75e00:	900129a0 	adrp	x0, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75e04:	f9409c00 	ldr	x0, [x0, #312]
+ 3f75e08:	94764256 	bl	5d06760 <std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >& std::__ndk1::__put_character_sequence<char, std::__ndk1::char_traits<char> >(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&, char const*, unsigned long)@plt>
+ 3f75e0c:	394023e8 	ldrb	w8, [sp, #8]
+ 3f75e10:	360006a8 	tbz	w8, #0, 3f75ee4 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x10a4>
+ 3f75e14:	f9400fe0 	ldr	x0, [sp, #24]
+ 3f75e18:	94762b1e 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75e1c:	14000032 	b	3f75ee4 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x10a4>
+ 3f75e20:	39024288 	strb	w8, [x20, #144]
+ 3f75e24:	f90013ea 	str	x10, [sp, #32]
+ 3f75e28:	900129b5 	adrp	x21, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75e2c:	f940ceb5 	ldr	x21, [x21, #408]
+ 3f75e30:	910083f7 	add	x23, sp, #0x20
+ 3f75e34:	9102628a 	add	x10, x20, #0x98
+ 3f75e38:	320003e9 	orr	w9, wzr, #0x1
+ 3f75e3c:	910042a8 	add	x8, x21, #0x10
+ 3f75e40:	eb0a02ff 	cmp	x23, x10
+ 3f75e44:	9100e2f6 	add	x22, x23, #0x38
+ 3f75e48:	a9027fe8 	stp	x8, xzr, [sp, #32]
+ 3f75e4c:	a9037fff 	stp	xzr, xzr, [sp, #48]
+ 3f75e50:	3900a7ff 	strb	wzr, [sp, #41]
+ 3f75e54:	a9047fff 	stp	xzr, xzr, [sp, #64]
+ 3f75e58:	a9057fff 	stp	xzr, xzr, [sp, #80]
+ 3f75e5c:	390107ff 	strb	wzr, [sp, #65]
+ 3f75e60:	390183e9 	strb	w9, [sp, #96]
+ 3f75e64:	54000580 	b.eq	3f75f14 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x10d4>  // b.none
+ 3f75e68:	910026e1 	add	x1, x23, #0x9
+ 3f75e6c:	91028280 	add	x0, x20, #0xa0
+ 3f75e70:	aa1f03e2 	mov	x2, xzr
+ 3f75e74:	977cefcb 	bl	1eb1da0 <physx::pvdsdk::PvdUserRenderer::create(unsigned int)@@Base+0x2a008>
+ 3f75e78:	394103e9 	ldrb	w9, [sp, #64]
+ 3f75e7c:	a944abeb 	ldp	x11, x10, [sp, #72]
+ 3f75e80:	910086e8 	add	x8, x23, #0x21
+ 3f75e84:	9102e280 	add	x0, x20, #0xb8
+ 3f75e88:	7200013f 	tst	w9, #0x1
+ 3f75e8c:	d341fd2c 	lsr	x12, x9, #1
+ 3f75e90:	9a8a0101 	csel	x1, x8, x10, eq	// eq = none
+ 3f75e94:	9a8b0182 	csel	x2, x12, x11, eq	// eq = none
+ 3f75e98:	977cefc2 	bl	1eb1da0 <physx::pvdsdk::PvdUserRenderer::create(unsigned int)@@Base+0x2a008>
+ 3f75e9c:	394022c8 	ldrb	w8, [x22, #8]
+ 3f75ea0:	f94002c9 	ldr	x9, [x22]
+ 3f75ea4:	394103ea 	ldrb	w10, [sp, #64]
+ 3f75ea8:	910042ab 	add	x11, x21, #0x10
+ 3f75eac:	39036288 	strb	w8, [x20, #216]
+ 3f75eb0:	f9006a89 	str	x9, [x20, #208]
+ 3f75eb4:	f90013eb 	str	x11, [sp, #32]
+ 3f75eb8:	3600006a 	tbz	w10, #0, 3f75ec4 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x1084>
+ 3f75ebc:	f9402be0 	ldr	x0, [sp, #80]
+ 3f75ec0:	94762af4 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75ec4:	3940a3e8 	ldrb	w8, [sp, #40]
+ 3f75ec8:	36000068 	tbz	w8, #0, 3f75ed4 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x1094>
+ 3f75ecc:	f9401fe0 	ldr	x0, [sp, #56]
+ 3f75ed0:	94762af0 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75ed4:	320003e8 	orr	w8, wzr, #0x1
+ 3f75ed8:	3903e288 	strb	w8, [x20, #248]
+ 3f75edc:	aa1303e0 	mov	x0, x19
+ 3f75ee0:	94764214 	bl	5d06730 <std::__ndk1::recursive_mutex::unlock()@plt>
+ 3f75ee4:	f9401708 	ldr	x8, [x24, #40]
+ 3f75ee8:	f85a03a9 	ldur	x9, [x29, #-96]
+ 3f75eec:	eb09011f 	cmp	x8, x9
+ 3f75ef0:	54000221 	b.ne	3f75f34 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x10f4>  // b.any
+ 3f75ef4:	a95a7bfd 	ldp	x29, x30, [sp, #416]
+ 3f75ef8:	a9594ff4 	ldp	x20, x19, [sp, #400]
+ 3f75efc:	a95857f6 	ldp	x22, x21, [sp, #384]
+ 3f75f00:	a9575ff8 	ldp	x24, x23, [sp, #368]
+ 3f75f04:	a95667fa 	ldp	x26, x25, [sp, #352]
+ 3f75f08:	a9556ffc 	ldp	x28, x27, [sp, #336]
+ 3f75f0c:	9106c3ff 	add	sp, sp, #0x1b0
+ 3f75f10:	d65f03c0 	ret
+ 3f75f14:	394022c9 	ldrb	w9, [x22, #8]
+ 3f75f18:	f94002ca 	ldr	x10, [x22]
+ 3f75f1c:	39036289 	strb	w9, [x20, #216]
+ 3f75f20:	f9006a8a 	str	x10, [x20, #208]
+ 3f75f24:	f90013e8 	str	x8, [sp, #32]
+ 3f75f28:	3940a3e8 	ldrb	w8, [sp, #40]
+ 3f75f2c:	3707fd08 	tbnz	w8, #0, 3f75ecc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x108c>
+ 3f75f30:	17ffffe9 	b	3f75ed4 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x1094>
+ 3f75f34:	94762adb 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3f75f38:	aa0003f4 	mov	x20, x0
+ 3f75f3c:	14000017 	b	3f75f98 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x1158>
+ 3f75f40:	910042a8 	add	x8, x21, #0x10
+ 3f75f44:	f90013e8 	str	x8, [sp, #32]
+ 3f75f48:	3940a3e8 	ldrb	w8, [sp, #40]
+ 3f75f4c:	aa0003f4 	mov	x20, x0
+ 3f75f50:	37000428 	tbnz	w8, #0, 3f75fd4 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x1194>
+ 3f75f54:	14000022 	b	3f75fdc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x119c>
+ 3f75f58:	91010328 	add	x8, x25, #0x40
+ 3f75f5c:	a9034fe8 	stp	x8, x19, [sp, #48]
+ 3f75f60:	3941e3e8 	ldrb	w8, [sp, #120]
+ 3f75f64:	aa1403f5 	mov	x21, x20
+ 3f75f68:	aa0003f4 	mov	x20, x0
+ 3f75f6c:	f90013fb 	str	x27, [sp, #32]
+ 3f75f70:	f90053fc 	str	x28, [sp, #160]
+ 3f75f74:	36000068 	tbz	w8, #0, 3f75f80 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x1140>
+ 3f75f78:	f94047e0 	ldr	x0, [sp, #136]
+ 3f75f7c:	94762ac5 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75f80:	900129a8 	adrp	x8, 64a9000 <vtable for __cxxabiv1::__pointer_to_member_type_info@@Base+0xa430>
+ 3f75f84:	f940d908 	ldr	x8, [x8, #432]
+ 3f75f88:	aa1503e0 	mov	x0, x21
+ 3f75f8c:	91004108 	add	x8, x8, #0x10
+ 3f75f90:	f9001fe8 	str	x8, [sp, #56]
+ 3f75f94:	94762c3b 	bl	5d01080 <std::__ndk1::locale::~locale()@plt>
+ 3f75f98:	f94003e0 	ldr	x0, [sp]
+ 3f75f9c:	94764221 	bl	5d06820 <std::__ndk1::ios_base::~ios_base()@plt>
+ 3f75fa0:	aa1403e0 	mov	x0, x20
+ 3f75fa4:	947619da 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f75fa8:	aa0003f4 	mov	x20, x0
+ 3f75fac:	1400000c 	b	3f75fdc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x119c>
+ 3f75fb0:	910042a8 	add	x8, x21, #0x10
+ 3f75fb4:	f90013e8 	str	x8, [sp, #32]
+ 3f75fb8:	394103e8 	ldrb	w8, [sp, #64]
+ 3f75fbc:	aa0003f4 	mov	x20, x0
+ 3f75fc0:	36000068 	tbz	w8, #0, 3f75fcc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x118c>
+ 3f75fc4:	f9402be0 	ldr	x0, [sp, #80]
+ 3f75fc8:	94762ab2 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75fcc:	3940a3e8 	ldrb	w8, [sp, #40]
+ 3f75fd0:	36000068 	tbz	w8, #0, 3f75fdc <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x119c>
+ 3f75fd4:	f9401fe0 	ldr	x0, [sp, #56]
+ 3f75fd8:	94762aae 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f75fdc:	aa1303e0 	mov	x0, x19
+ 3f75fe0:	947641d4 	bl	5d06730 <std::__ndk1::recursive_mutex::unlock()@plt>
+ 3f75fe4:	aa1403e0 	mov	x0, x20
+ 3f75fe8:	947619c9 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f75fec:	394023e8 	ldrb	w8, [sp, #8]
+ 3f75ff0:	aa0003f4 	mov	x20, x0
+ 3f75ff4:	37000068 	tbnz	w8, #0, 3f76000 <ntes_gzailab::Encryptor::Encrypt(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >)@@Base+0x11c0>
+ 3f75ff8:	aa1403e0 	mov	x0, x20
+ 3f75ffc:	947619c4 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 3f76000:	f9400fe0 	ldr	x0, [sp, #24]
+ 3f76004:	94762aa3 	bl	5d00a90 <operator delete(void*)@plt>
+ 3f76008:	aa1403e0 	mov	x0, x20
+ 3f7600c:	947619c0 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+
+0000000003f76010 <ntes_gzailab::Encryptor::EncryptCore(char const*, int, char*)@@Base>:
+ 3f76010:	f81c0ff7 	str	x23, [sp, #-64]!
+ 3f76014:	a90157f6 	stp	x22, x21, [sp, #16]
+ 3f76018:	a9024ff4 	stp	x20, x19, [sp, #32]
+ 3f7601c:	a9037bfd 	stp	x29, x30, [sp, #48]
+ 3f76020:	9100c3fd 	add	x29, sp, #0x30
+ 3f76024:	aa0303f3 	mov	x19, x3
+ 3f76028:	11003c48 	add	w8, w2, #0xf
+ 3f7602c:	7100005f 	cmp	w2, #0x0
+ 3f76030:	a9400003 	ldp	x3, x0, [x0]
+ 3f76034:	1a82b108 	csel	w8, w8, w2, lt	// lt = tstop
+ 3f76038:	121c6d08 	and	w8, w8, #0xfffffff0
+ 3f7603c:	4b080057 	sub	w23, w2, w8
+ 3f76040:	2a0803e2 	mov	w2, w8
+ 3f76044:	aa0103f4 	mov	x20, x1
+ 3f76048:	93407d15 	sxtw	x21, w8
+ 3f7604c:	94764309 	bl	5d06c70 <AES::EncryptECB(unsigned char*, unsigned int, unsigned char*)@plt>
+ 3f76050:	aa0003f6 	mov	x22, x0
+ 3f76054:	aa1303e0 	mov	x0, x19
+ 3f76058:	aa1603e1 	mov	x1, x22
+ 3f7605c:	aa1503e2 	mov	x2, x21
+ 3f76060:	94762ac4 	bl	5d00b70 <memcpy@plt>
+ 3f76064:	b4000076 	cbz	x22, 3f76070 <ntes_gzailab::Encryptor::EncryptCore(char const*, int, char*)@@Base+0x60>
+ 3f76068:	aa1603e0 	mov	x0, x22
+ 3f7606c:	94762c59 	bl	5d011d0 <operator delete[](void*)@plt>
+ 3f76070:	34000137 	cbz	w23, 3f76094 <ntes_gzailab::Encryptor::EncryptCore(char const*, int, char*)@@Base+0x84>
+ 3f76074:	8b150260 	add	x0, x19, x21
+ 3f76078:	8b150281 	add	x1, x20, x21
+ 3f7607c:	a9437bfd 	ldp	x29, x30, [sp, #48]
+ 3f76080:	a9424ff4 	ldp	x20, x19, [sp, #32]
+ 3f76084:	a94157f6 	ldp	x22, x21, [sp, #16]
+ 3f76088:	93407ee2 	sxtw	x2, w23
+ 3f7608c:	f84407f7 	ldr	x23, [sp], #64
+ 3f76090:	14762ab8 	b	5d00b70 <memcpy@plt>
+ 3f76094:	a9437bfd 	ldp	x29, x30, [sp, #48]
+ 3f76098:	a9424ff4 	ldp	x20, x19, [sp, #32]
+ 3f7609c:	a94157f6 	ldp	x22, x21, [sp, #16]
+ 3f760a0:	f84407f7 	ldr	x23, [sp], #64
+ 3f760a4:	d65f03c0 	ret
+
+0000000003f760a8 <ntes_gzailab::Encryptor::Decrypt(char const*, char*&, int&)@@Base>:
+ 3f760a8:	a9bc5ff8 	stp	x24, x23, [sp, #-64]!
+ 3f760ac:	a90157f6 	stp	x22, x21, [sp, #16]
+ 3f760b0:	a9024ff4 	stp	x20, x19, [sp, #32]
+ 3f760b4:	a9037bfd 	stp	x29, x30, [sp, #48]
+ 3f760b8:	9100c3fd 	add	x29, sp, #0x30
+ 3f760bc:	aa0103f3 	mov	x19, x1
+ 3f760c0:	aa0003f5 	mov	x21, x0
+ 3f760c4:	b8804660 	ldrsw	x0, [x19], #4
+ 3f760c8:	aa0203f4 	mov	x20, x2
+ 3f760cc:	11003c08 	add	w8, w0, #0xf
+ 3f760d0:	7100001f 	cmp	w0, #0x0
+ 3f760d4:	1a80b108 	csel	w8, w8, w0, lt	// lt = tstop
+ 3f760d8:	121c6d17 	and	w23, w8, #0xfffffff0
+ 3f760dc:	b9000060 	str	w0, [x3]
+ 3f760e0:	4b170018 	sub	w24, w0, w23
+ 3f760e4:	94762c2b 	bl	5d01190 <operator new[](unsigned long)@plt>
+ 3f760e8:	f9000280 	str	x0, [x20]
+ 3f760ec:	a94002a3 	ldp	x3, x0, [x21]
+ 3f760f0:	aa1303e1 	mov	x1, x19
+ 3f760f4:	2a1703e2 	mov	w2, w23
+ 3f760f8:	947642da 	bl	5d06c60 <AES::DecryptECB(unsigned char*, unsigned int, unsigned char*)@plt>
+ 3f760fc:	aa0003f6 	mov	x22, x0
+ 3f76100:	f9400280 	ldr	x0, [x20]
+ 3f76104:	93407ef5 	sxtw	x21, w23
+ 3f76108:	aa1603e1 	mov	x1, x22
+ 3f7610c:	aa1503e2 	mov	x2, x21
+ 3f76110:	94762a98 	bl	5d00b70 <memcpy@plt>
+ 3f76114:	b4000076 	cbz	x22, 3f76120 <ntes_gzailab::Encryptor::Decrypt(char const*, char*&, int&)@@Base+0x78>
+ 3f76118:	aa1603e0 	mov	x0, x22
+ 3f7611c:	94762c2d 	bl	5d011d0 <operator delete[](void*)@plt>
+ 3f76120:	34000158 	cbz	w24, 3f76148 <ntes_gzailab::Encryptor::Decrypt(char const*, char*&, int&)@@Base+0xa0>
+ 3f76124:	f9400288 	ldr	x8, [x20]
+ 3f76128:	8b150261 	add	x1, x19, x21
+ 3f7612c:	a9437bfd 	ldp	x29, x30, [sp, #48]
+ 3f76130:	a9424ff4 	ldp	x20, x19, [sp, #32]
+ 3f76134:	8b150100 	add	x0, x8, x21
+ 3f76138:	a94157f6 	ldp	x22, x21, [sp, #16]
+ 3f7613c:	93407f02 	sxtw	x2, w24
+ 3f76140:	a8c45ff8 	ldp	x24, x23, [sp], #64
+ 3f76144:	14762a8b 	b	5d00b70 <memcpy@plt>
+ 3f76148:	a9437bfd 	ldp	x29, x30, [sp, #48]
+ 3f7614c:	a9424ff4 	ldp	x20, x19, [sp, #32]
+ 3f76150:	a94157f6 	ldp	x22, x21, [sp, #16]
+ 3f76154:	a8c45ff8 	ldp	x24, x23, [sp], #64
+ 3f76158:	d65f03c0 	ret
+
+0000000003f7615c <ntes_gzailab::TokenDecryptor::IsValidToken(char const*) const@@Base>:
+ 3f7615c:	b4000261 	cbz	x1, 3f761a8 <ntes_gzailab::TokenDecryptor::IsValidToken(char const*) const@@Base+0x4c>

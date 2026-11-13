@@ -1,0 +1,2119 @@
+
+decompiled/native/lib/arm64-v8a/libGame.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000003a69700 <PyInit__testinternalcapi@@Base+0x3b25e0>:
+ 3a69700:	a90657f6 	stp	x22, x21, [sp, #96]
+ 3a69704:	a9074ff4 	stp	x20, x19, [sp, #112]
+ 3a69708:	910083fd 	add	x29, sp, #0x20
+ 3a6970c:	d53bd056 	mrs	x22, tpidr_el0
+ 3a69710:	aa0203f3 	mov	x19, x2
+ 3a69714:	f94016c8 	ldr	x8, [x22, #40]
+ 3a69718:	f81f83a8 	stur	x8, [x29, #-8]
+ 3a6971c:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69720:	91110108 	add	x8, x8, #0x440
+ 3a69724:	a900ffe8 	stp	x8, xzr, [sp, #8]
+ 3a69728:	b4000163 	cbz	x3, 3a69754 <PyInit__testinternalcapi@@Base+0x3b2634>
+ 3a6972c:	8b130c34 	add	x20, x1, x19, lsl #3
+ 3a69730:	b40009d3 	cbz	x19, 3a69868 <PyInit__testinternalcapi@@Base+0x3b2748>
+ 3a69734:	f100067f 	cmp	x19, #0x1
+ 3a69738:	54000cc1 	b.ne	3a698d0 <PyInit__testinternalcapi@@Base+0x3b27b0>  // b.any
+ 3a6973c:	f9400035 	ldr	x21, [x1]
+ 3a69740:	f9400877 	ldr	x23, [x3, #16]
+ 3a69744:	f90003f5 	str	x21, [sp]
+ 3a69748:	f10006ff 	cmp	x23, #0x1
+ 3a6974c:	540000cb 	b.lt	3a69764 <PyInit__testinternalcapi@@Base+0x3b2644>  // b.tstop
+ 3a69750:	14000089 	b	3a69974 <PyInit__testinternalcapi@@Base+0x3b2854>
+ 3a69754:	f100067f 	cmp	x19, #0x1
+ 3a69758:	54000bc1 	b.ne	3a698d0 <PyInit__testinternalcapi@@Base+0x3b27b0>  // b.any
+ 3a6975c:	f9400035 	ldr	x21, [x1]
+ 3a69760:	f90003f5 	str	x21, [sp]
+ 3a69764:	f001cb08 	adrp	x8, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a69768:	9001cb29 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6976c:	f945b508 	ldr	x8, [x8, #2920]
+ 3a69770:	f9444529 	ldr	x9, [x9, #2184]
+ 3a69774:	f9400d08 	ldr	x8, [x8, #24]
+ 3a69778:	eb08013f 	cmp	x9, x8
+ 3a6977c:	54001121 	b.ne	3a699a0 <PyInit__testinternalcapi@@Base+0x3b2880>  // b.any
+ 3a69780:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69784:	f9444909 	ldr	x9, [x8, #2192]
+ 3a69788:	b40011c9 	cbz	x9, 3a699c0 <PyInit__testinternalcapi@@Base+0x3b28a0>
+ 3a6978c:	f940012a 	ldr	x10, [x9]
+ 3a69790:	9100054a 	add	x10, x10, #0x1
+ 3a69794:	f900012a 	str	x10, [x9]
+ 3a69798:	f9444913 	ldr	x19, [x8, #2192]
+ 3a6979c:	b40011d3 	cbz	x19, 3a699d4 <PyInit__testinternalcapi@@Base+0x3b28b4>
+ 3a697a0:	f9400668 	ldr	x8, [x19, #8]
+ 3a697a4:	9001cb29 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a697a8:	aa1303e0 	mov	x0, x19
+ 3a697ac:	f940b521 	ldr	x1, [x9, #360]
+ 3a697b0:	f9404908 	ldr	x8, [x8, #144]
+ 3a697b4:	b4001148 	cbz	x8, 3a699dc <PyInit__testinternalcapi@@Base+0x3b28bc>
+ 3a697b8:	d63f0100 	blr	x8
+ 3a697bc:	f9400268 	ldr	x8, [x19]
+ 3a697c0:	d1000508 	sub	x8, x8, #0x1
+ 3a697c4:	f9000268 	str	x8, [x19]
+ 3a697c8:	b40010e0 	cbz	x0, 3a699e4 <PyInit__testinternalcapi@@Base+0x3b28c4>
+ 3a697cc:	b50000a8 	cbnz	x8, 3a697e0 <PyInit__testinternalcapi@@Base+0x3b26c0>
+ 3a697d0:	aa0003f4 	mov	x20, x0
+ 3a697d4:	aa1303e0 	mov	x0, x19
+ 3a697d8:	97f4b937 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a697dc:	aa1403e0 	mov	x0, x20
+ 3a697e0:	d00151e9 	adrp	x9, 64a7000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x8430>
+ 3a697e4:	f9400408 	ldr	x8, [x0, #8]
+ 3a697e8:	f9414929 	ldr	x9, [x9, #656]
+ 3a697ec:	eb09011f 	cmp	x8, x9
+ 3a697f0:	54001120 	b.eq	3a69a14 <PyInit__testinternalcapi@@Base+0x3b28f4>  // b.none
+ 3a697f4:	aa1f03f4 	mov	x20, xzr
+ 3a697f8:	2a1f03e8 	mov	w8, wzr
+ 3a697fc:	aa0003f3 	mov	x19, x0
+ 3a69800:	910023e9 	add	x9, sp, #0x8
+ 3a69804:	11000502 	add	w2, w8, #0x1
+ 3a69808:	aa1303e0 	mov	x0, x19
+ 3a6980c:	91002129 	add	x9, x9, #0x8
+ 3a69810:	a900d7f4 	stp	x20, x21, [sp, #8]
+ 3a69814:	cb284d21 	sub	x1, x9, w8, uxtw #3
+ 3a69818:	97ffdea1 	bl	3a6129c <PyInit__testinternalcapi@@Base+0x3aa17c>
+ 3a6981c:	b4000134 	cbz	x20, 3a69840 <PyInit__testinternalcapi@@Base+0x3b2720>
+ 3a69820:	f9400288 	ldr	x8, [x20]
+ 3a69824:	f1000508 	subs	x8, x8, #0x1
+ 3a69828:	f9000288 	str	x8, [x20]
+ 3a6982c:	540000a1 	b.ne	3a69840 <PyInit__testinternalcapi@@Base+0x3b2720>  // b.any
+ 3a69830:	aa0003f5 	mov	x21, x0
+ 3a69834:	aa1403e0 	mov	x0, x20
+ 3a69838:	97f4b91f 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6983c:	aa1503e0 	mov	x0, x21
+ 3a69840:	b40010a0 	cbz	x0, 3a69a54 <PyInit__testinternalcapi@@Base+0x3b2934>
+ 3a69844:	f9400268 	ldr	x8, [x19]
+ 3a69848:	f1000508 	subs	x8, x8, #0x1
+ 3a6984c:	f9000268 	str	x8, [x19]
+ 3a69850:	540006c1 	b.ne	3a69928 <PyInit__testinternalcapi@@Base+0x3b2808>  // b.any
+ 3a69854:	aa0003f4 	mov	x20, x0
+ 3a69858:	aa1303e0 	mov	x0, x19
+ 3a6985c:	97f4b916 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69860:	aa1403e0 	mov	x0, x20
+ 3a69864:	14000031 	b	3a69928 <PyInit__testinternalcapi@@Base+0x3b2808>
+ 3a69868:	f940087a 	ldr	x26, [x3, #16]
+ 3a6986c:	f1000757 	subs	x23, x26, #0x1
+ 3a69870:	540002cb 	b.lt	3a698c8 <PyInit__testinternalcapi@@Base+0x3b27a8>  // b.tstop
+ 3a69874:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69878:	aa0303f8 	mov	x24, x3
+ 3a6987c:	aa1f03f9 	mov	x25, xzr
+ 3a69880:	f9422115 	ldr	x21, [x8, #1088]
+ 3a69884:	9100631b 	add	x27, x24, #0x18
+ 3a69888:	aa0303e8 	mov	x8, x3
+ 3a6988c:	f8797b68 	ldr	x8, [x27, x25, lsl #3]
+ 3a69890:	eb15011f 	cmp	x8, x21
+ 3a69894:	54000640 	b.eq	3a6995c <PyInit__testinternalcapi@@Base+0x3b283c>  // b.none
+ 3a69898:	91000739 	add	x25, x25, #0x1
+ 3a6989c:	eb19035f 	cmp	x26, x25
+ 3a698a0:	54ffff61 	b.ne	3a6988c <PyInit__testinternalcapi@@Base+0x3b276c>  // b.any
+ 3a698a4:	aa1f03f9 	mov	x25, xzr
+ 3a698a8:	f8797b61 	ldr	x1, [x27, x25, lsl #3]
+ 3a698ac:	aa1503e0 	mov	x0, x21
+ 3a698b0:	52800042 	mov	w2, #0x2                   	// #2
+ 3a698b4:	97ffe9ff 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a698b8:	35000500 	cbnz	w0, 3a69958 <PyInit__testinternalcapi@@Base+0x3b2838>
+ 3a698bc:	91000739 	add	x25, x25, #0x1
+ 3a698c0:	eb19035f 	cmp	x26, x25
+ 3a698c4:	54ffff21 	b.ne	3a698a8 <PyInit__testinternalcapi@@Base+0x3b2788>  // b.any
+ 3a698c8:	97f87274 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a698cc:	b5000d00 	cbnz	x0, 3a69a6c <PyInit__testinternalcapi@@Base+0x3b294c>
+ 3a698d0:	f00151c8 	adrp	x8, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a698d4:	90fe5b61 	adrp	x1, 5d5000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x161277>
+ 3a698d8:	91375021 	add	x1, x1, #0xdd4
+ 3a698dc:	f940e508 	ldr	x8, [x8, #456]
+ 3a698e0:	b0fe8062 	adrp	x2, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a698e4:	9133e442 	add	x2, x2, #0xcf9
+ 3a698e8:	b0fe5923 	adrp	x3, 58e000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1a8277>
+ 3a698ec:	9139a463 	add	x3, x3, #0xe69
+ 3a698f0:	b0fe8065 	adrp	x5, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a698f4:	910814a5 	add	x5, x5, #0x205
+ 3a698f8:	f9400100 	ldr	x0, [x8]
+ 3a698fc:	52800024 	mov	w4, #0x1                   	// #1
+ 3a69900:	aa1303e6 	mov	x6, x19
+ 3a69904:	97f876ca 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a69908:	52836e61 	mov	w1, #0x1b73                	// #7027
+ 3a6990c:	90fe5aa0 	adrp	x0, 5bd000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x179277>
+ 3a69910:	9135a000 	add	x0, x0, #0xd68
+ 3a69914:	b0fe8063 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a69918:	91081863 	add	x3, x3, #0x206
+ 3a6991c:	52801382 	mov	w2, #0x9c                  	// #156
+ 3a69920:	97ffdaf2 	bl	3a604e8 <PyInit__testinternalcapi@@Base+0x3a93c8>
+ 3a69924:	aa1f03e0 	mov	x0, xzr
+ 3a69928:	f94016c8 	ldr	x8, [x22, #40]
+ 3a6992c:	f85f83a9 	ldur	x9, [x29, #-8]
+ 3a69930:	eb09011f 	cmp	x8, x9
+ 3a69934:	54000a41 	b.ne	3a69a7c <PyInit__testinternalcapi@@Base+0x3b295c>  // b.any
+ 3a69938:	a9474ff4 	ldp	x20, x19, [sp, #112]
+ 3a6993c:	f9401bfb 	ldr	x27, [sp, #48]
+ 3a69940:	a94657f6 	ldp	x22, x21, [sp, #96]
+ 3a69944:	a9455ff8 	ldp	x24, x23, [sp, #80]
+ 3a69948:	a94467fa 	ldp	x26, x25, [sp, #64]
+ 3a6994c:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 3a69950:	910203ff 	add	sp, sp, #0x80
+ 3a69954:	d65f03c0 	ret
+ 3a69958:	37fffb80 	tbnz	w0, #31, 3a698c8 <PyInit__testinternalcapi@@Base+0x3b27a8>
+ 3a6995c:	f8797a95 	ldr	x21, [x20, x25, lsl #3]
+ 3a69960:	f90003f5 	str	x21, [sp]
+ 3a69964:	b4fffb35 	cbz	x21, 3a698c8 <PyInit__testinternalcapi@@Base+0x3b27a8>
+ 3a69968:	aa1803e3 	mov	x3, x24
+ 3a6996c:	f10006ff 	cmp	x23, #0x1
+ 3a69970:	54ffefab 	b.lt	3a69764 <PyInit__testinternalcapi@@Base+0x3b2644>  // b.tstop
+ 3a69974:	b0fe8065 	adrp	x5, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a69978:	9133e4a5 	add	x5, x5, #0xcf9
+ 3a6997c:	910023e2 	add	x2, sp, #0x8
+ 3a69980:	aa0303e0 	mov	x0, x3
+ 3a69984:	910003e3 	mov	x3, sp
+ 3a69988:	aa1403e1 	mov	x1, x20
+ 3a6998c:	aa1303e4 	mov	x4, x19
+ 3a69990:	97ffe8f7 	bl	3a63d6c <PyInit__testinternalcapi@@Base+0x3acc4c>
+ 3a69994:	37f80700 	tbnz	w0, #31, 3a69a74 <PyInit__testinternalcapi@@Base+0x3b2954>
+ 3a69998:	f94003f5 	ldr	x21, [sp]
+ 3a6999c:	17ffff72 	b	3a69764 <PyInit__testinternalcapi@@Base+0x3b2644>
+ 3a699a0:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a699a4:	9001cb21 	adrp	x1, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a699a8:	91222021 	add	x1, x1, #0x888
+ 3a699ac:	f940b100 	ldr	x0, [x8, #352]
+ 3a699b0:	9001cb22 	adrp	x2, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a699b4:	91224042 	add	x2, x2, #0x890
+ 3a699b8:	97ffda0d 	bl	3a601ec <PyInit__testinternalcapi@@Base+0x3a90cc>
+ 3a699bc:	14000004 	b	3a699cc <PyInit__testinternalcapi@@Base+0x3b28ac>
+ 3a699c0:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a699c4:	f940b100 	ldr	x0, [x8, #352]
+ 3a699c8:	97ffd9e2 	bl	3a60150 <PyInit__testinternalcapi@@Base+0x3a9030>
+ 3a699cc:	aa0003f3 	mov	x19, x0
+ 3a699d0:	b5ffee93 	cbnz	x19, 3a697a0 <PyInit__testinternalcapi@@Base+0x3b2680>
+ 3a699d4:	52837441 	mov	w1, #0x1ba2                	// #7074
+ 3a699d8:	14000009 	b	3a699fc <PyInit__testinternalcapi@@Base+0x3b28dc>
+ 3a699dc:	97f4b232 	bl	37962a4 <PyInit__testinternalcapi@@Base+0xdf184>
+ 3a699e0:	17ffff77 	b	3a697bc <PyInit__testinternalcapi@@Base+0x3b269c>
+ 3a699e4:	52837481 	mov	w1, #0x1ba4                	// #7076
+ 3a699e8:	b50000a8 	cbnz	x8, 3a699fc <PyInit__testinternalcapi@@Base+0x3b28dc>
+ 3a699ec:	aa1303e0 	mov	x0, x19
+ 3a699f0:	2a0103f3 	mov	w19, w1
+ 3a699f4:	97f4b8b0 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a699f8:	2a1303e1 	mov	w1, w19
+ 3a699fc:	90fe5aa0 	adrp	x0, 5bd000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x179277>
+ 3a69a00:	9135a000 	add	x0, x0, #0xd68
+ 3a69a04:	b0fe8063 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a69a08:	91081863 	add	x3, x3, #0x206
+ 3a69a0c:	528013a2 	mov	w2, #0x9d                  	// #157
+ 3a69a10:	17ffffc4 	b	3a69920 <PyInit__testinternalcapi@@Base+0x3b2800>
+ 3a69a14:	f9400c14 	ldr	x20, [x0, #24]
+ 3a69a18:	b4ffef14 	cbz	x20, 3a697f8 <PyInit__testinternalcapi@@Base+0x3b26d8>
+ 3a69a1c:	f9400288 	ldr	x8, [x20]
+ 3a69a20:	f9400813 	ldr	x19, [x0, #16]
+ 3a69a24:	91000508 	add	x8, x8, #0x1
+ 3a69a28:	f9000288 	str	x8, [x20]
+ 3a69a2c:	f9400268 	ldr	x8, [x19]
+ 3a69a30:	91000508 	add	x8, x8, #0x1
+ 3a69a34:	f9000268 	str	x8, [x19]
+ 3a69a38:	f9400008 	ldr	x8, [x0]
+ 3a69a3c:	f1000508 	subs	x8, x8, #0x1
+ 3a69a40:	f9000008 	str	x8, [x0]
+ 3a69a44:	54000041 	b.ne	3a69a4c <PyInit__testinternalcapi@@Base+0x3b292c>  // b.any
+ 3a69a48:	97f4b89b 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69a4c:	52800028 	mov	w8, #0x1                   	// #1
+ 3a69a50:	17ffff6c 	b	3a69800 <PyInit__testinternalcapi@@Base+0x3b26e0>
+ 3a69a54:	f9400268 	ldr	x8, [x19]
+ 3a69a58:	52837721 	mov	w1, #0x1bb9                	// #7097
+ 3a69a5c:	f1000508 	subs	x8, x8, #0x1
+ 3a69a60:	f9000268 	str	x8, [x19]
+ 3a69a64:	54fffcc1 	b.ne	3a699fc <PyInit__testinternalcapi@@Base+0x3b28dc>  // b.any
+ 3a69a68:	17ffffe1 	b	3a699ec <PyInit__testinternalcapi@@Base+0x3b28cc>
+ 3a69a6c:	52836c61 	mov	w1, #0x1b63                	// #7011
+ 3a69a70:	17ffffa7 	b	3a6990c <PyInit__testinternalcapi@@Base+0x3b27ec>
+ 3a69a74:	52836d01 	mov	w1, #0x1b68                	// #7016
+ 3a69a78:	17ffffa5 	b	3a6990c <PyInit__testinternalcapi@@Base+0x3b27ec>
+ 3a69a7c:	948a5c09 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3a69a80:	d10203ff 	sub	sp, sp, #0x80
+ 3a69a84:	a9027bfd 	stp	x29, x30, [sp, #32]
+ 3a69a88:	f9001bfb 	str	x27, [sp, #48]
+ 3a69a8c:	a90467fa 	stp	x26, x25, [sp, #64]
+ 3a69a90:	a9055ff8 	stp	x24, x23, [sp, #80]
+ 3a69a94:	a90657f6 	stp	x22, x21, [sp, #96]
+ 3a69a98:	a9074ff4 	stp	x20, x19, [sp, #112]
+ 3a69a9c:	910083fd 	add	x29, sp, #0x20
+ 3a69aa0:	d53bd056 	mrs	x22, tpidr_el0
+ 3a69aa4:	aa0203f3 	mov	x19, x2
+ 3a69aa8:	f94016c8 	ldr	x8, [x22, #40]
+ 3a69aac:	f81f83a8 	stur	x8, [x29, #-8]
+ 3a69ab0:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69ab4:	91078108 	add	x8, x8, #0x1e0
+ 3a69ab8:	a900ffe8 	stp	x8, xzr, [sp, #8]
+ 3a69abc:	b4000163 	cbz	x3, 3a69ae8 <PyInit__testinternalcapi@@Base+0x3b29c8>
+ 3a69ac0:	8b130c34 	add	x20, x1, x19, lsl #3
+ 3a69ac4:	b40008b3 	cbz	x19, 3a69bd8 <PyInit__testinternalcapi@@Base+0x3b2ab8>
+ 3a69ac8:	f100067f 	cmp	x19, #0x1
+ 3a69acc:	54000ba1 	b.ne	3a69c40 <PyInit__testinternalcapi@@Base+0x3b2b20>  // b.any
+ 3a69ad0:	f9400035 	ldr	x21, [x1]
+ 3a69ad4:	f9400877 	ldr	x23, [x3, #16]
+ 3a69ad8:	f90003f5 	str	x21, [sp]
+ 3a69adc:	f10006ff 	cmp	x23, #0x1
+ 3a69ae0:	540000ab 	b.lt	3a69af4 <PyInit__testinternalcapi@@Base+0x3b29d4>  // b.tstop
+ 3a69ae4:	14000080 	b	3a69ce4 <PyInit__testinternalcapi@@Base+0x3b2bc4>
+ 3a69ae8:	f100067f 	cmp	x19, #0x1
+ 3a69aec:	54000aa1 	b.ne	3a69c40 <PyInit__testinternalcapi@@Base+0x3b2b20>  // b.any
+ 3a69af0:	f9400035 	ldr	x21, [x1]
+ 3a69af4:	f001cb08 	adrp	x8, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a69af8:	9001cb29 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69afc:	f945b508 	ldr	x8, [x8, #2920]
+ 3a69b00:	f9444d29 	ldr	x9, [x9, #2200]
+ 3a69b04:	f9400d08 	ldr	x8, [x8, #24]
+ 3a69b08:	eb08013f 	cmp	x9, x8
+ 3a69b0c:	54001021 	b.ne	3a69d10 <PyInit__testinternalcapi@@Base+0x3b2bf0>  // b.any
+ 3a69b10:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69b14:	f9445109 	ldr	x9, [x8, #2208]
+ 3a69b18:	b4001109 	cbz	x9, 3a69d38 <PyInit__testinternalcapi@@Base+0x3b2c18>
+ 3a69b1c:	f940012a 	ldr	x10, [x9]
+ 3a69b20:	9100054a 	add	x10, x10, #0x1
+ 3a69b24:	f900012a 	str	x10, [x9]
+ 3a69b28:	f9445100 	ldr	x0, [x8, #2208]
+ 3a69b2c:	b4001020 	cbz	x0, 3a69d30 <PyInit__testinternalcapi@@Base+0x3b2c10>
+ 3a69b30:	f9400408 	ldr	x8, [x0, #8]
+ 3a69b34:	f9400109 	ldr	x9, [x8]
+ 3a69b38:	91000529 	add	x9, x9, #0x1
+ 3a69b3c:	f9000109 	str	x9, [x8]
+ 3a69b40:	a9404c08 	ldp	x8, x19, [x0]
+ 3a69b44:	f1000508 	subs	x8, x8, #0x1
+ 3a69b48:	f9000008 	str	x8, [x0]
+ 3a69b4c:	54000041 	b.ne	3a69b54 <PyInit__testinternalcapi@@Base+0x3b2a34>  // b.any
+ 3a69b50:	97f4b859 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69b54:	d00151e9 	adrp	x9, 64a7000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x8430>
+ 3a69b58:	f9400668 	ldr	x8, [x19, #8]
+ 3a69b5c:	f9414929 	ldr	x9, [x9, #656]
+ 3a69b60:	eb09011f 	cmp	x8, x9
+ 3a69b64:	54000f20 	b.eq	3a69d48 <PyInit__testinternalcapi@@Base+0x3b2c28>  // b.none
+ 3a69b68:	aa1f03f4 	mov	x20, xzr
+ 3a69b6c:	2a1f03e8 	mov	w8, wzr
+ 3a69b70:	910023e9 	add	x9, sp, #0x8
+ 3a69b74:	11000502 	add	w2, w8, #0x1
+ 3a69b78:	aa1303e0 	mov	x0, x19
+ 3a69b7c:	91002129 	add	x9, x9, #0x8
+ 3a69b80:	a900d7f4 	stp	x20, x21, [sp, #8]
+ 3a69b84:	cb284d21 	sub	x1, x9, w8, uxtw #3
+ 3a69b88:	97ffddc5 	bl	3a6129c <PyInit__testinternalcapi@@Base+0x3aa17c>
+ 3a69b8c:	b4000134 	cbz	x20, 3a69bb0 <PyInit__testinternalcapi@@Base+0x3b2a90>
+ 3a69b90:	f9400288 	ldr	x8, [x20]
+ 3a69b94:	f1000508 	subs	x8, x8, #0x1
+ 3a69b98:	f9000288 	str	x8, [x20]
+ 3a69b9c:	540000a1 	b.ne	3a69bb0 <PyInit__testinternalcapi@@Base+0x3b2a90>  // b.any
+ 3a69ba0:	aa0003f5 	mov	x21, x0
+ 3a69ba4:	aa1403e0 	mov	x0, x20
+ 3a69ba8:	97f4b843 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69bac:	aa1503e0 	mov	x0, x21
+ 3a69bb0:	b4000f00 	cbz	x0, 3a69d90 <PyInit__testinternalcapi@@Base+0x3b2c70>
+ 3a69bb4:	f9400268 	ldr	x8, [x19]
+ 3a69bb8:	f1000508 	subs	x8, x8, #0x1
+ 3a69bbc:	f9000268 	str	x8, [x19]
+ 3a69bc0:	540006c1 	b.ne	3a69c98 <PyInit__testinternalcapi@@Base+0x3b2b78>  // b.any
+ 3a69bc4:	aa0003f4 	mov	x20, x0
+ 3a69bc8:	aa1303e0 	mov	x0, x19
+ 3a69bcc:	97f4b83a 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69bd0:	aa1403e0 	mov	x0, x20
+ 3a69bd4:	14000031 	b	3a69c98 <PyInit__testinternalcapi@@Base+0x3b2b78>
+ 3a69bd8:	f940087a 	ldr	x26, [x3, #16]
+ 3a69bdc:	f1000757 	subs	x23, x26, #0x1
+ 3a69be0:	540002cb 	b.lt	3a69c38 <PyInit__testinternalcapi@@Base+0x3b2b18>  // b.tstop
+ 3a69be4:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69be8:	aa0303f8 	mov	x24, x3
+ 3a69bec:	aa1f03f9 	mov	x25, xzr
+ 3a69bf0:	f940f115 	ldr	x21, [x8, #480]
+ 3a69bf4:	9100631b 	add	x27, x24, #0x18
+ 3a69bf8:	aa0303e8 	mov	x8, x3
+ 3a69bfc:	f8797b68 	ldr	x8, [x27, x25, lsl #3]
+ 3a69c00:	eb15011f 	cmp	x8, x21
+ 3a69c04:	54000640 	b.eq	3a69ccc <PyInit__testinternalcapi@@Base+0x3b2bac>  // b.none
+ 3a69c08:	91000739 	add	x25, x25, #0x1
+ 3a69c0c:	eb19035f 	cmp	x26, x25
+ 3a69c10:	54ffff61 	b.ne	3a69bfc <PyInit__testinternalcapi@@Base+0x3b2adc>  // b.any
+ 3a69c14:	aa1f03f9 	mov	x25, xzr
+ 3a69c18:	f8797b61 	ldr	x1, [x27, x25, lsl #3]
+ 3a69c1c:	aa1503e0 	mov	x0, x21
+ 3a69c20:	52800042 	mov	w2, #0x2                   	// #2
+ 3a69c24:	97ffe923 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a69c28:	35000500 	cbnz	w0, 3a69cc8 <PyInit__testinternalcapi@@Base+0x3b2ba8>
+ 3a69c2c:	91000739 	add	x25, x25, #0x1
+ 3a69c30:	eb19035f 	cmp	x26, x25
+ 3a69c34:	54ffff21 	b.ne	3a69c18 <PyInit__testinternalcapi@@Base+0x3b2af8>  // b.any
+ 3a69c38:	97f87198 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a69c3c:	b5000c40 	cbnz	x0, 3a69dc4 <PyInit__testinternalcapi@@Base+0x3b2ca4>
+ 3a69c40:	f00151c8 	adrp	x8, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a69c44:	90fe5b61 	adrp	x1, 5d5000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x161277>
+ 3a69c48:	91375021 	add	x1, x1, #0xdd4
+ 3a69c4c:	f940e508 	ldr	x8, [x8, #456]
+ 3a69c50:	b0fe8062 	adrp	x2, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a69c54:	91340442 	add	x2, x2, #0xd01
+ 3a69c58:	b0fe5923 	adrp	x3, 58e000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1a8277>
+ 3a69c5c:	9139a463 	add	x3, x3, #0xe69
+ 3a69c60:	b0fe8065 	adrp	x5, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a69c64:	910814a5 	add	x5, x5, #0x205
+ 3a69c68:	f9400100 	ldr	x0, [x8]
+ 3a69c6c:	52800024 	mov	w4, #0x1                   	// #1
+ 3a69c70:	aa1303e6 	mov	x6, x19
+ 3a69c74:	97f875ee 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a69c78:	52838461 	mov	w1, #0x1c23                	// #7203
+ 3a69c7c:	f0fe6280 	adrp	x0, 6bc000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x7a277>
+ 3a69c80:	9132fc00 	add	x0, x0, #0xcbf
+ 3a69c84:	b0fe8063 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a69c88:	91081863 	add	x3, x3, #0x206
+ 3a69c8c:	528013e2 	mov	w2, #0x9f                  	// #159
+ 3a69c90:	97ffda16 	bl	3a604e8 <PyInit__testinternalcapi@@Base+0x3a93c8>
+ 3a69c94:	aa1f03e0 	mov	x0, xzr
+ 3a69c98:	f94016c8 	ldr	x8, [x22, #40]
+ 3a69c9c:	f85f83a9 	ldur	x9, [x29, #-8]
+ 3a69ca0:	eb09011f 	cmp	x8, x9
+ 3a69ca4:	54000981 	b.ne	3a69dd4 <PyInit__testinternalcapi@@Base+0x3b2cb4>  // b.any
+ 3a69ca8:	a9474ff4 	ldp	x20, x19, [sp, #112]
+ 3a69cac:	f9401bfb 	ldr	x27, [sp, #48]
+ 3a69cb0:	a94657f6 	ldp	x22, x21, [sp, #96]
+ 3a69cb4:	a9455ff8 	ldp	x24, x23, [sp, #80]
+ 3a69cb8:	a94467fa 	ldp	x26, x25, [sp, #64]
+ 3a69cbc:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 3a69cc0:	910203ff 	add	sp, sp, #0x80
+ 3a69cc4:	d65f03c0 	ret
+ 3a69cc8:	37fffb80 	tbnz	w0, #31, 3a69c38 <PyInit__testinternalcapi@@Base+0x3b2b18>
+ 3a69ccc:	f8797a95 	ldr	x21, [x20, x25, lsl #3]
+ 3a69cd0:	f90003f5 	str	x21, [sp]
+ 3a69cd4:	b4fffb35 	cbz	x21, 3a69c38 <PyInit__testinternalcapi@@Base+0x3b2b18>
+ 3a69cd8:	aa1803e3 	mov	x3, x24
+ 3a69cdc:	f10006ff 	cmp	x23, #0x1
+ 3a69ce0:	54fff0ab 	b.lt	3a69af4 <PyInit__testinternalcapi@@Base+0x3b29d4>  // b.tstop
+ 3a69ce4:	b0fe8065 	adrp	x5, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a69ce8:	913404a5 	add	x5, x5, #0xd01
+ 3a69cec:	910023e2 	add	x2, sp, #0x8
+ 3a69cf0:	aa0303e0 	mov	x0, x3
+ 3a69cf4:	910003e3 	mov	x3, sp
+ 3a69cf8:	aa1403e1 	mov	x1, x20
+ 3a69cfc:	aa1303e4 	mov	x4, x19
+ 3a69d00:	97ffe81b 	bl	3a63d6c <PyInit__testinternalcapi@@Base+0x3acc4c>
+ 3a69d04:	37f80640 	tbnz	w0, #31, 3a69dcc <PyInit__testinternalcapi@@Base+0x3b2cac>
+ 3a69d08:	f94003f5 	ldr	x21, [sp]
+ 3a69d0c:	17ffff7a 	b	3a69af4 <PyInit__testinternalcapi@@Base+0x3b29d4>
+ 3a69d10:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69d14:	9001cb21 	adrp	x1, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69d18:	91226021 	add	x1, x1, #0x898
+ 3a69d1c:	f9420d00 	ldr	x0, [x8, #1048]
+ 3a69d20:	9001cb22 	adrp	x2, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69d24:	91228042 	add	x2, x2, #0x8a0
+ 3a69d28:	97ffd931 	bl	3a601ec <PyInit__testinternalcapi@@Base+0x3a90cc>
+ 3a69d2c:	17ffff80 	b	3a69b2c <PyInit__testinternalcapi@@Base+0x3b2a0c>
+ 3a69d30:	52838a41 	mov	w1, #0x1c52                	// #7250
+ 3a69d34:	1400001e 	b	3a69dac <PyInit__testinternalcapi@@Base+0x3b2c8c>
+ 3a69d38:	9001cb28 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69d3c:	f9420d00 	ldr	x0, [x8, #1048]
+ 3a69d40:	97ffd904 	bl	3a60150 <PyInit__testinternalcapi@@Base+0x3a9030>
+ 3a69d44:	17ffff7a 	b	3a69b2c <PyInit__testinternalcapi@@Base+0x3b2a0c>
+ 3a69d48:	f9400e74 	ldr	x20, [x19, #24]
+ 3a69d4c:	b4fff114 	cbz	x20, 3a69b6c <PyInit__testinternalcapi@@Base+0x3b2a4c>
+ 3a69d50:	f9400288 	ldr	x8, [x20]
+ 3a69d54:	f9400a77 	ldr	x23, [x19, #16]
+ 3a69d58:	91000508 	add	x8, x8, #0x1
+ 3a69d5c:	f9000288 	str	x8, [x20]
+ 3a69d60:	f94002e8 	ldr	x8, [x23]
+ 3a69d64:	91000508 	add	x8, x8, #0x1
+ 3a69d68:	f90002e8 	str	x8, [x23]
+ 3a69d6c:	f9400268 	ldr	x8, [x19]
+ 3a69d70:	f1000508 	subs	x8, x8, #0x1
+ 3a69d74:	f9000268 	str	x8, [x19]
+ 3a69d78:	54000061 	b.ne	3a69d84 <PyInit__testinternalcapi@@Base+0x3b2c64>  // b.any
+ 3a69d7c:	aa1303e0 	mov	x0, x19
+ 3a69d80:	97f4b7cd 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69d84:	52800028 	mov	w8, #0x1                   	// #1
+ 3a69d88:	aa1703f3 	mov	x19, x23
+ 3a69d8c:	17ffff79 	b	3a69b70 <PyInit__testinternalcapi@@Base+0x3b2a50>
+ 3a69d90:	f9400268 	ldr	x8, [x19]
+ 3a69d94:	f1000508 	subs	x8, x8, #0x1
+ 3a69d98:	f9000268 	str	x8, [x19]
+ 3a69d9c:	54000061 	b.ne	3a69da8 <PyInit__testinternalcapi@@Base+0x3b2c88>  // b.any
+ 3a69da0:	aa1303e0 	mov	x0, x19
+ 3a69da4:	97f4b7c4 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69da8:	52838d01 	mov	w1, #0x1c68                	// #7272
+ 3a69dac:	f0fe6280 	adrp	x0, 6bc000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x7a277>
+ 3a69db0:	9132fc00 	add	x0, x0, #0xcbf
+ 3a69db4:	b0fe8063 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a69db8:	91081863 	add	x3, x3, #0x206
+ 3a69dbc:	52801402 	mov	w2, #0xa0                  	// #160
+ 3a69dc0:	17ffffb4 	b	3a69c90 <PyInit__testinternalcapi@@Base+0x3b2b70>
+ 3a69dc4:	52838261 	mov	w1, #0x1c13                	// #7187
+ 3a69dc8:	17ffffad 	b	3a69c7c <PyInit__testinternalcapi@@Base+0x3b2b5c>
+ 3a69dcc:	52838301 	mov	w1, #0x1c18                	// #7192
+ 3a69dd0:	17ffffab 	b	3a69c7c <PyInit__testinternalcapi@@Base+0x3b2b5c>
+ 3a69dd4:	948a5b33 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3a69dd8:	d102c3ff 	sub	sp, sp, #0xb0
+ 3a69ddc:	fd0023e8 	str	d8, [sp, #64]
+ 3a69de0:	a9057bfd 	stp	x29, x30, [sp, #80]
+ 3a69de4:	a9066ffc 	stp	x28, x27, [sp, #96]
+ 3a69de8:	a90767fa 	stp	x26, x25, [sp, #112]
+ 3a69dec:	a9085ff8 	stp	x24, x23, [sp, #128]
+ 3a69df0:	a90957f6 	stp	x22, x21, [sp, #144]
+ 3a69df4:	a90a4ff4 	stp	x20, x19, [sp, #160]
+ 3a69df8:	910143fd 	add	x29, sp, #0x50
+ 3a69dfc:	d53bd057 	mrs	x23, tpidr_el0
+ 3a69e00:	aa0203f3 	mov	x19, x2
+ 3a69e04:	f94016e8 	ldr	x8, [x23, #40]
+ 3a69e08:	f81e83a8 	stur	x8, [x29, #-24]
+ 3a69e0c:	f001cb08 	adrp	x8, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a69e10:	91364108 	add	x8, x8, #0xd90
+ 3a69e14:	a902ffe8 	stp	x8, xzr, [sp, #40]
+ 3a69e18:	b4000163 	cbz	x3, 3a69e44 <PyInit__testinternalcapi@@Base+0x3b2d24>
+ 3a69e1c:	8b130c34 	add	x20, x1, x19, lsl #3
+ 3a69e20:	b40026b3 	cbz	x19, 3a6a2f4 <PyInit__testinternalcapi@@Base+0x3b31d4>
+ 3a69e24:	f100067f 	cmp	x19, #0x1
+ 3a69e28:	540029e1 	b.ne	3a6a364 <PyInit__testinternalcapi@@Base+0x3b3244>  // b.any
+ 3a69e2c:	f9400038 	ldr	x24, [x1]
+ 3a69e30:	f9400876 	ldr	x22, [x3, #16]
+ 3a69e34:	f90013f8 	str	x24, [sp, #32]
+ 3a69e38:	f10006df 	cmp	x22, #0x1
+ 3a69e3c:	540000cb 	b.lt	3a69e54 <PyInit__testinternalcapi@@Base+0x3b2d34>  // b.tstop
+ 3a69e40:	140001d5 	b	3a6a594 <PyInit__testinternalcapi@@Base+0x3b3474>
+ 3a69e44:	f100067f 	cmp	x19, #0x1
+ 3a69e48:	540028e1 	b.ne	3a6a364 <PyInit__testinternalcapi@@Base+0x3b3244>  // b.any
+ 3a69e4c:	f9400038 	ldr	x24, [x1]
+ 3a69e50:	f90013f8 	str	x24, [sp, #32]
+ 3a69e54:	aa1803e0 	mov	x0, x24
+ 3a69e58:	97f34048 	bl	3739f78 <PyInit__testinternalcapi@@Base+0x82e58>
+ 3a69e5c:	b100041f 	cmn	x0, #0x1
+ 3a69e60:	f90007f7 	str	x23, [sp, #8]
+ 3a69e64:	54004c40 	b.eq	3a6a7ec <PyInit__testinternalcapi@@Base+0x3b36cc>  // b.none
+ 3a69e68:	d1002000 	sub	x0, x0, #0x8
+ 3a69e6c:	97f4634e 	bl	3782ba4 <PyInit__testinternalcapi@@Base+0xcba84>
+ 3a69e70:	aa0003f4 	mov	x20, x0
+ 3a69e74:	b4004cc0 	cbz	x0, 3a6a80c <PyInit__testinternalcapi@@Base+0x3b36ec>
+ 3a69e78:	900151f3 	adrp	x19, 64a5000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x6430>
+ 3a69e7c:	f9400688 	ldr	x8, [x20, #8]
+ 3a69e80:	9001cb29 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69e84:	f9438a73 	ldr	x19, [x19, #1808]
+ 3a69e88:	f9424121 	ldr	x1, [x9, #1152]
+ 3a69e8c:	f9000ff4 	str	x20, [sp, #24]
+ 3a69e90:	eb13011f 	cmp	x8, x19
+ 3a69e94:	54004ca1 	b.ne	3a6a828 <PyInit__testinternalcapi@@Base+0x3b3708>  // b.any
+ 3a69e98:	f9400a88 	ldr	x8, [x20, #16]
+ 3a69e9c:	f100051f 	cmp	x8, #0x1
+ 3a69ea0:	540000c0 	b.eq	3a69eb8 <PyInit__testinternalcapi@@Base+0x3b2d98>  // b.none
+ 3a69ea4:	b100051f 	cmn	x8, #0x1
+ 3a69ea8:	54003a81 	b.ne	3a6a5f8 <PyInit__testinternalcapi@@Base+0x3b34d8>  // b.any
+ 3a69eac:	b9401a88 	ldr	w8, [x20, #24]
+ 3a69eb0:	4b0803e8 	neg	w8, w8
+ 3a69eb4:	14000002 	b	3a69ebc <PyInit__testinternalcapi@@Base+0x3b2d9c>
+ 3a69eb8:	b9401a88 	ldr	w8, [x20, #24]
+ 3a69ebc:	93407d08 	sxtw	x8, w8
+ 3a69ec0:	d293e469 	mov	x9, #0x9f23                	// #40739
+ 3a69ec4:	f2b06ea9 	movk	x9, #0x8375, lsl #16
+ 3a69ec8:	f2de4529 	movk	x9, #0xf229, lsl #32
+ 3a69ecc:	f2e6eb29 	movk	x9, #0x3759, lsl #48
+ 3a69ed0:	9b497d09 	smulh	x9, x8, x9
+ 3a69ed4:	9343fd2a 	asr	x10, x9, #3
+ 3a69ed8:	8b49fd49 	add	x9, x10, x9, lsr #63
+ 3a69edc:	528004aa 	mov	w10, #0x25                  	// #37
+ 3a69ee0:	9b0aa128 	msub	x8, x9, x10, x8
+ 3a69ee4:	8a88fd49 	and	x9, x10, x8, asr #63
+ 3a69ee8:	8b080120 	add	x0, x9, x8
+ 3a69eec:	97f45e61 	bl	3781870 <PyInit__testinternalcapi@@Base+0xca750>
+ 3a69ef0:	aa0003f9 	mov	x25, x0
+ 3a69ef4:	b4004a00 	cbz	x0, 3a6a834 <PyInit__testinternalcapi@@Base+0x3b3714>
+ 3a69ef8:	f9400728 	ldr	x8, [x25, #8]
+ 3a69efc:	9001cb29 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a69f00:	f9424535 	ldr	x21, [x9, #1160]
+ 3a69f04:	eb13011f 	cmp	x8, x19
+ 3a69f08:	54004a41 	b.ne	3a6a850 <PyInit__testinternalcapi@@Base+0x3b3730>  // b.any
+ 3a69f0c:	f9400b28 	ldr	x8, [x25, #16]
+ 3a69f10:	f100051f 	cmp	x8, #0x1
+ 3a69f14:	54000061 	b.ne	3a69f20 <PyInit__testinternalcapi@@Base+0x3b2e00>  // b.any
+ 3a69f18:	b9401b28 	ldr	w8, [x25, #24]
+ 3a69f1c:	14000005 	b	3a69f30 <PyInit__testinternalcapi@@Base+0x3b2e10>
+ 3a69f20:	b100051f 	cmn	x8, #0x1
+ 3a69f24:	54004f21 	b.ne	3a6a908 <PyInit__testinternalcapi@@Base+0x3b37e8>  // b.any
+ 3a69f28:	b9401b28 	ldr	w8, [x25, #24]
+ 3a69f2c:	4b0803e8 	neg	w8, w8
+ 3a69f30:	93407d08 	sxtw	x8, w8
+ 3a69f34:	52801009 	mov	w9, #0x80                  	// #128
+ 3a69f38:	cb080120 	sub	x0, x9, x8
+ 3a69f3c:	97f45e4d 	bl	3781870 <PyInit__testinternalcapi@@Base+0xca750>
+ 3a69f40:	aa0003f5 	mov	x21, x0
+ 3a69f44:	b4004960 	cbz	x0, 3a6a870 <PyInit__testinternalcapi@@Base+0x3b3750>
+ 3a69f48:	f9400328 	ldr	x8, [x25]
+ 3a69f4c:	f1000508 	subs	x8, x8, #0x1
+ 3a69f50:	f9000328 	str	x8, [x25]
+ 3a69f54:	54000061 	b.ne	3a69f60 <PyInit__testinternalcapi@@Base+0x3b2e40>  // b.any
+ 3a69f58:	aa1903e0 	mov	x0, x25
+ 3a69f5c:	97f4b756 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69f60:	f9400708 	ldr	x8, [x24, #8]
+ 3a69f64:	f9000bf5 	str	x21, [sp, #16]
+ 3a69f68:	f9403914 	ldr	x20, [x8, #112]
+ 3a69f6c:	b40032b4 	cbz	x20, 3a6a5c0 <PyInit__testinternalcapi@@Base+0x3b34a0>
+ 3a69f70:	f9400689 	ldr	x9, [x20, #8]
+ 3a69f74:	b4003269 	cbz	x9, 3a6a5c0 <PyInit__testinternalcapi@@Base+0x3b34a0>
+ 3a69f78:	aa1f03e0 	mov	x0, xzr
+ 3a69f7c:	97f4630a 	bl	3782ba4 <PyInit__testinternalcapi@@Base+0xcba84>
+ 3a69f80:	aa0003f6 	mov	x22, x0
+ 3a69f84:	b4004860 	cbz	x0, 3a6a890 <PyInit__testinternalcapi@@Base+0x3b3770>
+ 3a69f88:	f00151c2 	adrp	x2, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a69f8c:	aa1603e0 	mov	x0, x22
+ 3a69f90:	aa1503e1 	mov	x1, x21
+ 3a69f94:	f9410042 	ldr	x2, [x2, #512]
+ 3a69f98:	97f4e6d9 	bl	37a3afc <PyInit__testinternalcapi@@Base+0xec9dc>
+ 3a69f9c:	f94002c8 	ldr	x8, [x22]
+ 3a69fa0:	aa0003f5 	mov	x21, x0
+ 3a69fa4:	f1000508 	subs	x8, x8, #0x1
+ 3a69fa8:	f90002c8 	str	x8, [x22]
+ 3a69fac:	54000060 	b.eq	3a69fb8 <PyInit__testinternalcapi@@Base+0x3b2e98>  // b.none
+ 3a69fb0:	b50000b5 	cbnz	x21, 3a69fc4 <PyInit__testinternalcapi@@Base+0x3b2ea4>
+ 3a69fb4:	1400018b 	b	3a6a5e0 <PyInit__testinternalcapi@@Base+0x3b34c0>
+ 3a69fb8:	aa1603e0 	mov	x0, x22
+ 3a69fbc:	97f4b73e 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69fc0:	b4003115 	cbz	x21, 3a6a5e0 <PyInit__testinternalcapi@@Base+0x3b34c0>
+ 3a69fc4:	f9400688 	ldr	x8, [x20, #8]
+ 3a69fc8:	aa1803e0 	mov	x0, x24
+ 3a69fcc:	aa1503e1 	mov	x1, x21
+ 3a69fd0:	d63f0100 	blr	x8
+ 3a69fd4:	f94002a8 	ldr	x8, [x21]
+ 3a69fd8:	aa0003fa 	mov	x26, x0
+ 3a69fdc:	f1000508 	subs	x8, x8, #0x1
+ 3a69fe0:	f90002a8 	str	x8, [x21]
+ 3a69fe4:	54000061 	b.ne	3a69ff0 <PyInit__testinternalcapi@@Base+0x3b2ed0>  // b.any
+ 3a69fe8:	aa1503e0 	mov	x0, x21
+ 3a69fec:	97f4b732 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a69ff0:	b4002f7a 	cbz	x26, 3a6a5dc <PyInit__testinternalcapi@@Base+0x3b34bc>
+ 3a69ff4:	a902ebff 	stp	xzr, x26, [sp, #40]
+ 3a69ff8:	d00151e0 	adrp	x0, 64a7000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x8430>
+ 3a69ffc:	9100a3e8 	add	x8, sp, #0x28
+ 3a6a000:	f9434400 	ldr	x0, [x0, #1672]
+ 3a6a004:	91002101 	add	x1, x8, #0x8
+ 3a6a008:	b24107e2 	mov	x2, #0x8000000000000001    	// #-9223372036854775807
+ 3a6a00c:	97ffdca4 	bl	3a6129c <PyInit__testinternalcapi@@Base+0x3aa17c>
+ 3a6a010:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a014:	aa0003f5 	mov	x21, x0
+ 3a6a018:	b4004400 	cbz	x0, 3a6a898 <PyInit__testinternalcapi@@Base+0x3b3778>
+ 3a6a01c:	f9400348 	ldr	x8, [x26]
+ 3a6a020:	f1000508 	subs	x8, x8, #0x1
+ 3a6a024:	f9000348 	str	x8, [x26]
+ 3a6a028:	54000061 	b.ne	3a6a034 <PyInit__testinternalcapi@@Base+0x3b2f14>  // b.any
+ 3a6a02c:	aa1a03e0 	mov	x0, x26
+ 3a6a030:	97f4b721 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a034:	f001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6a038:	f9422d09 	ldr	x9, [x8, #1112]
+ 3a6a03c:	f940012a 	ldr	x10, [x9]
+ 3a6a040:	9100054a 	add	x10, x10, #0x1
+ 3a6a044:	f900012a 	str	x10, [x9]
+ 3a6a048:	f94002aa 	ldr	x10, [x21]
+ 3a6a04c:	f9400aa9 	ldr	x9, [x21, #16]
+ 3a6a050:	f9422d19 	ldr	x25, [x8, #1112]
+ 3a6a054:	91000548 	add	x8, x10, #0x1
+ 3a6a058:	b100053f 	cmn	x9, #0x1
+ 3a6a05c:	f90002a8 	str	x8, [x21]
+ 3a6a060:	54004280 	b.eq	3a6a8b0 <PyInit__testinternalcapi@@Base+0x3b3790>  // b.none
+ 3a6a064:	f100053f 	cmp	x9, #0x1
+ 3a6a068:	54001acb 	b.lt	3a6a3c0 <PyInit__testinternalcapi@@Base+0x3b32a0>  // b.tstop
+ 3a6a06c:	f90003f8 	str	x24, [sp]
+ 3a6a070:	aa1f03fb 	mov	x27, xzr
+ 3a6a074:	aa1f03f4 	mov	x20, xzr
+ 3a6a078:	aa1f03fc 	mov	x28, xzr
+ 3a6a07c:	1e6e1008 	fmov	d8, #1.000000000000000000e+00
+ 3a6a080:	52800028 	mov	w8, #0x1                   	// #1
+ 3a6a084:	52801358 	mov	w24, #0x9a                  	// #154
+ 3a6a088:	aa1903f6 	mov	x22, x25
+ 3a6a08c:	b4000068 	cbz	x8, 3a6a098 <PyInit__testinternalcapi@@Base+0x3b2f78>
+ 3a6a090:	f94016a8 	ldr	x8, [x21, #40]
+ 3a6a094:	14000003 	b	3a6a0a0 <PyInit__testinternalcapi@@Base+0x3b2f80>
+ 3a6a098:	b00151e8 	adrp	x8, 64a7000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x8430>
+ 3a6a09c:	f9433108 	ldr	x8, [x8, #1632]
+ 3a6a0a0:	38746900 	ldrb	w0, [x8, x20]
+ 3a6a0a4:	97f45df3 	bl	3781870 <PyInit__testinternalcapi@@Base+0xca750>
+ 3a6a0a8:	b40022c0 	cbz	x0, 3a6a500 <PyInit__testinternalcapi@@Base+0x3b33e0>
+ 3a6a0ac:	aa0003f7 	mov	x23, x0
+ 3a6a0b0:	b40000fc 	cbz	x28, 3a6a0cc <PyInit__testinternalcapi@@Base+0x3b2fac>
+ 3a6a0b4:	f9400388 	ldr	x8, [x28]
+ 3a6a0b8:	f1000508 	subs	x8, x8, #0x1
+ 3a6a0bc:	f9000388 	str	x8, [x28]
+ 3a6a0c0:	54000061 	b.ne	3a6a0cc <PyInit__testinternalcapi@@Base+0x3b2fac>  // b.any
+ 3a6a0c4:	aa1c03e0 	mov	x0, x28
+ 3a6a0c8:	97f4b6fb 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a0cc:	f94002c8 	ldr	x8, [x22]
+ 3a6a0d0:	91000508 	add	x8, x8, #0x1
+ 3a6a0d4:	f90002c8 	str	x8, [x22]
+ 3a6a0d8:	b40000fb 	cbz	x27, 3a6a0f4 <PyInit__testinternalcapi@@Base+0x3b2fd4>
+ 3a6a0dc:	f9400368 	ldr	x8, [x27]
+ 3a6a0e0:	f1000508 	subs	x8, x8, #0x1
+ 3a6a0e4:	f9000368 	str	x8, [x27]
+ 3a6a0e8:	54000061 	b.ne	3a6a0f4 <PyInit__testinternalcapi@@Base+0x3b2fd4>  // b.any
+ 3a6a0ec:	aa1b03e0 	mov	x0, x27
+ 3a6a0f0:	97f4b6f1 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a0f4:	f94006c8 	ldr	x8, [x22, #8]
+ 3a6a0f8:	f001cb09 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6a0fc:	f9423139 	ldr	x25, [x9, #1120]
+ 3a6a100:	eb13011f 	cmp	x8, x19
+ 3a6a104:	540008c1 	b.ne	3a6a21c <PyInit__testinternalcapi@@Base+0x3b30fc>  // b.any
+ 3a6a108:	f9400ac8 	ldr	x8, [x22, #16]
+ 3a6a10c:	f100051f 	cmp	x8, #0x1
+ 3a6a110:	540000c0 	b.eq	3a6a128 <PyInit__testinternalcapi@@Base+0x3b3008>  // b.none
+ 3a6a114:	b100051f 	cmn	x8, #0x1
+ 3a6a118:	540006e1 	b.ne	3a6a1f4 <PyInit__testinternalcapi@@Base+0x3b30d4>  // b.any
+ 3a6a11c:	b9401ac8 	ldr	w8, [x22, #24]
+ 3a6a120:	4b0803e8 	neg	w8, w8
+ 3a6a124:	14000002 	b	3a6a12c <PyInit__testinternalcapi@@Base+0x3b300c>
+ 3a6a128:	b9401ac8 	ldr	w8, [x22, #24]
+ 3a6a12c:	93407d08 	sxtw	x8, w8
+ 3a6a130:	91000500 	add	x0, x8, #0x1
+ 3a6a134:	97f45dcf 	bl	3781870 <PyInit__testinternalcapi@@Base+0xca750>
+ 3a6a138:	aa0003f9 	mov	x25, x0
+ 3a6a13c:	b4001f60 	cbz	x0, 3a6a528 <PyInit__testinternalcapi@@Base+0x3b3408>
+ 3a6a140:	f94002c8 	ldr	x8, [x22]
+ 3a6a144:	f1000508 	subs	x8, x8, #0x1
+ 3a6a148:	f90002c8 	str	x8, [x22]
+ 3a6a14c:	54000061 	b.ne	3a6a158 <PyInit__testinternalcapi@@Base+0x3b3038>  // b.any
+ 3a6a150:	aa1603e0 	mov	x0, x22
+ 3a6a154:	97f4b6d8 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a158:	f94006e8 	ldr	x8, [x23, #8]
+ 3a6a15c:	f001cb09 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6a160:	f942493a 	ldr	x26, [x9, #1168]
+ 3a6a164:	eb13011f 	cmp	x8, x19
+ 3a6a168:	540006a1 	b.ne	3a6a23c <PyInit__testinternalcapi@@Base+0x3b311c>  // b.any
+ 3a6a16c:	f9400ae8 	ldr	x8, [x23, #16]
+ 3a6a170:	f100051f 	cmp	x8, #0x1
+ 3a6a174:	540000c0 	b.eq	3a6a18c <PyInit__testinternalcapi@@Base+0x3b306c>  // b.none
+ 3a6a178:	b100051f 	cmn	x8, #0x1
+ 3a6a17c:	54000461 	b.ne	3a6a208 <PyInit__testinternalcapi@@Base+0x3b30e8>  // b.any
+ 3a6a180:	b9401ae8 	ldr	w8, [x23, #24]
+ 3a6a184:	4b0803e8 	neg	w8, w8
+ 3a6a188:	14000002 	b	3a6a190 <PyInit__testinternalcapi@@Base+0x3b3070>
+ 3a6a18c:	b9401ae8 	ldr	w8, [x23, #24]
+ 3a6a190:	93407d08 	sxtw	x8, w8
+ 3a6a194:	ca180100 	eor	x0, x8, x24
+ 3a6a198:	97f45db6 	bl	3781870 <PyInit__testinternalcapi@@Base+0xca750>
+ 3a6a19c:	aa0003fa 	mov	x26, x0
+ 3a6a1a0:	b4001d20 	cbz	x0, 3a6a544 <PyInit__testinternalcapi@@Base+0x3b3424>
+ 3a6a1a4:	aa1503e0 	mov	x0, x21
+ 3a6a1a8:	aa1603e1 	mov	x1, x22
+ 3a6a1ac:	aa1a03e2 	mov	x2, x26
+ 3a6a1b0:	97f3415d 	bl	373a724 <PyInit__testinternalcapi@@Base+0x83604>
+ 3a6a1b4:	37f81ce0 	tbnz	w0, #31, 3a6a550 <PyInit__testinternalcapi@@Base+0x3b3430>
+ 3a6a1b8:	f9400348 	ldr	x8, [x26]
+ 3a6a1bc:	f1000508 	subs	x8, x8, #0x1
+ 3a6a1c0:	f9000348 	str	x8, [x26]
+ 3a6a1c4:	54000061 	b.ne	3a6a1d0 <PyInit__testinternalcapi@@Base+0x3b30b0>  // b.any
+ 3a6a1c8:	aa1a03e0 	mov	x0, x26
+ 3a6a1cc:	97f4b6ba 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a1d0:	f9400aa8 	ldr	x8, [x21, #16]
+ 3a6a1d4:	b100051f 	cmn	x8, #0x1
+ 3a6a1d8:	54001c20 	b.eq	3a6a55c <PyInit__testinternalcapi@@Base+0x3b343c>  // b.none
+ 3a6a1dc:	91000694 	add	x20, x20, #0x1
+ 3a6a1e0:	aa1603fb 	mov	x27, x22
+ 3a6a1e4:	aa1703fc 	mov	x28, x23
+ 3a6a1e8:	eb08029f 	cmp	x20, x8
+ 3a6a1ec:	54fff4eb 	b.lt	3a6a088 <PyInit__testinternalcapi@@Base+0x3b2f68>  // b.tstop
+ 3a6a1f0:	1400003d 	b	3a6a2e4 <PyInit__testinternalcapi@@Base+0x3b31c4>
+ 3a6a1f4:	b50002c8 	cbnz	x8, 3a6a24c <PyInit__testinternalcapi@@Base+0x3b312c>
+ 3a6a1f8:	f9400328 	ldr	x8, [x25]
+ 3a6a1fc:	91000508 	add	x8, x8, #0x1
+ 3a6a200:	f9000328 	str	x8, [x25]
+ 3a6a204:	17ffffcf 	b	3a6a140 <PyInit__testinternalcapi@@Base+0x3b3020>
+ 3a6a208:	b5000328 	cbnz	x8, 3a6a26c <PyInit__testinternalcapi@@Base+0x3b314c>
+ 3a6a20c:	f9400348 	ldr	x8, [x26]
+ 3a6a210:	91000508 	add	x8, x8, #0x1
+ 3a6a214:	f9000348 	str	x8, [x26]
+ 3a6a218:	17ffffe3 	b	3a6a1a4 <PyInit__testinternalcapi@@Base+0x3b3084>
+ 3a6a21c:	f00151c9 	adrp	x9, 64a5000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x6430>
+ 3a6a220:	f9436d29 	ldr	x9, [x9, #1752]
+ 3a6a224:	eb09011f 	cmp	x8, x9
+ 3a6a228:	54000320 	b.eq	3a6a28c <PyInit__testinternalcapi@@Base+0x3b316c>  // b.none
+ 3a6a22c:	aa1603e0 	mov	x0, x22
+ 3a6a230:	aa1903e1 	mov	x1, x25
+ 3a6a234:	97f34512 	bl	373b67c <PyInit__testinternalcapi@@Base+0x8455c>
+ 3a6a238:	17ffffc0 	b	3a6a138 <PyInit__testinternalcapi@@Base+0x3b3018>
+ 3a6a23c:	aa1703e0 	mov	x0, x23
+ 3a6a240:	aa1a03e1 	mov	x1, x26
+ 3a6a244:	97f34460 	bl	373b3c4 <PyInit__testinternalcapi@@Base+0x842a4>
+ 3a6a248:	17ffffd5 	b	3a6a19c <PyInit__testinternalcapi@@Base+0x3b307c>
+ 3a6a24c:	f100091f 	cmp	x8, #0x2
+ 3a6a250:	54000260 	b.eq	3a6a29c <PyInit__testinternalcapi@@Base+0x3b317c>  // b.none
+ 3a6a254:	b100091f 	cmn	x8, #0x2
+ 3a6a258:	54000281 	b.ne	3a6a2a8 <PyInit__testinternalcapi@@Base+0x3b3188>  // b.any
+ 3a6a25c:	294322c9 	ldp	w9, w8, [x22, #24]
+ 3a6a260:	aa087928 	orr	x8, x9, x8, lsl #30
+ 3a6a264:	cb0803e8 	neg	x8, x8
+ 3a6a268:	17ffffb2 	b	3a6a130 <PyInit__testinternalcapi@@Base+0x3b3010>
+ 3a6a26c:	f100091f 	cmp	x8, #0x2
+ 3a6a270:	54000280 	b.eq	3a6a2c0 <PyInit__testinternalcapi@@Base+0x3b31a0>  // b.none
+ 3a6a274:	b100091f 	cmn	x8, #0x2
+ 3a6a278:	540002a1 	b.ne	3a6a2cc <PyInit__testinternalcapi@@Base+0x3b31ac>  // b.any
+ 3a6a27c:	294322e9 	ldp	w9, w8, [x23, #24]
+ 3a6a280:	aa087928 	orr	x8, x9, x8, lsl #30
+ 3a6a284:	cb0803e8 	neg	x8, x8
+ 3a6a288:	17ffffc3 	b	3a6a194 <PyInit__testinternalcapi@@Base+0x3b3074>
+ 3a6a28c:	fd400ac0 	ldr	d0, [x22, #16]
+ 3a6a290:	1e682800 	fadd	d0, d0, d8
+ 3a6a294:	97f41564 	bl	376f824 <PyInit__testinternalcapi@@Base+0xb8704>
+ 3a6a298:	17ffffa8 	b	3a6a138 <PyInit__testinternalcapi@@Base+0x3b3018>
+ 3a6a29c:	294322c9 	ldp	w9, w8, [x22, #24]
+ 3a6a2a0:	aa087928 	orr	x8, x9, x8, lsl #30
+ 3a6a2a4:	17ffffa3 	b	3a6a130 <PyInit__testinternalcapi@@Base+0x3b3010>
+ 3a6a2a8:	f9403268 	ldr	x8, [x19, #96]
+ 3a6a2ac:	aa1603e0 	mov	x0, x22
+ 3a6a2b0:	aa1903e1 	mov	x1, x25
+ 3a6a2b4:	f9400108 	ldr	x8, [x8]
+ 3a6a2b8:	d63f0100 	blr	x8
+ 3a6a2bc:	17ffff9f 	b	3a6a138 <PyInit__testinternalcapi@@Base+0x3b3018>
+ 3a6a2c0:	294322e9 	ldp	w9, w8, [x23, #24]
+ 3a6a2c4:	aa087928 	orr	x8, x9, x8, lsl #30
+ 3a6a2c8:	17ffffb3 	b	3a6a194 <PyInit__testinternalcapi@@Base+0x3b3074>
+ 3a6a2cc:	f9403268 	ldr	x8, [x19, #96]
+ 3a6a2d0:	aa1703e0 	mov	x0, x23
+ 3a6a2d4:	aa1a03e1 	mov	x1, x26
+ 3a6a2d8:	f9403908 	ldr	x8, [x8, #112]
+ 3a6a2dc:	d63f0100 	blr	x8
+ 3a6a2e0:	17ffffaf 	b	3a6a19c <PyInit__testinternalcapi@@Base+0x3b307c>
+ 3a6a2e4:	f94002a8 	ldr	x8, [x21]
+ 3a6a2e8:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a2ec:	f94003f8 	ldr	x24, [sp]
+ 3a6a2f0:	14000036 	b	3a6a3c8 <PyInit__testinternalcapi@@Base+0x3b32a8>
+ 3a6a2f4:	f9400879 	ldr	x25, [x3, #16]
+ 3a6a2f8:	aa1703fb 	mov	x27, x23
+ 3a6a2fc:	f1000736 	subs	x22, x25, #0x1
+ 3a6a300:	540002cb 	b.lt	3a6a358 <PyInit__testinternalcapi@@Base+0x3b3238>  // b.tstop
+ 3a6a304:	d001cb08 	adrp	x8, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a6a308:	aa0303f7 	mov	x23, x3
+ 3a6a30c:	aa1f03f8 	mov	x24, xzr
+ 3a6a310:	f946c915 	ldr	x21, [x8, #3472]
+ 3a6a314:	910062fa 	add	x26, x23, #0x18
+ 3a6a318:	aa0303e8 	mov	x8, x3
+ 3a6a31c:	f8787b48 	ldr	x8, [x26, x24, lsl #3]
+ 3a6a320:	eb15011f 	cmp	x8, x21
+ 3a6a324:	540012a0 	b.eq	3a6a578 <PyInit__testinternalcapi@@Base+0x3b3458>  // b.none
+ 3a6a328:	91000718 	add	x24, x24, #0x1
+ 3a6a32c:	eb18033f 	cmp	x25, x24
+ 3a6a330:	54ffff61 	b.ne	3a6a31c <PyInit__testinternalcapi@@Base+0x3b31fc>  // b.any
+ 3a6a334:	aa1f03f8 	mov	x24, xzr
+ 3a6a338:	f8787b41 	ldr	x1, [x26, x24, lsl #3]
+ 3a6a33c:	aa1503e0 	mov	x0, x21
+ 3a6a340:	52800042 	mov	w2, #0x2                   	// #2
+ 3a6a344:	97ffe75b 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a6a348:	35001160 	cbnz	w0, 3a6a574 <PyInit__testinternalcapi@@Base+0x3b3454>
+ 3a6a34c:	91000718 	add	x24, x24, #0x1
+ 3a6a350:	eb18033f 	cmp	x25, x24
+ 3a6a354:	54ffff21 	b.ne	3a6a338 <PyInit__testinternalcapi@@Base+0x3b3218>  // b.any
+ 3a6a358:	97f86fd0 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a6a35c:	aa1b03f7 	mov	x23, x27
+ 3a6a360:	b5002f80 	cbnz	x0, 3a6a950 <PyInit__testinternalcapi@@Base+0x3b3830>
+ 3a6a364:	d00151c8 	adrp	x8, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6a368:	f0fe5b41 	adrp	x1, 5d5000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x161277>
+ 3a6a36c:	91375021 	add	x1, x1, #0xdd4
+ 3a6a370:	f940e508 	ldr	x8, [x8, #456]
+ 3a6a374:	90fe8062 	adrp	x2, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6a378:	91343042 	add	x2, x2, #0xd0c
+ 3a6a37c:	90fe5923 	adrp	x3, 58e000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1a8277>
+ 3a6a380:	9139a463 	add	x3, x3, #0xe69
+ 3a6a384:	90fe8065 	adrp	x5, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6a388:	910814a5 	add	x5, x5, #0x205
+ 3a6a38c:	f9400100 	ldr	x0, [x8]
+ 3a6a390:	52800024 	mov	w4, #0x1                   	// #1
+ 3a6a394:	aa1303e6 	mov	x6, x19
+ 3a6a398:	97f87425 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a6a39c:	52839a41 	mov	w1, #0x1cd2                	// #7378
+ 3a6a3a0:	d0fe5d20 	adrp	x0, 610000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x126277>
+ 3a6a3a4:	9117f800 	add	x0, x0, #0x5fe
+ 3a6a3a8:	90fe8063 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6a3ac:	91081863 	add	x3, x3, #0x206
+ 3a6a3b0:	52801442 	mov	w2, #0xa2                  	// #162
+ 3a6a3b4:	97ffd84d 	bl	3a604e8 <PyInit__testinternalcapi@@Base+0x3a93c8>
+ 3a6a3b8:	aa1f03f8 	mov	x24, xzr
+ 3a6a3bc:	140000fe 	b	3a6a7b4 <PyInit__testinternalcapi@@Base+0x3b3694>
+ 3a6a3c0:	aa1f03f7 	mov	x23, xzr
+ 3a6a3c4:	aa1f03f6 	mov	x22, xzr
+ 3a6a3c8:	f1000508 	subs	x8, x8, #0x1
+ 3a6a3cc:	f90002a8 	str	x8, [x21]
+ 3a6a3d0:	54000061 	b.ne	3a6a3dc <PyInit__testinternalcapi@@Base+0x3b32bc>  // b.any
+ 3a6a3d4:	aa1503e0 	mov	x0, x21
+ 3a6a3d8:	97f4b637 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a3dc:	f9400328 	ldr	x8, [x25]
+ 3a6a3e0:	f1000508 	subs	x8, x8, #0x1
+ 3a6a3e4:	f9000328 	str	x8, [x25]
+ 3a6a3e8:	54000061 	b.ne	3a6a3f4 <PyInit__testinternalcapi@@Base+0x3b32d4>  // b.any
+ 3a6a3ec:	aa1903e0 	mov	x0, x25
+ 3a6a3f0:	97f4b631 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a3f4:	a902d7ff 	stp	xzr, x21, [sp, #40]
+ 3a6a3f8:	d00151c0 	adrp	x0, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6a3fc:	9100a3e8 	add	x8, sp, #0x28
+ 3a6a400:	f9451000 	ldr	x0, [x0, #2592]
+ 3a6a404:	91002101 	add	x1, x8, #0x8
+ 3a6a408:	b24107e2 	mov	x2, #0x8000000000000001    	// #-9223372036854775807
+ 3a6a40c:	97ffdba4 	bl	3a6129c <PyInit__testinternalcapi@@Base+0x3aa17c>
+ 3a6a410:	b4002620 	cbz	x0, 3a6a8d4 <PyInit__testinternalcapi@@Base+0x3b37b4>
+ 3a6a414:	f9400708 	ldr	x8, [x24, #8]
+ 3a6a418:	aa0003f9 	mov	x25, x0
+ 3a6a41c:	f9403913 	ldr	x19, [x8, #112]
+ 3a6a420:	b4001033 	cbz	x19, 3a6a624 <PyInit__testinternalcapi@@Base+0x3b3504>
+ 3a6a424:	f9400669 	ldr	x9, [x19, #8]
+ 3a6a428:	b4000fe9 	cbz	x9, 3a6a624 <PyInit__testinternalcapi@@Base+0x3b3504>
+ 3a6a42c:	928000e0 	mov	x0, #0xfffffffffffffff8    	// #-8
+ 3a6a430:	97f461dd 	bl	3782ba4 <PyInit__testinternalcapi@@Base+0xcba84>
+ 3a6a434:	aa0003fa 	mov	x26, x0
+ 3a6a438:	b4002540 	cbz	x0, 3a6a8e0 <PyInit__testinternalcapi@@Base+0x3b37c0>
+ 3a6a43c:	d00151c2 	adrp	x2, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6a440:	aa1a03e1 	mov	x1, x26
+ 3a6a444:	f9410042 	ldr	x2, [x2, #512]
+ 3a6a448:	f9400be0 	ldr	x0, [sp, #16]
+ 3a6a44c:	97f4e5ac 	bl	37a3afc <PyInit__testinternalcapi@@Base+0xec9dc>
+ 3a6a450:	f9400348 	ldr	x8, [x26]
+ 3a6a454:	aa0003fb 	mov	x27, x0
+ 3a6a458:	f1000508 	subs	x8, x8, #0x1
+ 3a6a45c:	f9000348 	str	x8, [x26]
+ 3a6a460:	54000060 	b.eq	3a6a46c <PyInit__testinternalcapi@@Base+0x3b334c>  // b.none
+ 3a6a464:	b50000bb 	cbnz	x27, 3a6a478 <PyInit__testinternalcapi@@Base+0x3b3358>
+ 3a6a468:	14000076 	b	3a6a640 <PyInit__testinternalcapi@@Base+0x3b3520>
+ 3a6a46c:	aa1a03e0 	mov	x0, x26
+ 3a6a470:	97f4b611 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a474:	b4000e7b 	cbz	x27, 3a6a640 <PyInit__testinternalcapi@@Base+0x3b3520>
+ 3a6a478:	f9400668 	ldr	x8, [x19, #8]
+ 3a6a47c:	aa1803e0 	mov	x0, x24
+ 3a6a480:	aa1b03e1 	mov	x1, x27
+ 3a6a484:	d63f0100 	blr	x8
+ 3a6a488:	f9400368 	ldr	x8, [x27]
+ 3a6a48c:	aa0003fa 	mov	x26, x0
+ 3a6a490:	f1000508 	subs	x8, x8, #0x1
+ 3a6a494:	f9000368 	str	x8, [x27]
+ 3a6a498:	54000061 	b.ne	3a6a4a4 <PyInit__testinternalcapi@@Base+0x3b3384>  // b.any
+ 3a6a49c:	aa1b03e0 	mov	x0, x27
+ 3a6a4a0:	97f4b605 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a4a4:	b40021fa 	cbz	x26, 3a6a8e0 <PyInit__testinternalcapi@@Base+0x3b37c0>
+ 3a6a4a8:	aa1903e0 	mov	x0, x25
+ 3a6a4ac:	aa1a03e1 	mov	x1, x26
+ 3a6a4b0:	97f34473 	bl	373b67c <PyInit__testinternalcapi@@Base+0x8455c>
+ 3a6a4b4:	aa0003f8 	mov	x24, x0
+ 3a6a4b8:	b4002460 	cbz	x0, 3a6a944 <PyInit__testinternalcapi@@Base+0x3b3824>
+ 3a6a4bc:	f9400328 	ldr	x8, [x25]
+ 3a6a4c0:	f1000508 	subs	x8, x8, #0x1
+ 3a6a4c4:	f9000328 	str	x8, [x25]
+ 3a6a4c8:	54000061 	b.ne	3a6a4d4 <PyInit__testinternalcapi@@Base+0x3b33b4>  // b.any
+ 3a6a4cc:	aa1903e0 	mov	x0, x25
+ 3a6a4d0:	97f4b5f9 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a4d4:	f9400348 	ldr	x8, [x26]
+ 3a6a4d8:	f1000508 	subs	x8, x8, #0x1
+ 3a6a4dc:	f9000348 	str	x8, [x26]
+ 3a6a4e0:	54000061 	b.ne	3a6a4ec <PyInit__testinternalcapi@@Base+0x3b33cc>  // b.any
+ 3a6a4e4:	aa1a03e0 	mov	x0, x26
+ 3a6a4e8:	97f4b5f3 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a4ec:	f9400308 	ldr	x8, [x24]
+ 3a6a4f0:	91000508 	add	x8, x8, #0x1
+ 3a6a4f4:	f9000308 	str	x8, [x24]
+ 3a6a4f8:	b5001014 	cbnz	x20, 3a6a6f8 <PyInit__testinternalcapi@@Base+0x3b35d8>
+ 3a6a4fc:	14000085 	b	3a6a710 <PyInit__testinternalcapi@@Base+0x3b35f0>
+ 3a6a500:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a504:	5283a781 	mov	w1, #0x1d3c                	// #7484
+ 3a6a508:	aa1603f9 	mov	x25, x22
+ 3a6a50c:	528014e2 	mov	w2, #0xa7                  	// #167
+ 3a6a510:	b4001db9 	cbz	x25, 3a6a8c4 <PyInit__testinternalcapi@@Base+0x3b37a4>
+ 3a6a514:	aa1f03fa 	mov	x26, xzr
+ 3a6a518:	aa1b03f6 	mov	x22, x27
+ 3a6a51c:	aa1c03f7 	mov	x23, x28
+ 3a6a520:	aa1503f8 	mov	x24, x21
+ 3a6a524:	1400004b 	b	3a6a650 <PyInit__testinternalcapi@@Base+0x3b3530>
+ 3a6a528:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a52c:	aa1f03fa 	mov	x26, xzr
+ 3a6a530:	528014e2 	mov	w2, #0xa7                  	// #167
+ 3a6a534:	5283aa41 	mov	w1, #0x1d52                	// #7506
+ 3a6a538:	aa1503f8 	mov	x24, x21
+ 3a6a53c:	aa1603f9 	mov	x25, x22
+ 3a6a540:	14000044 	b	3a6a650 <PyInit__testinternalcapi@@Base+0x3b3530>
+ 3a6a544:	52801502 	mov	w2, #0xa8                  	// #168
+ 3a6a548:	5283abe1 	mov	w1, #0x1d5f                	// #7519
+ 3a6a54c:	14000007 	b	3a6a568 <PyInit__testinternalcapi@@Base+0x3b3448>
+ 3a6a550:	52801502 	mov	w2, #0xa8                  	// #168
+ 3a6a554:	5283ac21 	mov	w1, #0x1d61                	// #7521
+ 3a6a558:	14000004 	b	3a6a568 <PyInit__testinternalcapi@@Base+0x3b3448>
+ 3a6a55c:	aa1f03fa 	mov	x26, xzr
+ 3a6a560:	528014e2 	mov	w2, #0xa7                  	// #167
+ 3a6a564:	5283ad61 	mov	w1, #0x1d6b                	// #7531
+ 3a6a568:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a56c:	aa1503f8 	mov	x24, x21
+ 3a6a570:	14000038 	b	3a6a650 <PyInit__testinternalcapi@@Base+0x3b3530>
+ 3a6a574:	37ffef20 	tbnz	w0, #31, 3a6a358 <PyInit__testinternalcapi@@Base+0x3b3238>
+ 3a6a578:	f8787a98 	ldr	x24, [x20, x24, lsl #3]
+ 3a6a57c:	f90013f8 	str	x24, [sp, #32]
+ 3a6a580:	b4ffeed8 	cbz	x24, 3a6a358 <PyInit__testinternalcapi@@Base+0x3b3238>
+ 3a6a584:	aa1703e3 	mov	x3, x23
+ 3a6a588:	aa1b03f7 	mov	x23, x27
+ 3a6a58c:	f10006df 	cmp	x22, #0x1
+ 3a6a590:	54ffc62b 	b.lt	3a69e54 <PyInit__testinternalcapi@@Base+0x3b2d34>  // b.tstop
+ 3a6a594:	90fe8065 	adrp	x5, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6a598:	913430a5 	add	x5, x5, #0xd0c
+ 3a6a59c:	9100a3e2 	add	x2, sp, #0x28
+ 3a6a5a0:	aa0303e0 	mov	x0, x3
+ 3a6a5a4:	910083e3 	add	x3, sp, #0x20
+ 3a6a5a8:	aa1403e1 	mov	x1, x20
+ 3a6a5ac:	aa1303e4 	mov	x4, x19
+ 3a6a5b0:	97ffe5ef 	bl	3a63d6c <PyInit__testinternalcapi@@Base+0x3acc4c>
+ 3a6a5b4:	37f81f40 	tbnz	w0, #31, 3a6a99c <PyInit__testinternalcapi@@Base+0x3b387c>
+ 3a6a5b8:	f94013f8 	ldr	x24, [sp, #32]
+ 3a6a5bc:	17fffe26 	b	3a69e54 <PyInit__testinternalcapi@@Base+0x3b2d34>
+ 3a6a5c0:	d00151c9 	adrp	x9, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6a5c4:	90fe6281 	adrp	x1, 6ba000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x7c277>
+ 3a6a5c8:	9137d421 	add	x1, x1, #0xdf5
+ 3a6a5cc:	f940e529 	ldr	x9, [x9, #456]
+ 3a6a5d0:	f9400d02 	ldr	x2, [x8, #24]
+ 3a6a5d4:	f9400120 	ldr	x0, [x9]
+ 3a6a5d8:	97f87395 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a6a5dc:	aa1f03f5 	mov	x21, xzr
+ 3a6a5e0:	aa1f03f6 	mov	x22, xzr
+ 3a6a5e4:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a5e8:	aa1f03f7 	mov	x23, xzr
+ 3a6a5ec:	528014c2 	mov	w2, #0xa6                  	// #166
+ 3a6a5f0:	5283a4c1 	mov	w1, #0x1d26                	// #7462
+ 3a6a5f4:	1400003a 	b	3a6a6dc <PyInit__testinternalcapi@@Base+0x3b35bc>
+ 3a6a5f8:	b5001788 	cbnz	x8, 3a6a8e8 <PyInit__testinternalcapi@@Base+0x3b37c8>
+ 3a6a5fc:	f9400288 	ldr	x8, [x20]
+ 3a6a600:	aa1403f9 	mov	x25, x20
+ 3a6a604:	91000508 	add	x8, x8, #0x1
+ 3a6a608:	f9000288 	str	x8, [x20]
+ 3a6a60c:	f001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6a610:	f9424515 	ldr	x21, [x8, #1160]
+ 3a6a614:	f94002a8 	ldr	x8, [x21]
+ 3a6a618:	91000508 	add	x8, x8, #0x1
+ 3a6a61c:	f90002a8 	str	x8, [x21]
+ 3a6a620:	17fffe4a 	b	3a69f48 <PyInit__testinternalcapi@@Base+0x3b2e28>
+ 3a6a624:	d00151c9 	adrp	x9, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6a628:	90fe6281 	adrp	x1, 6ba000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x7c277>
+ 3a6a62c:	9137d421 	add	x1, x1, #0xdf5
+ 3a6a630:	f940e529 	ldr	x9, [x9, #456]
+ 3a6a634:	f9400d02 	ldr	x2, [x8, #24]
+ 3a6a638:	f9400120 	ldr	x0, [x9]
+ 3a6a63c:	97f8737c 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a6a640:	aa1f03f8 	mov	x24, xzr
+ 3a6a644:	aa1f03fa 	mov	x26, xzr
+ 3a6a648:	52801542 	mov	w2, #0xaa                  	// #170
+ 3a6a64c:	5283af41 	mov	w1, #0x1d7a                	// #7546
+ 3a6a650:	f9400328 	ldr	x8, [x25]
+ 3a6a654:	f1000508 	subs	x8, x8, #0x1
+ 3a6a658:	f9000328 	str	x8, [x25]
+ 3a6a65c:	54000101 	b.ne	3a6a67c <PyInit__testinternalcapi@@Base+0x3b355c>  // b.any
+ 3a6a660:	aa1903e0 	mov	x0, x25
+ 3a6a664:	2a0203f3 	mov	w19, w2
+ 3a6a668:	2a0103f4 	mov	w20, w1
+ 3a6a66c:	97f4b592 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a670:	2a1403e1 	mov	w1, w20
+ 3a6a674:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a678:	2a1303e2 	mov	w2, w19
+ 3a6a67c:	b400019a 	cbz	x26, 3a6a6ac <PyInit__testinternalcapi@@Base+0x3b358c>
+ 3a6a680:	f9400348 	ldr	x8, [x26]
+ 3a6a684:	f1000508 	subs	x8, x8, #0x1
+ 3a6a688:	f9000348 	str	x8, [x26]
+ 3a6a68c:	54000101 	b.ne	3a6a6ac <PyInit__testinternalcapi@@Base+0x3b358c>  // b.any
+ 3a6a690:	aa1a03e0 	mov	x0, x26
+ 3a6a694:	2a0203f3 	mov	w19, w2
+ 3a6a698:	2a0103f4 	mov	w20, w1
+ 3a6a69c:	97f4b586 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a6a0:	2a1403e1 	mov	w1, w20
+ 3a6a6a4:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a6a8:	2a1303e2 	mov	w2, w19
+ 3a6a6ac:	b4000198 	cbz	x24, 3a6a6dc <PyInit__testinternalcapi@@Base+0x3b35bc>
+ 3a6a6b0:	f9400308 	ldr	x8, [x24]
+ 3a6a6b4:	f1000508 	subs	x8, x8, #0x1
+ 3a6a6b8:	f9000308 	str	x8, [x24]
+ 3a6a6bc:	54000101 	b.ne	3a6a6dc <PyInit__testinternalcapi@@Base+0x3b35bc>  // b.any
+ 3a6a6c0:	aa1803e0 	mov	x0, x24
+ 3a6a6c4:	2a0203f3 	mov	w19, w2
+ 3a6a6c8:	2a0103f4 	mov	w20, w1
+ 3a6a6cc:	97f4b57a 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a6d0:	2a1403e1 	mov	w1, w20
+ 3a6a6d4:	f9400ff4 	ldr	x20, [sp, #24]
+ 3a6a6d8:	2a1303e2 	mov	w2, w19
+ 3a6a6dc:	d0fe5d20 	adrp	x0, 610000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x126277>
+ 3a6a6e0:	9117f800 	add	x0, x0, #0x5fe
+ 3a6a6e4:	90fe8063 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6a6e8:	91081863 	add	x3, x3, #0x206
+ 3a6a6ec:	97ffd77f 	bl	3a604e8 <PyInit__testinternalcapi@@Base+0x3a93c8>
+ 3a6a6f0:	aa1f03f8 	mov	x24, xzr
+ 3a6a6f4:	b40000f4 	cbz	x20, 3a6a710 <PyInit__testinternalcapi@@Base+0x3b35f0>
+ 3a6a6f8:	f9400288 	ldr	x8, [x20]
+ 3a6a6fc:	f1000508 	subs	x8, x8, #0x1
+ 3a6a700:	f9000288 	str	x8, [x20]
+ 3a6a704:	54000061 	b.ne	3a6a710 <PyInit__testinternalcapi@@Base+0x3b35f0>  // b.any
+ 3a6a708:	aa1403e0 	mov	x0, x20
+ 3a6a70c:	97f4b56a 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a710:	f9400be0 	ldr	x0, [sp, #16]
+ 3a6a714:	b40000c0 	cbz	x0, 3a6a72c <PyInit__testinternalcapi@@Base+0x3b360c>
+ 3a6a718:	f9400008 	ldr	x8, [x0]
+ 3a6a71c:	f1000508 	subs	x8, x8, #0x1
+ 3a6a720:	f9000008 	str	x8, [x0]
+ 3a6a724:	54000041 	b.ne	3a6a72c <PyInit__testinternalcapi@@Base+0x3b360c>  // b.any
+ 3a6a728:	97f4b563 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a72c:	b40000f5 	cbz	x21, 3a6a748 <PyInit__testinternalcapi@@Base+0x3b3628>
+ 3a6a730:	f94002a8 	ldr	x8, [x21]
+ 3a6a734:	f1000508 	subs	x8, x8, #0x1
+ 3a6a738:	f90002a8 	str	x8, [x21]
+ 3a6a73c:	54000061 	b.ne	3a6a748 <PyInit__testinternalcapi@@Base+0x3b3628>  // b.any
+ 3a6a740:	aa1503e0 	mov	x0, x21
+ 3a6a744:	97f4b55c 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a748:	b40000b6 	cbz	x22, 3a6a75c <PyInit__testinternalcapi@@Base+0x3b363c>
+ 3a6a74c:	f94002c8 	ldr	x8, [x22]
+ 3a6a750:	f1000508 	subs	x8, x8, #0x1
+ 3a6a754:	f90002c8 	str	x8, [x22]
+ 3a6a758:	540001e0 	b.eq	3a6a794 <PyInit__testinternalcapi@@Base+0x3b3674>  // b.none
+ 3a6a75c:	b40000b7 	cbz	x23, 3a6a770 <PyInit__testinternalcapi@@Base+0x3b3650>
+ 3a6a760:	f94002e8 	ldr	x8, [x23]
+ 3a6a764:	f1000508 	subs	x8, x8, #0x1
+ 3a6a768:	f90002e8 	str	x8, [x23]
+ 3a6a76c:	540001c0 	b.eq	3a6a7a4 <PyInit__testinternalcapi@@Base+0x3b3684>  // b.none
+ 3a6a770:	b4000218 	cbz	x24, 3a6a7b0 <PyInit__testinternalcapi@@Base+0x3b3690>
+ 3a6a774:	f9400308 	ldr	x8, [x24]
+ 3a6a778:	f94007f7 	ldr	x23, [sp, #8]
+ 3a6a77c:	f1000508 	subs	x8, x8, #0x1
+ 3a6a780:	f9000308 	str	x8, [x24]
+ 3a6a784:	54000181 	b.ne	3a6a7b4 <PyInit__testinternalcapi@@Base+0x3b3694>  // b.any
+ 3a6a788:	aa1803e0 	mov	x0, x24
+ 3a6a78c:	97f4b54a 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a790:	14000009 	b	3a6a7b4 <PyInit__testinternalcapi@@Base+0x3b3694>
+ 3a6a794:	aa1603e0 	mov	x0, x22
+ 3a6a798:	97f4b547 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a79c:	b5fffe37 	cbnz	x23, 3a6a760 <PyInit__testinternalcapi@@Base+0x3b3640>
+ 3a6a7a0:	17fffff4 	b	3a6a770 <PyInit__testinternalcapi@@Base+0x3b3650>
+ 3a6a7a4:	aa1703e0 	mov	x0, x23
+ 3a6a7a8:	97f4b543 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6a7ac:	b5fffe58 	cbnz	x24, 3a6a774 <PyInit__testinternalcapi@@Base+0x3b3654>
+ 3a6a7b0:	f94007f7 	ldr	x23, [sp, #8]
+ 3a6a7b4:	f94016e8 	ldr	x8, [x23, #40]
+ 3a6a7b8:	f85e83a9 	ldur	x9, [x29, #-24]
+ 3a6a7bc:	eb09011f 	cmp	x8, x9
+ 3a6a7c0:	54000f21 	b.ne	3a6a9a4 <PyInit__testinternalcapi@@Base+0x3b3884>  // b.any
+ 3a6a7c4:	aa1803e0 	mov	x0, x24
+ 3a6a7c8:	a94a4ff4 	ldp	x20, x19, [sp, #160]
+ 3a6a7cc:	fd4023e8 	ldr	d8, [sp, #64]
+ 3a6a7d0:	a94957f6 	ldp	x22, x21, [sp, #144]
+ 3a6a7d4:	a9485ff8 	ldp	x24, x23, [sp, #128]
+ 3a6a7d8:	a94767fa 	ldp	x26, x25, [sp, #112]
+ 3a6a7dc:	a9466ffc 	ldp	x28, x27, [sp, #96]
+ 3a6a7e0:	a9457bfd 	ldp	x29, x30, [sp, #80]
+ 3a6a7e4:	9102c3ff 	add	sp, sp, #0xb0
+ 3a6a7e8:	d65f03c0 	ret
+ 3a6a7ec:	aa1f03f4 	mov	x20, xzr
+ 3a6a7f0:	aa1f03f5 	mov	x21, xzr
+ 3a6a7f4:	aa1f03f6 	mov	x22, xzr
+ 3a6a7f8:	aa1f03f7 	mov	x23, xzr
+ 3a6a7fc:	f9000bff 	str	xzr, [sp, #16]
+ 3a6a800:	52801462 	mov	w2, #0xa3                  	// #163
+ 3a6a804:	5283a141 	mov	w1, #0x1d0a                	// #7434
+ 3a6a808:	17ffffb5 	b	3a6a6dc <PyInit__testinternalcapi@@Base+0x3b35bc>
+ 3a6a80c:	aa1f03f5 	mov	x21, xzr
+ 3a6a810:	aa1f03f6 	mov	x22, xzr
+ 3a6a814:	aa1f03f7 	mov	x23, xzr
+ 3a6a818:	f9000bff 	str	xzr, [sp, #16]
+ 3a6a81c:	52801462 	mov	w2, #0xa3                  	// #163
+ 3a6a820:	5283a161 	mov	w1, #0x1d0b                	// #7435
+ 3a6a824:	17ffffae 	b	3a6a6dc <PyInit__testinternalcapi@@Base+0x3b35bc>
+ 3a6a828:	aa1403e0 	mov	x0, x20
+ 3a6a82c:	97f344df 	bl	373bba8 <PyInit__testinternalcapi@@Base+0x84a88>
+ 3a6a830:	17fffdb0 	b	3a69ef0 <PyInit__testinternalcapi@@Base+0x3b2dd0>
+ 3a6a834:	aa1f03f5 	mov	x21, xzr
+ 3a6a838:	aa1f03f6 	mov	x22, xzr
+ 3a6a83c:	aa1f03f7 	mov	x23, xzr
+ 3a6a840:	f9000bff 	str	xzr, [sp, #16]
+ 3a6a844:	52801482 	mov	w2, #0xa4                  	// #164
+ 3a6a848:	5283a2e1 	mov	w1, #0x1d17                	// #7447
+ 3a6a84c:	17ffffa4 	b	3a6a6dc <PyInit__testinternalcapi@@Base+0x3b35bc>
+ 3a6a850:	f00151c9 	adrp	x9, 64a5000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x6430>
+ 3a6a854:	f9436d29 	ldr	x9, [x9, #1752]
+ 3a6a858:	eb09011f 	cmp	x8, x9
+ 3a6a85c:	54000680 	b.eq	3a6a92c <PyInit__testinternalcapi@@Base+0x3b380c>  // b.none
+ 3a6a860:	aa1503e0 	mov	x0, x21
+ 3a6a864:	aa1903e1 	mov	x1, x25
+ 3a6a868:	97f34341 	bl	373b56c <PyInit__testinternalcapi@@Base+0x8444c>
+ 3a6a86c:	17fffdb5 	b	3a69f40 <PyInit__testinternalcapi@@Base+0x3b2e20>
+ 3a6a870:	aa1f03f6 	mov	x22, xzr
+ 3a6a874:	aa1f03f7 	mov	x23, xzr
+ 3a6a878:	aa1f03f8 	mov	x24, xzr
+ 3a6a87c:	aa1f03fa 	mov	x26, xzr
+ 3a6a880:	f9000bff 	str	xzr, [sp, #16]
+ 3a6a884:	52801482 	mov	w2, #0xa4                  	// #164
+ 3a6a888:	5283a321 	mov	w1, #0x1d19                	// #7449
+ 3a6a88c:	17ffff71 	b	3a6a650 <PyInit__testinternalcapi@@Base+0x3b3530>
+ 3a6a890:	aa1f03f5 	mov	x21, xzr
+ 3a6a894:	17ffff54 	b	3a6a5e4 <PyInit__testinternalcapi@@Base+0x3b34c4>
+ 3a6a898:	aa1f03f8 	mov	x24, xzr
+ 3a6a89c:	aa1f03f7 	mov	x23, xzr
+ 3a6a8a0:	aa1f03f6 	mov	x22, xzr
+ 3a6a8a4:	5283a501 	mov	w1, #0x1d28                	// #7464
+ 3a6a8a8:	528014c2 	mov	w2, #0xa6                  	// #166
+ 3a6a8ac:	17ffff75 	b	3a6a680 <PyInit__testinternalcapi@@Base+0x3b3560>
+ 3a6a8b0:	aa1f03fc 	mov	x28, xzr
+ 3a6a8b4:	aa1f03fb 	mov	x27, xzr
+ 3a6a8b8:	5283a721 	mov	w1, #0x1d39                	// #7481
+ 3a6a8bc:	528014e2 	mov	w2, #0xa7                  	// #167
+ 3a6a8c0:	b5ffe2b9 	cbnz	x25, 3a6a514 <PyInit__testinternalcapi@@Base+0x3b33f4>
+ 3a6a8c4:	aa1b03f6 	mov	x22, x27
+ 3a6a8c8:	aa1c03f7 	mov	x23, x28
+ 3a6a8cc:	aa1503f8 	mov	x24, x21
+ 3a6a8d0:	17ffff78 	b	3a6a6b0 <PyInit__testinternalcapi@@Base+0x3b3590>
+ 3a6a8d4:	52801542 	mov	w2, #0xaa                  	// #170
+ 3a6a8d8:	5283af01 	mov	w1, #0x1d78                	// #7544
+ 3a6a8dc:	17ffff80 	b	3a6a6dc <PyInit__testinternalcapi@@Base+0x3b35bc>
+ 3a6a8e0:	aa1f03f8 	mov	x24, xzr
+ 3a6a8e4:	17ffff59 	b	3a6a648 <PyInit__testinternalcapi@@Base+0x3b3528>
+ 3a6a8e8:	f100091f 	cmp	x8, #0x2
+ 3a6a8ec:	54000360 	b.eq	3a6a958 <PyInit__testinternalcapi@@Base+0x3b3838>  // b.none
+ 3a6a8f0:	b100091f 	cmn	x8, #0x2
+ 3a6a8f4:	54000381 	b.ne	3a6a964 <PyInit__testinternalcapi@@Base+0x3b3844>  // b.any
+ 3a6a8f8:	29432289 	ldp	w9, w8, [x20, #24]
+ 3a6a8fc:	aa087928 	orr	x8, x9, x8, lsl #30
+ 3a6a900:	cb0803e8 	neg	x8, x8
+ 3a6a904:	17fffd6f 	b	3a69ec0 <PyInit__testinternalcapi@@Base+0x3b2da0>
+ 3a6a908:	b4ffe868 	cbz	x8, 3a6a614 <PyInit__testinternalcapi@@Base+0x3b34f4>
+ 3a6a90c:	f100091f 	cmp	x8, #0x2
+ 3a6a910:	54000340 	b.eq	3a6a978 <PyInit__testinternalcapi@@Base+0x3b3858>  // b.none
+ 3a6a914:	b100091f 	cmn	x8, #0x2
+ 3a6a918:	54000361 	b.ne	3a6a984 <PyInit__testinternalcapi@@Base+0x3b3864>  // b.any
+ 3a6a91c:	29432329 	ldp	w9, w8, [x25, #24]
+ 3a6a920:	aa087928 	orr	x8, x9, x8, lsl #30
+ 3a6a924:	cb0803e8 	neg	x8, x8
+ 3a6a928:	17fffd83 	b	3a69f34 <PyInit__testinternalcapi@@Base+0x3b2e14>
+ 3a6a92c:	d2e80c08 	mov	x8, #0x4060000000000000    	// #4638707616191610880
+ 3a6a930:	fd400b20 	ldr	d0, [x25, #16]
+ 3a6a934:	9e670101 	fmov	d1, x8
+ 3a6a938:	1e603820 	fsub	d0, d1, d0
+ 3a6a93c:	97f413ba 	bl	376f824 <PyInit__testinternalcapi@@Base+0xb8704>
+ 3a6a940:	17fffd80 	b	3a69f40 <PyInit__testinternalcapi@@Base+0x3b2e20>
+ 3a6a944:	52801542 	mov	w2, #0xaa                  	// #170
+ 3a6a948:	5283af81 	mov	w1, #0x1d7c                	// #7548
+ 3a6a94c:	17ffff41 	b	3a6a650 <PyInit__testinternalcapi@@Base+0x3b3530>
+ 3a6a950:	52839841 	mov	w1, #0x1cc2                	// #7362
+ 3a6a954:	17fffe93 	b	3a6a3a0 <PyInit__testinternalcapi@@Base+0x3b3280>
+ 3a6a958:	29432289 	ldp	w9, w8, [x20, #24]
+ 3a6a95c:	aa087928 	orr	x8, x9, x8, lsl #30
+ 3a6a960:	17fffd58 	b	3a69ec0 <PyInit__testinternalcapi@@Base+0x3b2da0>
+ 3a6a964:	f9403268 	ldr	x8, [x19, #96]
+ 3a6a968:	aa1403e0 	mov	x0, x20
+ 3a6a96c:	f9400d08 	ldr	x8, [x8, #24]
+ 3a6a970:	d63f0100 	blr	x8
+ 3a6a974:	17fffd5f 	b	3a69ef0 <PyInit__testinternalcapi@@Base+0x3b2dd0>
+ 3a6a978:	29432329 	ldp	w9, w8, [x25, #24]
+ 3a6a97c:	aa087928 	orr	x8, x9, x8, lsl #30
+ 3a6a980:	17fffd6d 	b	3a69f34 <PyInit__testinternalcapi@@Base+0x3b2e14>
+ 3a6a984:	f9403268 	ldr	x8, [x19, #96]
+ 3a6a988:	aa1503e0 	mov	x0, x21
+ 3a6a98c:	aa1903e1 	mov	x1, x25
+ 3a6a990:	f9400508 	ldr	x8, [x8, #8]
+ 3a6a994:	d63f0100 	blr	x8
+ 3a6a998:	17fffd6a 	b	3a69f40 <PyInit__testinternalcapi@@Base+0x3b2e20>
+ 3a6a99c:	528398e1 	mov	w1, #0x1cc7                	// #7367
+ 3a6a9a0:	17fffe80 	b	3a6a3a0 <PyInit__testinternalcapi@@Base+0x3b3280>
+ 3a6a9a4:	948a583f 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3a6a9a8:	d10343ff 	sub	sp, sp, #0xd0
+ 3a6a9ac:	a9077bfd 	stp	x29, x30, [sp, #112]
+ 3a6a9b0:	a9086ffc 	stp	x28, x27, [sp, #128]
+ 3a6a9b4:	a90967fa 	stp	x26, x25, [sp, #144]
+ 3a6a9b8:	a90a5ff8 	stp	x24, x23, [sp, #160]
+ 3a6a9bc:	a90b57f6 	stp	x22, x21, [sp, #176]
+ 3a6a9c0:	a90c4ff4 	stp	x20, x19, [sp, #192]
+ 3a6a9c4:	9101c3fd 	add	x29, sp, #0x70
+ 3a6a9c8:	d53bd05a 	mrs	x26, tpidr_el0
+ 3a6a9cc:	6f00e400 	movi	v0.2d, #0x0
+ 3a6a9d0:	d001cb09 	adrp	x9, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a6a9d4:	91352129 	add	x9, x9, #0xd48
+ 3a6a9d8:	f9401748 	ldr	x8, [x26, #40]
+ 3a6a9dc:	aa0203f6 	mov	x22, x2
+ 3a6a9e0:	f81f83a8 	stur	x8, [x29, #-8]
+ 3a6a9e4:	91192128 	add	x8, x9, #0x648
+ 3a6a9e8:	a901a7e8 	stp	x8, x9, [sp, #24]
+ 3a6a9ec:	9108c128 	add	x8, x9, #0x230
+ 3a6a9f0:	91118129 	add	x9, x9, #0x460
+ 3a6a9f4:	ad3e83a0 	stp	q0, q0, [x29, #-48]
+ 3a6a9f8:	a902a7e8 	stp	x8, x9, [sp, #40]
+ 3a6a9fc:	f9001fff 	str	xzr, [sp, #56]
+ 3a6aa00:	b4000283 	cbz	x3, 3a6aa50 <PyInit__testinternalcapi@@Base+0x3b3930>
+ 3a6aa04:	8b160c3c 	add	x28, x1, x22, lsl #3
+ 3a6aa08:	aa0303f7 	mov	x23, x3
+ 3a6aa0c:	f10006df 	cmp	x22, #0x1
+ 3a6aa10:	540002ed 	b.le	3a6aa6c <PyInit__testinternalcapi@@Base+0x3b394c>
+ 3a6aa14:	f10012df 	cmp	x22, #0x4
+ 3a6aa18:	54000420 	b.eq	3a6aa9c <PyInit__testinternalcapi@@Base+0x3b397c>  // b.none
+ 3a6aa1c:	f1000edf 	cmp	x22, #0x3
+ 3a6aa20:	54000500 	b.eq	3a6aac0 <PyInit__testinternalcapi@@Base+0x3b39a0>  // b.none
+ 3a6aa24:	f1000adf 	cmp	x22, #0x2
+ 3a6aa28:	54000921 	b.ne	3a6ab4c <PyInit__testinternalcapi@@Base+0x3b3a2c>  // b.any
+ 3a6aa2c:	aa1703f9 	mov	x25, x23
+ 3a6aa30:	a9405033 	ldp	x19, x20, [x1]
+ 3a6aa34:	f9000bfc 	str	x28, [sp, #16]
+ 3a6aa38:	f8410f3c 	ldr	x28, [x25, #16]!
+ 3a6aa3c:	a93d53b3 	stp	x19, x20, [x29, #-48]
+ 3a6aa40:	f90007fc 	str	x28, [sp, #8]
+ 3a6aa44:	f100079f 	cmp	x28, #0x1
+ 3a6aa48:	54000f6a 	b.ge	3a6ac34 <PyInit__testinternalcapi@@Base+0x3b3b14>  // b.tcont
+ 3a6aa4c:	1400008d 	b	3a6ac80 <PyInit__testinternalcapi@@Base+0x3b3b60>
+ 3a6aa50:	f10012df 	cmp	x22, #0x4
+ 3a6aa54:	540007c1 	b.ne	3a6ab4c <PyInit__testinternalcapi@@Base+0x3b3a2c>  // b.any
+ 3a6aa58:	a9405033 	ldp	x19, x20, [x1]
+ 3a6aa5c:	a9416435 	ldp	x21, x25, [x1, #16]
+ 3a6aa60:	a93d53b3 	stp	x19, x20, [x29, #-48]
+ 3a6aa64:	a93e67b5 	stp	x21, x25, [x29, #-32]
+ 3a6aa68:	140000ca 	b	3a6ad90 <PyInit__testinternalcapi@@Base+0x3b3c70>
+ 3a6aa6c:	b40003f6 	cbz	x22, 3a6aae8 <PyInit__testinternalcapi@@Base+0x3b39c8>
+ 3a6aa70:	f10006df 	cmp	x22, #0x1
+ 3a6aa74:	540006c1 	b.ne	3a6ab4c <PyInit__testinternalcapi@@Base+0x3b3a2c>  // b.any
+ 3a6aa78:	aa1703f9 	mov	x25, x23
+ 3a6aa7c:	f9400033 	ldr	x19, [x1]
+ 3a6aa80:	f9000bfc 	str	x28, [sp, #16]
+ 3a6aa84:	f8410f3b 	ldr	x27, [x25, #16]!
+ 3a6aa88:	f81d03b3 	stur	x19, [x29, #-48]
+ 3a6aa8c:	aa1b03f5 	mov	x21, x27
+ 3a6aa90:	f100077f 	cmp	x27, #0x1
+ 3a6aa94:	540008ca 	b.ge	3a6abac <PyInit__testinternalcapi@@Base+0x3b3a8c>  // b.tcont
+ 3a6aa98:	14000058 	b	3a6abf8 <PyInit__testinternalcapi@@Base+0x3b3ad8>
+ 3a6aa9c:	a9416435 	ldp	x21, x25, [x1, #16]
+ 3a6aaa0:	f9400ae8 	ldr	x8, [x23, #16]
+ 3a6aaa4:	a9405033 	ldp	x19, x20, [x1]
+ 3a6aaa8:	f9000bfc 	str	x28, [sp, #16]
+ 3a6aaac:	a93e67b5 	stp	x21, x25, [x29, #-32]
+ 3a6aab0:	a93d53b3 	stp	x19, x20, [x29, #-48]
+ 3a6aab4:	f100051f 	cmp	x8, #0x1
+ 3a6aab8:	540016cb 	b.lt	3a6ad90 <PyInit__testinternalcapi@@Base+0x3b3c70>  // b.tstop
+ 3a6aabc:	14000196 	b	3a6b114 <PyInit__testinternalcapi@@Base+0x3b3ff4>
+ 3a6aac0:	a940d434 	ldp	x20, x21, [x1, #8]
+ 3a6aac4:	f9000bfc 	str	x28, [sp, #16]
+ 3a6aac8:	f9400033 	ldr	x19, [x1]
+ 3a6aacc:	f9400afc 	ldr	x28, [x23, #16]
+ 3a6aad0:	a93dd7b4 	stp	x20, x21, [x29, #-40]
+ 3a6aad4:	f90007fc 	str	x28, [sp, #8]
+ 3a6aad8:	f81d03b3 	stur	x19, [x29, #-48]
+ 3a6aadc:	f100079f 	cmp	x28, #0x1
+ 3a6aae0:	54000f0a 	b.ge	3a6acc0 <PyInit__testinternalcapi@@Base+0x3b3ba0>  // b.tcont
+ 3a6aae4:	1400008a 	b	3a6ad0c <PyInit__testinternalcapi@@Base+0x3b3bec>
+ 3a6aae8:	aa1703f9 	mov	x25, x23
+ 3a6aaec:	f8410f38 	ldr	x24, [x25, #16]!
+ 3a6aaf0:	f1000715 	subs	x21, x24, #0x1
+ 3a6aaf4:	5400028b 	b.lt	3a6ab44 <PyInit__testinternalcapi@@Base+0x3b3a24>  // b.tstop
+ 3a6aaf8:	f001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6aafc:	aa1f03f4 	mov	x20, xzr
+ 3a6ab00:	910062fb 	add	x27, x23, #0x18
+ 3a6ab04:	f941c913 	ldr	x19, [x8, #912]
+ 3a6ab08:	f8747b68 	ldr	x8, [x27, x20, lsl #3]
+ 3a6ab0c:	eb13011f 	cmp	x8, x19
+ 3a6ab10:	54000400 	b.eq	3a6ab90 <PyInit__testinternalcapi@@Base+0x3b3a70>  // b.none
+ 3a6ab14:	91000694 	add	x20, x20, #0x1
+ 3a6ab18:	eb14031f 	cmp	x24, x20
+ 3a6ab1c:	54ffff61 	b.ne	3a6ab08 <PyInit__testinternalcapi@@Base+0x3b39e8>  // b.any
+ 3a6ab20:	aa1f03f4 	mov	x20, xzr
+ 3a6ab24:	f8747b61 	ldr	x1, [x27, x20, lsl #3]
+ 3a6ab28:	aa1303e0 	mov	x0, x19
+ 3a6ab2c:	52800042 	mov	w2, #0x2                   	// #2
+ 3a6ab30:	97ffe560 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a6ab34:	350002c0 	cbnz	w0, 3a6ab8c <PyInit__testinternalcapi@@Base+0x3b3a6c>
+ 3a6ab38:	91000694 	add	x20, x20, #0x1
+ 3a6ab3c:	eb14031f 	cmp	x24, x20
+ 3a6ab40:	54ffff21 	b.ne	3a6ab24 <PyInit__testinternalcapi@@Base+0x3b3a04>  // b.any
+ 3a6ab44:	97f86dd5 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a6ab48:	b5003360 	cbnz	x0, 3a6b1b4 <PyInit__testinternalcapi@@Base+0x3b4094>
+ 3a6ab4c:	d00151c8 	adrp	x8, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6ab50:	f0fe5b41 	adrp	x1, 5d5000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x161277>
+ 3a6ab54:	91375021 	add	x1, x1, #0xdd4
+ 3a6ab58:	f940e508 	ldr	x8, [x8, #456]
+ 3a6ab5c:	90fe8062 	adrp	x2, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6ab60:	91346c42 	add	x2, x2, #0xd1b
+ 3a6ab64:	90fe5923 	adrp	x3, 58e000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1a8277>
+ 3a6ab68:	9139a463 	add	x3, x3, #0xe69
+ 3a6ab6c:	f0fe5c25 	adrp	x5, 5f1000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x145277>
+ 3a6ab70:	912aa8a5 	add	x5, x5, #0xaaa
+ 3a6ab74:	f9400100 	ldr	x0, [x8]
+ 3a6ab78:	52800084 	mov	w4, #0x4                   	// #4
+ 3a6ab7c:	aa1603e6 	mov	x6, x22
+ 3a6ab80:	97f8722b 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a6ab84:	5283c4b3 	mov	w19, #0x1e25                	// #7717
+ 3a6ab88:	14000072 	b	3a6ad50 <PyInit__testinternalcapi@@Base+0x3b3c30>
+ 3a6ab8c:	37fffdc0 	tbnz	w0, #31, 3a6ab44 <PyInit__testinternalcapi@@Base+0x3b3a24>
+ 3a6ab90:	f8747b93 	ldr	x19, [x28, x20, lsl #3]
+ 3a6ab94:	f81d03b3 	stur	x19, [x29, #-48]
+ 3a6ab98:	b4fffd73 	cbz	x19, 3a6ab44 <PyInit__testinternalcapi@@Base+0x3b3a24>
+ 3a6ab9c:	f940033b 	ldr	x27, [x25]
+ 3a6aba0:	f9000bfc 	str	x28, [sp, #16]
+ 3a6aba4:	f100077f 	cmp	x27, #0x1
+ 3a6aba8:	5400028b 	b.lt	3a6abf8 <PyInit__testinternalcapi@@Base+0x3b3ad8>  // b.tstop
+ 3a6abac:	d001cb08 	adrp	x8, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a6abb0:	aa1f03fc 	mov	x28, xzr
+ 3a6abb4:	910062f8 	add	x24, x23, #0x18
+ 3a6abb8:	f946a514 	ldr	x20, [x8, #3400]
+ 3a6abbc:	f87c7b08 	ldr	x8, [x24, x28, lsl #3]
+ 3a6abc0:	eb14011f 	cmp	x8, x20
+ 3a6abc4:	54000260 	b.eq	3a6ac10 <PyInit__testinternalcapi@@Base+0x3b3af0>  // b.none
+ 3a6abc8:	9100079c 	add	x28, x28, #0x1
+ 3a6abcc:	eb1c037f 	cmp	x27, x28
+ 3a6abd0:	54ffff61 	b.ne	3a6abbc <PyInit__testinternalcapi@@Base+0x3b3a9c>  // b.any
+ 3a6abd4:	aa1f03fc 	mov	x28, xzr
+ 3a6abd8:	f87c7b01 	ldr	x1, [x24, x28, lsl #3]
+ 3a6abdc:	aa1403e0 	mov	x0, x20
+ 3a6abe0:	52800042 	mov	w2, #0x2                   	// #2
+ 3a6abe4:	97ffe533 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a6abe8:	35000120 	cbnz	w0, 3a6ac0c <PyInit__testinternalcapi@@Base+0x3b3aec>
+ 3a6abec:	9100079c 	add	x28, x28, #0x1
+ 3a6abf0:	eb1c037f 	cmp	x27, x28
+ 3a6abf4:	54ffff21 	b.ne	3a6abd8 <PyInit__testinternalcapi@@Base+0x3b3ab8>  // b.any
+ 3a6abf8:	97f86da8 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a6abfc:	b5002d80 	cbnz	x0, 3a6b1ac <PyInit__testinternalcapi@@Base+0x3b408c>
+ 3a6ac00:	5283bf73 	mov	w19, #0x1dfb                	// #7675
+ 3a6ac04:	52800026 	mov	w6, #0x1                   	// #1
+ 3a6ac08:	14000045 	b	3a6ad1c <PyInit__testinternalcapi@@Base+0x3b3bfc>
+ 3a6ac0c:	37ffff60 	tbnz	w0, #31, 3a6abf8 <PyInit__testinternalcapi@@Base+0x3b3ad8>
+ 3a6ac10:	f9400be8 	ldr	x8, [sp, #16]
+ 3a6ac14:	f87c7914 	ldr	x20, [x8, x28, lsl #3]
+ 3a6ac18:	f81d83b4 	stur	x20, [x29, #-40]
+ 3a6ac1c:	b4fffef4 	cbz	x20, 3a6abf8 <PyInit__testinternalcapi@@Base+0x3b3ad8>
+ 3a6ac20:	f940033c 	ldr	x28, [x25]
+ 3a6ac24:	d10006a8 	sub	x8, x21, #0x1
+ 3a6ac28:	f90007e8 	str	x8, [sp, #8]
+ 3a6ac2c:	f100079f 	cmp	x28, #0x1
+ 3a6ac30:	5400028b 	b.lt	3a6ac80 <PyInit__testinternalcapi@@Base+0x3b3b60>  // b.tstop
+ 3a6ac34:	d001cb08 	adrp	x8, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a6ac38:	aa1f03f8 	mov	x24, xzr
+ 3a6ac3c:	910062fb 	add	x27, x23, #0x18
+ 3a6ac40:	f947bd15 	ldr	x21, [x8, #3960]
+ 3a6ac44:	f8787b68 	ldr	x8, [x27, x24, lsl #3]
+ 3a6ac48:	eb15011f 	cmp	x8, x21
+ 3a6ac4c:	54000260 	b.eq	3a6ac98 <PyInit__testinternalcapi@@Base+0x3b3b78>  // b.none
+ 3a6ac50:	91000718 	add	x24, x24, #0x1
+ 3a6ac54:	eb18039f 	cmp	x28, x24
+ 3a6ac58:	54ffff61 	b.ne	3a6ac44 <PyInit__testinternalcapi@@Base+0x3b3b24>  // b.any
+ 3a6ac5c:	aa1f03f8 	mov	x24, xzr
+ 3a6ac60:	f8787b61 	ldr	x1, [x27, x24, lsl #3]
+ 3a6ac64:	aa1503e0 	mov	x0, x21
+ 3a6ac68:	52800042 	mov	w2, #0x2                   	// #2
+ 3a6ac6c:	97ffe511 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a6ac70:	35000120 	cbnz	w0, 3a6ac94 <PyInit__testinternalcapi@@Base+0x3b3b74>
+ 3a6ac74:	91000718 	add	x24, x24, #0x1
+ 3a6ac78:	eb18039f 	cmp	x28, x24
+ 3a6ac7c:	54ffff21 	b.ne	3a6ac60 <PyInit__testinternalcapi@@Base+0x3b3b40>  // b.any
+ 3a6ac80:	97f86d86 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a6ac84:	b5002900 	cbnz	x0, 3a6b1a4 <PyInit__testinternalcapi@@Base+0x3b4084>
+ 3a6ac88:	5283c0b3 	mov	w19, #0x1e05                	// #7685
+ 3a6ac8c:	52800046 	mov	w6, #0x2                   	// #2
+ 3a6ac90:	14000023 	b	3a6ad1c <PyInit__testinternalcapi@@Base+0x3b3bfc>
+ 3a6ac94:	37ffff60 	tbnz	w0, #31, 3a6ac80 <PyInit__testinternalcapi@@Base+0x3b3b60>
+ 3a6ac98:	f9400be8 	ldr	x8, [sp, #16]
+ 3a6ac9c:	f8787915 	ldr	x21, [x8, x24, lsl #3]
+ 3a6aca0:	f81e03b5 	stur	x21, [x29, #-32]
+ 3a6aca4:	b4fffef5 	cbz	x21, 3a6ac80 <PyInit__testinternalcapi@@Base+0x3b3b60>
+ 3a6aca8:	f94007e8 	ldr	x8, [sp, #8]
+ 3a6acac:	f940033c 	ldr	x28, [x25]
+ 3a6acb0:	d1000508 	sub	x8, x8, #0x1
+ 3a6acb4:	f90007e8 	str	x8, [sp, #8]
+ 3a6acb8:	f100079f 	cmp	x28, #0x1
+ 3a6acbc:	5400028b 	b.lt	3a6ad0c <PyInit__testinternalcapi@@Base+0x3b3bec>  // b.tstop
+ 3a6acc0:	f001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6acc4:	aa1f03f8 	mov	x24, xzr
+ 3a6acc8:	910062fb 	add	x27, x23, #0x18
+ 3a6accc:	f940d519 	ldr	x25, [x8, #424]
+ 3a6acd0:	f8787b68 	ldr	x8, [x27, x24, lsl #3]
+ 3a6acd4:	eb19011f 	cmp	x8, x25
+ 3a6acd8:	540004c0 	b.eq	3a6ad70 <PyInit__testinternalcapi@@Base+0x3b3c50>  // b.none
+ 3a6acdc:	91000718 	add	x24, x24, #0x1
+ 3a6ace0:	eb18039f 	cmp	x28, x24
+ 3a6ace4:	54ffff61 	b.ne	3a6acd0 <PyInit__testinternalcapi@@Base+0x3b3bb0>  // b.any
+ 3a6ace8:	aa1f03f8 	mov	x24, xzr
+ 3a6acec:	f8787b61 	ldr	x1, [x27, x24, lsl #3]
+ 3a6acf0:	aa1903e0 	mov	x0, x25
+ 3a6acf4:	52800042 	mov	w2, #0x2                   	// #2
+ 3a6acf8:	97ffe4ee 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a6acfc:	35000380 	cbnz	w0, 3a6ad6c <PyInit__testinternalcapi@@Base+0x3b3c4c>
+ 3a6ad00:	91000718 	add	x24, x24, #0x1
+ 3a6ad04:	eb18039f 	cmp	x28, x24
+ 3a6ad08:	54ffff21 	b.ne	3a6acec <PyInit__testinternalcapi@@Base+0x3b3bcc>  // b.any
+ 3a6ad0c:	97f86d63 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a6ad10:	b5002460 	cbnz	x0, 3a6b19c <PyInit__testinternalcapi@@Base+0x3b407c>
+ 3a6ad14:	5283c1f3 	mov	w19, #0x1e0f                	// #7695
+ 3a6ad18:	52800066 	mov	w6, #0x3                   	// #3
+ 3a6ad1c:	d00151c8 	adrp	x8, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6ad20:	f0fe5b41 	adrp	x1, 5d5000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x161277>
+ 3a6ad24:	91375021 	add	x1, x1, #0xdd4
+ 3a6ad28:	f940e508 	ldr	x8, [x8, #456]
+ 3a6ad2c:	90fe8062 	adrp	x2, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6ad30:	91346c42 	add	x2, x2, #0xd1b
+ 3a6ad34:	90fe5923 	adrp	x3, 58e000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1a8277>
+ 3a6ad38:	9139a463 	add	x3, x3, #0xe69
+ 3a6ad3c:	f0fe5c25 	adrp	x5, 5f1000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x145277>
+ 3a6ad40:	912aa8a5 	add	x5, x5, #0xaaa
+ 3a6ad44:	f9400100 	ldr	x0, [x8]
+ 3a6ad48:	52800084 	mov	w4, #0x4                   	// #4
+ 3a6ad4c:	97f871b8 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a6ad50:	d0fe6060 	adrp	x0, 678000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xbe277>
+ 3a6ad54:	91058c00 	add	x0, x0, #0x163
+ 3a6ad58:	90fe8063 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6ad5c:	91081863 	add	x3, x3, #0x206
+ 3a6ad60:	2a1303e1 	mov	w1, w19
+ 3a6ad64:	52801602 	mov	w2, #0xb0                  	// #176
+ 3a6ad68:	140000ff 	b	3a6b164 <PyInit__testinternalcapi@@Base+0x3b4044>
+ 3a6ad6c:	37fffd00 	tbnz	w0, #31, 3a6ad0c <PyInit__testinternalcapi@@Base+0x3b3bec>
+ 3a6ad70:	f9400be8 	ldr	x8, [sp, #16]
+ 3a6ad74:	f8787919 	ldr	x25, [x8, x24, lsl #3]
+ 3a6ad78:	f81e83b9 	stur	x25, [x29, #-24]
+ 3a6ad7c:	b4fffc99 	cbz	x25, 3a6ad0c <PyInit__testinternalcapi@@Base+0x3b3bec>
+ 3a6ad80:	f94007e8 	ldr	x8, [sp, #8]
+ 3a6ad84:	d1000508 	sub	x8, x8, #0x1
+ 3a6ad88:	f100051f 	cmp	x8, #0x1
+ 3a6ad8c:	54001c4a 	b.ge	3a6b114 <PyInit__testinternalcapi@@Base+0x3b3ff4>  // b.tcont
+ 3a6ad90:	d001cb08 	adrp	x8, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a6ad94:	f001cb09 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6ad98:	f945b508 	ldr	x8, [x8, #2920]
+ 3a6ad9c:	f9445529 	ldr	x9, [x9, #2216]
+ 3a6ada0:	f9400d08 	ldr	x8, [x8, #24]
+ 3a6ada4:	eb08013f 	cmp	x9, x8
+ 3a6ada8:	54001261 	b.ne	3a6aff4 <PyInit__testinternalcapi@@Base+0x3b3ed4>  // b.any
+ 3a6adac:	f001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6adb0:	f9445909 	ldr	x9, [x8, #2224]
+ 3a6adb4:	b4001309 	cbz	x9, 3a6b014 <PyInit__testinternalcapi@@Base+0x3b3ef4>
+ 3a6adb8:	f940012a 	ldr	x10, [x9]
+ 3a6adbc:	9100054a 	add	x10, x10, #0x1
+ 3a6adc0:	f900012a 	str	x10, [x9]
+ 3a6adc4:	f9445917 	ldr	x23, [x8, #2224]
+ 3a6adc8:	b4001317 	cbz	x23, 3a6b028 <PyInit__testinternalcapi@@Base+0x3b3f08>
+ 3a6adcc:	52800040 	mov	w0, #0x2                   	// #2
+ 3a6add0:	97f4ebaf 	bl	37a5c8c <PyInit__testinternalcapi@@Base+0xeeb6c>
+ 3a6add4:	b40012e0 	cbz	x0, 3a6b030 <PyInit__testinternalcapi@@Base+0x3b3f10>
+ 3a6add8:	f9000c17 	str	x23, [x0, #24]
+ 3a6addc:	aa0003f6 	mov	x22, x0
+ 3a6ade0:	f9400268 	ldr	x8, [x19]
+ 3a6ade4:	91000508 	add	x8, x8, #0x1
+ 3a6ade8:	f9000268 	str	x8, [x19]
+ 3a6adec:	f001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6adf0:	f943f117 	ldr	x23, [x8, #2016]
+ 3a6adf4:	f9001013 	str	x19, [x0, #32]
+ 3a6adf8:	f94006e8 	ldr	x8, [x23, #8]
+ 3a6adfc:	f9404118 	ldr	x24, [x8, #128]
+ 3a6ae00:	b40011d8 	cbz	x24, 3a6b038 <PyInit__testinternalcapi@@Base+0x3b3f18>
+ 3a6ae04:	f0fe6320 	adrp	x0, 6d1000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x65277>
+ 3a6ae08:	91336c00 	add	x0, x0, #0xcdb
+ 3a6ae0c:	97f78793 	bl	384cc58 <PyInit__testinternalcapi@@Base+0x195b38>
+ 3a6ae10:	350013c0 	cbnz	w0, 3a6b088 <PyInit__testinternalcapi@@Base+0x3b3f68>
+ 3a6ae14:	aa1703e0 	mov	x0, x23
+ 3a6ae18:	aa1603e1 	mov	x1, x22
+ 3a6ae1c:	aa1f03e2 	mov	x2, xzr
+ 3a6ae20:	d63f0300 	blr	x24
+ 3a6ae24:	aa0003f7 	mov	x23, x0
+ 3a6ae28:	97f787c1 	bl	384cd2c <PyInit__testinternalcapi@@Base+0x195c0c>
+ 3a6ae2c:	b40012b7 	cbz	x23, 3a6b080 <PyInit__testinternalcapi@@Base+0x3b3f60>
+ 3a6ae30:	f94002c8 	ldr	x8, [x22]
+ 3a6ae34:	f1000508 	subs	x8, x8, #0x1
+ 3a6ae38:	f90002c8 	str	x8, [x22]
+ 3a6ae3c:	54000061 	b.ne	3a6ae48 <PyInit__testinternalcapi@@Base+0x3b3d28>  // b.any
+ 3a6ae40:	aa1603e0 	mov	x0, x22
+ 3a6ae44:	97f4b39c 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6ae48:	f94006e8 	ldr	x8, [x23, #8]
+ 3a6ae4c:	f001cb09 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6ae50:	aa1703e0 	mov	x0, x23
+ 3a6ae54:	f9401d21 	ldr	x1, [x9, #56]
+ 3a6ae58:	f9404908 	ldr	x8, [x8, #144]
+ 3a6ae5c:	b4000fc8 	cbz	x8, 3a6b054 <PyInit__testinternalcapi@@Base+0x3b3f34>
+ 3a6ae60:	d63f0100 	blr	x8
+ 3a6ae64:	aa0003f6 	mov	x22, x0
+ 3a6ae68:	b4000fc0 	cbz	x0, 3a6b060 <PyInit__testinternalcapi@@Base+0x3b3f40>
+ 3a6ae6c:	f94002e8 	ldr	x8, [x23]
+ 3a6ae70:	f1000508 	subs	x8, x8, #0x1
+ 3a6ae74:	f90002e8 	str	x8, [x23]
+ 3a6ae78:	54000061 	b.ne	3a6ae84 <PyInit__testinternalcapi@@Base+0x3b3d64>  // b.any
+ 3a6ae7c:	aa1703e0 	mov	x0, x23
+ 3a6ae80:	97f4b38d 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6ae84:	b00151e9 	adrp	x9, 64a7000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x8430>
+ 3a6ae88:	f94006c8 	ldr	x8, [x22, #8]
+ 3a6ae8c:	f9414929 	ldr	x9, [x9, #656]
+ 3a6ae90:	eb09011f 	cmp	x8, x9
+ 3a6ae94:	54000fe1 	b.ne	3a6b090 <PyInit__testinternalcapi@@Base+0x3b3f70>  // b.any
+ 3a6ae98:	f9400ed7 	ldr	x23, [x22, #24]
+ 3a6ae9c:	b40011b7 	cbz	x23, 3a6b0d0 <PyInit__testinternalcapi@@Base+0x3b3fb0>
+ 3a6aea0:	f94002e8 	ldr	x8, [x23]
+ 3a6aea4:	f9400ad8 	ldr	x24, [x22, #16]
+ 3a6aea8:	91000508 	add	x8, x8, #0x1
+ 3a6aeac:	f90002e8 	str	x8, [x23]
+ 3a6aeb0:	f9400308 	ldr	x8, [x24]
+ 3a6aeb4:	91000508 	add	x8, x8, #0x1
+ 3a6aeb8:	f9000308 	str	x8, [x24]
+ 3a6aebc:	f94002c8 	ldr	x8, [x22]
+ 3a6aec0:	f1000508 	subs	x8, x8, #0x1
+ 3a6aec4:	f90002c8 	str	x8, [x22]
+ 3a6aec8:	54000061 	b.ne	3a6aed4 <PyInit__testinternalcapi@@Base+0x3b3db4>  // b.any
+ 3a6aecc:	aa1603e0 	mov	x0, x22
+ 3a6aed0:	97f4b379 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6aed4:	52800022 	mov	w2, #0x1                   	// #1
+ 3a6aed8:	aa1803f6 	mov	x22, x24
+ 3a6aedc:	910063e8 	add	x8, sp, #0x18
+ 3a6aee0:	aa1603e0 	mov	x0, x22
+ 3a6aee4:	a901fff7 	stp	x23, xzr, [sp, #24]
+ 3a6aee8:	91002108 	add	x8, x8, #0x8
+ 3a6aeec:	cb020d01 	sub	x1, x8, x2, lsl #3
+ 3a6aef0:	97ffd8eb 	bl	3a6129c <PyInit__testinternalcapi@@Base+0x3aa17c>
+ 3a6aef4:	aa0003f8 	mov	x24, x0
+ 3a6aef8:	b40000f7 	cbz	x23, 3a6af14 <PyInit__testinternalcapi@@Base+0x3b3df4>
+ 3a6aefc:	f94002e8 	ldr	x8, [x23]
+ 3a6af00:	f1000508 	subs	x8, x8, #0x1
+ 3a6af04:	f90002e8 	str	x8, [x23]
+ 3a6af08:	54000061 	b.ne	3a6af14 <PyInit__testinternalcapi@@Base+0x3b3df4>  // b.any
+ 3a6af0c:	aa1703e0 	mov	x0, x23
+ 3a6af10:	97f4b369 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6af14:	b4000c58 	cbz	x24, 3a6b09c <PyInit__testinternalcapi@@Base+0x3b3f7c>
+ 3a6af18:	f94002c8 	ldr	x8, [x22]
+ 3a6af1c:	f1000508 	subs	x8, x8, #0x1
+ 3a6af20:	f90002c8 	str	x8, [x22]
+ 3a6af24:	54000061 	b.ne	3a6af30 <PyInit__testinternalcapi@@Base+0x3b3e10>  // b.any
+ 3a6af28:	aa1603e0 	mov	x0, x22
+ 3a6af2c:	97f4b362 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6af30:	f9400308 	ldr	x8, [x24]
+ 3a6af34:	f1000508 	subs	x8, x8, #0x1
+ 3a6af38:	f9000308 	str	x8, [x24]
+ 3a6af3c:	54000061 	b.ne	3a6af48 <PyInit__testinternalcapi@@Base+0x3b3e28>  // b.any
+ 3a6af40:	aa1803e0 	mov	x0, x24
+ 3a6af44:	97f4b35c 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6af48:	f9400668 	ldr	x8, [x19, #8]
+ 3a6af4c:	f001cb09 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6af50:	aa1303e0 	mov	x0, x19
+ 3a6af54:	f940bd21 	ldr	x1, [x9, #376]
+ 3a6af58:	aa1403e2 	mov	x2, x20
+ 3a6af5c:	f9404d08 	ldr	x8, [x8, #152]
+ 3a6af60:	b4000bc8 	cbz	x8, 3a6b0d8 <PyInit__testinternalcapi@@Base+0x3b3fb8>
+ 3a6af64:	d63f0100 	blr	x8
+ 3a6af68:	37f80bc0 	tbnz	w0, #31, 3a6b0e0 <PyInit__testinternalcapi@@Base+0x3b3fc0>
+ 3a6af6c:	f9400668 	ldr	x8, [x19, #8]
+ 3a6af70:	f001cb09 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6af74:	aa1303e0 	mov	x0, x19
+ 3a6af78:	f940c121 	ldr	x1, [x9, #384]
+ 3a6af7c:	aa1503e2 	mov	x2, x21
+ 3a6af80:	f9404d08 	ldr	x8, [x8, #152]
+ 3a6af84:	b4000b48 	cbz	x8, 3a6b0ec <PyInit__testinternalcapi@@Base+0x3b3fcc>
+ 3a6af88:	d63f0100 	blr	x8
+ 3a6af8c:	37f80b40 	tbnz	w0, #31, 3a6b0f4 <PyInit__testinternalcapi@@Base+0x3b3fd4>
+ 3a6af90:	f9400668 	ldr	x8, [x19, #8]
+ 3a6af94:	f001cb09 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6af98:	aa1303e0 	mov	x0, x19
+ 3a6af9c:	f940c921 	ldr	x1, [x9, #400]
+ 3a6afa0:	aa1903e2 	mov	x2, x25
+ 3a6afa4:	f9404d08 	ldr	x8, [x8, #152]
+ 3a6afa8:	b4000ac8 	cbz	x8, 3a6b100 <PyInit__testinternalcapi@@Base+0x3b3fe0>
+ 3a6afac:	d63f0100 	blr	x8
+ 3a6afb0:	37f80ac0 	tbnz	w0, #31, 3a6b108 <PyInit__testinternalcapi@@Base+0x3b3fe8>
+ 3a6afb4:	f9400668 	ldr	x8, [x19, #8]
+ 3a6afb8:	f001cb09 	adrp	x9, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6afbc:	d00151c2 	adrp	x2, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6afc0:	f940c521 	ldr	x1, [x9, #392]
+ 3a6afc4:	aa1303e0 	mov	x0, x19
+ 3a6afc8:	f9404d08 	ldr	x8, [x8, #152]
+ 3a6afcc:	f9440c42 	ldr	x2, [x2, #2072]
+ 3a6afd0:	b4000ba8 	cbz	x8, 3a6b144 <PyInit__testinternalcapi@@Base+0x3b4024>
+ 3a6afd4:	d63f0100 	blr	x8
+ 3a6afd8:	37f80ba0 	tbnz	w0, #31, 3a6b14c <PyInit__testinternalcapi@@Base+0x3b402c>
+ 3a6afdc:	d00151c0 	adrp	x0, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6afe0:	f9410000 	ldr	x0, [x0, #512]
+ 3a6afe4:	f9400008 	ldr	x8, [x0]
+ 3a6afe8:	91000508 	add	x8, x8, #0x1
+ 3a6afec:	f9000008 	str	x8, [x0]
+ 3a6aff0:	1400005f 	b	3a6b16c <PyInit__testinternalcapi@@Base+0x3b404c>
+ 3a6aff4:	f001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6aff8:	f001cb01 	adrp	x1, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6affc:	9122a021 	add	x1, x1, #0x8a8
+ 3a6b000:	f9408100 	ldr	x0, [x8, #256]
+ 3a6b004:	d001cb02 	adrp	x2, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b008:	9122c042 	add	x2, x2, #0x8b0
+ 3a6b00c:	97ffd478 	bl	3a601ec <PyInit__testinternalcapi@@Base+0x3a90cc>
+ 3a6b010:	14000004 	b	3a6b020 <PyInit__testinternalcapi@@Base+0x3b3f00>
+ 3a6b014:	d001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b018:	f9408100 	ldr	x0, [x8, #256]
+ 3a6b01c:	97ffd44d 	bl	3a60150 <PyInit__testinternalcapi@@Base+0x3a9030>
+ 3a6b020:	aa0003f7 	mov	x23, x0
+ 3a6b024:	b5ffed57 	cbnz	x23, 3a6adcc <PyInit__testinternalcapi@@Base+0x3b3cac>
+ 3a6b028:	5283ca61 	mov	w1, #0x1e53                	// #7763
+ 3a6b02c:	14000021 	b	3a6b0b0 <PyInit__testinternalcapi@@Base+0x3b3f90>
+ 3a6b030:	5283caa1 	mov	w1, #0x1e55                	// #7765
+ 3a6b034:	1400000c 	b	3a6b064 <PyInit__testinternalcapi@@Base+0x3b3f44>
+ 3a6b038:	aa1703e0 	mov	x0, x23
+ 3a6b03c:	aa1603e1 	mov	x1, x22
+ 3a6b040:	aa1f03e2 	mov	x2, xzr
+ 3a6b044:	97f3a00a 	bl	375306c <PyInit__testinternalcapi@@Base+0x9bf4c>
+ 3a6b048:	aa0003f7 	mov	x23, x0
+ 3a6b04c:	b5ffef20 	cbnz	x0, 3a6ae30 <PyInit__testinternalcapi@@Base+0x3b3d10>
+ 3a6b050:	1400000e 	b	3a6b088 <PyInit__testinternalcapi@@Base+0x3b3f68>
+ 3a6b054:	97f4ac94 	bl	37962a4 <PyInit__testinternalcapi@@Base+0xdf184>
+ 3a6b058:	aa0003f6 	mov	x22, x0
+ 3a6b05c:	b5fff080 	cbnz	x0, 3a6ae6c <PyInit__testinternalcapi@@Base+0x3b3d4c>
+ 3a6b060:	5283cc01 	mov	w1, #0x1e60                	// #7776
+ 3a6b064:	f94002e8 	ldr	x8, [x23]
+ 3a6b068:	f1000508 	subs	x8, x8, #0x1
+ 3a6b06c:	f90002e8 	str	x8, [x23]
+ 3a6b070:	54000201 	b.ne	3a6b0b0 <PyInit__testinternalcapi@@Base+0x3b3f90>  // b.any
+ 3a6b074:	2a0103f3 	mov	w19, w1
+ 3a6b078:	aa1703f6 	mov	x22, x23
+ 3a6b07c:	14000010 	b	3a6b0bc <PyInit__testinternalcapi@@Base+0x3b3f9c>
+ 3a6b080:	97f86c86 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a6b084:	b4000a20 	cbz	x0, 3a6b1c8 <PyInit__testinternalcapi@@Base+0x3b40a8>
+ 3a6b088:	5283cba1 	mov	w1, #0x1e5d                	// #7773
+ 3a6b08c:	14000005 	b	3a6b0a0 <PyInit__testinternalcapi@@Base+0x3b3f80>
+ 3a6b090:	aa1f03f7 	mov	x23, xzr
+ 3a6b094:	aa1f03e2 	mov	x2, xzr
+ 3a6b098:	17ffff91 	b	3a6aedc <PyInit__testinternalcapi@@Base+0x3b3dbc>
+ 3a6b09c:	5283cea1 	mov	w1, #0x1e75                	// #7797
+ 3a6b0a0:	f94002c8 	ldr	x8, [x22]
+ 3a6b0a4:	f1000508 	subs	x8, x8, #0x1
+ 3a6b0a8:	f90002c8 	str	x8, [x22]
+ 3a6b0ac:	54000060 	b.eq	3a6b0b8 <PyInit__testinternalcapi@@Base+0x3b3f98>  // b.none
+ 3a6b0b0:	52801622 	mov	w2, #0xb1                  	// #177
+ 3a6b0b4:	14000028 	b	3a6b154 <PyInit__testinternalcapi@@Base+0x3b4034>
+ 3a6b0b8:	2a0103f3 	mov	w19, w1
+ 3a6b0bc:	aa1603e0 	mov	x0, x22
+ 3a6b0c0:	97f4b2fd 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b0c4:	52801622 	mov	w2, #0xb1                  	// #177
+ 3a6b0c8:	2a1303e1 	mov	w1, w19
+ 3a6b0cc:	14000022 	b	3a6b154 <PyInit__testinternalcapi@@Base+0x3b4034>
+ 3a6b0d0:	aa1f03e2 	mov	x2, xzr
+ 3a6b0d4:	17ffff82 	b	3a6aedc <PyInit__testinternalcapi@@Base+0x3b3dbc>
+ 3a6b0d8:	97f4acf4 	bl	37964a8 <PyInit__testinternalcapi@@Base+0xdf388>
+ 3a6b0dc:	36fff480 	tbz	w0, #31, 3a6af6c <PyInit__testinternalcapi@@Base+0x3b3e4c>
+ 3a6b0e0:	5283d041 	mov	w1, #0x1e82                	// #7810
+ 3a6b0e4:	52801662 	mov	w2, #0xb3                  	// #179
+ 3a6b0e8:	1400001b 	b	3a6b154 <PyInit__testinternalcapi@@Base+0x3b4034>
+ 3a6b0ec:	97f4acef 	bl	37964a8 <PyInit__testinternalcapi@@Base+0xdf388>
+ 3a6b0f0:	36fff500 	tbz	w0, #31, 3a6af90 <PyInit__testinternalcapi@@Base+0x3b3e70>
+ 3a6b0f4:	5283d161 	mov	w1, #0x1e8b                	// #7819
+ 3a6b0f8:	52801682 	mov	w2, #0xb4                  	// #180
+ 3a6b0fc:	14000016 	b	3a6b154 <PyInit__testinternalcapi@@Base+0x3b4034>
+ 3a6b100:	97f4acea 	bl	37964a8 <PyInit__testinternalcapi@@Base+0xdf388>
+ 3a6b104:	36fff580 	tbz	w0, #31, 3a6afb4 <PyInit__testinternalcapi@@Base+0x3b3e94>
+ 3a6b108:	5283d281 	mov	w1, #0x1e94                	// #7828
+ 3a6b10c:	528016a2 	mov	w2, #0xb5                  	// #181
+ 3a6b110:	14000011 	b	3a6b154 <PyInit__testinternalcapi@@Base+0x3b4034>
+ 3a6b114:	f9400be1 	ldr	x1, [sp, #16]
+ 3a6b118:	f0fe8045 	adrp	x5, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b11c:	91346ca5 	add	x5, x5, #0xd1b
+ 3a6b120:	910063e2 	add	x2, sp, #0x18
+ 3a6b124:	d100c3a3 	sub	x3, x29, #0x30
+ 3a6b128:	aa1703e0 	mov	x0, x23
+ 3a6b12c:	aa1603e4 	mov	x4, x22
+ 3a6b130:	97ffe30f 	bl	3a63d6c <PyInit__testinternalcapi@@Base+0x3acc4c>
+ 3a6b134:	37f80440 	tbnz	w0, #31, 3a6b1bc <PyInit__testinternalcapi@@Base+0x3b409c>
+ 3a6b138:	a97d53b3 	ldp	x19, x20, [x29, #-48]
+ 3a6b13c:	a97e67b5 	ldp	x21, x25, [x29, #-32]
+ 3a6b140:	17ffff14 	b	3a6ad90 <PyInit__testinternalcapi@@Base+0x3b3c70>
+ 3a6b144:	97f4acd9 	bl	37964a8 <PyInit__testinternalcapi@@Base+0xdf388>
+ 3a6b148:	36fff4a0 	tbz	w0, #31, 3a6afdc <PyInit__testinternalcapi@@Base+0x3b3ebc>
+ 3a6b14c:	5283d3a1 	mov	w1, #0x1e9d                	// #7837
+ 3a6b150:	528016c2 	mov	w2, #0xb6                  	// #182
+ 3a6b154:	b0fe6060 	adrp	x0, 678000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xbe277>
+ 3a6b158:	91058c00 	add	x0, x0, #0x163
+ 3a6b15c:	f0fe8043 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b160:	91081863 	add	x3, x3, #0x206
+ 3a6b164:	97ffd4e1 	bl	3a604e8 <PyInit__testinternalcapi@@Base+0x3a93c8>
+ 3a6b168:	aa1f03e0 	mov	x0, xzr
+ 3a6b16c:	f9401748 	ldr	x8, [x26, #40]
+ 3a6b170:	f85f83a9 	ldur	x9, [x29, #-8]
+ 3a6b174:	eb09011f 	cmp	x8, x9
+ 3a6b178:	54000261 	b.ne	3a6b1c4 <PyInit__testinternalcapi@@Base+0x3b40a4>  // b.any
+ 3a6b17c:	a94c4ff4 	ldp	x20, x19, [sp, #192]
+ 3a6b180:	a94b57f6 	ldp	x22, x21, [sp, #176]
+ 3a6b184:	a94a5ff8 	ldp	x24, x23, [sp, #160]
+ 3a6b188:	a94967fa 	ldp	x26, x25, [sp, #144]
+ 3a6b18c:	a9486ffc 	ldp	x28, x27, [sp, #128]
+ 3a6b190:	a9477bfd 	ldp	x29, x30, [sp, #112]
+ 3a6b194:	910343ff 	add	sp, sp, #0xd0
+ 3a6b198:	d65f03c0 	ret
+ 3a6b19c:	5283c1b3 	mov	w19, #0x1e0d                	// #7693
+ 3a6b1a0:	17fffeec 	b	3a6ad50 <PyInit__testinternalcapi@@Base+0x3b3c30>
+ 3a6b1a4:	5283c073 	mov	w19, #0x1e03                	// #7683
+ 3a6b1a8:	17fffeea 	b	3a6ad50 <PyInit__testinternalcapi@@Base+0x3b3c30>
+ 3a6b1ac:	5283bf33 	mov	w19, #0x1df9                	// #7673
+ 3a6b1b0:	17fffee8 	b	3a6ad50 <PyInit__testinternalcapi@@Base+0x3b3c30>
+ 3a6b1b4:	5283be33 	mov	w19, #0x1df1                	// #7665
+ 3a6b1b8:	17fffee6 	b	3a6ad50 <PyInit__testinternalcapi@@Base+0x3b3c30>
+ 3a6b1bc:	5283c293 	mov	w19, #0x1e14                	// #7700
+ 3a6b1c0:	17fffee4 	b	3a6ad50 <PyInit__testinternalcapi@@Base+0x3b3c30>
+ 3a6b1c4:	948a5637 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3a6b1c8:	b00151c8 	adrp	x8, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6b1cc:	b0fe5d81 	adrp	x1, 61c000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x11a277>
+ 3a6b1d0:	912ad821 	add	x1, x1, #0xab6
+ 3a6b1d4:	f940f508 	ldr	x8, [x8, #488]
+ 3a6b1d8:	f9400100 	ldr	x0, [x8]
+ 3a6b1dc:	97f86c12 	bl	3886224 <PyInit__testinternalcapi@@Base+0x1cf104>
+ 3a6b1e0:	17ffffaa 	b	3a6b088 <PyInit__testinternalcapi@@Base+0x3b3f68>
+ 3a6b1e4:	d10243ff 	sub	sp, sp, #0x90
+ 3a6b1e8:	a9037bfd 	stp	x29, x30, [sp, #48]
+ 3a6b1ec:	a9046ffc 	stp	x28, x27, [sp, #64]
+ 3a6b1f0:	a90567fa 	stp	x26, x25, [sp, #80]
+ 3a6b1f4:	a9065ff8 	stp	x24, x23, [sp, #96]
+ 3a6b1f8:	a90757f6 	stp	x22, x21, [sp, #112]
+ 3a6b1fc:	a9084ff4 	stp	x20, x19, [sp, #128]
+ 3a6b200:	9100c3fd 	add	x29, sp, #0x30
+ 3a6b204:	d53bd057 	mrs	x23, tpidr_el0
+ 3a6b208:	aa0203f3 	mov	x19, x2
+ 3a6b20c:	f94016e8 	ldr	x8, [x23, #40]
+ 3a6b210:	f81f83a8 	stur	x8, [x29, #-8]
+ 3a6b214:	d001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b218:	9103a108 	add	x8, x8, #0xe8
+ 3a6b21c:	910aa109 	add	x9, x8, #0x2a8
+ 3a6b220:	a9007fff 	stp	xzr, xzr, [sp]
+ 3a6b224:	a90123e9 	stp	x9, x8, [sp, #16]
+ 3a6b228:	f90013ff 	str	xzr, [sp, #32]
+ 3a6b22c:	b40001c3 	cbz	x3, 3a6b264 <PyInit__testinternalcapi@@Base+0x3b4144>
+ 3a6b230:	8b130c35 	add	x21, x1, x19, lsl #3
+ 3a6b234:	aa0303f4 	mov	x20, x3
+ 3a6b238:	b4000c73 	cbz	x19, 3a6b3c4 <PyInit__testinternalcapi@@Base+0x3b42a4>
+ 3a6b23c:	f100067f 	cmp	x19, #0x1
+ 3a6b240:	54000b40 	b.eq	3a6b3a8 <PyInit__testinternalcapi@@Base+0x3b4288>  // b.none
+ 3a6b244:	f1000a7f 	cmp	x19, #0x2
+ 3a6b248:	54000ee1 	b.ne	3a6b424 <PyInit__testinternalcapi@@Base+0x3b4304>  // b.any
+ 3a6b24c:	a9405838 	ldp	x24, x22, [x1]
+ 3a6b250:	f9400a88 	ldr	x8, [x20, #16]
+ 3a6b254:	a9005bf8 	stp	x24, x22, [sp]
+ 3a6b258:	f100051f 	cmp	x8, #0x1
+ 3a6b25c:	540000cb 	b.lt	3a6b274 <PyInit__testinternalcapi@@Base+0x3b4154>  // b.tstop
+ 3a6b260:	140000c6 	b	3a6b578 <PyInit__testinternalcapi@@Base+0x3b4458>
+ 3a6b264:	f1000a7f 	cmp	x19, #0x2
+ 3a6b268:	54000de1 	b.ne	3a6b424 <PyInit__testinternalcapi@@Base+0x3b4304>  // b.any
+ 3a6b26c:	a9405838 	ldp	x24, x22, [x1]
+ 3a6b270:	a9005bf8 	stp	x24, x22, [sp]
+ 3a6b274:	d001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b278:	b001cb09 	adrp	x9, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a6b27c:	f943e100 	ldr	x0, [x8, #1984]
+ 3a6b280:	f947e521 	ldr	x1, [x9, #4040]
+ 3a6b284:	f9400408 	ldr	x8, [x0, #8]
+ 3a6b288:	f9404908 	ldr	x8, [x8, #144]
+ 3a6b28c:	b40018c8 	cbz	x8, 3a6b5a4 <PyInit__testinternalcapi@@Base+0x3b4484>
+ 3a6b290:	d63f0100 	blr	x8
+ 3a6b294:	aa0003f3 	mov	x19, x0
+ 3a6b298:	b40018c0 	cbz	x0, 3a6b5b0 <PyInit__testinternalcapi@@Base+0x3b4490>
+ 3a6b29c:	900151e9 	adrp	x9, 64a7000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x8430>
+ 3a6b2a0:	f9400668 	ldr	x8, [x19, #8]
+ 3a6b2a4:	f9414929 	ldr	x9, [x9, #656]
+ 3a6b2a8:	eb09011f 	cmp	x8, x9
+ 3a6b2ac:	540018e1 	b.ne	3a6b5c8 <PyInit__testinternalcapi@@Base+0x3b44a8>  // b.any
+ 3a6b2b0:	f9400e74 	ldr	x20, [x19, #24]
+ 3a6b2b4:	b4001ab4 	cbz	x20, 3a6b608 <PyInit__testinternalcapi@@Base+0x3b44e8>
+ 3a6b2b8:	f9400288 	ldr	x8, [x20]
+ 3a6b2bc:	f9400a75 	ldr	x21, [x19, #16]
+ 3a6b2c0:	91000508 	add	x8, x8, #0x1
+ 3a6b2c4:	f9000288 	str	x8, [x20]
+ 3a6b2c8:	f94002a8 	ldr	x8, [x21]
+ 3a6b2cc:	91000508 	add	x8, x8, #0x1
+ 3a6b2d0:	f90002a8 	str	x8, [x21]
+ 3a6b2d4:	f9400268 	ldr	x8, [x19]
+ 3a6b2d8:	f1000508 	subs	x8, x8, #0x1
+ 3a6b2dc:	f9000268 	str	x8, [x19]
+ 3a6b2e0:	54000061 	b.ne	3a6b2ec <PyInit__testinternalcapi@@Base+0x3b41cc>  // b.any
+ 3a6b2e4:	aa1303e0 	mov	x0, x19
+ 3a6b2e8:	97f4b273 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b2ec:	52800028 	mov	w8, #0x1                   	// #1
+ 3a6b2f0:	aa1503f3 	mov	x19, x21
+ 3a6b2f4:	910043e9 	add	x9, sp, #0x10
+ 3a6b2f8:	d001cb0a 	adrp	x10, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b2fc:	321f0102 	orr	w2, w8, #0x2
+ 3a6b300:	91002129 	add	x9, x9, #0x8
+ 3a6b304:	f940c94a 	ldr	x10, [x10, #400]
+ 3a6b308:	aa1303e0 	mov	x0, x19
+ 3a6b30c:	cb284d21 	sub	x1, x9, w8, uxtw #3
+ 3a6b310:	a90163f4 	stp	x20, x24, [sp, #16]
+ 3a6b314:	f90013ea 	str	x10, [sp, #32]
+ 3a6b318:	97ffd7e1 	bl	3a6129c <PyInit__testinternalcapi@@Base+0x3aa17c>
+ 3a6b31c:	aa0003f5 	mov	x21, x0
+ 3a6b320:	b40000f4 	cbz	x20, 3a6b33c <PyInit__testinternalcapi@@Base+0x3b421c>
+ 3a6b324:	f9400288 	ldr	x8, [x20]
+ 3a6b328:	f1000508 	subs	x8, x8, #0x1
+ 3a6b32c:	f9000288 	str	x8, [x20]
+ 3a6b330:	54000061 	b.ne	3a6b33c <PyInit__testinternalcapi@@Base+0x3b421c>  // b.any
+ 3a6b334:	aa1403e0 	mov	x0, x20
+ 3a6b338:	97f4b25f 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b33c:	b40014d5 	cbz	x21, 3a6b5d4 <PyInit__testinternalcapi@@Base+0x3b44b4>
+ 3a6b340:	f9400268 	ldr	x8, [x19]
+ 3a6b344:	f1000508 	subs	x8, x8, #0x1
+ 3a6b348:	f9000268 	str	x8, [x19]
+ 3a6b34c:	54000061 	b.ne	3a6b358 <PyInit__testinternalcapi@@Base+0x3b4238>  // b.any
+ 3a6b350:	aa1303e0 	mov	x0, x19
+ 3a6b354:	97f4b258 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b358:	aa1503e0 	mov	x0, x21
+ 3a6b35c:	aa1603e1 	mov	x1, x22
+ 3a6b360:	aa1f03e2 	mov	x2, xzr
+ 3a6b364:	97f4ac51 	bl	37964a8 <PyInit__testinternalcapi@@Base+0xdf388>
+ 3a6b368:	3100041f 	cmn	w0, #0x1
+ 3a6b36c:	54001520 	b.eq	3a6b610 <PyInit__testinternalcapi@@Base+0x3b44f0>  // b.none
+ 3a6b370:	b00151c0 	adrp	x0, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6b374:	f9410000 	ldr	x0, [x0, #512]
+ 3a6b378:	f9400008 	ldr	x8, [x0]
+ 3a6b37c:	91000508 	add	x8, x8, #0x1
+ 3a6b380:	f9000008 	str	x8, [x0]
+ 3a6b384:	f94002a8 	ldr	x8, [x21]
+ 3a6b388:	f1000508 	subs	x8, x8, #0x1
+ 3a6b38c:	f90002a8 	str	x8, [x21]
+ 3a6b390:	54000ce1 	b.ne	3a6b52c <PyInit__testinternalcapi@@Base+0x3b440c>  // b.any
+ 3a6b394:	aa0003f3 	mov	x19, x0
+ 3a6b398:	aa1503e0 	mov	x0, x21
+ 3a6b39c:	97f4b246 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b3a0:	aa1303e0 	mov	x0, x19
+ 3a6b3a4:	14000062 	b	3a6b52c <PyInit__testinternalcapi@@Base+0x3b440c>
+ 3a6b3a8:	f9400a9a 	ldr	x26, [x20, #16]
+ 3a6b3ac:	f9400038 	ldr	x24, [x1]
+ 3a6b3b0:	aa1a03f9 	mov	x25, x26
+ 3a6b3b4:	f90003f8 	str	x24, [sp]
+ 3a6b3b8:	f100075f 	cmp	x26, #0x1
+ 3a6b3bc:	5400062a 	b.ge	3a6b480 <PyInit__testinternalcapi@@Base+0x3b4360>  // b.tcont
+ 3a6b3c0:	14000043 	b	3a6b4cc <PyInit__testinternalcapi@@Base+0x3b43ac>
+ 3a6b3c4:	f9400a9a 	ldr	x26, [x20, #16]
+ 3a6b3c8:	f1000759 	subs	x25, x26, #0x1
+ 3a6b3cc:	5400028b 	b.lt	3a6b41c <PyInit__testinternalcapi@@Base+0x3b42fc>  // b.tstop
+ 3a6b3d0:	d001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b3d4:	aa1f03f8 	mov	x24, xzr
+ 3a6b3d8:	9100629b 	add	x27, x20, #0x18
+ 3a6b3dc:	f941c916 	ldr	x22, [x8, #912]
+ 3a6b3e0:	f8787b68 	ldr	x8, [x27, x24, lsl #3]
+ 3a6b3e4:	eb16011f 	cmp	x8, x22
+ 3a6b3e8:	54000400 	b.eq	3a6b468 <PyInit__testinternalcapi@@Base+0x3b4348>  // b.none
+ 3a6b3ec:	91000718 	add	x24, x24, #0x1
+ 3a6b3f0:	eb18035f 	cmp	x26, x24
+ 3a6b3f4:	54ffff61 	b.ne	3a6b3e0 <PyInit__testinternalcapi@@Base+0x3b42c0>  // b.any
+ 3a6b3f8:	aa1f03f8 	mov	x24, xzr
+ 3a6b3fc:	f8787b61 	ldr	x1, [x27, x24, lsl #3]
+ 3a6b400:	aa1603e0 	mov	x0, x22
+ 3a6b404:	52800042 	mov	w2, #0x2                   	// #2
+ 3a6b408:	97ffe32a 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a6b40c:	350002c0 	cbnz	w0, 3a6b464 <PyInit__testinternalcapi@@Base+0x3b4344>
+ 3a6b410:	91000718 	add	x24, x24, #0x1
+ 3a6b414:	eb18035f 	cmp	x26, x24
+ 3a6b418:	54ffff21 	b.ne	3a6b3fc <PyInit__testinternalcapi@@Base+0x3b42dc>  // b.any
+ 3a6b41c:	97f86b9f 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a6b420:	b50010e0 	cbnz	x0, 3a6b63c <PyInit__testinternalcapi@@Base+0x3b451c>
+ 3a6b424:	b00151c8 	adrp	x8, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6b428:	d0fe5b41 	adrp	x1, 5d5000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x161277>
+ 3a6b42c:	91375021 	add	x1, x1, #0xdd4
+ 3a6b430:	f940e508 	ldr	x8, [x8, #456]
+ 3a6b434:	f0fe8042 	adrp	x2, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b438:	91349042 	add	x2, x2, #0xd24
+ 3a6b43c:	f0fe5903 	adrp	x3, 58e000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1a8277>
+ 3a6b440:	9139a463 	add	x3, x3, #0xe69
+ 3a6b444:	d0fe5c25 	adrp	x5, 5f1000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x145277>
+ 3a6b448:	912aa8a5 	add	x5, x5, #0xaaa
+ 3a6b44c:	f9400100 	ldr	x0, [x8]
+ 3a6b450:	52800044 	mov	w4, #0x2                   	// #2
+ 3a6b454:	aa1303e6 	mov	x6, x19
+ 3a6b458:	97f86ff5 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a6b45c:	5283e241 	mov	w1, #0x1f12                	// #7954
+ 3a6b460:	1400002c 	b	3a6b510 <PyInit__testinternalcapi@@Base+0x3b43f0>
+ 3a6b464:	37fffdc0 	tbnz	w0, #31, 3a6b41c <PyInit__testinternalcapi@@Base+0x3b42fc>
+ 3a6b468:	f8787ab8 	ldr	x24, [x21, x24, lsl #3]
+ 3a6b46c:	f90003f8 	str	x24, [sp]
+ 3a6b470:	b4fffd78 	cbz	x24, 3a6b41c <PyInit__testinternalcapi@@Base+0x3b42fc>
+ 3a6b474:	f9400a9a 	ldr	x26, [x20, #16]
+ 3a6b478:	f100075f 	cmp	x26, #0x1
+ 3a6b47c:	5400028b 	b.lt	3a6b4cc <PyInit__testinternalcapi@@Base+0x3b43ac>  // b.tstop
+ 3a6b480:	d001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b484:	aa1f03fb 	mov	x27, xzr
+ 3a6b488:	9100629c 	add	x28, x20, #0x18
+ 3a6b48c:	f9407516 	ldr	x22, [x8, #232]
+ 3a6b490:	f87b7b88 	ldr	x8, [x28, x27, lsl #3]
+ 3a6b494:	eb16011f 	cmp	x8, x22
+ 3a6b498:	54000640 	b.eq	3a6b560 <PyInit__testinternalcapi@@Base+0x3b4440>  // b.none
+ 3a6b49c:	9100077b 	add	x27, x27, #0x1
+ 3a6b4a0:	eb1b035f 	cmp	x26, x27
+ 3a6b4a4:	54ffff61 	b.ne	3a6b490 <PyInit__testinternalcapi@@Base+0x3b4370>  // b.any
+ 3a6b4a8:	aa1f03fb 	mov	x27, xzr
+ 3a6b4ac:	f87b7b81 	ldr	x1, [x28, x27, lsl #3]
+ 3a6b4b0:	aa1603e0 	mov	x0, x22
+ 3a6b4b4:	52800042 	mov	w2, #0x2                   	// #2
+ 3a6b4b8:	97ffe2fe 	bl	3a640b0 <PyInit__testinternalcapi@@Base+0x3acf90>
+ 3a6b4bc:	35000500 	cbnz	w0, 3a6b55c <PyInit__testinternalcapi@@Base+0x3b443c>
+ 3a6b4c0:	9100077b 	add	x27, x27, #0x1
+ 3a6b4c4:	eb1b035f 	cmp	x26, x27
+ 3a6b4c8:	54ffff21 	b.ne	3a6b4ac <PyInit__testinternalcapi@@Base+0x3b438c>  // b.any
+ 3a6b4cc:	97f86b73 	bl	3886298 <PyInit__testinternalcapi@@Base+0x1cf178>
+ 3a6b4d0:	b5000b20 	cbnz	x0, 3a6b634 <PyInit__testinternalcapi@@Base+0x3b4514>
+ 3a6b4d4:	b00151c8 	adrp	x8, 64a4000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x5430>
+ 3a6b4d8:	d0fe5b41 	adrp	x1, 5d5000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x161277>
+ 3a6b4dc:	91375021 	add	x1, x1, #0xdd4
+ 3a6b4e0:	f940e508 	ldr	x8, [x8, #456]
+ 3a6b4e4:	f0fe8042 	adrp	x2, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b4e8:	91349042 	add	x2, x2, #0xd24
+ 3a6b4ec:	f0fe5903 	adrp	x3, 58e000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1a8277>
+ 3a6b4f0:	9139a463 	add	x3, x3, #0xe69
+ 3a6b4f4:	d0fe5c25 	adrp	x5, 5f1000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x145277>
+ 3a6b4f8:	912aa8a5 	add	x5, x5, #0xaaa
+ 3a6b4fc:	f9400100 	ldr	x0, [x8]
+ 3a6b500:	52800044 	mov	w4, #0x2                   	// #2
+ 3a6b504:	52800026 	mov	w6, #0x1                   	// #1
+ 3a6b508:	97f86fc9 	bl	388742c <PyInit__testinternalcapi@@Base+0x1d030c>
+ 3a6b50c:	5283e001 	mov	w1, #0x1f00                	// #7936
+ 3a6b510:	d0fe5f40 	adrp	x0, 655000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xe1277>
+ 3a6b514:	911dbc00 	add	x0, x0, #0x76f
+ 3a6b518:	f0fe8043 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b51c:	91081863 	add	x3, x3, #0x206
+ 3a6b520:	52801702 	mov	w2, #0xb8                  	// #184
+ 3a6b524:	97ffd3f1 	bl	3a604e8 <PyInit__testinternalcapi@@Base+0x3a93c8>
+ 3a6b528:	aa1f03e0 	mov	x0, xzr
+ 3a6b52c:	f94016e8 	ldr	x8, [x23, #40]
+ 3a6b530:	f85f83a9 	ldur	x9, [x29, #-8]
+ 3a6b534:	eb09011f 	cmp	x8, x9
+ 3a6b538:	540008a1 	b.ne	3a6b64c <PyInit__testinternalcapi@@Base+0x3b452c>  // b.any
+ 3a6b53c:	a9484ff4 	ldp	x20, x19, [sp, #128]
+ 3a6b540:	a94757f6 	ldp	x22, x21, [sp, #112]
+ 3a6b544:	a9465ff8 	ldp	x24, x23, [sp, #96]
+ 3a6b548:	a94567fa 	ldp	x26, x25, [sp, #80]
+ 3a6b54c:	a9446ffc 	ldp	x28, x27, [sp, #64]
+ 3a6b550:	a9437bfd 	ldp	x29, x30, [sp, #48]
+ 3a6b554:	910243ff 	add	sp, sp, #0x90
+ 3a6b558:	d65f03c0 	ret
+ 3a6b55c:	37fffb80 	tbnz	w0, #31, 3a6b4cc <PyInit__testinternalcapi@@Base+0x3b43ac>
+ 3a6b560:	f87b7ab6 	ldr	x22, [x21, x27, lsl #3]
+ 3a6b564:	f90007f6 	str	x22, [sp, #8]
+ 3a6b568:	b4fffb36 	cbz	x22, 3a6b4cc <PyInit__testinternalcapi@@Base+0x3b43ac>
+ 3a6b56c:	d1000728 	sub	x8, x25, #0x1
+ 3a6b570:	f100051f 	cmp	x8, #0x1
+ 3a6b574:	54ffe80b 	b.lt	3a6b274 <PyInit__testinternalcapi@@Base+0x3b4154>  // b.tstop
+ 3a6b578:	f0fe8045 	adrp	x5, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b57c:	913490a5 	add	x5, x5, #0xd24
+ 3a6b580:	910043e2 	add	x2, sp, #0x10
+ 3a6b584:	910003e3 	mov	x3, sp
+ 3a6b588:	aa1403e0 	mov	x0, x20
+ 3a6b58c:	aa1503e1 	mov	x1, x21
+ 3a6b590:	aa1303e4 	mov	x4, x19
+ 3a6b594:	97ffe1f6 	bl	3a63d6c <PyInit__testinternalcapi@@Base+0x3acc4c>
+ 3a6b598:	37f80560 	tbnz	w0, #31, 3a6b644 <PyInit__testinternalcapi@@Base+0x3b4524>
+ 3a6b59c:	a9405bf8 	ldp	x24, x22, [sp]
+ 3a6b5a0:	17ffff35 	b	3a6b274 <PyInit__testinternalcapi@@Base+0x3b4154>
+ 3a6b5a4:	97f4ab40 	bl	37962a4 <PyInit__testinternalcapi@@Base+0xdf184>
+ 3a6b5a8:	aa0003f3 	mov	x19, x0
+ 3a6b5ac:	b5ffe780 	cbnz	x0, 3a6b29c <PyInit__testinternalcapi@@Base+0x3b417c>
+ 3a6b5b0:	d0fe5f40 	adrp	x0, 655000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xe1277>
+ 3a6b5b4:	911dbc00 	add	x0, x0, #0x76f
+ 3a6b5b8:	f0fe8043 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b5bc:	91081863 	add	x3, x3, #0x206
+ 3a6b5c0:	5283e841 	mov	w1, #0x1f42                	// #8002
+ 3a6b5c4:	1400000f 	b	3a6b600 <PyInit__testinternalcapi@@Base+0x3b44e0>
+ 3a6b5c8:	aa1f03f4 	mov	x20, xzr
+ 3a6b5cc:	2a1f03e8 	mov	w8, wzr
+ 3a6b5d0:	17ffff49 	b	3a6b2f4 <PyInit__testinternalcapi@@Base+0x3b41d4>
+ 3a6b5d4:	f9400268 	ldr	x8, [x19]
+ 3a6b5d8:	f1000508 	subs	x8, x8, #0x1
+ 3a6b5dc:	f9000268 	str	x8, [x19]
+ 3a6b5e0:	54000061 	b.ne	3a6b5ec <PyInit__testinternalcapi@@Base+0x3b44cc>  // b.any
+ 3a6b5e4:	aa1303e0 	mov	x0, x19
+ 3a6b5e8:	97f4b1b3 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b5ec:	d0fe5f40 	adrp	x0, 655000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xe1277>
+ 3a6b5f0:	911dbc00 	add	x0, x0, #0x76f
+ 3a6b5f4:	f0fe8043 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b5f8:	91081863 	add	x3, x3, #0x206
+ 3a6b5fc:	5283eac1 	mov	w1, #0x1f56                	// #8022
+ 3a6b600:	52801722 	mov	w2, #0xb9                  	// #185
+ 3a6b604:	17ffffc8 	b	3a6b524 <PyInit__testinternalcapi@@Base+0x3b4404>
+ 3a6b608:	2a1f03e8 	mov	w8, wzr
+ 3a6b60c:	17ffff3a 	b	3a6b2f4 <PyInit__testinternalcapi@@Base+0x3b41d4>
+ 3a6b610:	d0fe5f40 	adrp	x0, 655000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xe1277>
+ 3a6b614:	911dbc00 	add	x0, x0, #0x76f
+ 3a6b618:	f0fe8043 	adrp	x3, a76000 <_ZTSNSt6__ndk110__function6__baseIFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiEEE@@Base+0x37d0>
+ 3a6b61c:	91081863 	add	x3, x3, #0x206
+ 3a6b620:	5283ec81 	mov	w1, #0x1f64                	// #8036
+ 3a6b624:	52801742 	mov	w2, #0xba                  	// #186
+ 3a6b628:	97ffd3b0 	bl	3a604e8 <PyInit__testinternalcapi@@Base+0x3a93c8>
+ 3a6b62c:	aa1f03e0 	mov	x0, xzr
+ 3a6b630:	17ffff55 	b	3a6b384 <PyInit__testinternalcapi@@Base+0x3b4264>
+ 3a6b634:	5283dfc1 	mov	w1, #0x1efe                	// #7934
+ 3a6b638:	17ffffb6 	b	3a6b510 <PyInit__testinternalcapi@@Base+0x3b43f0>
+ 3a6b63c:	5283dec1 	mov	w1, #0x1ef6                	// #7926
+ 3a6b640:	17ffffb4 	b	3a6b510 <PyInit__testinternalcapi@@Base+0x3b43f0>
+ 3a6b644:	5283e0a1 	mov	w1, #0x1f05                	// #7941
+ 3a6b648:	17ffffb2 	b	3a6b510 <PyInit__testinternalcapi@@Base+0x3b43f0>
+ 3a6b64c:	948a5515 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 3a6b650:	d10403ff 	sub	sp, sp, #0x100
+ 3a6b654:	a90a7bfd 	stp	x29, x30, [sp, #160]
+ 3a6b658:	a90b6ffc 	stp	x28, x27, [sp, #176]
+ 3a6b65c:	a90c67fa 	stp	x26, x25, [sp, #192]
+ 3a6b660:	a90d5ff8 	stp	x24, x23, [sp, #208]
+ 3a6b664:	a90e57f6 	stp	x22, x21, [sp, #224]
+ 3a6b668:	a90f4ff4 	stp	x20, x19, [sp, #240]
+ 3a6b66c:	910283fd 	add	x29, sp, #0xa0
+ 3a6b670:	d53bd05b 	mrs	x27, tpidr_el0
+ 3a6b674:	aa0203f3 	mov	x19, x2
+ 3a6b678:	f9401768 	ldr	x8, [x27, #40]
+ 3a6b67c:	f81f83a8 	stur	x8, [x29, #-8]
+ 3a6b680:	d001cb08 	adrp	x8, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b684:	9103a108 	add	x8, x8, #0xe8
+ 3a6b688:	910aa109 	add	x9, x8, #0x2a8
+ 3a6b68c:	a93d7fbf 	stp	xzr, xzr, [x29, #-48]
+ 3a6b690:	a93e23a9 	stp	x9, x8, [x29, #-32]
+ 3a6b694:	f81f03bf 	stur	xzr, [x29, #-16]
+ 3a6b698:	b40001e3 	cbz	x3, 3a6b6d4 <PyInit__testinternalcapi@@Base+0x3b45b4>
+ 3a6b69c:	8b130c35 	add	x21, x1, x19, lsl #3
+ 3a6b6a0:	aa0303f4 	mov	x20, x3
+ 3a6b6a4:	b4003293 	cbz	x19, 3a6bcf4 <PyInit__testinternalcapi@@Base+0x3b4bd4>
+ 3a6b6a8:	f100067f 	cmp	x19, #0x1
+ 3a6b6ac:	54003140 	b.eq	3a6bcd4 <PyInit__testinternalcapi@@Base+0x3b4bb4>  // b.none
+ 3a6b6b0:	f1000a7f 	cmp	x19, #0x2
+ 3a6b6b4:	54003501 	b.ne	3a6bd54 <PyInit__testinternalcapi@@Base+0x3b4c34>  // b.any
+ 3a6b6b8:	f9002bfb 	str	x27, [sp, #80]
+ 3a6b6bc:	a9406c3c 	ldp	x28, x27, [x1]
+ 3a6b6c0:	f9400a88 	ldr	x8, [x20, #16]
+ 3a6b6c4:	a93d6fbc 	stp	x28, x27, [x29, #-48]
+ 3a6b6c8:	f100051f 	cmp	x8, #0x1
+ 3a6b6cc:	540000eb 	b.lt	3a6b6e8 <PyInit__testinternalcapi@@Base+0x3b45c8>  // b.tstop
+ 3a6b6d0:	14000220 	b	3a6bf50 <PyInit__testinternalcapi@@Base+0x3b4e30>
+ 3a6b6d4:	f1000a7f 	cmp	x19, #0x2
+ 3a6b6d8:	540033e1 	b.ne	3a6bd54 <PyInit__testinternalcapi@@Base+0x3b4c34>  // b.any
+ 3a6b6dc:	f9002bfb 	str	x27, [sp, #80]
+ 3a6b6e0:	a9406c3c 	ldp	x28, x27, [x1]
+ 3a6b6e4:	a93d6fbc 	stp	x28, x27, [x29, #-48]
+ 3a6b6e8:	d001cb17 	adrp	x23, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b6ec:	b001cb18 	adrp	x24, 73cc000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x254220>
+ 3a6b6f0:	f81c83bf 	stur	xzr, [x29, #-56]
+ 3a6b6f4:	f943e2e0 	ldr	x0, [x23, #1984]
+ 3a6b6f8:	f947e701 	ldr	x1, [x24, #4040]
+ 3a6b6fc:	f81b83bf 	stur	xzr, [x29, #-72]
+ 3a6b700:	f9400408 	ldr	x8, [x0, #8]
+ 3a6b704:	f9404908 	ldr	x8, [x8, #144]
+ 3a6b708:	b4004508 	cbz	x8, 3a6bfa8 <PyInit__testinternalcapi@@Base+0x3b4e88>
+ 3a6b70c:	d63f0100 	blr	x8
+ 3a6b710:	aa0003f4 	mov	x20, x0
+ 3a6b714:	f81c03a0 	stur	x0, [x29, #-64]
+ 3a6b718:	b40044c0 	cbz	x0, 3a6bfb0 <PyInit__testinternalcapi@@Base+0x3b4e90>
+ 3a6b71c:	900151fa 	adrp	x26, 64a7000 <_ZTVN10__cxxabiv129__pointer_to_member_type_infoE@@Base+0x8430>
+ 3a6b720:	f9400688 	ldr	x8, [x20, #8]
+ 3a6b724:	f9414b5a 	ldr	x26, [x26, #656]
+ 3a6b728:	f81b83bf 	stur	xzr, [x29, #-72]
+ 3a6b72c:	eb1a011f 	cmp	x8, x26
+ 3a6b730:	540045c1 	b.ne	3a6bfe8 <PyInit__testinternalcapi@@Base+0x3b4ec8>  // b.any
+ 3a6b734:	f9400e95 	ldr	x21, [x20, #24]
+ 3a6b738:	f81b83b5 	stur	x21, [x29, #-72]
+ 3a6b73c:	b4004795 	cbz	x21, 3a6c02c <PyInit__testinternalcapi@@Base+0x3b4f0c>
+ 3a6b740:	f94002a8 	ldr	x8, [x21]
+ 3a6b744:	f9400a93 	ldr	x19, [x20, #16]
+ 3a6b748:	91000508 	add	x8, x8, #0x1
+ 3a6b74c:	f81c03b3 	stur	x19, [x29, #-64]
+ 3a6b750:	f90002a8 	str	x8, [x21]
+ 3a6b754:	f9400268 	ldr	x8, [x19]
+ 3a6b758:	91000508 	add	x8, x8, #0x1
+ 3a6b75c:	f9000268 	str	x8, [x19]
+ 3a6b760:	f9400288 	ldr	x8, [x20]
+ 3a6b764:	f1000508 	subs	x8, x8, #0x1
+ 3a6b768:	f9000288 	str	x8, [x20]
+ 3a6b76c:	54000061 	b.ne	3a6b778 <PyInit__testinternalcapi@@Base+0x3b4658>  // b.any
+ 3a6b770:	aa1403e0 	mov	x0, x20
+ 3a6b774:	97f4b150 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b778:	52800028 	mov	w8, #0x1                   	// #1
+ 3a6b77c:	aa1303f4 	mov	x20, x19
+ 3a6b780:	d10083a9 	sub	x9, x29, #0x20
+ 3a6b784:	d001cb0a 	adrp	x10, 73cd000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x255220>
+ 3a6b788:	321f0102 	orr	w2, w8, #0x2
+ 3a6b78c:	91002129 	add	x9, x9, #0x8
+ 3a6b790:	f940c14a 	ldr	x10, [x10, #384]
+ 3a6b794:	aa1403e0 	mov	x0, x20
+ 3a6b798:	cb284d21 	sub	x1, x9, w8, uxtw #3
+ 3a6b79c:	a93e73b5 	stp	x21, x28, [x29, #-32]
+ 3a6b7a0:	f81f03aa 	stur	x10, [x29, #-16]
+ 3a6b7a4:	97ffd6be 	bl	3a6129c <PyInit__testinternalcapi@@Base+0x3aa17c>
+ 3a6b7a8:	aa0003f3 	mov	x19, x0
+ 3a6b7ac:	f81c83a0 	stur	x0, [x29, #-56]
+ 3a6b7b0:	b40000f5 	cbz	x21, 3a6b7cc <PyInit__testinternalcapi@@Base+0x3b46ac>
+ 3a6b7b4:	f94002a8 	ldr	x8, [x21]
+ 3a6b7b8:	f1000508 	subs	x8, x8, #0x1
+ 3a6b7bc:	f90002a8 	str	x8, [x21]
+ 3a6b7c0:	54000061 	b.ne	3a6b7cc <PyInit__testinternalcapi@@Base+0x3b46ac>  // b.any
+ 3a6b7c4:	aa1503e0 	mov	x0, x21
+ 3a6b7c8:	97f4b13b 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b7cc:	f81b83bf 	stur	xzr, [x29, #-72]
+ 3a6b7d0:	b4004133 	cbz	x19, 3a6bff4 <PyInit__testinternalcapi@@Base+0x3b4ed4>
+ 3a6b7d4:	f9400288 	ldr	x8, [x20]
+ 3a6b7d8:	f1000508 	subs	x8, x8, #0x1
+ 3a6b7dc:	f9000288 	str	x8, [x20]
+ 3a6b7e0:	54000061 	b.ne	3a6b7ec <PyInit__testinternalcapi@@Base+0x3b46cc>  // b.any
+ 3a6b7e4:	aa1403e0 	mov	x0, x20
+ 3a6b7e8:	97f4b133 	bl	3797cb4 <PyInit__testinternalcapi@@Base+0xe0b94>
+ 3a6b7ec:	f943e2e0 	ldr	x0, [x23, #1984]
+ 3a6b7f0:	f947e701 	ldr	x1, [x24, #4040]
+ 3a6b7f4:	f81c83bf 	stur	xzr, [x29, #-56]
+ 3a6b7f8:	f9400408 	ldr	x8, [x0, #8]
+ 3a6b7fc:	f9404908 	ldr	x8, [x8, #144]

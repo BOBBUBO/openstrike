@@ -1,0 +1,1095 @@
+
+decompiled/native/lib/arm64-v8a/libGame.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000032b7600 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1954bc>:
+ 32b7600:	d65f03c0 	ret
+ 32b7604:	d10143ff 	sub	sp, sp, #0x50
+ 32b7608:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 32b760c:	a9025ff8 	stp	x24, x23, [sp, #32]
+ 32b7610:	a90357f6 	stp	x22, x21, [sp, #48]
+ 32b7614:	a9044ff4 	stp	x20, x19, [sp, #64]
+ 32b7618:	910043fd 	add	x29, sp, #0x10
+ 32b761c:	d53bd058 	mrs	x24, tpidr_el0
+ 32b7620:	aa0803f3 	mov	x19, x8
+ 32b7624:	f9401709 	ldr	x9, [x24, #40]
+ 32b7628:	f90007e9 	str	x9, [sp, #8]
+ 32b762c:	f9400020 	ldr	x0, [x1]
+ 32b7630:	b4000560 	cbz	x0, 32b76dc <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195598>
+ 32b7634:	f9400008 	ldr	x8, [x0]
+ 32b7638:	aa0103f5 	mov	x21, x1
+ 32b763c:	f9401108 	ldr	x8, [x8, #32]
+ 32b7640:	d63f0100 	blr	x8
+ 32b7644:	f1001c1f 	cmp	x0, #0x7
+ 32b7648:	54000609 	b.ls	32b7708 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1955c4>  // b.plast
+ 32b764c:	f94002a0 	ldr	x0, [x21]
+ 32b7650:	f9400008 	ldr	x8, [x0]
+ 32b7654:	f9400d08 	ldr	x8, [x8, #24]
+ 32b7658:	d63f0100 	blr	x8
+ 32b765c:	b9400008 	ldr	w8, [x0]
+ 32b7660:	528b4b49 	mov	w9, #0x5a5a                	// #23130
+ 32b7664:	72ab4b49 	movk	w9, #0x5a5a, lsl #16
+ 32b7668:	6b09011f 	cmp	w8, w9
+ 32b766c:	540005a1 	b.ne	32b7720 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1955dc>  // b.any
+ 32b7670:	aa0003f7 	mov	x23, x0
+ 32b7674:	b9400414 	ldr	w20, [x0, #4]
+ 32b7678:	52800400 	mov	w0, #0x20                  	// #32
+ 32b767c:	94a924ed 	bl	5d00a30 <_Znwm@plt>
+ 32b7680:	aa1403e1 	mov	x1, x20
+ 32b7684:	aa0003f6 	mov	x22, x0
+ 32b7688:	97e2f614 	bl	2b74ed8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f458>
+ 32b768c:	f94002a0 	ldr	x0, [x21]
+ 32b7690:	f90003f4 	str	x20, [sp]
+ 32b7694:	f9400008 	ldr	x8, [x0]
+ 32b7698:	f9401108 	ldr	x8, [x8, #32]
+ 32b769c:	d63f0100 	blr	x8
+ 32b76a0:	f9400ac2 	ldr	x2, [x22, #16]
+ 32b76a4:	d1002001 	sub	x1, x0, #0x8
+ 32b76a8:	910022e0 	add	x0, x23, #0x8
+ 32b76ac:	910003e3 	mov	x3, sp
+ 32b76b0:	aa1f03e4 	mov	x4, xzr
+ 32b76b4:	97b66d06 	bl	2052acc <LZ4_slideInputBufferHC@@Base+0xc298>
+ 32b76b8:	35000400 	cbnz	w0, 32b7738 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1955f4>
+ 32b76bc:	f94003e4 	ldr	x4, [sp]
+ 32b76c0:	eb14009f 	cmp	x4, x20
+ 32b76c4:	54000481 	b.ne	32b7754 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195610>  // b.any
+ 32b76c8:	910022c1 	add	x1, x22, #0x8
+ 32b76cc:	52800020 	mov	w0, #0x1                   	// #1
+ 32b76d0:	f9000276 	str	x22, [x19]
+ 32b76d4:	94a9130b 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b76d8:	14000002 	b	32b76e0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19559c>
+ 32b76dc:	f900027f 	str	xzr, [x19]
+ 32b76e0:	f9401708 	ldr	x8, [x24, #40]
+ 32b76e4:	f94007e9 	ldr	x9, [sp, #8]
+ 32b76e8:	eb09011f 	cmp	x8, x9
+ 32b76ec:	54000421 	b.ne	32b7770 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19562c>  // b.any
+ 32b76f0:	a9444ff4 	ldp	x20, x19, [sp, #64]
+ 32b76f4:	a94357f6 	ldp	x22, x21, [sp, #48]
+ 32b76f8:	a9425ff8 	ldp	x24, x23, [sp, #32]
+ 32b76fc:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 32b7700:	910143ff 	add	sp, sp, #0x50
+ 32b7704:	d65f03c0 	ret
+ 32b7708:	b0fe9701 	adrp	x1, 598000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x19e277>
+ 32b770c:	91359021 	add	x1, x1, #0xd64
+ 32b7710:	b0fe9e42 	adrp	x2, 680000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xb6277>
+ 32b7714:	9123cc42 	add	x2, x2, #0x8f3
+ 32b7718:	52800020 	mov	w0, #0x1                   	// #1
+ 32b771c:	97ad8906 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7720:	90fea1e1 	adrp	x1, 6f3000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x43277>
+ 32b7724:	9102f021 	add	x1, x1, #0xbc
+ 32b7728:	b0fe9702 	adrp	x2, 598000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x19e277>
+ 32b772c:	9135e042 	add	x2, x2, #0xd78
+ 32b7730:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7734:	97ad8900 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7738:	2a0003e3 	mov	w3, w0
+ 32b773c:	f0fe9cc1 	adrp	x1, 652000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xe4277>
+ 32b7740:	9117c821 	add	x1, x1, #0x5f2
+ 32b7744:	d0fe9982 	adrp	x2, 5e9000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x14d277>
+ 32b7748:	912d9c42 	add	x2, x2, #0xb67
+ 32b774c:	52800040 	mov	w0, #0x2                   	// #2
+ 32b7750:	97ad88f9 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7754:	b0fea061 	adrp	x1, 6c4000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x72277>
+ 32b7758:	91311021 	add	x1, x1, #0xc44
+ 32b775c:	b0fe9c22 	adrp	x2, 63c000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xfa277>
+ 32b7760:	9108f042 	add	x2, x2, #0x23c
+ 32b7764:	52800060 	mov	w0, #0x3                   	// #3
+ 32b7768:	2a1403e3 	mov	w3, w20
+ 32b776c:	97ad88f2 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7770:	94a924cc 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b7774:	d10143ff 	sub	sp, sp, #0x50
+ 32b7778:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 32b777c:	a9025ff8 	stp	x24, x23, [sp, #32]
+ 32b7780:	a90357f6 	stp	x22, x21, [sp, #48]
+ 32b7784:	a9044ff4 	stp	x20, x19, [sp, #64]
+ 32b7788:	910043fd 	add	x29, sp, #0x10
+ 32b778c:	d53bd057 	mrs	x23, tpidr_el0
+ 32b7790:	aa0803f3 	mov	x19, x8
+ 32b7794:	f94016e9 	ldr	x9, [x23, #40]
+ 32b7798:	f90007e9 	str	x9, [sp, #8]
+ 32b779c:	f9400020 	ldr	x0, [x1]
+ 32b77a0:	b40005e0 	cbz	x0, 32b785c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195718>
+ 32b77a4:	f9400008 	ldr	x8, [x0]
+ 32b77a8:	aa0103f4 	mov	x20, x1
+ 32b77ac:	f9401108 	ldr	x8, [x8, #32]
+ 32b77b0:	d63f0100 	blr	x8
+ 32b77b4:	f100201f 	cmp	x0, #0x8
+ 32b77b8:	54000529 	b.ls	32b785c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195718>  // b.plast
+ 32b77bc:	f9400280 	ldr	x0, [x20]
+ 32b77c0:	f9400008 	ldr	x8, [x0]
+ 32b77c4:	f9400d08 	ldr	x8, [x8, #24]
+ 32b77c8:	d63f0100 	blr	x8
+ 32b77cc:	b9400008 	ldr	w8, [x0]
+ 32b77d0:	528b4b49 	mov	w9, #0x5a5a                	// #23130
+ 32b77d4:	72ab4b49 	movk	w9, #0x5a5a, lsl #16
+ 32b77d8:	6b09011f 	cmp	w8, w9
+ 32b77dc:	54000401 	b.ne	32b785c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195718>  // b.any
+ 32b77e0:	b9400416 	ldr	w22, [x0, #4]
+ 32b77e4:	aa0003f8 	mov	x24, x0
+ 32b77e8:	52800400 	mov	w0, #0x20                  	// #32
+ 32b77ec:	94a92491 	bl	5d00a30 <_Znwm@plt>
+ 32b77f0:	aa1603e1 	mov	x1, x22
+ 32b77f4:	aa0003f5 	mov	x21, x0
+ 32b77f8:	97e2f5b8 	bl	2b74ed8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f458>
+ 32b77fc:	f9400280 	ldr	x0, [x20]
+ 32b7800:	f90003f6 	str	x22, [sp]
+ 32b7804:	f9400008 	ldr	x8, [x0]
+ 32b7808:	f9401108 	ldr	x8, [x8, #32]
+ 32b780c:	d63f0100 	blr	x8
+ 32b7810:	f9400aa2 	ldr	x2, [x21, #16]
+ 32b7814:	d1002001 	sub	x1, x0, #0x8
+ 32b7818:	91002300 	add	x0, x24, #0x8
+ 32b781c:	910003e3 	mov	x3, sp
+ 32b7820:	aa1f03e4 	mov	x4, xzr
+ 32b7824:	97b66caa 	bl	2052acc <LZ4_slideInputBufferHC@@Base+0xc298>
+ 32b7828:	35000120 	cbnz	w0, 32b784c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195708>
+ 32b782c:	f94003e8 	ldr	x8, [sp]
+ 32b7830:	eb16011f 	cmp	x8, x22
+ 32b7834:	540000c1 	b.ne	32b784c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195708>  // b.any
+ 32b7838:	910022a1 	add	x1, x21, #0x8
+ 32b783c:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7840:	f9000275 	str	x21, [x19]
+ 32b7844:	94a912af 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b7848:	14000006 	b	32b7860 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19571c>
+ 32b784c:	aa1503e0 	mov	x0, x21
+ 32b7850:	97e2f55c 	bl	2b74dc0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f340>
+ 32b7854:	aa1503e0 	mov	x0, x21
+ 32b7858:	94a9248e 	bl	5d00a90 <_ZdlPv@plt>
+ 32b785c:	f900027f 	str	xzr, [x19]
+ 32b7860:	f94016e8 	ldr	x8, [x23, #40]
+ 32b7864:	f94007e9 	ldr	x9, [sp, #8]
+ 32b7868:	eb09011f 	cmp	x8, x9
+ 32b786c:	540000e1 	b.ne	32b7888 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195744>  // b.any
+ 32b7870:	a9444ff4 	ldp	x20, x19, [sp, #64]
+ 32b7874:	a94357f6 	ldp	x22, x21, [sp, #48]
+ 32b7878:	a9425ff8 	ldp	x24, x23, [sp, #32]
+ 32b787c:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 32b7880:	910143ff 	add	sp, sp, #0x50
+ 32b7884:	d65f03c0 	ret
+ 32b7888:	94a92486 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b788c:	d10103ff 	sub	sp, sp, #0x40
+ 32b7890:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 32b7894:	a90257f6 	stp	x22, x21, [sp, #32]
+ 32b7898:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 32b789c:	910043fd 	add	x29, sp, #0x10
+ 32b78a0:	d53bd056 	mrs	x22, tpidr_el0
+ 32b78a4:	f94016c8 	ldr	x8, [x22, #40]
+ 32b78a8:	f90007e8 	str	x8, [sp, #8]
+ 32b78ac:	b9400033 	ldr	w19, [x1]
+ 32b78b0:	f9401060 	ldr	x0, [x3, #32]
+ 32b78b4:	f90003f3 	str	x19, [sp]
+ 32b78b8:	b4000520 	cbz	x0, 32b795c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195818>
+ 32b78bc:	f9400008 	ldr	x8, [x0]
+ 32b78c0:	aa0103f4 	mov	x20, x1
+ 32b78c4:	910003e1 	mov	x1, sp
+ 32b78c8:	d1001055 	sub	x21, x2, #0x4
+ 32b78cc:	f9401908 	ldr	x8, [x8, #48]
+ 32b78d0:	d63f0100 	blr	x8
+ 32b78d4:	aa0003e2 	mov	x2, x0
+ 32b78d8:	91001280 	add	x0, x20, #0x4
+ 32b78dc:	910003e3 	mov	x3, sp
+ 32b78e0:	aa1503e1 	mov	x1, x21
+ 32b78e4:	aa1f03e4 	mov	x4, xzr
+ 32b78e8:	f90003f3 	str	x19, [sp]
+ 32b78ec:	97b66c78 	bl	2052acc <LZ4_slideInputBufferHC@@Base+0xc298>
+ 32b78f0:	350001a0 	cbnz	w0, 32b7924 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1957e0>
+ 32b78f4:	f94003e4 	ldr	x4, [sp]
+ 32b78f8:	eb13009f 	cmp	x4, x19
+ 32b78fc:	54000221 	b.ne	32b7940 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1957fc>  // b.any
+ 32b7900:	f94016c8 	ldr	x8, [x22, #40]
+ 32b7904:	f94007e9 	ldr	x9, [sp, #8]
+ 32b7908:	eb09011f 	cmp	x8, x9
+ 32b790c:	54000321 	b.ne	32b7970 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19582c>  // b.any
+ 32b7910:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 32b7914:	a94257f6 	ldp	x22, x21, [sp, #32]
+ 32b7918:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 32b791c:	910103ff 	add	sp, sp, #0x40
+ 32b7920:	d65f03c0 	ret
+ 32b7924:	2a0003e3 	mov	w3, w0
+ 32b7928:	f0fe9cc1 	adrp	x1, 652000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xe4277>
+ 32b792c:	9117c821 	add	x1, x1, #0x5f2
+ 32b7930:	b0fea062 	adrp	x2, 6c4000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x72277>
+ 32b7934:	91314042 	add	x2, x2, #0xc50
+ 32b7938:	52800040 	mov	w0, #0x2                   	// #2
+ 32b793c:	97ad887e 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7940:	b0fea061 	adrp	x1, 6c4000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x72277>
+ 32b7944:	91311021 	add	x1, x1, #0xc44
+ 32b7948:	b0fe9de2 	adrp	x2, 674000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xc2277>
+ 32b794c:	9125b442 	add	x2, x2, #0x96d
+ 32b7950:	52800060 	mov	w0, #0x3                   	// #3
+ 32b7954:	2a1303e3 	mov	w3, w19
+ 32b7958:	97ad8877 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b795c:	f94016c8 	ldr	x8, [x22, #40]
+ 32b7960:	f94007e9 	ldr	x9, [sp, #8]
+ 32b7964:	eb09011f 	cmp	x8, x9
+ 32b7968:	54000041 	b.ne	32b7970 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19582c>  // b.any
+ 32b796c:	97aec58a 	bl	1e68f94 <_Z28NvClothCompiledWithDxSupportv@@Base+0x18114>
+ 32b7970:	94a9244c 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b7974:	d10103ff 	sub	sp, sp, #0x40
+ 32b7978:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 32b797c:	a90257f6 	stp	x22, x21, [sp, #32]
+ 32b7980:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 32b7984:	910043fd 	add	x29, sp, #0x10
+ 32b7988:	d53bd055 	mrs	x21, tpidr_el0
+ 32b798c:	f94016a8 	ldr	x8, [x21, #40]
+ 32b7990:	f90007e8 	str	x8, [sp, #8]
+ 32b7994:	b9400036 	ldr	w22, [x1]
+ 32b7998:	f9401060 	ldr	x0, [x3, #32]
+ 32b799c:	f90003f6 	str	x22, [sp]
+ 32b79a0:	b4000380 	cbz	x0, 32b7a10 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1958cc>
+ 32b79a4:	f9400008 	ldr	x8, [x0]
+ 32b79a8:	aa0103f3 	mov	x19, x1
+ 32b79ac:	910003e1 	mov	x1, sp
+ 32b79b0:	aa0203f4 	mov	x20, x2
+ 32b79b4:	f9401908 	ldr	x8, [x8, #48]
+ 32b79b8:	d63f0100 	blr	x8
+ 32b79bc:	b4000180 	cbz	x0, 32b79ec <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1958a8>
+ 32b79c0:	aa0003e2 	mov	x2, x0
+ 32b79c4:	d1001281 	sub	x1, x20, #0x4
+ 32b79c8:	91001260 	add	x0, x19, #0x4
+ 32b79cc:	910003e3 	mov	x3, sp
+ 32b79d0:	aa1f03e4 	mov	x4, xzr
+ 32b79d4:	f90003f6 	str	x22, [sp]
+ 32b79d8:	97b66c3d 	bl	2052acc <LZ4_slideInputBufferHC@@Base+0xc298>
+ 32b79dc:	f94003e8 	ldr	x8, [sp]
+ 32b79e0:	7100001f 	cmp	w0, #0x0
+ 32b79e4:	fa560100 	ccmp	x8, x22, #0x0, eq	// eq = none
+ 32b79e8:	1a9f17e0 	cset	w0, eq	// eq = none
+ 32b79ec:	f94016a8 	ldr	x8, [x21, #40]
+ 32b79f0:	f94007e9 	ldr	x9, [sp, #8]
+ 32b79f4:	eb09011f 	cmp	x8, x9
+ 32b79f8:	54000161 	b.ne	32b7a24 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1958e0>  // b.any
+ 32b79fc:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 32b7a00:	a94257f6 	ldp	x22, x21, [sp, #32]
+ 32b7a04:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 32b7a08:	910103ff 	add	sp, sp, #0x40
+ 32b7a0c:	d65f03c0 	ret
+ 32b7a10:	f94016a8 	ldr	x8, [x21, #40]
+ 32b7a14:	f94007e9 	ldr	x9, [sp, #8]
+ 32b7a18:	eb09011f 	cmp	x8, x9
+ 32b7a1c:	54000041 	b.ne	32b7a24 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1958e0>  // b.any
+ 32b7a20:	97aec55d 	bl	1e68f94 <_Z28NvClothCompiledWithDxSupportv@@Base+0x18114>
+ 32b7a24:	94a9241f 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b7a28:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+ 32b7a2c:	f9000bf7 	str	x23, [sp, #16]
+ 32b7a30:	a90257f6 	stp	x22, x21, [sp, #32]
+ 32b7a34:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 32b7a38:	910003fd 	mov	x29, sp
+ 32b7a3c:	f9400020 	ldr	x0, [x1]
+ 32b7a40:	aa0103f5 	mov	x21, x1
+ 32b7a44:	aa0803f3 	mov	x19, x8
+ 32b7a48:	f9400009 	ldr	x9, [x0]
+ 32b7a4c:	f9401129 	ldr	x9, [x9, #32]
+ 32b7a50:	d63f0120 	blr	x9
+ 32b7a54:	aa0003f4 	mov	x20, x0
+ 32b7a58:	94a92db2 	bl	5d03120 <LZ4_compressBound@plt>
+ 32b7a5c:	2a0003f6 	mov	w22, w0
+ 32b7a60:	93407ec0 	sxtw	x0, w22
+ 32b7a64:	94a9247f 	bl	5d00c60 <malloc@plt>
+ 32b7a68:	f94002a8 	ldr	x8, [x21]
+ 32b7a6c:	f00200aa 	adrp	x10, 72ce000 <_ZN3MNN17SizeComputerSuite9gInstanceE@@Base+0x156220>
+ 32b7a70:	aa0003f5 	mov	x21, x0
+ 32b7a74:	397ee157 	ldrb	w23, [x10, #4024]
+ 32b7a78:	f9400109 	ldr	x9, [x8]
+ 32b7a7c:	aa0803e0 	mov	x0, x8
+ 32b7a80:	f9400d29 	ldr	x9, [x9, #24]
+ 32b7a84:	d63f0120 	blr	x9
+ 32b7a88:	340003b7 	cbz	w23, 32b7afc <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1959b8>
+ 32b7a8c:	aa1503e1 	mov	x1, x21
+ 32b7a90:	2a1403e2 	mov	w2, w20
+ 32b7a94:	2a1603e3 	mov	w3, w22
+ 32b7a98:	52800184 	mov	w4, #0xc                   	// #12
+ 32b7a9c:	94a92e49 	bl	5d033c0 <LZ4_compress_HC@plt>
+ 32b7aa0:	2a0003f6 	mov	w22, w0
+ 32b7aa4:	340003c0 	cbz	w0, 32b7b1c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1959d8>
+ 32b7aa8:	52800400 	mov	w0, #0x20                  	// #32
+ 32b7aac:	94a923e1 	bl	5d00a30 <_Znwm@plt>
+ 32b7ab0:	110022c8 	add	w8, w22, #0x8
+ 32b7ab4:	aa0003f7 	mov	x23, x0
+ 32b7ab8:	93407d01 	sxtw	x1, w8
+ 32b7abc:	97e2f507 	bl	2b74ed8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f458>
+ 32b7ac0:	f9400ae8 	ldr	x8, [x23, #16]
+ 32b7ac4:	528b4b49 	mov	w9, #0x5a5a                	// #23130
+ 32b7ac8:	93407ec2 	sxtw	x2, w22
+ 32b7acc:	72a68b49 	movk	w9, #0x345a, lsl #16
+ 32b7ad0:	aa1503e1 	mov	x1, x21
+ 32b7ad4:	91002100 	add	x0, x8, #0x8
+ 32b7ad8:	29005109 	stp	w9, w20, [x8]
+ 32b7adc:	94a92425 	bl	5d00b70 <memcpy@plt>
+ 32b7ae0:	aa1503e0 	mov	x0, x21
+ 32b7ae4:	94a924bb 	bl	5d00dd0 <free@plt>
+ 32b7ae8:	910022e1 	add	x1, x23, #0x8
+ 32b7aec:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7af0:	f9000277 	str	x23, [x19]
+ 32b7af4:	94a91203 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b7af8:	1400000c 	b	32b7b28 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1959e4>
+ 32b7afc:	f001be88 	adrp	x8, 6a8a000 <_ZN8tinyxml211XMLDocument11_errorNamesE@@Base+0x11c08>
+ 32b7b00:	aa1503e1 	mov	x1, x21
+ 32b7b04:	2a1403e2 	mov	w2, w20
+ 32b7b08:	b94f3104 	ldr	w4, [x8, #3888]
+ 32b7b0c:	2a1603e3 	mov	w3, w22
+ 32b7b10:	94a92d94 	bl	5d03160 <LZ4_compress_fast@plt>
+ 32b7b14:	2a0003f6 	mov	w22, w0
+ 32b7b18:	35fffc80 	cbnz	w0, 32b7aa8 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195964>
+ 32b7b1c:	aa1503e0 	mov	x0, x21
+ 32b7b20:	94a924ac 	bl	5d00dd0 <free@plt>
+ 32b7b24:	f900027f 	str	xzr, [x19]
+ 32b7b28:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 32b7b2c:	f9400bf7 	ldr	x23, [sp, #16]
+ 32b7b30:	a94257f6 	ldp	x22, x21, [sp, #32]
+ 32b7b34:	a8c47bfd 	ldp	x29, x30, [sp], #64
+ 32b7b38:	d65f03c0 	ret
+ 32b7b3c:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 32b7b40:	f9000bf3 	str	x19, [sp, #16]
+ 32b7b44:	910003fd 	mov	x29, sp
+ 32b7b48:	f9400020 	ldr	x0, [x1]
+ 32b7b4c:	b40002e0 	cbz	x0, 32b7ba8 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195a64>
+ 32b7b50:	f9400008 	ldr	x8, [x0]
+ 32b7b54:	aa0103f3 	mov	x19, x1
+ 32b7b58:	f9400d08 	ldr	x8, [x8, #24]
+ 32b7b5c:	d63f0100 	blr	x8
+ 32b7b60:	f9400268 	ldr	x8, [x19]
+ 32b7b64:	aa0003f3 	mov	x19, x0
+ 32b7b68:	f9400109 	ldr	x9, [x8]
+ 32b7b6c:	aa0803e0 	mov	x0, x8
+ 32b7b70:	f9401129 	ldr	x9, [x9, #32]
+ 32b7b74:	d63f0120 	blr	x9
+ 32b7b78:	f100241f 	cmp	x0, #0x9
+ 32b7b7c:	540000e3 	b.cc	32b7b98 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195a54>  // b.lo, b.ul, b.last
+ 32b7b80:	b9400268 	ldr	w8, [x19]
+ 32b7b84:	528b4b49 	mov	w9, #0x5a5a                	// #23130
+ 32b7b88:	72a68b49 	movk	w9, #0x345a, lsl #16
+ 32b7b8c:	6b09011f 	cmp	w8, w9
+ 32b7b90:	1a9f17e0 	cset	w0, eq	// eq = none
+ 32b7b94:	14000002 	b	32b7b9c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195a58>
+ 32b7b98:	2a1f03e0 	mov	w0, wzr
+ 32b7b9c:	f9400bf3 	ldr	x19, [sp, #16]
+ 32b7ba0:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 32b7ba4:	d65f03c0 	ret
+ 32b7ba8:	f0fe9fe1 	adrp	x1, 6b6000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x80277>
+ 32b7bac:	91090c21 	add	x1, x1, #0x243
+ 32b7bb0:	97ad87e1 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7bb4:	528b4b48 	mov	w8, #0x5a5a                	// #23130
+ 32b7bb8:	72a68b48 	movk	w8, #0x345a, lsl #16
+ 32b7bbc:	6b08003f 	cmp	w1, w8
+ 32b7bc0:	1a9f17e0 	cset	w0, eq	// eq = none
+ 32b7bc4:	d65f03c0 	ret
+ 32b7bc8:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+ 32b7bcc:	f9000bf7 	str	x23, [sp, #16]
+ 32b7bd0:	a90257f6 	stp	x22, x21, [sp, #32]
+ 32b7bd4:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 32b7bd8:	910003fd 	mov	x29, sp
+ 32b7bdc:	f9400020 	ldr	x0, [x1]
+ 32b7be0:	aa0803f3 	mov	x19, x8
+ 32b7be4:	b4000500 	cbz	x0, 32b7c84 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195b40>
+ 32b7be8:	f9400008 	ldr	x8, [x0]
+ 32b7bec:	aa0103f4 	mov	x20, x1
+ 32b7bf0:	f9401108 	ldr	x8, [x8, #32]
+ 32b7bf4:	d63f0100 	blr	x8
+ 32b7bf8:	f1001c1f 	cmp	x0, #0x7
+ 32b7bfc:	54000509 	b.ls	32b7c9c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195b58>  // b.plast
+ 32b7c00:	f9400280 	ldr	x0, [x20]
+ 32b7c04:	f9400008 	ldr	x8, [x0]
+ 32b7c08:	f9400d08 	ldr	x8, [x8, #24]
+ 32b7c0c:	d63f0100 	blr	x8
+ 32b7c10:	b9400008 	ldr	w8, [x0]
+ 32b7c14:	528b4b49 	mov	w9, #0x5a5a                	// #23130
+ 32b7c18:	72a68b49 	movk	w9, #0x345a, lsl #16
+ 32b7c1c:	6b09011f 	cmp	w8, w9
+ 32b7c20:	540004a1 	b.ne	32b7cb4 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195b70>  // b.any
+ 32b7c24:	aa0003f5 	mov	x21, x0
+ 32b7c28:	b9400417 	ldr	w23, [x0, #4]
+ 32b7c2c:	52800400 	mov	w0, #0x20                  	// #32
+ 32b7c30:	94a92380 	bl	5d00a30 <_Znwm@plt>
+ 32b7c34:	aa1703e1 	mov	x1, x23
+ 32b7c38:	aa0003f6 	mov	x22, x0
+ 32b7c3c:	97e2f4a7 	bl	2b74ed8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f458>
+ 32b7c40:	f9400280 	ldr	x0, [x20]
+ 32b7c44:	f9400ad4 	ldr	x20, [x22, #16]
+ 32b7c48:	f9400008 	ldr	x8, [x0]
+ 32b7c4c:	f9401108 	ldr	x8, [x8, #32]
+ 32b7c50:	d63f0100 	blr	x8
+ 32b7c54:	51002002 	sub	w2, w0, #0x8
+ 32b7c58:	910022a0 	add	x0, x21, #0x8
+ 32b7c5c:	aa1403e1 	mov	x1, x20
+ 32b7c60:	2a1703e3 	mov	w3, w23
+ 32b7c64:	94a92d5f 	bl	5d031e0 <LZ4_decompress_safe@plt>
+ 32b7c68:	6b17001f 	cmp	w0, w23
+ 32b7c6c:	54000301 	b.ne	32b7ccc <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195b88>  // b.any
+ 32b7c70:	910022c1 	add	x1, x22, #0x8
+ 32b7c74:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7c78:	f9000276 	str	x22, [x19]
+ 32b7c7c:	94a911a1 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b7c80:	14000002 	b	32b7c88 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195b44>
+ 32b7c84:	f900027f 	str	xzr, [x19]
+ 32b7c88:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 32b7c8c:	f9400bf7 	ldr	x23, [sp, #16]
+ 32b7c90:	a94257f6 	ldp	x22, x21, [sp, #32]
+ 32b7c94:	a8c47bfd 	ldp	x29, x30, [sp], #64
+ 32b7c98:	d65f03c0 	ret
+ 32b7c9c:	b0fe9701 	adrp	x1, 598000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x19e277>
+ 32b7ca0:	91359021 	add	x1, x1, #0xd64
+ 32b7ca4:	f0fe9802 	adrp	x2, 5ba000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x17c277>
+ 32b7ca8:	9121ac42 	add	x2, x2, #0x86b
+ 32b7cac:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7cb0:	97ad87a1 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7cb4:	d0fea001 	adrp	x1, 6b9000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x7d277>
+ 32b7cb8:	9127b421 	add	x1, x1, #0x9ed
+ 32b7cbc:	b0fe9b62 	adrp	x2, 624000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x112277>
+ 32b7cc0:	912aa842 	add	x2, x2, #0xaaa
+ 32b7cc4:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7cc8:	97ad879b 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7ccc:	b0fe9b61 	adrp	x1, 624000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x112277>
+ 32b7cd0:	912b6c21 	add	x1, x1, #0xadb
+ 32b7cd4:	f0fe9fa2 	adrp	x2, 6ae000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x88277>
+ 32b7cd8:	91117c42 	add	x2, x2, #0x45f
+ 32b7cdc:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7ce0:	97ad8795 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7ce4:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+ 32b7ce8:	f9000bf7 	str	x23, [sp, #16]
+ 32b7cec:	a90257f6 	stp	x22, x21, [sp, #32]
+ 32b7cf0:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 32b7cf4:	910003fd 	mov	x29, sp
+ 32b7cf8:	f9400020 	ldr	x0, [x1]
+ 32b7cfc:	aa0803f3 	mov	x19, x8
+ 32b7d00:	b4000580 	cbz	x0, 32b7db0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195c6c>
+ 32b7d04:	f9400008 	ldr	x8, [x0]
+ 32b7d08:	aa0103f4 	mov	x20, x1
+ 32b7d0c:	f9401108 	ldr	x8, [x8, #32]
+ 32b7d10:	d63f0100 	blr	x8
+ 32b7d14:	f100201f 	cmp	x0, #0x8
+ 32b7d18:	540004c9 	b.ls	32b7db0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195c6c>  // b.plast
+ 32b7d1c:	f9400280 	ldr	x0, [x20]
+ 32b7d20:	f9400008 	ldr	x8, [x0]
+ 32b7d24:	f9400d08 	ldr	x8, [x8, #24]
+ 32b7d28:	d63f0100 	blr	x8
+ 32b7d2c:	b9400008 	ldr	w8, [x0]
+ 32b7d30:	528b4b49 	mov	w9, #0x5a5a                	// #23130
+ 32b7d34:	72a68b49 	movk	w9, #0x345a, lsl #16
+ 32b7d38:	6b09011f 	cmp	w8, w9
+ 32b7d3c:	540003a1 	b.ne	32b7db0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195c6c>  // b.any
+ 32b7d40:	b9400416 	ldr	w22, [x0, #4]
+ 32b7d44:	aa0003f7 	mov	x23, x0
+ 32b7d48:	52800400 	mov	w0, #0x20                  	// #32
+ 32b7d4c:	94a92339 	bl	5d00a30 <_Znwm@plt>
+ 32b7d50:	aa1603e1 	mov	x1, x22
+ 32b7d54:	aa0003f5 	mov	x21, x0
+ 32b7d58:	97e2f460 	bl	2b74ed8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f458>
+ 32b7d5c:	f9400280 	ldr	x0, [x20]
+ 32b7d60:	f9400ab4 	ldr	x20, [x21, #16]
+ 32b7d64:	f9400008 	ldr	x8, [x0]
+ 32b7d68:	f9401108 	ldr	x8, [x8, #32]
+ 32b7d6c:	d63f0100 	blr	x8
+ 32b7d70:	51002002 	sub	w2, w0, #0x8
+ 32b7d74:	910022e0 	add	x0, x23, #0x8
+ 32b7d78:	aa1403e1 	mov	x1, x20
+ 32b7d7c:	2a1603e3 	mov	w3, w22
+ 32b7d80:	94a92d18 	bl	5d031e0 <LZ4_decompress_safe@plt>
+ 32b7d84:	6b16001f 	cmp	w0, w22
+ 32b7d88:	540000c1 	b.ne	32b7da0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195c5c>  // b.any
+ 32b7d8c:	910022a1 	add	x1, x21, #0x8
+ 32b7d90:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7d94:	f9000275 	str	x21, [x19]
+ 32b7d98:	94a9115a 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b7d9c:	14000006 	b	32b7db4 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195c70>
+ 32b7da0:	aa1503e0 	mov	x0, x21
+ 32b7da4:	97e2f407 	bl	2b74dc0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f340>
+ 32b7da8:	aa1503e0 	mov	x0, x21
+ 32b7dac:	94a92339 	bl	5d00a90 <_ZdlPv@plt>
+ 32b7db0:	f900027f 	str	xzr, [x19]
+ 32b7db4:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 32b7db8:	f9400bf7 	ldr	x23, [sp, #16]
+ 32b7dbc:	a94257f6 	ldp	x22, x21, [sp, #32]
+ 32b7dc0:	a8c47bfd 	ldp	x29, x30, [sp], #64
+ 32b7dc4:	d65f03c0 	ret
+ 32b7dc8:	d10103ff 	sub	sp, sp, #0x40
+ 32b7dcc:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 32b7dd0:	a90257f6 	stp	x22, x21, [sp, #32]
+ 32b7dd4:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 32b7dd8:	910043fd 	add	x29, sp, #0x10
+ 32b7ddc:	d53bd056 	mrs	x22, tpidr_el0
+ 32b7de0:	f94016c8 	ldr	x8, [x22, #40]
+ 32b7de4:	f90007e8 	str	x8, [sp, #8]
+ 32b7de8:	b9400033 	ldr	w19, [x1]
+ 32b7dec:	f9401060 	ldr	x0, [x3, #32]
+ 32b7df0:	f90003f3 	str	x19, [sp]
+ 32b7df4:	b40003a0 	cbz	x0, 32b7e68 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195d24>
+ 32b7df8:	f9400008 	ldr	x8, [x0]
+ 32b7dfc:	aa0103f4 	mov	x20, x1
+ 32b7e00:	910003e1 	mov	x1, sp
+ 32b7e04:	aa0203f5 	mov	x21, x2
+ 32b7e08:	f9401908 	ldr	x8, [x8, #48]
+ 32b7e0c:	d63f0100 	blr	x8
+ 32b7e10:	aa0003e1 	mov	x1, x0
+ 32b7e14:	510012a2 	sub	w2, w21, #0x4
+ 32b7e18:	91001280 	add	x0, x20, #0x4
+ 32b7e1c:	2a1303e3 	mov	w3, w19
+ 32b7e20:	94a92cf0 	bl	5d031e0 <LZ4_decompress_safe@plt>
+ 32b7e24:	6b13001f 	cmp	w0, w19
+ 32b7e28:	54000141 	b.ne	32b7e50 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195d0c>  // b.any
+ 32b7e2c:	f94016c8 	ldr	x8, [x22, #40]
+ 32b7e30:	f94007e9 	ldr	x9, [sp, #8]
+ 32b7e34:	eb09011f 	cmp	x8, x9
+ 32b7e38:	54000221 	b.ne	32b7e7c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195d38>  // b.any
+ 32b7e3c:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 32b7e40:	a94257f6 	ldp	x22, x21, [sp, #32]
+ 32b7e44:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 32b7e48:	910103ff 	add	sp, sp, #0x40
+ 32b7e4c:	d65f03c0 	ret
+ 32b7e50:	b0fe9b61 	adrp	x1, 624000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x112277>
+ 32b7e54:	912b6c21 	add	x1, x1, #0xadb
+ 32b7e58:	b0fe9e42 	adrp	x2, 680000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xb6277>
+ 32b7e5c:	91246442 	add	x2, x2, #0x919
+ 32b7e60:	52800020 	mov	w0, #0x1                   	// #1
+ 32b7e64:	97ad8734 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b7e68:	f94016c8 	ldr	x8, [x22, #40]
+ 32b7e6c:	f94007e9 	ldr	x9, [sp, #8]
+ 32b7e70:	eb09011f 	cmp	x8, x9
+ 32b7e74:	54000041 	b.ne	32b7e7c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195d38>  // b.any
+ 32b7e78:	97aec447 	bl	1e68f94 <_Z28NvClothCompiledWithDxSupportv@@Base+0x18114>
+ 32b7e7c:	94a92309 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b7e80:	d10103ff 	sub	sp, sp, #0x40
+ 32b7e84:	a9017bfd 	stp	x29, x30, [sp, #16]
+ 32b7e88:	a90257f6 	stp	x22, x21, [sp, #32]
+ 32b7e8c:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 32b7e90:	910043fd 	add	x29, sp, #0x10
+ 32b7e94:	d53bd056 	mrs	x22, tpidr_el0
+ 32b7e98:	f94016c8 	ldr	x8, [x22, #40]
+ 32b7e9c:	f90007e8 	str	x8, [sp, #8]
+ 32b7ea0:	b9400033 	ldr	w19, [x1]
+ 32b7ea4:	f9401060 	ldr	x0, [x3, #32]
+ 32b7ea8:	f90003f3 	str	x19, [sp]
+ 32b7eac:	b4000300 	cbz	x0, 32b7f0c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195dc8>
+ 32b7eb0:	f9400008 	ldr	x8, [x0]
+ 32b7eb4:	aa0103f4 	mov	x20, x1
+ 32b7eb8:	910003e1 	mov	x1, sp
+ 32b7ebc:	aa0203f5 	mov	x21, x2
+ 32b7ec0:	f9401908 	ldr	x8, [x8, #48]
+ 32b7ec4:	d63f0100 	blr	x8
+ 32b7ec8:	b4000100 	cbz	x0, 32b7ee8 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195da4>
+ 32b7ecc:	aa0003e1 	mov	x1, x0
+ 32b7ed0:	510012a2 	sub	w2, w21, #0x4
+ 32b7ed4:	91001280 	add	x0, x20, #0x4
+ 32b7ed8:	2a1303e3 	mov	w3, w19
+ 32b7edc:	94a92cc1 	bl	5d031e0 <LZ4_decompress_safe@plt>
+ 32b7ee0:	6b13001f 	cmp	w0, w19
+ 32b7ee4:	1a9f17e0 	cset	w0, eq	// eq = none
+ 32b7ee8:	f94016c8 	ldr	x8, [x22, #40]
+ 32b7eec:	f94007e9 	ldr	x9, [sp, #8]
+ 32b7ef0:	eb09011f 	cmp	x8, x9
+ 32b7ef4:	54000161 	b.ne	32b7f20 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195ddc>  // b.any
+ 32b7ef8:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 32b7efc:	a94257f6 	ldp	x22, x21, [sp, #32]
+ 32b7f00:	a9417bfd 	ldp	x29, x30, [sp, #16]
+ 32b7f04:	910103ff 	add	sp, sp, #0x40
+ 32b7f08:	d65f03c0 	ret
+ 32b7f0c:	f94016c8 	ldr	x8, [x22, #40]
+ 32b7f10:	f94007e9 	ldr	x9, [sp, #8]
+ 32b7f14:	eb09011f 	cmp	x8, x9
+ 32b7f18:	54000041 	b.ne	32b7f20 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195ddc>  // b.any
+ 32b7f1c:	97aec41e 	bl	1e68f94 <_Z28NvClothCompiledWithDxSupportv@@Base+0x18114>
+ 32b7f20:	94a922e0 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b7f24:	f9400020 	ldr	x0, [x1]
+ 32b7f28:	b4000380 	cbz	x0, 32b7f98 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195e54>
+ 32b7f2c:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 32b7f30:	f9000bf3 	str	x19, [sp, #16]
+ 32b7f34:	910003fd 	mov	x29, sp
+ 32b7f38:	f9400008 	ldr	x8, [x0]
+ 32b7f3c:	aa0103f3 	mov	x19, x1
+ 32b7f40:	f9400d08 	ldr	x8, [x8, #24]
+ 32b7f44:	d63f0100 	blr	x8
+ 32b7f48:	b4000240 	cbz	x0, 32b7f90 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195e4c>
+ 32b7f4c:	f9400260 	ldr	x0, [x19]
+ 32b7f50:	f9400008 	ldr	x8, [x0]
+ 32b7f54:	f9401108 	ldr	x8, [x8, #32]
+ 32b7f58:	d63f0100 	blr	x8
+ 32b7f5c:	f100101f 	cmp	x0, #0x4
+ 32b7f60:	54000062 	b.cs	32b7f6c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195e28>  // b.hs, b.nlast
+ 32b7f64:	2a1f03e0 	mov	w0, wzr
+ 32b7f68:	1400000a 	b	32b7f90 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195e4c>
+ 32b7f6c:	f9400260 	ldr	x0, [x19]
+ 32b7f70:	f9400008 	ldr	x8, [x0]
+ 32b7f74:	f9400d08 	ldr	x8, [x8, #24]
+ 32b7f78:	d63f0100 	blr	x8
+ 32b7f7c:	b9400008 	ldr	w8, [x0]
+ 32b7f80:	5289e989 	mov	w9, #0x4f4c                	// #20300
+ 32b7f84:	72aa69a9 	movk	w9, #0x534d, lsl #16
+ 32b7f88:	6b09011f 	cmp	w8, w9
+ 32b7f8c:	1a9f17e0 	cset	w0, eq	// eq = none
+ 32b7f90:	f9400bf3 	ldr	x19, [sp, #16]
+ 32b7f94:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 32b7f98:	d65f03c0 	ret
+ 32b7f9c:	5289e988 	mov	w8, #0x4f4c                	// #20300
+ 32b7fa0:	72aa69a8 	movk	w8, #0x534d, lsl #16
+ 32b7fa4:	6b08003f 	cmp	w1, w8
+ 32b7fa8:	1a9f17e0 	cset	w0, eq	// eq = none
+ 32b7fac:	d65f03c0 	ret
+ 32b7fb0:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+ 32b7fb4:	a90157f6 	stp	x22, x21, [sp, #16]
+ 32b7fb8:	a9024ff4 	stp	x20, x19, [sp, #32]
+ 32b7fbc:	910003fd 	mov	x29, sp
+ 32b7fc0:	f9400020 	ldr	x0, [x1]
+ 32b7fc4:	aa0803f3 	mov	x19, x8
+ 32b7fc8:	b4000740 	cbz	x0, 32b80b0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f6c>
+ 32b7fcc:	f9400008 	ldr	x8, [x0]
+ 32b7fd0:	aa0103f5 	mov	x21, x1
+ 32b7fd4:	f9400d08 	ldr	x8, [x8, #24]
+ 32b7fd8:	d63f0100 	blr	x8
+ 32b7fdc:	f94002a8 	ldr	x8, [x21]
+ 32b7fe0:	aa0003f4 	mov	x20, x0
+ 32b7fe4:	f9400109 	ldr	x9, [x8]
+ 32b7fe8:	aa0803e0 	mov	x0, x8
+ 32b7fec:	f9401129 	ldr	x9, [x9, #32]
+ 32b7ff0:	d63f0120 	blr	x9
+ 32b7ff4:	b40005f4 	cbz	x20, 32b80b0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f6c>
+ 32b7ff8:	92a10008 	mov	x8, #0xfffffffff7ffffff    	// #-134217729
+ 32b7ffc:	929ffd09 	mov	x9, #0xffffffffffff0017    	// #-65513
+ 32b8000:	aa0003e1 	mov	x1, x0
+ 32b8004:	8b080008 	add	x8, x0, x8
+ 32b8008:	f2bf0009 	movk	x9, #0xf800, lsl #16
+ 32b800c:	eb09011f 	cmp	x8, x9
+ 32b8010:	54000503 	b.cc	32b80b0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f6c>  // b.lo, b.ul, b.last
+ 32b8014:	aa1403e0 	mov	x0, x20
+ 32b8018:	97bc2051 	bl	21c015c <nghttp2_version@@Base+0x149bbc>
+ 32b801c:	529ffd88 	mov	w8, #0xffec                	// #65516
+ 32b8020:	d1005009 	sub	x9, x0, #0x14
+ 32b8024:	72a07fe8 	movk	w8, #0x3ff, lsl #16
+ 32b8028:	eb08013f 	cmp	x9, x8
+ 32b802c:	54000428 	b.hi	32b80b0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f6c>  // b.pmore
+ 32b8030:	aa0003f6 	mov	x22, x0
+ 32b8034:	92400408 	and	x8, x0, #0x3
+ 32b8038:	b50003c8 	cbnz	x8, 32b80b0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f6c>
+ 32b803c:	52800400 	mov	w0, #0x20                  	// #32
+ 32b8040:	94a9227c 	bl	5d00a30 <_Znwm@plt>
+ 32b8044:	aa1603e1 	mov	x1, x22
+ 32b8048:	aa0003f4 	mov	x20, x0
+ 32b804c:	97e2f3a3 	bl	2b74ed8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f458>
+ 32b8050:	91002281 	add	x1, x20, #0x8
+ 32b8054:	52800020 	mov	w0, #0x1                   	// #1
+ 32b8058:	94a910aa 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b805c:	f9400a88 	ldr	x8, [x20, #16]
+ 32b8060:	b4000328 	cbz	x8, 32b80c4 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f80>
+ 32b8064:	f94002a0 	ldr	x0, [x21]
+ 32b8068:	f9400008 	ldr	x8, [x0]
+ 32b806c:	f9400d08 	ldr	x8, [x8, #24]
+ 32b8070:	d63f0100 	blr	x8
+ 32b8074:	f94002a8 	ldr	x8, [x21]
+ 32b8078:	aa0003f5 	mov	x21, x0
+ 32b807c:	f9400109 	ldr	x9, [x8]
+ 32b8080:	aa0803e0 	mov	x0, x8
+ 32b8084:	f9401129 	ldr	x9, [x9, #32]
+ 32b8088:	d63f0120 	blr	x9
+ 32b808c:	f9400a82 	ldr	x2, [x20, #16]
+ 32b8090:	aa0003e1 	mov	x1, x0
+ 32b8094:	aa1503e0 	mov	x0, x21
+ 32b8098:	aa1603e3 	mov	x3, x22
+ 32b809c:	2a1f03e4 	mov	w4, wzr
+ 32b80a0:	97bc2047 	bl	21c01bc <nghttp2_version@@Base+0x149c1c>
+ 32b80a4:	36000100 	tbz	w0, #0, 32b80c4 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f80>
+ 32b80a8:	f9000274 	str	x20, [x19]
+ 32b80ac:	14000002 	b	32b80b4 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f70>
+ 32b80b0:	f900027f 	str	xzr, [x19]
+ 32b80b4:	a9424ff4 	ldp	x20, x19, [sp, #32]
+ 32b80b8:	a94157f6 	ldp	x22, x21, [sp, #16]
+ 32b80bc:	a8c37bfd 	ldp	x29, x30, [sp], #48
+ 32b80c0:	d65f03c0 	ret
+ 32b80c4:	91002281 	add	x1, x20, #0x8
+ 32b80c8:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 32b80cc:	f900027f 	str	xzr, [x19]
+ 32b80d0:	94a91098 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 32b80d4:	7100041f 	cmp	w0, #0x1
+ 32b80d8:	54fffee1 	b.ne	32b80b4 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195f70>  // b.any
+ 32b80dc:	f9400288 	ldr	x8, [x20]
+ 32b80e0:	f9400901 	ldr	x1, [x8, #16]
+ 32b80e4:	aa1403e0 	mov	x0, x20
+ 32b80e8:	a9424ff4 	ldp	x20, x19, [sp, #32]
+ 32b80ec:	a94157f6 	ldp	x22, x21, [sp, #16]
+ 32b80f0:	a8c37bfd 	ldp	x29, x30, [sp], #48
+ 32b80f4:	d61f0020 	br	x1
+ 32b80f8:	aa0003f3 	mov	x19, x0
+ 32b80fc:	91002281 	add	x1, x20, #0x8
+ 32b8100:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 32b8104:	94a9108b 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 32b8108:	7100041f 	cmp	w0, #0x1
+ 32b810c:	54000060 	b.eq	32b8118 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195fd4>  // b.none
+ 32b8110:	aa1303e0 	mov	x0, x19
+ 32b8114:	94a9117e 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 32b8118:	f9400288 	ldr	x8, [x20]
+ 32b811c:	aa1403e0 	mov	x0, x20
+ 32b8120:	f9400908 	ldr	x8, [x8, #16]
+ 32b8124:	d63f0100 	blr	x8
+ 32b8128:	aa1303e0 	mov	x0, x19
+ 32b812c:	94a91178 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 32b8130:	17ffffa0 	b	32b7fb0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195e6c>
+ 32b8134:	d10183ff 	sub	sp, sp, #0x60
+ 32b8138:	a9027bfd 	stp	x29, x30, [sp, #32]
+ 32b813c:	a9035ff8 	stp	x24, x23, [sp, #48]
+ 32b8140:	a90457f6 	stp	x22, x21, [sp, #64]
+ 32b8144:	a9054ff4 	stp	x20, x19, [sp, #80]
+ 32b8148:	910083fd 	add	x29, sp, #0x20
+ 32b814c:	d53bd057 	mrs	x23, tpidr_el0
+ 32b8150:	2a1f03e0 	mov	w0, wzr
+ 32b8154:	f94016e8 	ldr	x8, [x23, #40]
+ 32b8158:	f81f83a8 	stur	x8, [x29, #-8]
+ 32b815c:	b4000c21 	cbz	x1, 32b82e0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19619c>
+ 32b8160:	b2659be8 	mov	x8, #0xfffffffff8000003    	// #-134217725
+ 32b8164:	929ffd09 	mov	x9, #0xffffffffffff0017    	// #-65513
+ 32b8168:	8b080048 	add	x8, x2, x8
+ 32b816c:	f2bf0009 	movk	x9, #0xf800, lsl #16
+ 32b8170:	eb09011f 	cmp	x8, x9
+ 32b8174:	54000b63 	b.cc	32b82e0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19619c>  // b.lo, b.ul, b.last
+ 32b8178:	f9401068 	ldr	x8, [x3, #32]
+ 32b817c:	b4000948 	cbz	x8, 32b82a4 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196160>
+ 32b8180:	52800400 	mov	w0, #0x20                  	// #32
+ 32b8184:	aa0303f6 	mov	x22, x3
+ 32b8188:	aa0203f4 	mov	x20, x2
+ 32b818c:	aa0103f5 	mov	x21, x1
+ 32b8190:	94a92228 	bl	5d00a30 <_Znwm@plt>
+ 32b8194:	91001281 	add	x1, x20, #0x4
+ 32b8198:	aa0003f3 	mov	x19, x0
+ 32b819c:	97e2f2f1 	bl	2b74d60 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f2e0>
+ 32b81a0:	91002261 	add	x1, x19, #0x8
+ 32b81a4:	52800020 	mov	w0, #0x1                   	// #1
+ 32b81a8:	94a91056 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b81ac:	f9400a68 	ldr	x8, [x19, #16]
+ 32b81b0:	5289e989 	mov	w9, #0x4f4c                	// #20300
+ 32b81b4:	aa1503e1 	mov	x1, x21
+ 32b81b8:	72aa69a9 	movk	w9, #0x534d, lsl #16
+ 32b81bc:	aa1403e2 	mov	x2, x20
+ 32b81c0:	b9000109 	str	w9, [x8]
+ 32b81c4:	f9400a68 	ldr	x8, [x19, #16]
+ 32b81c8:	91001100 	add	x0, x8, #0x4
+ 32b81cc:	94a92269 	bl	5d00b70 <memcpy@plt>
+ 32b81d0:	91002261 	add	x1, x19, #0x8
+ 32b81d4:	52800020 	mov	w0, #0x1                   	// #1
+ 32b81d8:	94a9104a 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b81dc:	f9000bf3 	str	x19, [sp, #16]
+ 32b81e0:	910023e8 	add	x8, sp, #0x8
+ 32b81e4:	910043e1 	add	x1, sp, #0x10
+ 32b81e8:	97ffff72 	bl	32b7fb0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195e6c>
+ 32b81ec:	91002261 	add	x1, x19, #0x8
+ 32b81f0:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 32b81f4:	94a9104f 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 32b81f8:	7100041f 	cmp	w0, #0x1
+ 32b81fc:	54000580 	b.eq	32b82ac <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196168>  // b.none
+ 32b8200:	f94007f4 	ldr	x20, [sp, #8]
+ 32b8204:	b4000614 	cbz	x20, 32b82c4 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196180>
+ 32b8208:	f9400288 	ldr	x8, [x20]
+ 32b820c:	aa1403e0 	mov	x0, x20
+ 32b8210:	f9401108 	ldr	x8, [x8, #32]
+ 32b8214:	d63f0100 	blr	x8
+ 32b8218:	f94012c8 	ldr	x8, [x22, #32]
+ 32b821c:	f9000be0 	str	x0, [sp, #16]
+ 32b8220:	b40007e8 	cbz	x8, 32b831c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1961d8>
+ 32b8224:	f9400109 	ldr	x9, [x8]
+ 32b8228:	f9401929 	ldr	x9, [x9, #48]
+ 32b822c:	910043e1 	add	x1, sp, #0x10
+ 32b8230:	aa0803e0 	mov	x0, x8
+ 32b8234:	d63f0120 	blr	x9
+ 32b8238:	f100001f 	cmp	x0, #0x0
+ 32b823c:	aa0003f5 	mov	x21, x0
+ 32b8240:	1a9f07f8 	cset	w24, ne	// ne = any
+ 32b8244:	b40001c0 	cbz	x0, 32b827c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196138>
+ 32b8248:	f9400288 	ldr	x8, [x20]
+ 32b824c:	aa1403e0 	mov	x0, x20
+ 32b8250:	f9400d08 	ldr	x8, [x8, #24]
+ 32b8254:	d63f0100 	blr	x8
+ 32b8258:	f9400288 	ldr	x8, [x20]
+ 32b825c:	aa0003f6 	mov	x22, x0
+ 32b8260:	aa1403e0 	mov	x0, x20
+ 32b8264:	f9401108 	ldr	x8, [x8, #32]
+ 32b8268:	d63f0100 	blr	x8
+ 32b826c:	aa0003e2 	mov	x2, x0
+ 32b8270:	aa1503e0 	mov	x0, x21
+ 32b8274:	aa1603e1 	mov	x1, x22
+ 32b8278:	94a9223e 	bl	5d00b70 <memcpy@plt>
+ 32b827c:	91002281 	add	x1, x20, #0x8
+ 32b8280:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 32b8284:	94a9102b 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 32b8288:	7100041f 	cmp	w0, #0x1
+ 32b828c:	540001e1 	b.ne	32b82c8 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196184>  // b.any
+ 32b8290:	f9400288 	ldr	x8, [x20]
+ 32b8294:	aa1403e0 	mov	x0, x20
+ 32b8298:	f9400908 	ldr	x8, [x8, #16]
+ 32b829c:	d63f0100 	blr	x8
+ 32b82a0:	1400000a 	b	32b82c8 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196184>
+ 32b82a4:	2a1f03e0 	mov	w0, wzr
+ 32b82a8:	1400000e 	b	32b82e0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19619c>
+ 32b82ac:	f9400268 	ldr	x8, [x19]
+ 32b82b0:	aa1303e0 	mov	x0, x19
+ 32b82b4:	f9400908 	ldr	x8, [x8, #16]
+ 32b82b8:	d63f0100 	blr	x8
+ 32b82bc:	f94007f4 	ldr	x20, [sp, #8]
+ 32b82c0:	b5fffa54 	cbnz	x20, 32b8208 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1960c4>
+ 32b82c4:	2a1f03f8 	mov	w24, wzr
+ 32b82c8:	91002261 	add	x1, x19, #0x8
+ 32b82cc:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 32b82d0:	94a91018 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 32b82d4:	7100041f 	cmp	w0, #0x1
+ 32b82d8:	54000180 	b.eq	32b8308 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1961c4>  // b.none
+ 32b82dc:	2a1803e0 	mov	w0, w24
+ 32b82e0:	f94016e8 	ldr	x8, [x23, #40]
+ 32b82e4:	f85f83a9 	ldur	x9, [x29, #-8]
+ 32b82e8:	eb09011f 	cmp	x8, x9
+ 32b82ec:	54000561 	b.ne	32b8398 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196254>  // b.any
+ 32b82f0:	a9454ff4 	ldp	x20, x19, [sp, #80]
+ 32b82f4:	a94457f6 	ldp	x22, x21, [sp, #64]
+ 32b82f8:	a9435ff8 	ldp	x24, x23, [sp, #48]
+ 32b82fc:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 32b8300:	910183ff 	add	sp, sp, #0x60
+ 32b8304:	d65f03c0 	ret
+ 32b8308:	f9400268 	ldr	x8, [x19]
+ 32b830c:	aa1303e0 	mov	x0, x19
+ 32b8310:	f9400908 	ldr	x8, [x8, #16]
+ 32b8314:	d63f0100 	blr	x8
+ 32b8318:	17fffff1 	b	32b82dc <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196198>
+ 32b831c:	f94016e8 	ldr	x8, [x23, #40]
+ 32b8320:	f85f83a9 	ldur	x9, [x29, #-8]
+ 32b8324:	eb09011f 	cmp	x8, x9
+ 32b8328:	54000381 	b.ne	32b8398 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196254>  // b.any
+ 32b832c:	97aec31a 	bl	1e68f94 <_Z28NvClothCompiledWithDxSupportv@@Base+0x18114>
+ 32b8330:	aa0003f5 	mov	x21, x0
+ 32b8334:	91002261 	add	x1, x19, #0x8
+ 32b8338:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 32b833c:	94a90ffd 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 32b8340:	7100041f 	cmp	w0, #0x1
+ 32b8344:	54000141 	b.ne	32b836c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196228>  // b.any
+ 32b8348:	f9400268 	ldr	x8, [x19]
+ 32b834c:	aa1303e0 	mov	x0, x19
+ 32b8350:	1400001a 	b	32b83b8 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196274>
+ 32b8354:	aa0003f5 	mov	x21, x0
+ 32b8358:	91002281 	add	x1, x20, #0x8
+ 32b835c:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 32b8360:	94a90ff4 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 32b8364:	7100041f 	cmp	w0, #0x1
+ 32b8368:	54000240 	b.eq	32b83b0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19626c>  // b.none
+ 32b836c:	91002261 	add	x1, x19, #0x8
+ 32b8370:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 32b8374:	94a90fef 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 32b8378:	7100041f 	cmp	w0, #0x1
+ 32b837c:	54000100 	b.eq	32b839c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196258>  // b.none
+ 32b8380:	f94016e8 	ldr	x8, [x23, #40]
+ 32b8384:	f85f83a9 	ldur	x9, [x29, #-8]
+ 32b8388:	eb09011f 	cmp	x8, x9
+ 32b838c:	54000061 	b.ne	32b8398 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196254>  // b.any
+ 32b8390:	aa1503e0 	mov	x0, x21
+ 32b8394:	94a910de 	bl	5cfc70c <__emutls_get_address@@Base+0xfc0>
+ 32b8398:	94a921c2 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b839c:	f9400268 	ldr	x8, [x19]
+ 32b83a0:	aa1303e0 	mov	x0, x19
+ 32b83a4:	f9400908 	ldr	x8, [x8, #16]
+ 32b83a8:	d63f0100 	blr	x8
+ 32b83ac:	17fffff5 	b	32b8380 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19623c>
+ 32b83b0:	f9400288 	ldr	x8, [x20]
+ 32b83b4:	aa1403e0 	mov	x0, x20
+ 32b83b8:	f9400908 	ldr	x8, [x8, #16]
+ 32b83bc:	d63f0100 	blr	x8
+ 32b83c0:	17ffffeb 	b	32b836c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196228>
+ 32b83c4:	17ffff5c 	b	32b8134 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x195ff0>
+ 32b83c8:	aa0103e0 	mov	x0, x1
+ 32b83cc:	14a92281 	b	5d00dd0 <free@plt>
+ 32b83d0:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 32b83d4:	f9000bf3 	str	x19, [sp, #16]
+ 32b83d8:	910003fd 	mov	x29, sp
+ 32b83dc:	f9400020 	ldr	x0, [x1]
+ 32b83e0:	b40002e0 	cbz	x0, 32b843c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1962f8>
+ 32b83e4:	f9400008 	ldr	x8, [x0]
+ 32b83e8:	aa0103f3 	mov	x19, x1
+ 32b83ec:	f9400d08 	ldr	x8, [x8, #24]
+ 32b83f0:	d63f0100 	blr	x8
+ 32b83f4:	f9400268 	ldr	x8, [x19]
+ 32b83f8:	aa0003f3 	mov	x19, x0
+ 32b83fc:	f9400109 	ldr	x9, [x8]
+ 32b8400:	aa0803e0 	mov	x0, x8
+ 32b8404:	f9401129 	ldr	x9, [x9, #32]
+ 32b8408:	d63f0120 	blr	x9
+ 32b840c:	f100241f 	cmp	x0, #0x9
+ 32b8410:	540000e3 	b.cc	32b842c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1962e8>  // b.lo, b.ul, b.last
+ 32b8414:	b9400268 	ldr	w8, [x19]
+ 32b8418:	528b4989 	mov	w9, #0x5a4c                	// #23116
+ 32b841c:	72a829a9 	movk	w9, #0x414d, lsl #16
+ 32b8420:	6b09011f 	cmp	w8, w9
+ 32b8424:	1a9f17e0 	cset	w0, eq	// eq = none
+ 32b8428:	14000002 	b	32b8430 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1962ec>
+ 32b842c:	2a1f03e0 	mov	w0, wzr
+ 32b8430:	f9400bf3 	ldr	x19, [sp, #16]
+ 32b8434:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 32b8438:	d65f03c0 	ret
+ 32b843c:	f0fea161 	adrp	x1, 6e7000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x4f277>
+ 32b8440:	91092021 	add	x1, x1, #0x248
+ 32b8444:	97ad85bc 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b8448:	528b4988 	mov	w8, #0x5a4c                	// #23116
+ 32b844c:	72a829a8 	movk	w8, #0x414d, lsl #16
+ 32b8450:	6b08003f 	cmp	w1, w8
+ 32b8454:	1a9f17e0 	cset	w0, eq	// eq = none
+ 32b8458:	d65f03c0 	ret
+ 32b845c:	d10183ff 	sub	sp, sp, #0x60
+ 32b8460:	a9027bfd 	stp	x29, x30, [sp, #32]
+ 32b8464:	a9035ff8 	stp	x24, x23, [sp, #48]
+ 32b8468:	a90457f6 	stp	x22, x21, [sp, #64]
+ 32b846c:	a9054ff4 	stp	x20, x19, [sp, #80]
+ 32b8470:	910083fd 	add	x29, sp, #0x20
+ 32b8474:	d53bd058 	mrs	x24, tpidr_el0
+ 32b8478:	aa0803f3 	mov	x19, x8
+ 32b847c:	f9401709 	ldr	x9, [x24, #40]
+ 32b8480:	f81f83a9 	stur	x9, [x29, #-8]
+ 32b8484:	f9400020 	ldr	x0, [x1]
+ 32b8488:	b40005a0 	cbz	x0, 32b853c <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1963f8>
+ 32b848c:	f9400008 	ldr	x8, [x0]
+ 32b8490:	aa0103f4 	mov	x20, x1
+ 32b8494:	f9401108 	ldr	x8, [x8, #32]
+ 32b8498:	d63f0100 	blr	x8
+ 32b849c:	f1001c1f 	cmp	x0, #0x7
+ 32b84a0:	54000649 	b.ls	32b8568 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196424>  // b.plast
+ 32b84a4:	f9400280 	ldr	x0, [x20]
+ 32b84a8:	f9400008 	ldr	x8, [x0]
+ 32b84ac:	f9400d08 	ldr	x8, [x8, #24]
+ 32b84b0:	d63f0100 	blr	x8
+ 32b84b4:	b9400008 	ldr	w8, [x0]
+ 32b84b8:	528b4989 	mov	w9, #0x5a4c                	// #23116
+ 32b84bc:	72a829a9 	movk	w9, #0x414d, lsl #16
+ 32b84c0:	6b09011f 	cmp	w8, w9
+ 32b84c4:	540005e1 	b.ne	32b8580 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19643c>  // b.any
+ 32b84c8:	aa0003f5 	mov	x21, x0
+ 32b84cc:	f9400280 	ldr	x0, [x20]
+ 32b84d0:	b94006b6 	ldr	w22, [x21, #4]
+ 32b84d4:	f9400008 	ldr	x8, [x0]
+ 32b84d8:	f9401108 	ldr	x8, [x8, #32]
+ 32b84dc:	d63f0100 	blr	x8
+ 32b84e0:	d1002017 	sub	x23, x0, #0x8
+ 32b84e4:	52800400 	mov	w0, #0x20                  	// #32
+ 32b84e8:	94a92152 	bl	5d00a30 <_Znwm@plt>
+ 32b84ec:	aa1603e1 	mov	x1, x22
+ 32b84f0:	aa0003f4 	mov	x20, x0
+ 32b84f4:	97e2f279 	bl	2b74ed8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f458>
+ 32b84f8:	b00160e8 	adrp	x8, 5ed5000 <_ZTINSt6__ndk13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEfNS_4lessIS6_EENS4_INS_4pairIKS6_fEEEEEE@@Base+0x14ae0>
+ 32b84fc:	912e8108 	add	x8, x8, #0xba0
+ 32b8500:	f9400a82 	ldr	x2, [x20, #16]
+ 32b8504:	3dc00100 	ldr	q0, [x8]
+ 32b8508:	910022a0 	add	x0, x21, #0x8
+ 32b850c:	910003e4 	mov	x4, sp
+ 32b8510:	aa1703e1 	mov	x1, x23
+ 32b8514:	aa1603e3 	mov	x3, x22
+ 32b8518:	3d8003e0 	str	q0, [sp]
+ 32b851c:	97b6679e 	bl	2052394 <LZ4_slideInputBufferHC@@Base+0xbb60>
+ 32b8520:	eb16001f 	cmp	x0, x22
+ 32b8524:	540003a1 	b.ne	32b8598 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196454>  // b.any
+ 32b8528:	91002281 	add	x1, x20, #0x8
+ 32b852c:	52800020 	mov	w0, #0x1                   	// #1
+ 32b8530:	f9000274 	str	x20, [x19]
+ 32b8534:	94a90f73 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b8538:	14000002 	b	32b8540 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1963fc>
+ 32b853c:	f900027f 	str	xzr, [x19]
+ 32b8540:	f9401708 	ldr	x8, [x24, #40]
+ 32b8544:	f85f83a9 	ldur	x9, [x29, #-8]
+ 32b8548:	eb09011f 	cmp	x8, x9
+ 32b854c:	54000321 	b.ne	32b85b0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19646c>  // b.any
+ 32b8550:	a9454ff4 	ldp	x20, x19, [sp, #80]
+ 32b8554:	a94457f6 	ldp	x22, x21, [sp, #64]
+ 32b8558:	a9435ff8 	ldp	x24, x23, [sp, #48]
+ 32b855c:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 32b8560:	910183ff 	add	sp, sp, #0x60
+ 32b8564:	d65f03c0 	ret
+ 32b8568:	90fe9701 	adrp	x1, 598000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x19e277>
+ 32b856c:	91359021 	add	x1, x1, #0xd64
+ 32b8570:	f0fea162 	adrp	x2, 6e7000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x4f277>
+ 32b8574:	91093842 	add	x2, x2, #0x24e
+ 32b8578:	52800020 	mov	w0, #0x1                   	// #1
+ 32b857c:	97ad856e 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b8580:	90fe9701 	adrp	x1, 598000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x19e277>
+ 32b8584:	9136a421 	add	x1, x1, #0xda9
+ 32b8588:	90fe9e42 	adrp	x2, 680000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xb6277>
+ 32b858c:	91251442 	add	x2, x2, #0x945
+ 32b8590:	52800020 	mov	w0, #0x1                   	// #1
+ 32b8594:	97ad8568 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b8598:	90fe9bc1 	adrp	x1, 630000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x106277>
+ 32b859c:	9118dc21 	add	x1, x1, #0x637
+ 32b85a0:	d0fe9fa2 	adrp	x2, 6ae000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x88277>
+ 32b85a4:	91117c42 	add	x2, x2, #0x45f
+ 32b85a8:	52800020 	mov	w0, #0x1                   	// #1
+ 32b85ac:	97ad8562 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 32b85b0:	94a9213c 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b85b4:	aa0103e0 	mov	x0, x1
+ 32b85b8:	14a921aa 	b	5d00c60 <malloc@plt>
+ 32b85bc:	d65f03c0 	ret
+ 32b85c0:	2a1f03e0 	mov	w0, wzr
+ 32b85c4:	d65f03c0 	ret
+ 32b85c8:	d10183ff 	sub	sp, sp, #0x60
+ 32b85cc:	a9027bfd 	stp	x29, x30, [sp, #32]
+ 32b85d0:	a9035ff8 	stp	x24, x23, [sp, #48]
+ 32b85d4:	a90457f6 	stp	x22, x21, [sp, #64]
+ 32b85d8:	a9054ff4 	stp	x20, x19, [sp, #80]
+ 32b85dc:	910083fd 	add	x29, sp, #0x20
+ 32b85e0:	d53bd057 	mrs	x23, tpidr_el0
+ 32b85e4:	aa0803f3 	mov	x19, x8
+ 32b85e8:	f94016e9 	ldr	x9, [x23, #40]
+ 32b85ec:	f81f83a9 	stur	x9, [x29, #-8]
+ 32b85f0:	f9400020 	ldr	x0, [x1]
+ 32b85f4:	b4000640 	cbz	x0, 32b86bc <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196578>
+ 32b85f8:	f9400008 	ldr	x8, [x0]
+ 32b85fc:	aa0103f4 	mov	x20, x1
+ 32b8600:	f9401108 	ldr	x8, [x8, #32]
+ 32b8604:	d63f0100 	blr	x8
+ 32b8608:	f100201f 	cmp	x0, #0x8
+ 32b860c:	54000589 	b.ls	32b86bc <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196578>  // b.plast
+ 32b8610:	f9400280 	ldr	x0, [x20]
+ 32b8614:	f9400008 	ldr	x8, [x0]
+ 32b8618:	f9400d08 	ldr	x8, [x8, #24]
+ 32b861c:	d63f0100 	blr	x8
+ 32b8620:	b9400008 	ldr	w8, [x0]
+ 32b8624:	528b4989 	mov	w9, #0x5a4c                	// #23116
+ 32b8628:	72a829a9 	movk	w9, #0x414d, lsl #16
+ 32b862c:	6b09011f 	cmp	w8, w9
+ 32b8630:	54000461 	b.ne	32b86bc <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196578>  // b.any
+ 32b8634:	f9400288 	ldr	x8, [x20]
+ 32b8638:	b9400415 	ldr	w21, [x0, #4]
+ 32b863c:	aa0003f8 	mov	x24, x0
+ 32b8640:	f9400109 	ldr	x9, [x8]
+ 32b8644:	aa0803e0 	mov	x0, x8
+ 32b8648:	f9401129 	ldr	x9, [x9, #32]
+ 32b864c:	d63f0120 	blr	x9
+ 32b8650:	d1002016 	sub	x22, x0, #0x8
+ 32b8654:	52800400 	mov	w0, #0x20                  	// #32
+ 32b8658:	94a920f6 	bl	5d00a30 <_Znwm@plt>
+ 32b865c:	aa1503e1 	mov	x1, x21
+ 32b8660:	aa0003f4 	mov	x20, x0
+ 32b8664:	97e2f21d 	bl	2b74ed8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f458>
+ 32b8668:	b00160e8 	adrp	x8, 5ed5000 <_ZTINSt6__ndk13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEfNS_4lessIS6_EENS4_INS_4pairIKS6_fEEEEEE@@Base+0x14ae0>
+ 32b866c:	912e8108 	add	x8, x8, #0xba0
+ 32b8670:	f9400a82 	ldr	x2, [x20, #16]
+ 32b8674:	3dc00100 	ldr	q0, [x8]
+ 32b8678:	91002300 	add	x0, x24, #0x8
+ 32b867c:	910003e4 	mov	x4, sp
+ 32b8680:	aa1603e1 	mov	x1, x22
+ 32b8684:	aa1503e3 	mov	x3, x21
+ 32b8688:	3d8003e0 	str	q0, [sp]
+ 32b868c:	97b66742 	bl	2052394 <LZ4_slideInputBufferHC@@Base+0xbb60>
+ 32b8690:	eb15001f 	cmp	x0, x21
+ 32b8694:	540000c1 	b.ne	32b86ac <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196568>  // b.any
+ 32b8698:	91002281 	add	x1, x20, #0x8
+ 32b869c:	52800020 	mov	w0, #0x1                   	// #1
+ 32b86a0:	f9000274 	str	x20, [x19]
+ 32b86a4:	94a90f17 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 32b86a8:	14000006 	b	32b86c0 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x19657c>
+ 32b86ac:	aa1403e0 	mov	x0, x20
+ 32b86b0:	97e2f1c4 	bl	2b74dc0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f340>
+ 32b86b4:	aa1403e0 	mov	x0, x20
+ 32b86b8:	94a920f6 	bl	5d00a90 <_ZdlPv@plt>
+ 32b86bc:	f900027f 	str	xzr, [x19]
+ 32b86c0:	f94016e8 	ldr	x8, [x23, #40]
+ 32b86c4:	f85f83a9 	ldur	x9, [x29, #-8]
+ 32b86c8:	eb09011f 	cmp	x8, x9
+ 32b86cc:	540000e1 	b.ne	32b86e8 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x1965a4>  // b.any
+ 32b86d0:	a9454ff4 	ldp	x20, x19, [sp, #80]
+ 32b86d4:	a94457f6 	ldp	x22, x21, [sp, #64]
+ 32b86d8:	a9435ff8 	ldp	x24, x23, [sp, #48]
+ 32b86dc:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 32b86e0:	910183ff 	add	sp, sp, #0x60
+ 32b86e4:	d65f03c0 	ret
+ 32b86e8:	94a920ee 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 32b86ec:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 32b86f0:	f9000bf3 	str	x19, [sp, #16]
+ 32b86f4:	910003fd 	mov	x29, sp
+ 32b86f8:	f9400020 	ldr	x0, [x1]
+ 32b86fc:	b40002e0 	cbz	x0, 32b8758 <Java_com_netease_messiah_CCLive_NativeOnClose@@Base+0x196614>

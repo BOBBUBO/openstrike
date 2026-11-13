@@ -1,0 +1,61 @@
+// Extracted from client_gate.proto in libGame.so
+syntax = "proto2";
+package mobile.server;
+
+import "common.proto";
+
+message EncryptString {
+  required bytes encryptstr = 1;
+}
+
+message SessionSeed {
+  required int64 seed = 1;
+  optional int32 crypto = 2;
+}
+
+message SessionKey {
+  required bytes random_padding_header = 1;
+  required bytes session_key = 2;
+  required int64 seed = 3;
+  required bytes random_padding_tail = 4;
+  optional int32 crypto = 5;
+}
+
+message CtrlMsg {
+  required int32 typ = 1;
+  required int32 cmd = 2;
+}
+
+service IGateService {
+  rpc seed_request (mobile.server.Void) returns (mobile.server.Void);
+  rpc session_key (mobile.server.EncryptString) returns (mobile.server.Void);
+  rpc connect_server (mobile.server.ConnectServerRequest) returns (mobile.server.Void);
+  rpc entity_message (mobile.server.EntityMessage) returns (mobile.server.Void);
+  rpc reg_md5_index (mobile.server.Md5OrIndex) returns (mobile.server.Void);
+  rpc update_pos_info (mobile.server.ForwardPosInfo) returns (mobile.server.Void);
+  rpc interest_entity (mobile.server.InterestInfo) returns (mobile.server.Void);
+  rpc traceroute (mobile.server.TraceRoute) returns (mobile.server.Void);
+  rpc ctrl_message (mobile.server.CtrlMsg) returns (mobile.server.Void);
+}
+
+service IGateClient {
+  rpc seed_reply (mobile.server.SessionSeed) returns (mobile.server.Void);
+  rpc session_key_ok (mobile.server.Void) returns (mobile.server.Void);
+  rpc connect_reply (mobile.server.ConnectServerReply) returns (mobile.server.Void);
+  rpc create_entity (mobile.server.EntityInfo) returns (mobile.server.Void);
+  rpc destroy_entity (mobile.server.EntityInfo) returns (mobile.server.Void);
+  rpc entity_message (mobile.server.EntityMessage) returns (mobile.server.Void);
+  rpc chat_to_client (mobile.server.OutBandInfo) returns (mobile.server.Void);
+  rpc reg_md5_index (mobile.server.Md5OrIndex) returns (mobile.server.Void);
+  rpc update_aoi_info (mobile.server.AoiInfo) returns (mobile.server.Void);
+  rpc update_aoi_guid (mobile.server.AoiGuid) returns (mobile.server.Void);
+  rpc update_aoi_props (mobile.server.AoiProp) returns (mobile.server.Void);
+  rpc entity_method (mobile.server.AreaMessage) returns (mobile.server.Void);
+  rpc area_create_entity (mobile.server.AreaCreateEntityMsg) returns (mobile.server.Void);
+  rpc filter_entity_method (mobile.server.AreaMessage) returns (mobile.server.Void);
+  rpc set_space_data (mobile.server.SpaceData) returns (mobile.server.Void);
+  rpc traceroute (mobile.server.TraceRoute) returns (mobile.server.Void);
+  rpc ping (mobile.server.Ping) returns (mobile.server.Void);
+  rpc spectate_message (mobile.server.SpectateMessage) returns (mobile.server.Void);
+}
+

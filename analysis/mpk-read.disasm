@@ -1,0 +1,455 @@
+
+decompiled/native/lib/arm64-v8a/libGame.so:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000002b4ae00 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615380>:
+ 2b4ae00:	f9400288 	ldr	x8, [x20]
+ 2b4ae04:	aa1403e0 	mov	x0, x20
+ 2b4ae08:	f9400908 	ldr	x8, [x8, #16]
+ 2b4ae0c:	d63f0100 	blr	x8
+ 2b4ae10:	17fffff8 	b	2b4adf0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615370>
+ 2b4ae14:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 2b4ae18:	a9014ff4 	stp	x20, x19, [sp, #16]
+ 2b4ae1c:	910003fd 	mov	x29, sp
+ 2b4ae20:	39406008 	ldrb	w8, [x0, #24]
+ 2b4ae24:	aa0003f3 	mov	x19, x0
+ 2b4ae28:	36000068 	tbz	w8, #0, 2b4ae34 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6153b4>
+ 2b4ae2c:	f9401660 	ldr	x0, [x19, #40]
+ 2b4ae30:	94c6d718 	bl	5d00a90 <_ZdlPv@plt>
+ 2b4ae34:	f9400a74 	ldr	x20, [x19, #16]
+ 2b4ae38:	b40000d4 	cbz	x20, 2b4ae50 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6153d0>
+ 2b4ae3c:	91002281 	add	x1, x20, #0x8
+ 2b4ae40:	12800000 	mov	w0, #0xffffffff            	// #-1
+ 2b4ae44:	94c6c53b 	bl	5cfc330 <__emutls_get_address@@Base+0xbe4>
+ 2b4ae48:	7100041f 	cmp	w0, #0x1
+ 2b4ae4c:	540000a0 	b.eq	2b4ae60 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6153e0>  // b.none
+ 2b4ae50:	aa1303e0 	mov	x0, x19
+ 2b4ae54:	a9414ff4 	ldp	x20, x19, [sp, #16]
+ 2b4ae58:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 2b4ae5c:	14c6d70d 	b	5d00a90 <_ZdlPv@plt>
+ 2b4ae60:	f9400288 	ldr	x8, [x20]
+ 2b4ae64:	aa1403e0 	mov	x0, x20
+ 2b4ae68:	f9400908 	ldr	x8, [x8, #16]
+ 2b4ae6c:	d63f0100 	blr	x8
+ 2b4ae70:	17fffff8 	b	2b4ae50 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6153d0>
+ 2b4ae74:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+ 2b4ae78:	910003fd 	mov	x29, sp
+ 2b4ae7c:	90fedb61 	adrp	x1, 6b6000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x80277>
+ 2b4ae80:	913e0421 	add	x1, x1, #0xf81
+ 2b4ae84:	b0fed8e2 	adrp	x2, 667000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xcf277>
+ 2b4ae88:	91177842 	add	x2, x2, #0x5de
+ 2b4ae8c:	52800020 	mov	w0, #0x1                   	// #1
+ 2b4ae90:	97cb3b29 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 2b4ae94:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+ 2b4ae98:	910003fd 	mov	x29, sp
+ 2b4ae9c:	aa0003e9 	mov	x9, x0
+ 2b4aea0:	38418d2a 	ldrb	w10, [x9, #24]!
+ 2b4aea4:	370000ea 	tbnz	w10, #0, 2b4aec0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615440>
+ 2b4aea8:	3dc00120 	ldr	q0, [x9]
+ 2b4aeac:	f9400929 	ldr	x9, [x9, #16]
+ 2b4aeb0:	3d800100 	str	q0, [x8]
+ 2b4aeb4:	f9000909 	str	x9, [x8, #16]
+ 2b4aeb8:	a8c17bfd 	ldp	x29, x30, [sp], #16
+ 2b4aebc:	d65f03c0 	ret
+ 2b4aec0:	a9420402 	ldp	x2, x1, [x0, #32]
+ 2b4aec4:	aa0803e0 	mov	x0, x8
+ 2b4aec8:	97c9d9ba 	bl	1dc15b0 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf32080>
+ 2b4aecc:	a8c17bfd 	ldp	x29, x30, [sp], #16
+ 2b4aed0:	d65f03c0 	ret
+ 2b4aed4:	97c9d5d7 	bl	1dc0630 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf31100>
+ 2b4aed8:	d10103ff 	sub	sp, sp, #0x40
+ 2b4aedc:	a9027bfd 	stp	x29, x30, [sp, #32]
+ 2b4aee0:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 2b4aee4:	910083fd 	add	x29, sp, #0x20
+ 2b4aee8:	d53bd054 	mrs	x20, tpidr_el0
+ 2b4aeec:	aa0803f3 	mov	x19, x8
+ 2b4aef0:	91006409 	add	x9, x0, #0x19
+ 2b4aef4:	f9401688 	ldr	x8, [x20, #40]
+ 2b4aef8:	f81f83a8 	stur	x8, [x29, #-8]
+ 2b4aefc:	39406008 	ldrb	w8, [x0, #24]
+ 2b4af00:	a942280b 	ldp	x11, x10, [x0, #32]
+ 2b4af04:	910023e0 	add	x0, sp, #0x8
+ 2b4af08:	7200011f 	tst	w8, #0x1
+ 2b4af0c:	d341fd08 	lsr	x8, x8, #1
+ 2b4af10:	9a8a0129 	csel	x9, x9, x10, eq	// eq = none
+ 2b4af14:	9a8b0108 	csel	x8, x8, x11, eq	// eq = none
+ 2b4af18:	f9000269 	str	x9, [x19]
+ 2b4af1c:	b9000a68 	str	w8, [x19, #8]
+ 2b4af20:	a900a3e9 	stp	x9, x8, [sp, #8]
+ 2b4af24:	94000237 	bl	2b4b800 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615d80>
+ 2b4af28:	b9000e60 	str	w0, [x19, #12]
+ 2b4af2c:	f9401688 	ldr	x8, [x20, #40]
+ 2b4af30:	f85f83a9 	ldur	x9, [x29, #-8]
+ 2b4af34:	eb09011f 	cmp	x8, x9
+ 2b4af38:	540000a1 	b.ne	2b4af4c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6154cc>  // b.any
+ 2b4af3c:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 2b4af40:	a9427bfd 	ldp	x29, x30, [sp, #32]
+ 2b4af44:	910103ff 	add	sp, sp, #0x40
+ 2b4af48:	d65f03c0 	ret
+ 2b4af4c:	94c6d6d5 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 2b4af50:	52800020 	mov	w0, #0x1                   	// #1
+ 2b4af54:	d65f03c0 	ret
+ 2b4af58:	f9401800 	ldr	x0, [x0, #48]
+ 2b4af5c:	d65f03c0 	ret
+ 2b4af60:	2a1f03e0 	mov	w0, wzr
+ 2b4af64:	d65f03c0 	ret
+ 2b4af68:	f9400800 	ldr	x0, [x0, #16]
+ 2b4af6c:	f9400008 	ldr	x8, [x0]
+ 2b4af70:	f9402501 	ldr	x1, [x8, #72]
+ 2b4af74:	d61f0020 	br	x1
+ 2b4af78:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+ 2b4af7c:	910003fd 	mov	x29, sp
+ 2b4af80:	90fedb61 	adrp	x1, 6b6000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x80277>
+ 2b4af84:	913e0421 	add	x1, x1, #0xf81
+ 2b4af88:	b0fed8e2 	adrp	x2, 667000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xcf277>
+ 2b4af8c:	91177842 	add	x2, x2, #0x5de
+ 2b4af90:	52800020 	mov	w0, #0x1                   	// #1
+ 2b4af94:	97cb3ae8 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 2b4af98:	f9402000 	ldr	x0, [x0, #64]
+ 2b4af9c:	d65f03c0 	ret
+ 2b4afa0:	f9402008 	ldr	x8, [x0, #64]
+ 2b4afa4:	f9401809 	ldr	x9, [x0, #48]
+ 2b4afa8:	eb09011f 	cmp	x8, x9
+ 2b4afac:	1a9f37e0 	cset	w0, cs	// cs = hs, nlast
+ 2b4afb0:	d65f03c0 	ret
+ 2b4afb4:	7100085f 	cmp	w2, #0x2
+ 2b4afb8:	54000140 	b.eq	2b4afe0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615560>  // b.none
+ 2b4afbc:	7100045f 	cmp	w2, #0x1
+ 2b4afc0:	540000a0 	b.eq	2b4afd4 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615554>  // b.none
+ 2b4afc4:	35000142 	cbnz	w2, 2b4afec <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x61556c>
+ 2b4afc8:	f9002001 	str	x1, [x0, #64]
+ 2b4afcc:	52800020 	mov	w0, #0x1                   	// #1
+ 2b4afd0:	d65f03c0 	ret
+ 2b4afd4:	f9402008 	ldr	x8, [x0, #64]
+ 2b4afd8:	8b010108 	add	x8, x8, x1
+ 2b4afdc:	14000003 	b	2b4afe8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615568>
+ 2b4afe0:	f9401808 	ldr	x8, [x0, #48]
+ 2b4afe4:	cb010108 	sub	x8, x8, x1
+ 2b4afe8:	f9002008 	str	x8, [x0, #64]
+ 2b4afec:	52800020 	mov	w0, #0x1                   	// #1
+ 2b4aff0:	d65f03c0 	ret
+ 2b4aff4:	a943a40a 	ldp	x10, x9, [x0, #56]
+ 2b4aff8:	f9400808 	ldr	x8, [x0, #16]
+ 2b4affc:	8b02012b 	add	x11, x9, x2
+ 2b4b000:	8b090143 	add	x3, x10, x9
+ 2b4b004:	f900200b 	str	x11, [x0, #64]
+ 2b4b008:	aa0803e0 	mov	x0, x8
+ 2b4b00c:	f940010b 	ldr	x11, [x8]
+ 2b4b010:	f9403d64 	ldr	x4, [x11, #120]
+ 2b4b014:	d61f0080 	br	x4
+ 2b4b018:	f9400808 	ldr	x8, [x0, #16]
+ 2b4b01c:	f9401c09 	ldr	x9, [x0, #56]
+ 2b4b020:	f940010a 	ldr	x10, [x8]
+ 2b4b024:	8b030123 	add	x3, x9, x3
+ 2b4b028:	aa0803e0 	mov	x0, x8
+ 2b4b02c:	f9403d44 	ldr	x4, [x10, #120]
+ 2b4b030:	d61f0080 	br	x4
+ 2b4b034:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+ 2b4b038:	910003fd 	mov	x29, sp
+ 2b4b03c:	f0fedb41 	adrp	x1, 6b6000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x80277>
+ 2b4b040:	913e0421 	add	x1, x1, #0xf81
+ 2b4b044:	90fed8e2 	adrp	x2, 667000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0xcf277>
+ 2b4b048:	91177842 	add	x2, x2, #0x5de
+ 2b4b04c:	52800020 	mov	w0, #0x1                   	// #1
+ 2b4b050:	97cb3ab9 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 2b4b054:	d10303ff 	sub	sp, sp, #0xc0
+ 2b4b058:	a9077bfd 	stp	x29, x30, [sp, #112]
+ 2b4b05c:	f90043f9 	str	x25, [sp, #128]
+ 2b4b060:	a9095ff8 	stp	x24, x23, [sp, #144]
+ 2b4b064:	a90a57f6 	stp	x22, x21, [sp, #160]
+ 2b4b068:	a90b4ff4 	stp	x20, x19, [sp, #176]
+ 2b4b06c:	9101c3fd 	add	x29, sp, #0x70
+ 2b4b070:	d53bd059 	mrs	x25, tpidr_el0
+ 2b4b074:	aa0803f6 	mov	x22, x8
+ 2b4b078:	f9401729 	ldr	x9, [x25, #40]
+ 2b4b07c:	f81f83a9 	stur	x9, [x29, #-8]
+ 2b4b080:	f9401813 	ldr	x19, [x0, #48]
+ 2b4b084:	b4000433 	cbz	x19, 2b4b108 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615688>
+ 2b4b088:	aa0003f4 	mov	x20, x0
+ 2b4b08c:	52800400 	mov	w0, #0x20                  	// #32
+ 2b4b090:	94c6d668 	bl	5d00a30 <_Znwm@plt>
+ 2b4b094:	aa1303e1 	mov	x1, x19
+ 2b4b098:	aa0003f7 	mov	x23, x0
+ 2b4b09c:	9400a731 	bl	2b74d60 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x63f2e0>
+ 2b4b0a0:	aa1f03f5 	mov	x21, xzr
+ 2b4b0a4:	14000004 	b	2b4b0b4 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615634>
+ 2b4b0a8:	8b150315 	add	x21, x24, x21
+ 2b4b0ac:	eb1302bf 	cmp	x21, x19
+ 2b4b0b0:	54000202 	b.cs	2b4b0f0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615670>  // b.hs, b.nlast
+ 2b4b0b4:	a943a289 	ldp	x9, x8, [x20, #56]
+ 2b4b0b8:	cb150262 	sub	x2, x19, x21
+ 2b4b0bc:	f9400a80 	ldr	x0, [x20, #16]
+ 2b4b0c0:	f9400aeb 	ldr	x11, [x23, #16]
+ 2b4b0c4:	8b02010a 	add	x10, x8, x2
+ 2b4b0c8:	8b150161 	add	x1, x11, x21
+ 2b4b0cc:	8b080123 	add	x3, x9, x8
+ 2b4b0d0:	f900228a 	str	x10, [x20, #64]
+ 2b4b0d4:	f940000a 	ldr	x10, [x0]
+ 2b4b0d8:	f9403d4a 	ldr	x10, [x10, #120]
+ 2b4b0dc:	d63f0140 	blr	x10
+ 2b4b0e0:	aa0003f8 	mov	x24, x0
+ 2b4b0e4:	b5fffe20 	cbnz	x0, 2b4b0a8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615628>
+ 2b4b0e8:	94c6d7fa 	bl	5d010d0 <sched_yield@plt>
+ 2b4b0ec:	17ffffef 	b	2b4b0a8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615628>
+ 2b4b0f0:	54000241 	b.ne	2b4b138 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6156b8>  // b.any
+ 2b4b0f4:	910022e1 	add	x1, x23, #0x8
+ 2b4b0f8:	52800020 	mov	w0, #0x1                   	// #1
+ 2b4b0fc:	f90002d7 	str	x23, [x22]
+ 2b4b100:	94c6c480 	bl	5cfc300 <__emutls_get_address@@Base+0xbb4>
+ 2b4b104:	14000002 	b	2b4b10c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x61568c>
+ 2b4b108:	f90002df 	str	xzr, [x22]
+ 2b4b10c:	f9401728 	ldr	x8, [x25, #40]
+ 2b4b110:	f85f83a9 	ldur	x9, [x29, #-8]
+ 2b4b114:	eb09011f 	cmp	x8, x9
+ 2b4b118:	540005c1 	b.ne	2b4b1d0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615750>  // b.any
+ 2b4b11c:	a94b4ff4 	ldp	x20, x19, [sp, #176]
+ 2b4b120:	f94043f9 	ldr	x25, [sp, #128]
+ 2b4b124:	a94a57f6 	ldp	x22, x21, [sp, #160]
+ 2b4b128:	a9495ff8 	ldp	x24, x23, [sp, #144]
+ 2b4b12c:	a9477bfd 	ldp	x29, x30, [sp, #112]
+ 2b4b130:	910303ff 	add	sp, sp, #0xc0
+ 2b4b134:	d65f03c0 	ret
+ 2b4b138:	d10083a8 	sub	x8, x29, #0x20
+ 2b4b13c:	aa1403e0 	mov	x0, x20
+ 2b4b140:	97ffff55 	bl	2b4ae94 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615414>
+ 2b4b144:	f9400a80 	ldr	x0, [x20, #16]
+ 2b4b148:	f9400008 	ldr	x8, [x0]
+ 2b4b14c:	f9401109 	ldr	x9, [x8, #32]
+ 2b4b150:	9100e3e8 	add	x8, sp, #0x38
+ 2b4b154:	d63f0120 	blr	x9
+ 2b4b158:	94c6d736 	bl	5d00e30 <__errno@plt>
+ 2b4b15c:	aa0003f6 	mov	x22, x0
+ 2b4b160:	910083e8 	add	x8, sp, #0x20
+ 2b4b164:	aa1403e0 	mov	x0, x20
+ 2b4b168:	910083f7 	add	x23, sp, #0x20
+ 2b4b16c:	97ffff4a 	bl	2b4ae94 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615414>
+ 2b4b170:	f9400a80 	ldr	x0, [x20, #16]
+ 2b4b174:	394083e8 	ldrb	w8, [sp, #32]
+ 2b4b178:	f9401bea 	ldr	x10, [sp, #48]
+ 2b4b17c:	f9400009 	ldr	x9, [x0]
+ 2b4b180:	7200011f 	tst	w8, #0x1
+ 2b4b184:	910023e8 	add	x8, sp, #0x8
+ 2b4b188:	9a971554 	csinc	x20, x10, x23, ne	// ne = any
+ 2b4b18c:	910023f7 	add	x23, sp, #0x8
+ 2b4b190:	f9401129 	ldr	x9, [x9, #32]
+ 2b4b194:	d63f0120 	blr	x9
+ 2b4b198:	394023e8 	ldrb	w8, [sp, #8]
+ 2b4b19c:	f9400fe9 	ldr	x9, [sp, #24]
+ 2b4b1a0:	d0fedd21 	adrp	x1, 6f1000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x45277>
+ 2b4b1a4:	91114021 	add	x1, x1, #0x450
+ 2b4b1a8:	b94002c7 	ldr	w7, [x22]
+ 2b4b1ac:	f0fed1e2 	adrp	x2, 58a000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x1ac277>
+ 2b4b1b0:	912ff842 	add	x2, x2, #0xbfe
+ 2b4b1b4:	7200011f 	tst	w8, #0x1
+ 2b4b1b8:	528000c0 	mov	w0, #0x6                   	// #6
+ 2b4b1bc:	9a971524 	csinc	x4, x9, x23, ne	// ne = any
+ 2b4b1c0:	aa1403e3 	mov	x3, x20
+ 2b4b1c4:	aa1503e5 	mov	x5, x21
+ 2b4b1c8:	aa1303e6 	mov	x6, x19
+ 2b4b1cc:	97cb3a5a 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 2b4b1d0:	94c6d634 	bl	5d00aa0 <__stack_chk_fail@plt>
+ 2b4b1d4:	97c9d517 	bl	1dc0630 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf31100>
+ 2b4b1d8:	97c9d516 	bl	1dc0630 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf31100>
+ 2b4b1dc:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+ 2b4b1e0:	a9015ff8 	stp	x24, x23, [sp, #16]
+ 2b4b1e4:	a90257f6 	stp	x22, x21, [sp, #32]
+ 2b4b1e8:	a9034ff4 	stp	x20, x19, [sp, #48]
+ 2b4b1ec:	910003fd 	mov	x29, sp
+ 2b4b1f0:	f9401813 	ldr	x19, [x0, #48]
+ 2b4b1f4:	aa0803f5 	mov	x21, x8
+ 2b4b1f8:	b4000533 	cbz	x19, 2b4b29c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x61581c>
+ 2b4b1fc:	aa0003f4 	mov	x20, x0
+ 2b4b200:	a9007ebf 	stp	xzr, xzr, [x21]
+ 2b4b204:	f9000abf 	str	xzr, [x21, #16]
+ 2b4b208:	aa1503e0 	mov	x0, x21
+ 2b4b20c:	aa1303e1 	mov	x1, x19
+ 2b4b210:	2a1f03e2 	mov	w2, wzr
+ 2b4b214:	94c6d747 	bl	5d00f30 <_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEmc@plt>
+ 2b4b218:	aa1f03f6 	mov	x22, xzr
+ 2b4b21c:	910006b8 	add	x24, x21, #0x1
+ 2b4b220:	14000004 	b	2b4b230 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6157b0>
+ 2b4b224:	8b1602f6 	add	x22, x23, x22
+ 2b4b228:	eb1302df 	cmp	x22, x19
+ 2b4b22c:	54000262 	b.cs	2b4b278 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6157f8>  // b.hs, b.nlast
+ 2b4b230:	a943a289 	ldp	x9, x8, [x20, #56]
+ 2b4b234:	cb160262 	sub	x2, x19, x22
+ 2b4b238:	f9400a80 	ldr	x0, [x20, #16]
+ 2b4b23c:	f9400aac 	ldr	x12, [x21, #16]
+ 2b4b240:	8b02010a 	add	x10, x8, x2
+ 2b4b244:	8b080123 	add	x3, x9, x8
+ 2b4b248:	f900228a 	str	x10, [x20, #64]
+ 2b4b24c:	394002aa 	ldrb	w10, [x21]
+ 2b4b250:	f940000b 	ldr	x11, [x0]
+ 2b4b254:	7200015f 	tst	w10, #0x1
+ 2b4b258:	f9403d6a 	ldr	x10, [x11, #120]
+ 2b4b25c:	9a8c030b 	csel	x11, x24, x12, eq	// eq = none
+ 2b4b260:	8b160161 	add	x1, x11, x22
+ 2b4b264:	d63f0140 	blr	x10
+ 2b4b268:	aa0003f7 	mov	x23, x0
+ 2b4b26c:	b5fffdc0 	cbnz	x0, 2b4b224 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6157a4>
+ 2b4b270:	94c6d798 	bl	5d010d0 <sched_yield@plt>
+ 2b4b274:	17ffffec 	b	2b4b224 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6157a4>
+ 2b4b278:	54000140 	b.eq	2b4b2a0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615820>  // b.none
+ 2b4b27c:	d0fedd21 	adrp	x1, 6f1000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x45277>
+ 2b4b280:	91114021 	add	x1, x1, #0x450
+ 2b4b284:	90fed662 	adrp	x2, 617000 <_ZTSN2nv5cloth17ClothFabricCookerE@@Base-0x11f277>
+ 2b4b288:	910a1442 	add	x2, x2, #0x285
+ 2b4b28c:	52800060 	mov	w0, #0x3                   	// #3
+ 2b4b290:	aa1603e3 	mov	x3, x22
+ 2b4b294:	aa1303e4 	mov	x4, x19
+ 2b4b298:	97cb3a27 	bl	1e19b34 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf8a604>
+ 2b4b29c:	790002bf 	strh	wzr, [x21]
+ 2b4b2a0:	a9434ff4 	ldp	x20, x19, [sp, #48]
+ 2b4b2a4:	a94257f6 	ldp	x22, x21, [sp, #32]
+ 2b4b2a8:	a9415ff8 	ldp	x24, x23, [sp, #16]
+ 2b4b2ac:	a8c47bfd 	ldp	x29, x30, [sp], #64
+ 2b4b2b0:	d65f03c0 	ret
+ 2b4b2b4:	97c9d4df 	bl	1dc0630 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf31100>
+ 2b4b2b8:	97c9d4de 	bl	1dc0630 <_ZTSN10__cxxabiv121__vmi_class_type_infoE@@Base+0xf31100>
+ 2b4b2bc:	f9400809 	ldr	x9, [x0, #16]
+ 2b4b2c0:	f9401c0a 	ldr	x10, [x0, #56]
+ 2b4b2c4:	f940012b 	ldr	x11, [x9]
+ 2b4b2c8:	8b020142 	add	x2, x10, x2
+ 2b4b2cc:	aa0903e0 	mov	x0, x9
+ 2b4b2d0:	f9404d63 	ldr	x3, [x11, #152]
+ 2b4b2d4:	d61f0060 	br	x3
+ 2b4b2d8:	aa1f03e0 	mov	x0, xzr
+ 2b4b2dc:	d65f03c0 	ret
+ 2b4b2e0:	3943c008 	ldrb	w8, [x0, #240]
+ 2b4b2e4:	b0019089 	adrp	x9, 5d5c000 <_ZTINSt6__ndk16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEEE@@Base+0xd8>
+ 2b4b2e8:	91002129 	add	x9, x9, #0x8
+ 2b4b2ec:	f9000009 	str	x9, [x0]
+ 2b4b2f0:	36000168 	tbz	w8, #0, 2b4b31c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x61589c>
+ 2b4b2f4:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 2b4b2f8:	f9000bf3 	str	x19, [sp, #16]
+ 2b4b2fc:	910003fd 	mov	x29, sp
+ 2b4b300:	f9408008 	ldr	x8, [x0, #256]
+ 2b4b304:	aa0003f3 	mov	x19, x0
+ 2b4b308:	aa0803e0 	mov	x0, x8
+ 2b4b30c:	94c6d5e1 	bl	5d00a90 <_ZdlPv@plt>
+ 2b4b310:	aa1303e0 	mov	x0, x19
+ 2b4b314:	f9400bf3 	ldr	x19, [sp, #16]
+ 2b4b318:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 2b4b31c:	17ff754d 	b	2b28850 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x5f2dd0>
+ 2b4b320:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 2b4b324:	f9000bf3 	str	x19, [sp, #16]
+ 2b4b328:	910003fd 	mov	x29, sp
+ 2b4b32c:	3943c008 	ldrb	w8, [x0, #240]
+ 2b4b330:	aa0003f3 	mov	x19, x0
+ 2b4b334:	b0019089 	adrp	x9, 5d5c000 <_ZTINSt6__ndk16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEEE@@Base+0xd8>
+ 2b4b338:	91002129 	add	x9, x9, #0x8
+ 2b4b33c:	f9000009 	str	x9, [x0]
+ 2b4b340:	36000068 	tbz	w8, #0, 2b4b34c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x6158cc>
+ 2b4b344:	f9408260 	ldr	x0, [x19, #256]
+ 2b4b348:	94c6d5d2 	bl	5d00a90 <_ZdlPv@plt>
+ 2b4b34c:	aa1303e0 	mov	x0, x19
+ 2b4b350:	97ff7540 	bl	2b28850 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x5f2dd0>
+ 2b4b354:	aa1303e0 	mov	x0, x19
+ 2b4b358:	f9400bf3 	ldr	x19, [sp, #16]
+ 2b4b35c:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 2b4b360:	14c6d5cc 	b	5d00a90 <_ZdlPv@plt>
+ 2b4b364:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 2b4b368:	f9000bf3 	str	x19, [sp, #16]
+ 2b4b36c:	910003fd 	mov	x29, sp
+ 2b4b370:	aa0003f3 	mov	x19, x0
+ 2b4b374:	97ff7537 	bl	2b28850 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x5f2dd0>
+ 2b4b378:	aa1303e0 	mov	x0, x19
+ 2b4b37c:	f9400bf3 	ldr	x19, [sp, #16]
+ 2b4b380:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 2b4b384:	14c6d5c3 	b	5d00a90 <_ZdlPv@plt>
+ 2b4b388:	d10283ff 	sub	sp, sp, #0xa0
+ 2b4b38c:	a9047bfd 	stp	x29, x30, [sp, #64]
+ 2b4b390:	a9056ffc 	stp	x28, x27, [sp, #80]
+ 2b4b394:	a90667fa 	stp	x26, x25, [sp, #96]
+ 2b4b398:	a9075ff8 	stp	x24, x23, [sp, #112]
+ 2b4b39c:	a90857f6 	stp	x22, x21, [sp, #128]
+ 2b4b3a0:	a9094ff4 	stp	x20, x19, [sp, #144]
+ 2b4b3a4:	910103fd 	add	x29, sp, #0x40
+ 2b4b3a8:	d53bd059 	mrs	x25, tpidr_el0
+ 2b4b3ac:	aa0803f3 	mov	x19, x8
+ 2b4b3b0:	f9401728 	ldr	x8, [x25, #40]
+ 2b4b3b4:	f81f83a8 	stur	x8, [x29, #-8]
+ 2b4b3b8:	a9405434 	ldp	x20, x21, [x1]
+ 2b4b3bc:	39400289 	ldrb	w9, [x20]
+ 2b4b3c0:	7100bd3f 	cmp	w9, #0x2f
+ 2b4b3c4:	1a9f17fa 	cset	w26, eq	// eq = none
+ 2b4b3c8:	da9f13e8 	csetm	x8, eq	// eq = none
+ 2b4b3cc:	b4000135 	cbz	x21, 2b4b3f0 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615970>
+ 2b4b3d0:	8b15028a 	add	x10, x20, x21
+ 2b4b3d4:	385ff14a 	ldurb	w10, [x10, #-1]
+ 2b4b3d8:	7100bd5f 	cmp	w10, #0x2f
+ 2b4b3dc:	1a9f17eb 	cset	w11, eq	// eq = none
+ 2b4b3e0:	da9f13ea 	csetm	x10, eq	// eq = none
+ 2b4b3e4:	7100bd3f 	cmp	w9, #0x2f
+ 2b4b3e8:	540000c1 	b.ne	2b4b400 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615980>  // b.any
+ 2b4b3ec:	1400002c 	b	2b4b49c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615a1c>
+ 2b4b3f0:	2a1f03eb 	mov	w11, wzr
+ 2b4b3f4:	aa1f03ea 	mov	x10, xzr
+ 2b4b3f8:	7100bd3f 	cmp	w9, #0x2f
+ 2b4b3fc:	54000500 	b.eq	2b4b49c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615a1c>  // b.none
+ 2b4b400:	350004eb 	cbnz	w11, 2b4b49c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615a1c>
+ 2b4b404:	39412008 	ldrb	w8, [x0, #72]
+ 2b4b408:	a9452c09 	ldp	x9, x11, [x0, #80]
+ 2b4b40c:	a9027fff 	stp	xzr, xzr, [sp, #32]
+ 2b4b410:	d341fd0a 	lsr	x10, x8, #1
+ 2b4b414:	7200011f 	tst	w8, #0x1
+ 2b4b418:	91012408 	add	x8, x0, #0x49
+ 2b4b41c:	9a8b0117 	csel	x23, x8, x11, eq	// eq = none
+ 2b4b420:	f9001bff 	str	xzr, [sp, #48]
+ 2b4b424:	9a890156 	csel	x22, x10, x9, eq	// eq = none
+ 2b4b428:	8b1602a8 	add	x8, x21, x22
+ 2b4b42c:	910083e0 	add	x0, sp, #0x20
+ 2b4b430:	91000501 	add	x1, x8, #0x1
+ 2b4b434:	910083fa 	add	x26, sp, #0x20
+ 2b4b438:	94c6dc32 	bl	5d02500 <_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7reserveEm@plt>
+ 2b4b43c:	a9422be8 	ldp	x8, x10, [sp, #32]
+ 2b4b440:	b240035a 	orr	x26, x26, #0x1
+ 2b4b444:	394083e9 	ldrb	w9, [sp, #32]
+ 2b4b448:	927ff90b 	and	x11, x8, #0xfffffffffffffffe
+ 2b4b44c:	7200013f 	tst	w9, #0x1
+ 2b4b450:	528002c9 	mov	w9, #0x16                  	// #22
+ 2b4b454:	d100056b 	sub	x11, x11, #0x1
+ 2b4b458:	d3411d0c 	ubfx	x12, x8, #1, #7
+ 2b4b45c:	9a8b0121 	csel	x1, x9, x11, eq	// eq = none
+ 2b4b460:	f240011f 	tst	x8, #0x1
+ 2b4b464:	9a8a0198 	csel	x24, x12, x10, eq	// eq = none
+ 2b4b468:	cb180029 	sub	x9, x1, x24
+ 2b4b46c:	eb16013f 	cmp	x9, x22
+ 2b4b470:	540006e2 	b.cs	2b4b54c <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615acc>  // b.hs, b.nlast
+ 2b4b474:	cb0102c8 	sub	x8, x22, x1
+ 2b4b478:	910083e0 	add	x0, sp, #0x20
+ 2b4b47c:	8b180102 	add	x2, x8, x24
+ 2b4b480:	aa1803e3 	mov	x3, x24
+ 2b4b484:	aa1803e4 	mov	x4, x24
+ 2b4b488:	aa1f03e5 	mov	x5, xzr
+ 2b4b48c:	aa1603e6 	mov	x6, x22
+ 2b4b490:	aa1703e7 	mov	x7, x23
+ 2b4b494:	97cd9b04 	bl	1eb20a4 <_ZN5physx6pvdsdk15PvdUserRenderer6createEj@@Base+0x2a30c>
+ 2b4b498:	1400004b 	b	2b4b5c4 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615b44>
+ 2b4b49c:	eb1a02a9 	subs	x9, x21, x26
+ 2b4b4a0:	54001843 	b.cc	2b4b7a8 <Java_com_netease_messiah_Font_nativeInitBitmapDC@@Base+0x615d28>  // b.lo, b.ul, b.last
+ 2b4b4a4:	8b0802a8 	add	x8, x21, x8
+ 2b4b4a8:	3941200b 	ldrb	w11, [x0, #72]
+ 2b4b4ac:	a9027fff 	stp	xzr, xzr, [sp, #32]
+ 2b4b4b0:	8b0a0108 	add	x8, x8, x10
+ 2b4b4b4:	a945280c 	ldp	x12, x10, [x0, #80]
+ 2b4b4b8:	eb08013f 	cmp	x9, x8
+ 2b4b4bc:	d341fd6d 	lsr	x13, x11, #1
+ 2b4b4c0:	f9001bff 	str	xzr, [sp, #48]
+ 2b4b4c4:	9a883135 	csel	x21, x9, x8, cc	// cc = lo, ul, last
+ 2b4b4c8:	7200017f 	tst	w11, #0x1
+ 2b4b4cc:	91012408 	add	x8, x0, #0x49
+ 2b4b4d0:	9a8c01b6 	csel	x22, x13, x12, eq	// eq = none
+ 2b4b4d4:	9a8a0117 	csel	x23, x8, x10, eq	// eq = none
+ 2b4b4d8:	8b1602a8 	add	x8, x21, x22
+ 2b4b4dc:	910083e0 	add	x0, sp, #0x20
+ 2b4b4e0:	91000501 	add	x1, x8, #0x1
+ 2b4b4e4:	910083fb 	add	x27, sp, #0x20
+ 2b4b4e8:	94c6dc06 	bl	5d02500 <_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7reserveEm@plt>
+ 2b4b4ec:	a9422be8 	ldp	x8, x10, [sp, #32]
+ 2b4b4f0:	b240037b 	orr	x27, x27, #0x1
+ 2b4b4f4:	394083e9 	ldrb	w9, [sp, #32]
+ 2b4b4f8:	927ff90b 	and	x11, x8, #0xfffffffffffffffe
+ 2b4b4fc:	7200013f 	tst	w9, #0x1

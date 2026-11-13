@@ -1,0 +1,31 @@
+shoff=7156968 shentsize=64 shnum=30 shstrndx=29
+ 0                          type=0          addr=000000000000 off=000000000000 size=000000000000 es=0
+ 1 .note.android.ident      type=7          addr=000000000238 off=000000000238 size=000000000098 es=0
+ 2 .note.gnu.build-id       type=7          addr=0000000002d0 off=0000000002d0 size=000000000024 es=0
+ 3 .dynsym                  type=11         addr=0000000002f8 off=0000000002f8 size=000000047340 es=24
+ 4 .gnu.version             type=1879048191 addr=000000047638 off=000000047638 size=000000005ef0 es=2
+ 5 .gnu.version_r           type=1879048190 addr=00000004d528 off=00000004d528 size=000000000060 es=0
+ 6 .gnu.hash                type=1879048182 addr=00000004d588 off=00000004d588 size=00000001609c es=0
+ 7 .dynstr                  type=3          addr=000000063624 off=000000063624 size=00000007eb79 es=0
+ 8 .rela.dyn                type=1610612738 addr=0000000e21a0 off=0000000e21a0 size=000000280812 es=1
+ 9 .rela.plt                type=4          addr=0000003629b8 off=0000003629b8 size=0000000194a0 es=24
+10 .gcc_except_table        type=1          addr=00000037be58 off=00000037be58 size=00000020cc4c es=0
+11 .rodata                  type=1          addr=000000588b00 off=000000588b00 size=0000009081b0 es=0
+12 protodesc_cold           type=1          addr=000000e90cb0 off=000000e90cb0 size=00000000a4d0 es=0
+13 .eh_frame_hdr            type=1          addr=000000e9b180 off=000000e9b180 size=0000002a97ac es=0
+14 .eh_frame                type=1          addr=000001144930 off=000001144930 size=000000c7badc es=0
+15 .text                    type=1          addr=000001dc0420 off=000001dc0420 size=000003f40494 es=0
+16 __lcxx_override          type=1          addr=000005d008b4 off=000005d008b4 size=00000000010c es=0
+17 .plt                     type=1          addr=000005d009c0 off=000005d009c0 size=000000010de0 es=0
+18 .data.rel.ro             type=1          addr=000005d157c0 off=000005d117c0 size=00000078bf40 es=0
+19 .fini_array              type=15         addr=0000064a1700 off=00000649d700 size=000000000010 es=0
+20 .init_array              type=14         addr=0000064a1710 off=00000649d710 size=0000000027b0 es=0
+21 .dynamic                 type=6          addr=0000064a3ec0 off=00000649fec0 size=000000000210 es=16
+22 .got                     type=1          addr=0000064a40d0 off=0000064a00d0 size=00000000adb8 es=0
+23 .got.plt                 type=1          addr=0000064aee88 off=0000064aae88 size=0000000086f8 es=0
+24 .relro_padding           type=8          addr=0000064b7580 off=0000064b3580 size=000000000a80 es=0
+25 .data                    type=1          addr=0000064bb580 off=0000064b3580 size=000000c7af90 es=0
+26 .PyRuntime               type=1          addr=000007136510 off=00000712e510 size=000000027d70 es=0
+27 .bss                     type=8          addr=00000715e280 off=000007156280 size=000000ef1f30 es=0
+28 .comment                 type=1          addr=000000000000 off=000007156280 size=0000000005a5 es=1
+29 .shstrtab                type=3          addr=000000000000 off=000007156825 size=00000000013d es=0

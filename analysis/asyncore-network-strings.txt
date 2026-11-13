@@ -1,0 +1,603 @@
+ 5f0160 [MovingSelector2D SlaveNodeID=%s ParamCnt=%d] (BipedRot=%.4f)
+ 5f0204 TraverseEdge
+ 5f0420 SetGameObjectOnMultiplePositions
+ 5f0f8b libunwind: unsupported .eh_frame_hdr version: %u at %lx
+ 5f12a4 TkFrameworkImpl::createJoint: desc.chunkIndices[0] is not a support chunk in the asset for desc.families[0].  Joint not created.
+ 5f1350 static const char *physx::shdfnd::ReflectionAllocator<physx::pvdsdk::PvdDefaultSocketTransport>::getName() [T = physx::pvdsdk::PvdDefaultSocketTransport]
+ 5f1457 Failed to connect to %s port %u after %ld ms: %s
+ 5f1488 gzip
+ 5f148d localhost
+ 5f154c Shuffling %i addresses
+ 5f1563 Host:%s
+ 5f15eb Unsupported HTTP version (%u.%d) in response
+ 5f1618 Mark bundle as not supporting multiuse
+ 5f169f Excessive server response line length received, %zd bytes. Stripping
+ 5f1732 Failed to resolve "%s" for SOCKS5 connect.
+ 5f175d Failed to receive SOCKS5 connect request ack.
+ 5f187b No connections available.
+ 5f18c2 Protocol "%s" not supported or disabled in libcurl
+ 5f1915 Connecting to hostname: %s
+ 5f1953 Server finished
+ 5f1e01 FieldDescriptorProto.extendee not set for extension field.
+ 5f1e86 src/External/protobuf/src/google/protobuf/descriptor.h
+ 5f1f8e Unsupported
+ 5f20ee VariablePointers capability is not supported in GLSL.
+ 5f214f AddressingModelPhysicalStorageBuffer64EXT must be used for PhysicalStorageBufferEXT.
+ 5f22fe Float -> Int bitcast not supported on legacy ESSL.
+ 5f234f gl_SampleMask/gl_SampleMaskIn not supported before GLSL 400.
+ 5f23c2 OpFRem requires trunc() and is only supported on non-legacy targets. A workaround is needed for legacy.
+ 5f242a textureQueryLevels not supported in ES profile.
+ 5f2471 Only 1D, 2D, 2DRect, 3D, Buffer, InputTarget and Cube textures supported.
+ 5f24e4 Kernel capability not supported.
+ 5f2505 OpConstantComposite only supports 1, 2, 3 and 4 elements.
+ 5f2724 unsupported encoding: %s
+ 5f282e Unsupported combination of parameters
+ 5f29f8 multiplier
+ 5f2a50 rpc_arg_tuple.init_script type is not ready(%s)
+ 5f2c4d [asiocore] call_server_new args should be tuple
+ 5f2deb Prevent-NonDelivery-Report
+ 5f2e2a X400-Recipients
+ 5f2e3a Internal Server Error
+ 5f2f24 traceroute
+ 5f2fb5 HTTP/1.1 505 HTTP Version Not Supported
+ 5f2ff8 <multiple>
+ 5f309d ClipParam
+ 5f30c0 AddRoadwayNode
+ 5f327c ExportPhysicsSceneWithUUID
+ 5f32ca GenTexCubeMipMap
+ 5f330b INavigateObstacle
+ 5f33eb MipLevels
+ 5f37a0 WheelSuspensionElongatedThreshold
+ 5f3df2 vkFreeDescriptorSets
+ 5f3ebe RigidBody::setRigidBodyFlag: kinematic bodies with CCD enabled are not supported! CCD will be ignored.
+ 5f493d static const char *physx::shdfnd::ReflectionAllocator<physx::Cm::DelegateTask<physx::Sc::Scene, &physx::Sc::Scene::ccdBroadPhase>>::getName() [T = physx::Cm::DelegateTask<physx::Sc::Scene, &physx::Sc::Scene::ccdBroadPhase>]
+ 5f5104 pipeline->GetOwner()->IsMainRenderViewport()
+ 5f5ad6 whence value %d unsupported
+ 5f5c8a executescript
+ 5f5d48 Value is not a SSLSession.
+ 5f5d63 Cannot set session for server-side SSLSocket.
+ 5f5e10 DIGEST_AND_KEY_TYPE_NOT_SUPPORTED
+ 5f6027 UNSUPPORTED_MASK_ALGORITHM
+ 5f6068 CIPHER_OR_HASH_UNAVAILABLE
+ 5f60cd SSL_SESSION_ID_CONFLICT
+ 5f6181 ALERT_DESCRIPTION_CERTIFICATE_UNOBTAINABLE
+ 5f61c5 HOSTFLAG_ALWAYS_CHECK_SUBJECT
+ 5f630d bytes length not a multiple of item size
+ 5f674c TIPC_TOP_SRV
+ 5f677d IPPROTO_PUP
+ 5f679c INADDR_NONE
+ 5f67a8 IP_OPTIONS
+ 5f67ef connect_ex
+ 5f6806 %s(): unsupported CAN protocol
+ 5f6862 algset is only supported for AF_ALG
+ 5f689a gethostbyname
+ 5f68a8 gethostname
+ 5f68b4 socket.gethostname
+ 5f6940 zdict argument must support the buffer protocol
+ 5f6b49 Import can't find module, or can't find name in module.
+ 5f6bb7 Please report this to the Python maintainer, along with the traceback,
+ 5f77d9 absolute_import
+ 5f783e _install_importlib
+ 5f78bc siphash13
+ 5f78f4 import _frozen_importlib # frozen
+ 5f7917 Failed to retrieve BuiltinImporter
+ 5f79f8 _aix_support
+ 5f7d69 TransitionFlipX
+ 5f7d79 TransitionZoomFlipAngular
+ 5f7eac SCRIPTEVENTTYPE_KMENUCLICKEDEVENT
+ 5f7f20 multiply
+ 5f80e9 ccext.CCBAnimationManagerDelegate
+ 5f866f addJoystickConnectEventListener
+ 5f8771 setSkipInvisible
+ 5f87ec MImporter.finder.get_encrypt_name_with_path
+ 5f8840 SendCheckedOrderToUnisdkServer
+ 5f8922 EmojiParserWrap
+ 5f8b31 IsSupportMSAA
+ 5f8b83 ToggleBudgetSupport
+ 5f8ccb EnableDepthClip
+ 5f8fd0 Number of rows per strip
+ 5f93ce [AAudio] Device Disconnected. Failed to post job for rerouting.
+ 5f98ed ENGINE_get_cipher
+ 5f9a7d nsCaPolicyUrl
+ 5f9a8b nsSslServerName
+ 5f9ac4 ripemd160
+ 5f9c1f SEED-OFB
+ 5f9df5 unsupported pkcs12 mode
+ 5f9fda IPAddressChoice
+ 5fa270 src/External/openssl/openssl/ssl/ssl_ciph.c
+ 5fa2a5 serverpref
+ 5fa2b0 ServerPreference
+ 5fa2c1 ciphersuite_cb
+ 5fa2f5 ossl_statem_server_write_transition
+ 5fa364 tls1_set_server_sigalgs
+ 5fa3ea at least TLS 1.0 needed in FIPS mode
+ 5fa499 serverhello tlsext
+ 5fa62c GetNumPipePackets
+ 5fa81c ClipDistance
+ 5fa959 copy-propagate-arrays
+ 5faad8 Vulkan spec doesn't allow BuiltIn Layer and ViewportIndex to be used for variables with Input storage class if execution model is Vertex, TessellationEvaluation, Geometry, or MeshNV.
+ 5faf34 AddressQualifier must be a 32-bit unsigned integer OpConstant
+ 5fb3a8 Geometry execution model entry points must specify exactly one of OutputPoints, OutputLineStrip or OutputTriangleStrip execution modes.
+ 5fca77 SupportMultipleUV
+ 5fcc0a Not supported yet.
+ 5fccb7 S_VIEWPORT_INDEX
+ 5fcdcb Script
+ 5fce7a EnableMipMap
+ 5fd144 unsupported arm64 register
+ 5fd15f unsupported restore location for register
+ 5fd799 LOGIN
+ 5fd7a8 Instructs server to resume from offset %ld
+ 5fd7d3 Connect data stream passively
+ 5fd7fc Chunky upload is not supported by HTTP 1.0
+ 5fd84a HTTP/1.1 proxy connection set close!
+ 5fd8f4 Refusing to issue an RTSP SETUP without a Transport: header.
+ 5fd9d8 %s (unsupported)
+ 5fda14 Excess found: excess = %zd url = %s (zero-length body)
+ 5fdb6f SUPERSCRIPT_X
+ 5fdc59 The current session is closing
+ 5fdce3 ldpc_rand: ERROR, seed (%llu) out of range
+ 5fde4e google.protobuf.Method.request_type_url
+ 5fe2a3 Component decoration is not supported in targets below GLSL 1.40.
+ 5fe5ce texelFetch not supported in legacy ES
+ 5fe6c0 reportIntersectionEXT
+ 5fe93b unsupported use of NULLS %s
+ 5fea13 RIGHT and FULL OUTER JOINs are not currently supported
+ 5fea78 unsupported frame specification
+ 5fed79 async_udp_ping.init_script type is not ready(%s)
+ 5fedaa async_websocket_connection.init_script type is not ready(%s)
+ 5feed6 [asiocore] %s unsupported type(%s)
+ 5fef41 Content-Description
+ 5ff299 Clip
+ 5ff4cb DoImport
+ 5ff761 MipLevelOffset
+ 5ffc8d Viewport
+ 5fffbc Load Vulkan exported functions failed.
+ 60062f TmpAllocExportData
+ 600bf9 mFrictionVsSlipGraphRecipx1Minusx0
+ 600df2 mAggregateIDOwnerClient
+ 600e6b src/External/PhysX3_4/BuildFilesPhysX3_4/PhysXSDK_3_4/../../PhysX_3.4/Source/SimulationController/src/ScContactReportBuffer.h
+ 601e9f Unsupported integrity check
+ 601f7b user-defined aggregate's 'finalize' method not defined
+ 601ff2 sqlite3.NotSupportedError
+ 6021f5 UNSUPPORTED_PRIVATE_KEY_ALGORITHM
+ 6022db CANNOT_CHANGE_CIPHER
+ 6023d0 INVALID_IPADDRESS
+ 602654 EADDRINUSE
+ 602805 PC_PIPE_BUF
+ 60293b VMADDR_CID_ANY
+ 602973 TIPC_ADDR_ID
+ 6029a1 INADDR_ALLHOSTS_GROUP
+ 6029b7 IP_DROP_MEMBERSHIP
+ 6029d1 %s(): AF_TIPC address must be tuple, not %.500s
+ 602a01 wildcard resolved to multiple address
+ 602bc4 classmethod_descriptor
+ 602bdb <descriptor>.__objclass__.__qualname__ is not a unicode object
+ 602c6e ImportError
+ 602d1d object address  : %p
+ 60303b Format strings are only supported in Python 3.6 and greater
+ 603077 unterminated triple-quoted string literal (detected at line %d)
+ 60349e '%.200s' object does not support the context manager protocol
+ 6036c9 importlib.machinery
+ 603754 <frozen importlib._bootstrap_external>
+ 603c64 cc.LayerMultiplex
+ 603ec9 PLATFORM_OS_IPAD
+ 603f86 updateInSkipFrame
+ 603ffd isFlippedX
+ 60405a setSkipDraw
+ 604214 CCBREADER_SIZETYPE_MULTIPLY_RESOLUTION
+ 604618 isClippingParentContainsPoint
+ 6049d6 MImporter.finder.get_relpath_with_path
+ 604a9c HasLogin
+ 604b68 GetTooltipsWin
+ 604d01 SetClipboardText
+ 604dfa GetFrameScriptTime
+ 604e7b LinkSemanticToAffiliatedViewport
+ 605336 <LayerMultiplex | Tag = %d, Layers = %d
+ 6053b4 clipsToBounds
+ 6053c2 src/External/cocos2d/cocos/editor-support/cocostudio/CCArmatureAnimation.cpp
+ 605433 flipX
+ 6054ee Scan script does not transmit all data
+ 605b10 Format not supported
+ 605c4f BIO_get_host_ip
+ 605d12 CMS_RecipientInfo_kari_get0_alg
+ 605d5c not key transport
+ 605d6e unsupported recipientinfo type
+ 605fb2 data not multiple of block length
+ 6060f6 sbgp-ipAddrBlock
+ 606107 sbgp-routerIdentifier
+ 6061f8 msSmartcardLogin
+ 606209 Microsoft User Principal Name
+ 6062c9 x121Address
+ 60639e SipHash
+ 60642b unsupported key components
+ 606485 pkcs12 cipherfinal error
+ 606670 search only supported for directories
+ 6068d1 DHE-RSA-SEED-SHA
+ 6068e2 ADH-SEED-SHA
+ 60694d dtls_construct_change_cipher_spec
+ 60698f SSL_CTX_set_cipher_list
+ 6069c6 SSL_set_session_id_context
+ 606b0d no ciphers available
+ 606b22 Peer haven't sent GOST certificate, required for selected ciphersuite
+ 606b68 no shared cipher
+ 606b79 psk no server cb
+ 606d72 SubgroupAvcSicGetBestIpeLumaDistortionINTEL
+ 606dd9 OpenCL.DebugInfo.100 debug imported entity
+ 606edd ClipDistancePerViewNV
+ 606f08 ShaderViewportIndexLayerNV
+ 6079cc [VUID-ViewportIndex-ViewportIndex-04404] 
+ 607b67 [LookAt SlaveNodeID=%s ParamCnt=%d] (Pitch=%.4f, Yaw=%.4f, BlendRatio=%.4f, PitchFilterWeight=%.4f, YawFilterWeight=%.4f, PitchFilterMultiplier=%.4f, YawFilterMultiplier=%.4f)
+ 6082d8 SupportVertexColor
+ 6082eb SupportTangent
+ 608507 SPIR-V error: Mul on integer types not supported yet.
+ 608b15 INLINE_COMPOSITE list with non-STRUCT elements not supported.
+ 608fa8 x-gzip
+ 609041 Can't resolve proxy host %s:%hu
+ 609097 multipart/form-data
+ 6090c9 Proxy-Connection: Keep-Alive
+ 60910d Proxy CONNECT aborted due to timeout
+ 60918d Server returned nothing (no headers, no data)
+ 6092cf Alt-svc connecting from [%s]%s:%d to [%s]%s:%d
+ 60930d user + domain + host name too big
+ 60933e SSL connection using %s / %s
+ 60938e SSL Engine not supported
+ 609484 skippable
+ 6097f8 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
+ 60990d Unsupported: type mismatch
+ 609aaa MipMapLinearLinear
+ 609b68 line_strip
+ 609b8c Attempting to use image format not supported in ES profile.
+ 609df8 Uint -> Float bitcast not supported on legacy ESSL.
+ 609e50 gl_SamplePosition not supported before GLSL 400.
+ 60a290 Don't support cast type 
+ 60a3f5 unzipPackageFile
+ 60a406 unzipObbFile
+ 60a42a AndroidPlatform getAudioSessionRouteStatus
+ 60a50f importSoftBoneChains
+ 60a54c rpc_arg_bool.init_script type is not ready(%s)
+ 60a57b rpc_arg_any.init_script type is not ready(%s)
+ 60a5d5 set_login_key
+ 60a7e7 [asiocore] %s append unsupported type(%s)
+ 60a935 Gateway Timeout
+ 60a945 handle_connect_mh_common
+ 60aad2 send_connect_server
+ 60abbe %s connect failed, errno: %d
+ 60af5a ForcePrinciple
+ 60af69 FrictionVsSlip00
+ 60b1c0 RandomSeed
+ 60bc2e vkCmdPipelineBarrier
+ 60c6c7 Meshmerizer::extractHullPolygons: line strip extraction failed
+ 60cd7a AccountManager GetDnsNameserver
+ 60ceb9 GetConnectingMark
+ 60d45f INavigateTrigger
+ 60d47a SetGameObjectMultiplePositions
+ 60d8e2 skipkeys
+ 60d8f8 Integrity checks are only supported by FORMAT_XZ
+ 60dbf5 The operation did not complete (connect)
+ 60dce3 CURVE_DOES_NOT_SUPPORT_ECDH
+ 60ddf7 CIPHERSUITE_DIGEST_HAS_CHANGED
+ 60de2c NO_CIPHER_MATCH
+ 60de3c NO_SHARED_CIPHER
+ 60de6f SSL_SESSION_ID_TOO_LONG
+ 60dec9 UNSUPPORTED_SSL_VERSION
+ 60e07f EADDRNOTAVAIL
+ 60e398 AF_ROUTE
+ 60e3b1 SOL_IP
+ 60e3b8 IPPROTO_EGP
+ 60e3c4 IPPROTO_GRE
+ 60e3d0 IPPROTO_ESP
+ 60e40e unknown address family
+ 60e576 '%.200s' object does not support indexing
+ 60e5a0 unsupported operand type(s) for %.100s: '%.100s' and '%.100s'
+ 60f0fa      | Subscript(expr value, expr slice, expr_context ctx)
+ 60f41e required field "slice" missing from Subscript
+ 60f625 importlib._bootstrap
+ 60f701 <frozen importlib._bootstrap>
+ 60f71f import time: self [us] | cumulative | imported package
+ 60f764 config_init_hash_seed
+ 60f840 import _imp # builtin
+ 60fb23 Use TransitionZoomFlipY::create() instead
+ 60fdab multiply2
+ 6105fe MImporter.decrypt_string
+ 610617 MImporter.finder._create_module
+ 610952 GetEngineScriptStutterCount
+ 610b48 ShaderGraphPipelineState
+ 611629 getsockname truncated address
+ 611647 no port defined
+ 6119d3 EVP_CIPHER_CTX_set_key_length
+ 611c64 postalAddress
+ 611dcb PKCS7_RECIP_INFO_set
+ 611e36 unsupported mask algorithm
+ 611fde X400Name:<unsupported>
+ 61222a legacy_server_connect
+ 612240 SessionTicket
+ 612272 ossl_statem_server_post_process_message
+ 6122a4 ssl_create_cipher_list
+ 6122bb SSL_CTX_set_session_id_context
+ 61230c tls13_change_cipher_state
+ 612326 tls1_change_cipher_state
+ 61233f tls_construct_change_cipher_spec
+ 6123c7 tls_parse_stoc_server_name
+ 61243f missing supported groups extension
+ 61263f ReserveWritePipePackets
+ 612677 GetKernelPreferredWorkGroupSizeMultiple
+ 612857 SkipTrianglesKHR
+ 61288d DescriptorSet
+ 612d2a IterationMultiple loop control operand must be greater than zero
+ 612e10 A module-scope OpVariable with initialization value cannot be marked with the Import Linkage Type.
+ 612e73 These variables must have DescriptorSet and Binding decorations specified
+ 612fb4  can only be used with physical addressing models
+ 61376f Unsupported encoding, only PCM, ADPCM, and Vorbis are supported
+ 61387b DockingConnect
+ 6146fc SV_ViewportArrayIndex
+ 614814 SPIR-V error: Intrinsic 'transpose' on integer types not supported yet.
+ 614b28 MipFilter
+ 614e20 "INLINE_COMPOSITE of lists is not yet supported."
+ 614eb0 Input strings must be a multiple of the segment size %i in length
+ 614f16 MODE_PGP is not supported anymore
+ 61509a TkFrameworkImpl::reportIDChanged: object with new ID already exists.
+ 6152ad Server
+ 6152dd Ignoring Content-Length in CONNECT %03d response
+ 61530e Proxy replied %d to CONNECT request
+ 615332 LOGIN %s %s
+ 615445 Can't complete SOCKS5 connection to %s. (%d)
+ 615472 Requested range was not delivered by the server
+ 61559f glyph-to-script-map
+ 6155b3 postscript-font-name
+ 6155c8 random-seed
+ 6157d8 CONNECT_ERROR
+ 615b1b google.protobuf.Method.response_type_url
+ 615ef4 Only 32-bit integers and booleans are currently supported when evaluating specialization constants.
+ 6160bc Component decoration is not supported in ES targets.
+ 6161fa Sparse residency is not supported in ESSL.
+ 61647f #error GL_ARB_shader_draw_parameters is not supported.
+ 616894 Also supports ultra-fast levels from -100 (fastest) to -1 (less fast) since module compiled with ZSTD 1.3.4+.
+ 616ae3 gotoUrl
+ 616b84 importDynamicBoundingBox
+ 616bfb rpc_arg_long.init_script type is not ready(%s)
+ 616c2a rpc_arg_float.init_script type is not ready(%s)
+ 616c5a binded_prop.init_script type is not ready(%s)
+ 616c88 async_kcp_connection
+ 616c9d telnet_writer.init_script type is not ready(%s)
+ 616fcb Already Reported
+ 617020 on_check_connect_timer
+ 61704d disconnect_one
+ 617094 ; server_max_window_bits=
+ 617489 ConnectedAreas
+ 61753e DissolveTransitionViewport
+ 617ac4 TextureMip6
+ 617efe Not supported yet!!!!
+ 617f9c vkDestroyPipelineCache
+ 617fb3 vkCreateGraphicsPipelines
+ 617ff0 static const char *physx::shdfnd::ReflectionAllocator<physx::NpConnector>::getName() [T = physx::NpConnector]
+ 61805e PxAggregate: can't add articulation to aggregate, articulation already belongs to an aggregate
+ 6180f8 PxBatchQuery::release: This batch is still executing, skipping release
+ 618225 mConnectorArray
+ 6188bd Cannot export names during exportData.
+ 618966 StiffnessMultiplier
+ 6199ec PhotoManager SetMaxClipSize
+ 619b02 libbzip2 was not compiled correctly
+ 619f50 get_ciphers
+ 619f5c connect_renegotiate
+ 619fcc UNSUPPORTED_IP_FAMILY
+ 61a053 UNIMPLEMENTED_CIPHER
+ 61a082 CIPHER_IS_NULL
+ 61a13d BAD_CHANGE_CIPHER_SPEC
+ 61a223 SESSION_ID_CONTEXT_UNINITIALIZED
+ 61a2bf UNSUPPORTED_OPTION
+ 61a5fd multi-byte encodings are not supported
+ 61a6bc NETLINK_ROUTE
+ 61a6ca AF_QIPCRTR
+ 61a71b IPPROTO_RSVP
+ 61a728 INADDR_LOOPBACK
+ 61a738 IPV6_HOPLIMIT
+ 61a779 AI_NUMERICHOST
+ 61a827 illegal IP address string passed to inet_aton
+ 61a855 invalid length of packed IP address string
+ 61a935 unsupported operand type(s) for %.100s: '%.100s' and '%.100s'. Did you mean "print(<message>, file=<output_stream>)"?
+ 61ab13 descriptor '%V' needs a type, not '%s', as arg 2
+ 61b1bf field 'ctx' is required for Subscript
+ 61b233 ImportFrom
+ 61b364 ImportFrom(identifier? module, alias* names, int? level)
+ 61b4d4 Import field "names" changed size during iteration
+ 61b6e2 cannot import name %R from partially initialized module %R (most likely due to a circular import) (%S)
+ 61b7e6 multiple starred expressions in sequence pattern
+ 61bb49 ipaddress
+ 61be49 FlipY3D
+ 61bf35 cannot resolve overload function in pycocos_cocos2dx_TransitionFlipX_create_static
+ 61bf88 cannot resolve overload function in pycocos_cocos2dx_TransitionFlipAngular_create_static
+ 61bfe1 TransitionZoomFlipX
+ 61c01e cannot resolve overload function in pycocos_cocos2dx_ClippingNode_create_static
+ 61c1d3 SCRIPTEVENTTYPE_KNODEEVENT
+ 61c235 getNegated
+ 61c4b7 CCBREADER_SCALETYPE_MULTIPLY_RESOLUTION
+ 61c8b6 isPropagateTouchEvents
+ 61ca98 RemoveConnectedNode
+ 61cb4c MImporter.inspect_ismodule
+ 61cf5a RequestPortraitOrientation
+ 61d37b DCT scaled block size %dx%d not supported
+ 61d3d8 Bytes per compressed strip
+ 61d878 Failed to retrieve data buffer connector. Unknown data supply type.
+ 61d8c2 Connection: keep-alive
+ 61d8f5 ReadSkippableFrames: period=%u, count=%u
+ 61dabc gethostbyname addr is not af inet
+ 61db2b CMS_add0_recipient_password
+ 61db8e CMS_RecipientInfo_kari_get0_reks
+ 61dbaf CMS_RecipientInfo_set0_pkey
+ 61df29 nsRenewalUrl
+ 61e166 ipsecIKE
+ 61e16f sendRouter
+ 61e2cd no recipient matches certificate
+ 61e46d SSL Server
+ 61e4e3 Email address mismatch
+ 61e8d5 tls_process_change_cipher_spec
+ 61e91b invalid serverinfo data
+ 61e96a tlsv1 unsupported extension
+ 61ea64 GroupReserveWritePipePackets
+ 61eb46 SamplerImageAddressingModeNV
+ 61ed5d Pipes
+ 61f3f0 DescriptorSet must be a 32-bit unsigned integer OpConstant
+ 61fd0c suspelongated
+ 61ff7e static std::string_view Messiah::constexpr_typename_base<Messiah::IPhysicsCollidableBody *(Messiah::IObject::*)() noexcept>::__name() [_type = Messiah::IPhysicsCollidableBody *(Messiah::IObject::*)() noexcept]
+ 6203f2 SPIR-V error: Mesh shader intrinsics are not supported yet.
+ 62065c EnableReport
+ 620b59 unsupported restore location for float register
+ 620d7b Crypto.Cipher._AES
+ 620d8e Unknown cipher feedback mode %i
+ 620fce gzip error
+ 62106a sa_addr inet_ntop() failed with errno %d: %s
+ 621188 Got DISCONNECT
+ 621197 login
+ 621219 connection to proxy closed
+ 621234 SOCKS5 connect to %s:%d (remotely resolved)
+ 621292 Failed to shut down the SSL connection
+ 621320 Connection died, retrying a fresh connect (retry count: %d)
+ 62135c No more connections allowed to host %s: %zu
+ 621388 No connections available in cache
+ 6213c4 host=%s
+ 621422 SSL connection timeout
+ 621439 TLS change cipher
+ 621c74 Buffer block cannot be expressed as any of std430, std140, scalar, even with enhanced layouts. You can try flattening this block to support a more flexible layout.
+ 621d18 SSBOs not supported in legacy targets.
+ 621eaa Unsupported legacy texture op: 
+ 621eca roundEven supported only in ESSL 300.
+ 621fab textureQueryLod not supported in ES profile.
+ 622040 Only StorageClassPhysicalStorageBufferEXT is supported by OpConvertUToPtr.
+ 6224cf ROIPooling
+ 6224ef CpuBinary: unsupported data type (bits: %d, code: %d)
+ 62258e Invalid Tensor, the session may not be ready
+ 6226a4 EXPOSED_TO_SERVER
+ 6226ba async_kcp_connection.init_script type is not ready(%s)
+ 6226f1 async_websocket_connection
+ 62270c asiocore.set_login_key(key, ispub)
+ 62272f 	set login key for encrypt
+ 6228c2 send_position_to_server_sync
+ 6228df [asiocore] unsupported args type %s
+ 622a87 HTTP Version Not Supported
+ 622aa2 handle_connected
+ 622ab3 connected_timeout
+ 622afe do_connect
+ 622b3c The WebSocket handshake Connection field is missing the upgrade token
+ 622ba1 connect_server
+ 622bd2 dump_mmap_stats in release build is not supported!
+ 622c99 MemorySaver::Skip
+ 622ec3 Export
+ 62333a SupportedChanged
+ 623439 cClipToView
+ 6235c7 IPhysicsDynamicRB
+ 62385c PxAggregate: can't add actor to aggregate, max number of actors reached
+ 6238a4 PxAggregate: can't add articulation link to aggregate, only whole articulations can be added
+ 623af3 eREPORT_TO_FOREIGN_CLIENTS_SCENE_QUERY
+ 623c36 MBP::addRegion: max number of regions reached.
+ 6240ac mRecipMOI
+ 62415d FrictionVsSlipGraphRecipx2Minusx1
+ 62447a static const char *physx::shdfnd::ReflectionAllocator<physx::Sc::ActorPairReport *>::getName() [T = physx::Sc::ActorPairReport *]
+ 62450e ScScene.setEdgesConnectedTask
+ 6245b5 static const char *physx::shdfnd::ReflectionAllocator<physx::Cm::DelegateTask<physx::Sc::Scene, &physx::Sc::Scene::postCCDPass>>::getName() [T = physx::Cm::DelegateTask<physx::Sc::Scene, &physx::Sc::Scene::postCCDPass>]
+ 624a61  teleport 
+ 624aea TargetUrlOffset
+ 625679 deallocated BytesIO object has exported buffers
+ 6258c7 REVERSE_IMPORT_MAPPING
+ 625ad8 GF2M_NOT_SUPPORTED
+ 625b19 UNSUPPORTED_NUMBER_OF_ROUNDS
+ 625cb7 SSLV3_ALERT_UNSUPPORTED_CERTIFICATE
+ 625cdb SSL_SESSION_ID_HAS_BAD_LENGTH
+ 625ec9 cannot resize an array that is exporting buffers
+ 626228 TIPC_ADDR_NAME
+ 62624d IP_MULTICAST_TTL
+ 62625e IPV6_LEAVE_GROUP
+ 62626f IPV6_V6ONLY
+ 62627b IPV6_PKTINFO
+ 626288 IPV6_RECVHOPLIMIT
+ 6263f1 descriptor '%V' for '%.100s' objects doesn't apply to a '%.100s' object
+ 6264a6 ConnectionResetError
+ 6264d2 Base class for warnings about probable mistakes in module imports
+ 62652c file descriptor cannot be a negative integer (%i)
+ 626683 module %s has multiple create slots
+ 6269b5 field 'value' is required for Subscript
+ 626b4e ImportFrom field "names" changed size during iteration
+ 626de8 multiple starred expressions in assignment
+ 6273b7 FlipX3D
+ 627751 SCRIPTEVENTTYPE_KTOUCHESEVENT
+ 6278a3 setFlippedX
+ 627f29 setJavascriptInterfaceScheme
+ 627fd1 src/Runtime/Plugins/Python/Source/MImporter_py3.cpp
+ 62813f AddRemotePatchList
+ 6281c1 clip_name can not be none
+ 6282ee Failed To SetClipboard Text: %s
+ 6283fe GetShaderScriptStatistics
+ 628665 UIScript/
+ 6286d0 yCoordFlipped
+ 628b46 Address family not supported
+ 628b97 [AAudio] Failed to start stream after route change, retrying(%d)
+ 628d1a streaming not supported
+ 628e03 CMS_add1_ReceiptRequest
+ 628e1b CMS_RecipientInfo_set0_password
+ 628e3b cipher initialisation error
+ 628ebc log conf missing description
+ 62923a invalid fips mode
+ 62924c operation not supported for this keytype
+ 6292d0 Netscape Renewal Url
+ 62932b id-smime-ct-receipt
+ 6293b2 ipsecTunnel
+ 6293be IPSec Tunnel
+ 62963e id-tc26-cipher-gostr3412-2015-kuznyechik-ctracpkm-omac
+ 629718 server response parse error
+ 62981c operation not supported on this type
+ 62986b OSSL_STORE_INFO_set0_NAME_description
+ 6299b3 src/External/openssl/openssl/crypto/x509v3/v3_addr.c
+ 629a3c v2i_IPAddrBlocks
+ 629b9b TLS_DH_anon_WITH_SEED_CBC_SHA
+ 629cc3 final_server_name
+ 629de7 not server
+ 629e3e unknown cipher type
+ 629f21 Invalid extended instruction import '
+ 62a0f5 SubgroupAvcSicConfigureIpeLumaChromaINTEL
+ 62a11f SubgroupAvcSicSetBlockBasedRawSkipSadINTEL
+ 62a14a FixedRecipINTEL
+ 62a24d ShaderViewportMaskNV
+ 62ad0d : expected Memory Semantics to include a Vulkan-supported storage class
+ 62b0e4 AK::SpatialAudio::SetGeometry - Triangle number %i is skipped because it is invalid; two or more of its vertices are at the same position.
+ 62b432 LodGroupComponent : UnSupportPrimitiveType %s
+ 62b7a0 BeginTeleport
+ 62bd29 @_CLIPPING
+ 62beeb SPIR-V error: Ray query intrinsics are not supported yet.
+ 62c1da HMotionBlurLevel
+ 62c272 MipGenPreset
+ 62c8ce DW_EH_PE_aligned pointer encoding not supported
+ 62cabe Crypto.Cipher._ARC4
+ 62caf0 Crypto.Cipher._DES
+ 62cfa1 Unsupported SASL authentication mechanism
+ 62cfde unsupported parameter to CURLOPT_FTPSSLAUTH: %d
+ 62d036 Skipping time comparison
+ 62d04f Connection:
+ 62d0b6 allocate connect buffer!
+ 62d1db Connection #%ld is still name resolving, can't reuse
+ 62d233 WARNING: failed to configure server name indication (SNI) TLS extension
+ 62d28b old SSL session ID is stale, removing
+ 62d2d4 RAW_SUBSCRIPT_X
+ 62d503 no4cycle mode is no longer supported!
+ 62d690 libpng does not support gamma+background+rgb_to_gray
+ 62d7b8 src/External/protobuf/src/google/protobuf/descriptor.cc
+ 62d7f0 CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size): 
+ 62de5f Backend does not support native pointers and does not support OpPtrAccessChain.
+ 62e21f The model buffer has been released. Can't resize session
+ 62e378 HipOffsetRotWithClav
+ 62e3f6 SERVER_ONLY
+ 62e47d 	set kcp connection magic number
+ 62e6a7 %s connect timeout
+ 62e71d src/External/boost/boost/beast/core/impl/static_buffer.ipp
+ 62e89d %s disconnected
+ 62e8c7 Messiah Server
+ 62e9ab AreaConnected
+ 62ec23 GenTex3DMipMap
+ 62ecae IsSupported
+ 62f376 VkPipeline.cache
+ 62f3b1 vkCreateComputePipelines
+ 62f3e4 kernelRadiusMultiplier
+ 62fa7c Hit warnings or errors: skipping further verbose output.
+ 62fbca RecipMOI
+5f9f2c8 __import__
+5f9f508 __ipow__
+5fa1860 importlib
+5fa2be8 zipimporter

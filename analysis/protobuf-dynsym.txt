@@ -1,0 +1,2 @@
+   365: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND AAsset_openFileDescriptor64
+  2230: 00000000043f48ec   136 FUNC    GLOBAL DEFAULT   15 ma_calculate_buffer_size_in_frames_from_descriptor

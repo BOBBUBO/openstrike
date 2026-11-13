@@ -1,0 +1,155 @@
+Android (12470979, +pgo, +bolt, +lto, +mlgo, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+[file: decompiled/native/lib/arm64-v8a/libAndroidCrashHandler.so]
+http://www.mp3dev.org/
+Android (6317467 based on r365631c1) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project e0caee08e5f09b374a27a676d04978c81fcb1928) (based on LLVM 9.0.8svn)
+[file: decompiled/native/lib/arm64-v8a/libAudioCCReName.so]
+Android (6317467 based on r365631c1) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project e0caee08e5f09b374a27a676d04978c81fcb1928) (based on LLVM 9.0.8svn)
+[file: decompiled/native/lib/arm64-v8a/libAudioCore.so]
+https://gate.cc.163.com/userlogin/get_ex_linkd
+http://audiouser.cc.163.com/v1/sdkctrl/check
+Android (6317467 based on r365631c1) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project e0caee08e5f09b374a27a676d04978c81fcb1928) (based on LLVM 9.0.8svn)
+[file: decompiled/native/lib/arm64-v8a/libAudioEngine.so]
+Android (6317467 based on r365631c1) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project e0caee08e5f09b374a27a676d04978c81fcb1928) (based on LLVM 9.0.8svn)
+[file: decompiled/native/lib/arm64-v8a/libAudioMNN.so]
+Android (6317467 based on r365631c1) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project e0caee08e5f09b374a27a676d04978c81fcb1928) (based on LLVM 9.0.8svn)
+[file: decompiled/native/lib/arm64-v8a/libAudioProcessing.so]
+Android (6317467 based on r365631c1) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project e0caee08e5f09b374a27a676d04978c81fcb1928) (based on LLVM 9.0.8svn)
+[file: decompiled/native/lib/arm64-v8a/libAudioWebRTC.so]
+https://statlog.cc.163.com/query
+http://statlog.cc.netease.com/query
+cc.fp.ps.netease.com##cc.fp.ps.easebar.com##cc.devfp.ps.netease.com##cc.devfp.ps.easebar.com
+http://
+ unzip 1.01 Copyright 1998-2004 Gilles Vollant - http://www.winimage.com/zLibDll
+ zip 1.01 Copyright 1998-2004 Gilles Vollant - http://www.winimage.com/zLibDll
+# Your HSTS cache. https://curl.se/docs/hsts.html
+# Your alt-svc cache. https://curl.se/docs/alt-svc.html
+# https://curl.se/docs/http-cookies.html
+Android (6317467 based on r365631c1) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project e0caee08e5f09b374a27a676d04978c81fcb1928) (based on LLVM 9.0.8svn)
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+[file: decompiled/native/lib/arm64-v8a/libCommonLib.so]
+google.protobuf.Api.version
+src/External/openfec/openfec/src/lib_stable/reed-solomon_gf_2_8/of_reed-solomon_gf_2_8_api.c
+http://ns.adobe.com/xap/1.0/
+src/External/openfec/openfec/src/lib_common/of_openfec_api.c
+src/External/openfec/openfec/src/lib_stable/2d_parity_matrix/of_2d_parity_api.c
+google.protobuf.Api.name
+[Clang 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)]
+src/External/openfec/openfec/src/lib_stable/reed-solomon_gf_2_m/of_reed-solomon_gf_2_m_api.c
+http://www.w3.org/2000/xmlns/
+http://
+src/External/PythonCore3/Python-3.11.2/Modules/_testinternalcapi.c
+src/External/openfec/openfec/src/lib_stable/ldpc_staircase/of_ldpc_staircase_api.c
+http://www.w3.org/XML/1998/namespace
+# https://curl.se/docs/http-cookies.html
+https://
+src/External/openssl/openssl/crypto/conf/conf_api.c
+Non-UTF-8 code starting with '\x%.2x' in file %U on line %i, but no encoding declared; see https://peps.python.org/pep-0263/ for details
+# Your alt-svc cache. https://curl.se/docs/alt-svc.html
+google/protobuf/api.proto
+xml=http://www.w3.org/XML/1998/namespace
+google/protobuf/api.proto
+See https://www.python.org/psf/license/
+Android (12896553, +pgo, +bolt, +lto, +mlgo, based on r530567c) clang version 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)
+Android (12896553, based on r530567c) clang version 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (7284624, based on r416183b) clang version 12.0.5 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+[file: decompiled/native/lib/arm64-v8a/libGame.so]
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+[file: decompiled/native/lib/arm64-v8a/libNgModules.so]
+crypto/conf/conf_api.c
+Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+[file: decompiled/native/lib/arm64-v8a/libNgSocialNet.so]
+https://mgb.update.easebar.com/fallback.list
+https://mgb.update.easebar.com/fallbacktest.list
+https://mgb.update.netease.com/fallbacktest.list
+https://mgb.update.netease.com/fallback.list
+https://
+# https://curl.se/docs/http-cookies.html
+# Your HSTS cache. https://curl.se/docs/hsts.html
+https://8.8.8.8/resolve
+https://dep410.update.easebar.com/
+https://mgb.update.netease.com/
+# Your alt-svc cache. https://curl.se/docs/alt-svc.html
+Android (12642944, +pgo, +bolt, +lto, +mlgo, based on r530567b) clang version 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (12642944, based on r530567b) clang version 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+[file: decompiled/native/lib/arm64-v8a/libNtUniSdkRoostX.so]
+See instructions: https://www.tensorflow.org/lite/guide/ops_custom
+Select TensorFlow op(s), included in the given model, is(are) not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. For the Android, it can be resolved by adding "org.tensorflow:tensorflow-lite-select-tf-ops" dependency. See instructions: https://www.tensorflow.org/lite/guide/ops_select
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+Android (12470979, +pgo, +bolt, +lto, +mlgo, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+[file: decompiled/native/lib/arm64-v8a/libappdump_core.so]
+No nested protocol specified. Specify e.g. hls+http://%s
+http://
+<smil xmlns="http://www.w3.org/2001/SMIL20/Language">
+You need to read the OpenSSL FAQ, http://www.openssl.org/support/faq.html
+conf_api.c
+http://lame.sf.net
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+[file: decompiled/native/lib/arm64-v8a/libccffmpeg.so]
+http://
+http://cgi.v.cc.163.com/appsvrinfo_byplayer
+https://cgi.v.cc.163.com/visitorhb
+https://vquery.cc.163.com/query?content=
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+[file: decompiled/native/lib/arm64-v8a/libccplayer.so]
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+[file: decompiled/native/lib/arm64-v8a/libccsdl.so]
+http://cgi.v.cc.163.com/appsvrinfo_byplayer
+https://cgi.v.cc.163.com/visitorhb
+https://vquery.cc.163.com/query?content=
+http://vapi.cc.easebar.com/appsvrinfo_byplayer
+http://vquery.cc.easebar.com/query?content=
+http://192.168.229.163:5566/appsvrinfo_byplayer
+http://192.168.229.163:5566/visitorhb
+http://192.168.229.163:18899/query?content=
+http://
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+[file: decompiled/native/lib/arm64-v8a/libccstat.so]
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+[file: decompiled/native/lib/arm64-v8a/libccutil.so]
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+[file: decompiled/native/lib/arm64-v8a/libdatastore_shared_counter.so]
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+[file: decompiled/native/lib/arm64-v8a/libimage_processing_util_jni.so]
+If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+Android (13624864, +pgo, -bolt, +lto, -mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+[file: decompiled/native/lib/arm64-v8a/libnbsextend.so]
+                 "service.mkey.163.com"
+https://dual.pharos.netease.com
+http://
+https://mpay-common-server.g.mkey.163.com
+https://sigma-pharosv3-pathn.proxima.nie.netease.com/v3
+pharos.netease.com
+https://sigma-pharosv3-pathn.proxima.nie.easebar.com/v3
+                 "service.mkey.163.com",
+https://explore.pharos.netease.com
+https://pharos.netease.com
+crypto/conf/conf_api.c
+https://
+# https://curl.se/docs/http-cookies.html
+https://mpay-common-server-test.g.mkey.163.com
+# Your HSTS cache. https://curl.se/docs/hsts.html
+.proxima.nie.netease.com
+https://dual.pharos.easebar.com
+https://explore.pharos.easebar.com
+https://drpf-
+# Your alt-svc cache. https://curl.se/docs/alt-svc.html
+https://pharos.easebar.com
+Android (12642944, +pgo, +bolt, +lto, +mlgo, based on r530567b) clang version 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (12642944, based on r530567b) clang version 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+[file: decompiled/native/lib/arm64-v8a/libpharos.so]
+Android (12027248, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Android (12027248, +pgo, +bolt, +lto, +mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+[file: decompiled/native/lib/arm64-v8a/libspdloglib.so]
+Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+[file: decompiled/native/lib/arm64-v8a/libsurface_util_jni.so]
+Android (12470979, +pgo, +bolt, +lto, +mlgo, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Android (6317467 based on r365631c1) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project e0caee08e5f09b374a27a676d04978c81fcb1928) (based on LLVM 9.0.8svn)
+[file: decompiled/native/lib/arm64-v8a/libunitrace_dumper.so]

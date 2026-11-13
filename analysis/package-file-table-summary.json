@@ -1,0 +1,14 @@
+{
+  "mpkinfo_records": 45489,
+  "resolution": {
+    "named_hash": 22777,
+    "named_md5_hash": 17878,
+    "directory": 3668,
+    "unresolved": 445,
+    "named_hash_size": 721
+  },
+  "named_total": 41376,
+  "unique_names": 41376,
+  "ambiguity_histogram": {},
+  "hash": "MurmurHash3_x86_32(name, seed=0)"
+}

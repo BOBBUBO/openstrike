@@ -1,0 +1,57 @@
+ 5969ae src/Runtime/Plugins/Asyncore/Sources/proto/client_gate.pb.cc
+ 5b7804 src/External/protobuf/src/google/protobuf/generated_message_reflection.cc
+ 5be4ee http://ns.adobe.com/xap/1.0/
+ 5c39f9 src/External/protobuf/src/google/protobuf/io/zero_copy_stream_impl_lite.cc
+ 5e0b8f [Clang 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)]
+ 5e626b src/External/protobuf/src/google/protobuf/extension_set_heavy.cc
+ 5e62f4 src/External/protobuf/src/google/protobuf/io/coded_stream.cc
+ 5e6456 src/External/protobuf/src/google/protobuf/stubs/strutil.cc
+ 5e6491 src/External/protobuf/src/google/protobuf/text_format.cc
+ 609967 src/External/protobuf/src/google/protobuf/stubs/substitute.cc
+ 60e102 http://www.w3.org/2000/xmlns/
+ 61d91e http://
+ 62197b src/External/protobuf/src/google/protobuf/map_field.cc
+ 62d7b8 src/External/protobuf/src/google/protobuf/descriptor.cc
+ 62d992 src/External/protobuf/src/google/protobuf/io/tokenizer.cc
+ 62da02 src/External/protobuf/src/google/protobuf/message.cc
+ 6391bb src/External/protobuf/src/google/protobuf/wire_format.cc
+ 64f837 src/External/protobuf/src/google/protobuf/reflection_ops.cc
+ 65f26f http://www.w3.org/XML/1998/namespace
+ 6667b2 src/External/protobuf/src/google/protobuf/stubs/stringpiece.cc
+ 670fb1 # https://curl.se/docs/http-cookies.html
+ 678f34 https://
+ 689136 src/External/protobuf/src/google/protobuf/arena.cc
+ 699440 Non-UTF-8 code starting with '\x%.2x' in file %U on line %i, but no encoding declared; see https://peps.python.org/pep-0263/ for details
+ 69f72b ftp@example.com
+ 6cc521 # Your alt-svc cache. https://curl.se/docs/alt-svc.html
+ 6cd0ae src/External/protobuf/src/google/protobuf/io/zero_copy_stream.cc
+ 6d89c1 src/External/protobuf/src/google/protobuf/descriptor_database.cc
+ 6d8a18 src/External/protobuf/src/google/protobuf/dynamic_message.cc
+ 6d8b11 src/External/protobuf/src/google/protobuf/message_lite.cc
+ 6d8bd0 src/External/protobuf/src/google/protobuf/wire_format_lite.cc
+ 6e3ccf src/External/protobuf/src/google/protobuf/extension_set.cc
+ 771ed8 type.googleapis.com/
+ 771eed type.googleprod.com/
+ 90afd9 xml=http://www.w3.org/XML/1998/namespace
+ 92622e 14.0.0 which is publicly available from ftp://ftp.unicode.org/.
+ e90d47 Z,google.golang.org/protobuf/types/known/anypb
+ e910d2 Z,google.golang.org/protobuf/types/known/apipb
+ e92f05 Z-google.golang.org/protobuf/types/descriptorpb
+ e931b2 Z1google.golang.org/protobuf/types/known/durationpb
+ e9329c Z.google.golang.org/protobuf/types/known/emptypb
+ e933a5 Z2google.golang.org/protobuf/types/known/fieldmaskpb
+ e934c1 Z6google.golang.org/protobuf/types/known/sourcecontextpb
+ e937eb Z/google.golang.org/protobuf/types/known/structpb
+ e93939 Z2google.golang.org/protobuf/types/known/timestamppb
+ e94067 Z-google.golang.org/protobuf/types/known/typepb
+ e9437a Z1google.golang.org/protobuf/types/known/wrapperspb
+68edfa7 e.Io
+6c45b7e     for supporting Python development.  See www.python.org for more information.
+6c45cb0 See https://www.python.org/psf/license/
+71562d0 Android (12896553, +pgo, +bolt, +lto, +mlgo, based on r530567c) clang version 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+7156388 Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)
+715648f Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+7156544 Android (9352603, based on r450784d1) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+71565e2 Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)
+71566ea Android (12896553, based on r530567c) clang version 19.0.0 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+7156788 Android (7284624, based on r416183b) clang version 12.0.5 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
