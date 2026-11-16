@@ -22,7 +22,9 @@ analysis/apk-split-base/
 analysis/extracted-test/
 analysis/extracted-test2/
 analysis/messiah-records/
-analysis/essential/
+analysis/essential/*
+!analysis/essential/essential-list.json
+!analysis/essential/essential-name-map.json
 analysis/resources-first-16MiB.bin
 analysis/libGame.so
 analysis/*.so
@@ -43,6 +45,10 @@ analysis/ptr-index.json
 analysis/messiah-magic-records.json
 analysis/messiah-records.json
 analysis/resources1-matched.json
+analysis/aps2-relocs.json
+analysis/package-file-table3.jsonl
+analysis/package_decrypt_candidates.json
+analysis/decrypt_module_candidates.json
 
 # --- Python ----------------------------------------------------------------
 __pycache__/

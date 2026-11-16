@@ -28,6 +28,23 @@ Targets: `decompiled/native/lib/arm64-v8a/libGame.so` (118,845,672 B),
 >   shard buckets (§2.5). The undashed names are present in the **CDN
 >   patchlist** too (10,484/10,484 same md5+size) ⇒ they are the publisher's
 >   naming for 10,484 “sensitive” files (§2.6).
+> * **★ SOLVED — the patch **section manifest** is fully parsed**:
+>   `LocalData/Patch/032dc4cac2903ad0fa44ccdd81a20d7d` (2,088 B) = 15-byte
+>   header + 135 × (`u8 len | name | u16 trailer`), consumed byte-exactly.
+>   The names are 134 `dlcid_csb_*` patch groups + `dlcid_pack_5004` (§2.10).
+> * **★ CORRECTION — the patch seed filenames are NOT RFC-4122.** They are
+>   31-hex names with dashes at 8/13/17/23 (groups 8-4-3-5-11); the earlier
+>   “UUID v5” claim is retracted. The *package* dashed names **are** standard
+>   UUIDs (7,149 × v4, 381 × v5) (§2.9).
+> * **★ SOLVED — `filename_encrypt`'s closure internals**: the salt is
+>   `field ^ 0x7f` from an object field selected by flag bit 6, and the
+>   40-byte blob at `0x6d10cdb` is **not** a key (`0x384cc58` is a
+>   counter-decrement helper, not a cipher) — the work happens through a
+>   **virtual call** on the cipher object (§5.0.1).
+> * **★ SOLVED — the `decrypt_string` consumer is
+>   `MImporter.lazyimporter.__getattribute__`**, which rebinds the
+>   `decrypt_string` and `zlib` attributes on first access — the wiring
+>   point of the encrypted-module pipeline (§5.0.1).
 > * **★ SOLVED — the package table is now COMPLETE**: 41,376 named files
 >   (all MD5-verified) + 3 `Resources.mpk` header records + 442 `.cache`
 >   files + 3,668 directory entries; 0 rows unresolved for lack of an
@@ -622,19 +639,51 @@ patchlist or the pack manifest (0/445). They are:
 ⇒ the package table is now **complete**: 41,376 named files (all MD5-verified)
 + 3 header records + 442 `.cache` files + 3,668 directory entries.
 
-### 2.9 ★ The patch-side seed filenames are **UUID v5** (NEW)
+### 2.9 ★ The patch-side seed filenames are **not** RFC-4122 (NEW — correction)
 
 `LocalData/Patch/0a/0a0ab8a4-df96-4d5-9a862-967c2adca6f` and
-`LocalData/Patch/0d/0d0ab9a4-df96-4d5-9a862-967c2adca6f` are
-**RFC-4122 v5** (name-based SHA-1) UUIDs whose 2-hex shard equals the first
-byte of the UUID (10,484/10,484 for the undashed namespace, same rule here).
+`LocalData/Patch/0d/0d0ab9a4-df96-4d5-9a862-967c2abca6f` are
+**35-character names**: **31 hex digits** with dashes at indices **8, 13, 17, 23**
+(groups 8-4-3-5-11) — i.e. *not* a standard UUID (8-4-4-4-12 = 32 hex).
+⚠ This **retracts** the earlier “seed filenames are UUID v5” statement.
+
 Both files contain the *same* ASCII seed
 `71ad02b5-a3ec-4ec4-9c89-3b0979779444-1794371578-1794371578`
-(the inner UUID is **v4**). The two v5 UUIDs differ in exactly **one bit**
-(`0ab8a4df…` vs `0ab9a4df…`) ⇒ they are two names hashed into the same
-namespace. `md5`/`sha1`/`sha256` of the inner UUID, of the seed string and of
-the file name do **not** reproduce `UIScript/4051BDD0000f042` (the `.pyo`
-name is 16 hex = 8 bytes).
+(the inner UUID *is* a valid v4). The two seed names differ in exactly
+**two** hex digits (position 5 `8`/`9` and position 30 `b`/`d`).
+
+For comparison, the **package** dashed names *are* standard UUIDs:
+dash positions (8, 13, 18, 23) for **7,568** names — **7,149 × v4**,
+**381 × v5**, ~38 with an odd version nibble (suffix-stripped). The
+10,484 undashed names have **no dashes** at all and their `path_suffix`
+is simply the last 3 hex characters (no extension information).
+
+`md5`/`sha1`/`sha256` of the inner UUID, of the seed string, of the file name
+and `uuid5()` over 244,002 candidate logical names × 6 namespaces do **not**
+reproduce `UIScript/4051BDD0000f042` (the `.pyo` name is 16 hex = 8 bytes)
+(`analysis/try_uuid5_seed.py`).
+
+### 2.10 ★ The patch **section manifest** is fully parsed (NEW)
+
+`LocalData/Patch/032dc4cac2903ad0fa44ccdd81a20d7d` (2,088 B) parses
+**exactly** (2,088/2,088 bytes consumed):
+
+```
+header : 80 04 95 1d | u32 08 00 00 00 | 00 00 00 | 8f 94 28 8c   (15 B)
+entry  : u8 name_len | name[name_len] | u16 trailer
+trailer: 0x8c94 for 134 entries, 0x9094 for the last one
+entries: 135 (all unique)
+```
+
+The 135 names are **134 `dlcid_csb_*` patch groups + `dlcid_pack_5004`**.
+All 134 `dlcid_csb_*` names exist in the CDN patchlist, where they map to
+their file lists (e.g. `dlcid_csb_53` → 3 ASTC GUID files + the logical
+`UIScript/og_activity_peakday_xd.csb`).
+
+⇒ the file is the **patch-group / section manifest** that tells the downloader
+which patch groups to fetch; `dlcid_pack_5004` is the main pack group (the
+1,276-entry key of the pack manifest). The `dlcid_*` → GUID mapping in the
+patchlist is confirmed as the authoritative *logical id → file* map.
 
 ## 2.3 The complete Android package file table (SOLVED)
 
@@ -1756,6 +1805,46 @@ So the encrypted module filename is rendered as a **hexadecimal integer
 string** — consistent with the `uuid`-shaped names seen in the patch
 archives.
 
+**★ Closure internals re-verified this session (0x3a68cd0–0x3a68e60):**
+
+```
+0x3a68d10..0x3a68d60   read a u8/u16/u32 field of an object at
+                        x21+0x30 or x21+0x48, selected by `tst w8,#0x40`
+0x3a68d88              eor x8, x22, #0x7f      <-- SALT = field ^ 0x7f
+0x3a68d94              str x8, [x19, #16]      <-- stored in the closure cell
+0x3a68db4              bl 0x3a60270            <-- build the closure func-object
+0x3a68df8              adrp x0, 6d1000 / add x0,#0xcdb   <-- 40-byte blob
+0x3a68e00              bl 0x384cc58            <-- NOT crypto (see below)
+0x3a68e14              blr x23                 <-- virtual call on the cipher object
+0x3a68e1c              bl 0x384cd2c
+```
+
+The same salt block is duplicated at `0x3a695ac–0x3a69614` (shared by
+`gen_md5`). ⚠ **Correction:** `0x384cc58` is **not** a cipher — its `x0`
+argument is unused; it decrements a global counter at
+`0x7136510+0x240` and returns a boolean. The 40-byte blob at `0x6d10cdb`
+is therefore *not* a key (and the “XOR-154” reading of it stays refuted).
+
+The real work happens through a **virtual call**: the object stored in
+module-state slot `0x73cd7d0` has a vtable and the method at
+`[vtable+128]` is invoked with `(cipher, new_obj, 0)`.
+
+**★ The `decrypt_string` consumer is `MImporter.lazyimporter.__getattribute__`**
+(function range ≈ `0x3a6c780–0x3a6da00`; its only literals are
+`'MImporter.lazyimporter.__getattribute__'` and `'MImporter_py3.py'`).
+It performs two `setattr` calls:
+
+```
+0x3a6d830  setattr(obj, [0x73cd8e8], [0x73cd8f0])
+0x3a6d904  setattr(obj, [0x73cd8f8], [0x73cd900])
+```
+
+i.e. the lazy importer rebinds the **`decrypt_string`** and **`zlib`**
+attributes on first access — the classic Cython lazy-import trick. This is
+where the encrypted-module pipeline is wired together, and it is the place to
+look next for the container format (`head`/`headlen`/`comps`/`index`/`prefix`
+/`sdata`/`datalen` are all present as interned names).
+
 * `MChecker` (Cython) imports three sibling modules by name: **`MConfig`**,
   `MImporter`, `MPatch`, plus `MReloadImporter`; its string table also carries
   the struct format **`'=QH32sBBQ'`** — exactly the GUID record layout of
@@ -1869,6 +1958,8 @@ pack-manifest.json         # ★★ the decoded pack manifest (8 keys, 3 section
 scan_package_python.py     # ★★ rescan ALL payloads for Python source/pyc/marshal
 resolve_unresolved.py      # ★★ explain/resolve the 445 remaining table rows
 try_uuid5_names.py         # ★★ uuid5 / raw-sha1 name-hash attack (negative)
+try_uuid5_seed.py          # ★★ uuid5 attack on the patch seed filenames (negative)
+find_vtable.py             # ★★ RTTI -> typeinfo -> vtable -> virtual methods
 scan_globals_access.py     # ADRP+LDR/STR walker over the Cython global pages
                             #   (0x73cb000-0x73ce000) — found the salt object
 crack_env_rc4.py           # RC4-key cracker for the environment SDK (LZMA-header oracle)

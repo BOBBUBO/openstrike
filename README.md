@@ -26,6 +26,8 @@ is either a *script* or a *small text artifact* produced by those scripts.
 | `essential_py3` — the **prerequisite filelist** (153 files: path → md5, size) | ✅ **Solved** |
 | Pack manifest (`Resources1.mpk@0x0c172479`, `<md5>!|{` + JSON) | ✅ **Solved** |
 | `patch.repository` / `resource.repository` (cooked-asset indexes, `CCCCZZZ4`) | ✅ **Solved** (structure) |
+| Patch **section manifest** (`032dc4cac2903ad0fa44ccdd81a20d7d`, 135 patch groups) | ✅ **Solved** |
+| `MImporter.lazyimporter.__getattribute__` — the encrypted-module wiring point | ✅ **Located** |
 | MurmurHash3 x86_32 identification for `Resources.mpkinfo` | ✅ **Solved** |
 | UniSDK **domain** server list (32 domains, real IPs) | ✅ **Solved / fetched live** |
 | `regular_encode_*` environment SDK (Base64 → RC4 → LZMA) | ✅ **Solved** — it is *content moderation*, not the server list |
@@ -34,7 +36,7 @@ is either a *script* or a *small text artifact* produced by those scripts.
 | **Game** gate/server list (`server_list_host`, `cli_gateway`) | 🔴 **Open** — lives inside the encrypted `Config` |
 | Transport choice (WebSocket vs KCP) | 🟡 **Partial** — both compiled in, decided at runtime |
 
-> **⚠ Three corrections worth knowing about (see `FINDINGS.md` §2.3):**
+> **⚠ Four corrections worth knowing about (see `FINDINGS.md` §2.3):**
 > 1. The container of a package file is chosen by the mpkinfo **`flags`** field
 >    (`0` → `Resources.mpk`, `2` → `Resources1.mpk`), *not* by comparing the
 >    offset against the file lengths. Getting this wrong makes every
@@ -47,6 +49,9 @@ is either a *script* or a *small text artifact* produced by those scripts.
 > 3. `patch.repository` / `resource.repository` are **cooked-asset indexes**
 >    (magic `CCCCZZZ4`), *not* the patch→file map — they contain no `dlcid_`
 >    identifier at all.
+> 4. The patch-side **seed filenames** (`0a/0a0ab8a4-df96-4d5-9a862-…`) are
+>    **not** RFC-4122 UUIDs: they are 31-hex names with dashes at
+>    8/13/17/23. The *package* dashed names **are** standard UUIDs.
 
 ---
 
@@ -100,6 +105,8 @@ All scripts are plain Python 3 with **no third-party dependencies**
 | `scan_package_python.py` | ★★ rescan every payload for Python source / `.pyc` / marshal / zlib |
 | `resolve_unresolved.py` | ★★ explain + resolve the 445 remaining table rows |
 | `try_uuid5_names.py` | ★★ uuid5 / raw-SHA-1 name-hash attack on the undashed namespace (negative) |
+| `try_uuid5_seed.py` | ★★ uuid5 attack on the patch seed filenames (negative) |
+| `find_vtable.py` | ★★ RTTI → typeinfo → vtable → virtual-method finder |
 | `scan_mpk_blocks.py`, `scan_package_blocks.py`, `scan_package_chunks.py`, `scan_zzz4_chunks.py` | LZ4 chunk scanners (`liblz4` via ctypes) |
 | `scan_patch_records.py`, `scan_plain_patch_records.py` | brute-force record scanners for the patch archives |
 | `sample_guid_payloads.py`, `probe_multichunk.py` | payload fingerprinting |

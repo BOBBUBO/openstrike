@@ -1,0 +1,57 @@
+[
+ {
+  "path": "e3/e3b954e1-cd4f-446b-a9ab-9d71e4f5d769.4",
+  "archive": "Patch.mpk",
+  "kind": "raw",
+  "size": 647,
+  "r": 10,
+  "stop": 118,
+  "class": "magic:zlib-default",
+  "head_hex": "789c5a361b7792e0de36f56a5b96229d900b9a879b15eb499a63a28dbe9a801f0c9de05c283423fd218e27b81dda2f99729efb8aab82de90f97ba51552a4450a",
+  "head_repr": "b'x\\x9cZ6\\x1bw\\x92\\xe0\\xde6\\xf5j[\\x96\"\\x9d\\x90\\x0b\\x9a\\x87\\x9b\\x15\\xebI\\x9ac\\xa2\\x8d\\xbe\\x9a\\x80\\x1f\\x0c\\x9d\\xe0\\\\(4#\\xfd!\\x8e\\'\\xb8\\x1d\\xda/\\x99r\\x9e\\xfb\\x8a\\xab\\x82\\xde\\x90\\xf9{\\xa5\\x15R\\xa4E\\n\\xa579_o\\x87wv\\x05\\xf3\\xb3V\\x07=f\\xf9\\x06u\\xa4\\x1ek\\xe3e\\xd5y\\xc0u&\\xc3O\\xd5Y'"
+ },
+ {
+  "path": "d3/d3096cb4-808a-4295-8c17-b1da0d5274fd.4",
+  "archive": "Patch.mpk",
+  "kind": "raw",
+  "size": 59196,
+  "r": 25,
+  "stop": 103,
+  "class": "magic:zlib-best",
+  "head_hex": "78daa19e1a9b963a9a9edaa19e3a9aab9651ddfa9aef5060eada4fe447baa11a2c81e1a51aec51a1ba9a9a3aad9aba9aaf4ce546baa12b6c9ee1a59a3941a1c7",
+  "head_repr": "b'x\\xda\\xa1\\x9e\\x1a\\x9b\\x96:\\x9a\\x9e\\xda\\xa1\\x9e:\\x9a\\xab\\x96Q\\xdd\\xfa\\x9a\\xefP`\\xea\\xdaO\\xe4G\\xba\\xa1\\x1a,\\x81\\xe1\\xa5\\x1a\\xecQ\\xa1\\xba\\x9a\\x9a:\\xad\\x9a\\xba\\x9a\\xafL\\xe5F\\xba\\xa1+l\\x9e\\xe1\\xa5\\x9a9A\\xa1\\xc7\\x8c\\xa0\\xba\\x9a\\xcd\\x14L\\x1b\\xda\\xe4\\xfa.JE\\xd9/\\xa4\\xfe\\x1ft\\xa4\\xb0f\\xa0Z\\xf0\\x1a\\xa1\\xff\\x83\\x18\\xda'"
+ },
+ {
+  "path": "6b/6b737282-c7d6-4d78-af62-e9d4ccfd4605",
+  "archive": "Patch.mpk",
+  "kind": "raw",
+  "size": 31750,
+  "r": 33,
+  "stop": 95,
+  "class": "magic:zlib-best",
+  "head_hex": "78dac9fded6525269ada7fefebaf8fc58a9a699b79da4dd0dd99eccae129c7f053b1d87fda9a0e2ea7f3bc6511a1d7718a9a62c377d3c6c4dad3d0bb2812cc2e",
+  "head_repr": "b'x\\xda\\xc9\\xfd\\xede%&\\x9a\\xda\\x7f\\xef\\xeb\\xaf\\x8f\\xc5\\x8a\\x9ai\\x9by\\xdaM\\xd0\\xdd\\x99\\xec\\xca\\xe1)\\xc7\\xf0S\\xb1\\xd8\\x7f\\xda\\x9a\\x0e.\\xa7\\xf3\\xbce\\x11\\xa1\\xd7q\\x8a\\x9ab\\xc3w\\xd3\\xc6\\xc4\\xda\\xd3\\xd0\\xbb(\\x12\\xcc.v\\xef\\xf0 \\xf1\\xbf\\xe8(\\x1df\\xd9tK\\xaa\\xc3\\xd9#]\\xc5q\\xc1wQ\\x93\\xeb]fgK\\xdek'"
+ },
+ {
+  "path": "d3/d3096cb4-808a-4295-8c17-b1da0d5274fd.4",
+  "archive": "Patch.mpk",
+  "kind": "raw",
+  "size": 59196,
+  "r": 25,
+  "stop": 103,
+  "class": "magic:zlib-best",
+  "head_hex": "78daa19e1a9b963a9a9edaa19e3a9aab9651ddfa9aef5060eada4fe447baa11a2c81e1a51aec51a1ba9a9a3aad9aba9aaf4ce546baa12b6c9ee1a59a3941a1c7",
+  "head_repr": "b'x\\xda\\xa1\\x9e\\x1a\\x9b\\x96:\\x9a\\x9e\\xda\\xa1\\x9e:\\x9a\\xab\\x96Q\\xdd\\xfa\\x9a\\xefP`\\xea\\xdaO\\xe4G\\xba\\xa1\\x1a,\\x81\\xe1\\xa5\\x1a\\xecQ\\xa1\\xba\\x9a\\x9a:\\xad\\x9a\\xba\\x9a\\xafL\\xe5F\\xba\\xa1+l\\x9e\\xe1\\xa5\\x9a9A\\xa1\\xc7\\x8c\\xa0\\xba\\x9a\\xcd\\x14L\\x1b\\xda\\xe4\\xfa.JE\\xd9/\\xa4\\xfe\\x1ft\\xa4\\xb0f\\xa0Z\\xf0\\x1a\\xa1\\xff\\x83\\x18\\xda'"
+ },
+ {
+  "path": "bf/bf092ea9-7de9-49c1-a85c-1bc3c162b4c5",
+  "archive": "Patch.mpk",
+  "kind": "raw",
+  "size": 48,
+  "r": 3,
+  "stop": 125,
+  "class": "magic:gzip",
+  "head_hex": "1f8b1f8bc583cd83749fa3891688a3899c821688a888078a818a818aa988a888ae88868a45954595af88ae88a8881d8e",
+  "head_repr": "b'\\x1f\\x8b\\x1f\\x8b\\xc5\\x83\\xcd\\x83t\\x9f\\xa3\\x89\\x16\\x88\\xa3\\x89\\x9c\\x82\\x16\\x88\\xa8\\x88\\x07\\x8a\\x81\\x8a\\x81\\x8a\\xa9\\x88\\xa8\\x88\\xae\\x88\\x86\\x8aE\\x95E\\x95\\xaf\\x88\\xae\\x88\\xa8\\x88\\x1d\\x8e'"
+ }
+]
