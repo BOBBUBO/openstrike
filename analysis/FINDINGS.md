@@ -9,13 +9,31 @@ Targets: `decompiled/native/lib/arm64-v8a/libGame.so` (118,845,672 B),
 > understood, one field outstanding · **OPEN** = not yet cracked.
 >
 > **Latest status (this session)**
+> * **★★ SOLVED — BIG WIN — the package container rule.** `Resources.mpkinfo`'s
+>   `flags` field selects the container: **`flags=0` → `Resources.mpk`**,
+>   **`flags=2` → `Resources1.mpk`**; the offset is the raw
+>   `digest_words[1]`. The previous builder guessed the container from the
+>   file lengths and mis-assigned all 30,872 `flags=0` records, which is why
+>   every “GUID payload” ever looked encrypted. The rebuilt table now verifies
+>   **41,376 / 41,376 MD5s with 0 mismatches** (§2.3).
+> * **★ SOLVED — `essential_py3` IS the prerequisite filelist.** Its own tag
+>   grammar (`'s'`=string, `'H'`=dict) and its **153** `path → [md5, size]`
+>   entries are fully extracted, matching the MLauncher literal schema
+>   `filepath/filesize/filemd5` (§2.4).
+> * **★ SOLVED — the pack manifest** at `Resources1.mpk@0x0c172479`
+>   (`<md5>!|{` + JSON, 3,688,032 B) is decoded; its three sections are exact
+>   subsets of the patchlist with **0** value mismatches.
+> * **★ SOLVED — the GUID namespace has two flavours:** 20,472 **dashed**
+>   RFC-4122 v4/v5 UUIDs vs 10,484 **undashed** `xx/<32 hex>` raw-128-bit-hash
+>   shard buckets (§2.5).
+> * **★ SOLVED — the Android package contains NO Python.** A full re-scan of
+>   all 41,376 correctly-located payloads finds **0** Python source, **0**
+>   `.pyc` magics, **0** marshal code objects and only **1** zlib stream
+>   (§2.3). The game logic arrives via the patch/CDN channel.
 > * **SOLVED — BIG WIN** — the **UniSDK domain server list is recovered live**:
 >   `https://dep410.update.easebar.com/<gameid>.list` returns JSON with 32
 >   domains, their **real A/AAAA IPs**, CDN aliases and fallback chains
 >   (§1.2). Saved to `analysis/serverlist/g83naxx1ena.list.json`.
-> * **SOLVED** — the complete Android package file table: 41,376 names → byte
->   ranges in `Resources1.mpk`, **0 ambiguities** (§2.3). `essential_py3`
->   extracted and MD5-verified.
 > * **SOLVED** — `Resources.mpkinfo`'s `digest0` = **MurmurHash3 x86_32
 >   (seed 0)** of the file name; `digest1` = the global file offset.
 > * **SOLVED** — the `regular_encode` environment SDK decoder chain
@@ -30,9 +48,9 @@ Targets: `decompiled/native/lib/arm64-v8a/libGame.so` (118,845,672 B),
 >   102-byte tail; the transform is **position-stable** (one 21-byte range
 >   with constant XOR `0xc7`) ⇒ a static-key stream cipher over a *binary*
 >   plaintext (§4.2).
-> * **OPEN** — the encrypted Python modules, `LocalData/Config*` decryption,
->   and the **game** (gate) server list — which is *not* in the SDK `.list`
->   file but in the encrypted `Config` (§1.3).
+> * **OPEN** — the encrypted Python modules (must be in the **patch** channel),
+>   `LocalData/Config*` decryption, and the **game** (gate) server list —
+>   which is *not* in the SDK `.list` file but in the encrypted `Config` (§1.3).
 
 ---
 
@@ -464,6 +482,66 @@ The JSON has 8 top-level keys:
   `MLauncher`'s string block (i.e. `MLauncher.MAGIC == "4!|{"`), so the
   essential/prerequisite filelist is **downloaded or generated at runtime**.
 
+### 2.4 ★★ `essential_py3` IS the prerequisite filelist (SOLVED this session)
+
+The MLauncher Cython literal table (`analysis/lit-MLauncher.txt`) names the
+exact schema of the boot-critical file list:
+
+```
+'filelist', 'filelist_data', 'filelist_size',
+'filepath',  'filesize',    'filemd5',
+'essential_data', 'essential_md5'
+```
+
+and the launcher prints `'+ load prerequisite file'`,
+`'+ check file in prerequisite list'`, `'-_-|| file md5 not right: '`,
+`'-_-|| file size not right: '`, `'-- [[essential file corrupted]]'`,
+`'-- [[essential file not complete]]'`, `'-- [[essential file okay]]'`.
+
+**`essential_py3` is exactly that structure.** Parsed with
+`analysis/tagged_essential.py` it yields **153 pairs**
+(`analysis/essential/essential-list.json`):
+
+```
+"ce/ce58e50afadf546376d4b76ea5b98899"  -> ["9d89d9a7a869bd890293990b19ac4d65", 3656]
+"UIScript/auto_og_patch_scene_new0_ui.plist" -> ["5c020a2aa371f24da0cd7f93d658cd24", 1244]
+"patch.repository"                       -> ["57fa5fa470bda52cced689a0bb2e4676", 917909]
+…
+```
+
+Facts established:
+
+| property | value |
+|---|---|
+| entries | **153** = 152 in `common` + 1 in `android_astc_512` |
+| all present in the package | **153/153**, MD5 + size match the manifest |
+| all present in `packagefilelist` | **153/153** |
+| path forms | 148 **undashed** `xx/<32 hex>`, 5 logical (`UIScript/…`, `patch.repository`) |
+| sizes | 101 B … 917,909 B (`patch.repository`), Σ = 2,859,201 B |
+| named assets | `patch.repository` (917,909 B), `UIScript/og_patch_scene_new.csb` (9,245 B), `UIScript/textureinfo.info` (215,084 B), `UIScript/auto_og_patch_scene_new0_ui.plist` (1,244 B) |
+
+⇒ `mpkexclude: ["prerequisite"]` in the pack manifest means the *prerequisite*
+section is delivered separately, and `essential_py3` is its index. This is the
+**bootstrap manifest**: the launcher verifies each of those 153 files'
+MD5/size before starting, then `^_^ file clean done! -> enter main`.
+
+### 2.5 GUID namespace — two distinct flavours (SOLVED this session)
+
+The 41,376 named package files split into **three** namespaces:
+
+| form | count | structure |
+|---|---|---|
+| logical | 10,420 | `Char/…`, `UIScript/…`, `patch.repository`, … |
+| **undashed** `xx/<32 hex>` | **10,484** | the 2-hex directory is **always the first byte of the 32 hex** (10,484/10,484) — i.e. a **shard bucket**, and the 128-bit value is **not** a UUID (version nibble is uniform-random: `ver4` only 674/10,484) |
+| **dashed** `xx/<uuid>` | **20,472** | **19,884 × RFC-4122 v4** + **541 × RFC-4122 v5** + 47 other — the 2-hex directory is again the first byte of the UUID |
+
+⇒ the **undashed** form is the *engine-hashed* name (raw 128-bit hash, hex,
+sharded by its first byte) and the **dashed** form is the *publisher* UUID
+(v4 random / v5 name-based). The essential filelist uses **only** the
+undashed flavour for its GUID entries, so the prerequisite list is keyed by
+the engine's own hash — which is exactly the identifier `MImporter` would
+have to resolve at runtime.
+
 ## 2.3 The complete Android package file table (SOLVED)
 
 **`Resources.mpkinfo` record semantics — fully decoded:**
@@ -471,72 +549,79 @@ The JSON has 8 top-level keys:
 | field | meaning |
 |---|---|
 | `digest0` | **MurmurHash3 x86_32 (seed 0)** of the file name — **SOLVED** (`analysis/murmur3.py`; verified 3000/3000 on independent pairs; CRC32/ADLER32/FNV/djb2/sdbm/oat/murmur2/crc32c/md5-prefix all scored 0) |
-| `digest1` | **global byte offset of the file body inside `Resources1.mpk`** (an earlier "Unix build timestamp" reading was wrong — those values merely looked like timestamps) |
+| `digest1` | **byte offset of the file body** — but **which container it lives in depends on `flags`** (see the container rule below) |
 | `suffix` | **last 3 characters** of the path (histogram matches the package file array exactly: `ton` 3039, `nim` 1590, `csb` 1403, `ion` 1312, `aph` 940, `bnk` 876, `0.4` 854, `4.4` 820 …) |
 | `size` | byte length of the body |
-| `flags` | `0` = ordinary, `1` = directory (size 0), `2` = special/raw-stored |
+| `flags` | `0` = ordinary → payload in **`Resources.mpk`**; `1` = directory (size 0); `2` = special/raw-stored → payload in **`Resources1.mpk`** |
 
-**Proof that `digest1` is an offset:** `essential_py3` is mpkinfo record
-**#45,273** (`kind=13`, `suffix="py3"`, `size=13329`, `flags=2`,
-`offset=0x0c16f08b`) — and the 13,329 bytes at `0x0c16f08b` hash to exactly
-`bb060d6265e9052d549d4b5bdbf3a01d`, the MD5 published for `essential_py3` in
-`spike_patchlist_android_astc_512_py3.txt`.
+#### ★★ CORRECTION (this session) — the container rule
+
+The previous builder (`analysis/build_file_table.py`) *guessed* the container by
+comparing `offset + size` against the two file lengths, which mis-assigned
+**every `flags = 0` record** (all 30,872 of them were claimed to live in
+`Resources1.mpk`). The **correct rule** is:
+
+```
+flags == 0  ->  payload is in  Resources.mpk     at  offset = digest_words[1]
+flags == 2  ->  payload is in  Resources1.mpk    at  offset = digest_words[1]
+flags == 1  ->  directory / index entry (logical_size == 0)
+```
+
+**Proof:** the 153-entry prerequisite filelist recovered from `essential_py3`
+(now §2.4) matches its MD5 **153/153** when read from `Resources.mpk` at the
+raw mpkinfo offset, and **0/153** when read from `Resources1.mpk`.
+
+The rebuilt table (`analysis/rebuild_file_table.py` →
+`analysis/package-file-table2.jsonl`) now verifies:
+
+```
+mpkinfo_records        45,489
+md5 verified          41,376   ← was 0 with the old container guess
+directories            3,668
+unresolved               445
+md5 mismatches             0   ← 0 ambiguities, 0 false positives
+```
+
+⇒ **This retires the whole “GUID namespace is encrypted” hypothesis.**
+Every named file in the Android package is stored **verbatim**; the manifest
+MD5 is the MD5 of the *stored* bytes. There is **no** hidden encrypted
+namespace inside the APK.
 
 **`essential_py3` — EXTRACTED and MD5-verified**
 
 ```
-offset 0x0c16f08b   length 13,329   md5 bb060d6265e9052d549d4b5bdbf3a01d
+offset 0x0c16f08b (Resources1.mpk, flags=2)   length 13,329
+md5 bb060d6265e9052d549d4b5bdbf3a01d
 saved to analysis/essential/essential_py3.bin
 ```
 
-It is **not** Python source but a *tagged binary dict* (parser
-`analysis/tagged_config.py`; tags `'s'` u32LE-len string, `'i'` u32LE int,
-`'('` u32LE count + n values, `'{'` dict until `'}'`): **306 top-level items**,
-13,292 of 13,329 bytes consumed, trailer
-`0c305315703f13299c18023e2af1ddf2d4!|{` = `0c` + *pack-manifest MD5* + `!|{`
-(a reference to the manifest, type tag `0c`). It contains **153**
-`name → [md5, size]` entries, mixing logical paths (`UIScript/…`, `Char/…`)
-and GUID paths (`xx/uuid`) — **153/153 match the pack manifest exactly**.
-⇒ The `0c<md5>!|{` trailer is a *manifest reference footer* used by
-package files; `Collision.bin` (plaintext, `0x0c164140`, 31,859 B) has **no**
-trailer, so the footer is specific to manifest-style files.
-
-**The definitive name → byte-range table** — `analysis/build_file_table.py`
-(resolution order: `md5(body)+size` → `murmur3(name)` bucket → `+size` filter →
-ambiguity list):
+It is **not** Python source but a *tagged binary dict* — and its grammar
+**differs from `tagged_config2.py`**: in this flavour `'s'` = **string**
+(u32LE length + bytes) and `'H'` = **hash/dict** (u32LE count + n×(key,
+value)). The correct parser is `analysis/tagged_essential.py`.
 
 ```
-mpkinfo_records        45,489
-named_total/unique     41,376
-  resolved by md5      17,878
-  resolved by hash     22,777
-  resolved by hash+size  721
-directories             3,668
-unresolved                445
-ambiguity_histogram       {}      ← 0 ambiguous
+'{'  value*  '}'                 top-level flat dict
+'s'  u32 len + bytes             STRING
+'H'  u32 n + n×(key value)       DICT
+'(' / 'v' / 'M'  u32 n + values  LIST / TUPLE
+'i'  u32                         INT
+'p'  u32 len + bytes             BLOB
 ```
 
-Outputs: `analysis/package-file-table.jsonl` (45,489 rows: name, section,
-`md5_original`, `md5_stored`, size, offset, container, flags, suffix,
-`digest0`, method, candidates) and
-`analysis/package-file-table-unresolved.jsonl` (445 rows).
+**306 top-level items = 153 `name → [md5, size]` pairs**, 13,292 of 13,329
+bytes consumed; the trailer `0c305315703f13299c18023e2af1ddf2d4!|{` =
+`0c` + *pack-manifest MD5* + `!|{` (a manifest reference footer).
+Extracted to `analysis/essential/essential-list.json`.
 
 * **31,452** of the named files use the **GUID namespace** (`xx/uuid`),
   9,924 keep logical names.
-* 23,498 are “transformed” (stored MD5 ≠ manifest MD5): **21,344 GUID +
-  2,154 logical**.
-* ⚠ **Correction (this session):** `flags = 0` does **not** mean “encrypted”.
-  A 3,000-sample prefix histogram of the `flags=0` bodies shows no common
-  header at all, and the mean Shannon entropy of a 300-file sample is
-  **7.069** with a *minimum of 0* (i.e. plaintext files are present in the
-  same bucket). The MD5 mismatch simply means the manifest MD5 refers to the
-  **original source asset** while the stored blob is the **packed** form
-  (ASTC texture pages, LZ4 pages, …). ⇒ There is **no** second, hidden
-  encrypted namespace inside the Android package.
-* ⇒ **No Python logic modules ship inside the Android package.** All 2,144
-  “python-ish” hits in the table are `UIScript/*.csb` / `UIScript/*.plist`.
-  The encrypted logic must arrive from the patch/CDN channel or a separate
-  package.
+* ⇒ **No Python logic modules ship inside the Android package.** A full
+  re-scan of all 41,376 correctly-located payloads
+  (`analysis/scan_package_python.py`) finds **0** Python source, **0** `.pyc`
+  magics and **0** marshal code objects — only 1 zlib stream in the whole
+  package. The encrypted logic must arrive from the patch/CDN channel or a
+  separate package.
 
 ## 3. Python runtime — the game scripts are ENCRYPTED
 
@@ -1675,10 +1760,19 @@ scan_relocs.py / dump_sections.py
 try_config_*.py / config_xor_key.py   # Config decryption campaigns
 murmur3.py                 # MurmurHash3 x86_32 (seed 0) — digest0 of Resources.mpkinfo
 package_index.py           # join Resources.mpkinfo + pack manifest
-build_file_table.py        # ★ definitive name -> byte-range table (41,376 names, 0 ambiguous)
+build_file_table.py        # name -> byte-range table (legacy container guess — SUPERSEDED)
+rebuild_file_table.py      # ★★ definitive table: flags=0 -> Resources.mpk,
+                            #   flags=2 -> Resources1.mpk (41,376/41,376 MD5 verified)
+package-file-table2.jsonl  # ★★ the verified table (45,489 rows)
+package-python-hits.json   # ★★ result of the full Python-source/pyc/marshal rescan
 tagged_config.py           # parser for the tagged binary config grammar (s/i/(/{)
                             #   used by essential_py3 and TroyConfig/*.bin
+tagged_essential.py        # ★★ the *flat-dict* tagged grammar ('s'=string, 'H'=dict)
+                            #   — the correct parser for essential_py3
 essential/essential_py3.bin  # ★ extracted + MD5-verified package filelist blob
+essential/essential-list.json # ★★ the 153 prerequisite [path -> md5,size] entries
+pack-manifest.json         # ★★ the decoded pack manifest (8 keys, 3 sections)
+scan_package_python.py     # ★★ rescan ALL payloads for Python source/pyc/marshal
 scan_globals_access.py     # ADRP+LDR/STR walker over the Cython global pages
                             #   (0x73cb000-0x73ce000) — found the salt object
 crack_env_rc4.py           # RC4-key cracker for the environment SDK (LZMA-header oracle)
@@ -1770,24 +1864,22 @@ correlate_kind.py          # correlate Patch.mpkinfo record bytes with payload t
    `dlcid_*` key (all 168 combinations in `analysis/solve_mimporter_salt2.py`
    failed).
 4. **Resources1.mpk file bodies** — **SOLVED.** The file table is complete
-   (§2.3): 41,376 names → byte ranges, 0 ambiguities, `essential_py3`
-   extracted and MD5-verified. `flags = 0` does **not** mean “encrypted” — it
-   is simply the *packed* form (ASTC/LZ4 pages) whose MD5 differs from the
-   manifest's source-asset MD5.
-5. **Transport** — now narrowed to a *runtime* decision in the encrypted
-   Python layer (§1.1); once the Python is decrypted, look for
-   `async_kcp_connection` vs `async_websocket_connection` instantiation and
-   for `asiocore.set_kcp_vgate` / `set_kcp_vginfo`.
-6. **Java side** — decompile the remaining dex files and
-   `split_config.arm64_v8a.apk`; the writer of `server_list_host` /
-   `cli_gateway` is probably in `com.netease.download.config.ConfigCore` or
-   `com.netease.download.listener.*`, not in `KeyConst`.
-7. **The `4!|{` filelist blob** — `MLauncher.MAGIC == "4!|{"` (literal at
-   `0xa76f9a`). It is **not** on disk (the only `4!|{` byte sequence inside
-   `Resources1.mpk` is the tail of the pack-manifest MD5 plus `!|{`).
-   It is either downloaded at runtime or generated by the packer. Recovering
-   it would give the authoritative `filepath / filesize / filemd5` list used
-   for the package-vs-patch check.
+   (§2.3): 41,376 names → byte ranges, **41,376/41,376 MD5 verified**,
+   0 ambiguities, `essential_py3` extracted and MD5-verified.
+   **★★ Correction (this session):** the container is selected by the
+   mpkinfo **`flags`** field — `flags=0` → `Resources.mpk`,
+   `flags=2` → `Resources1.mpk` — and the offset is the raw
+   `digest_words[1]`. The previous length-based guess mis-assigned all
+   30,872 `flags=0` records, which manufactured the phantom
+   “encrypted GUID namespace”. Rebuild with
+   `analysis/rebuild_file_table.py`.
+7. **The `4!|{` filelist blob** — **SOLVED (this session):** the
+   prerequisite filelist **is** `essential_py3` (§2.4). `MLauncher.MAGIC ==
+   "4!|{"` (literal at `0xa76f9a`) is the *envelope* magic; the pack
+   manifest uses `<md5>!|{` and `essential_py3` uses the trailer
+   `0c<md5>!|{` — the `4` in `4!|{` is simply the last hex digit of the
+   MD5. The 153 `filepath / filesize / filemd5` records are extracted in
+   `analysis/essential/essential-list.json`.
 8. **`decrypt_string` primitive** — the last blocker for everything
    (Python, `Config`). Attack surface: the consumer at `0x3a6d780–0x3a6d960`
    loads the `zlib` global at `0x3a6d904` and the `decrypt_string` global at
@@ -1797,3 +1889,20 @@ correlate_kind.py          # correlate Patch.mpkinfo record bytes with payload t
    (`StartModule`, `Start`, `Construct_on`) — it is the native code that
    installs the Python path (`Script/Python`, `/Lib3`) and therefore the
    place where the encrypted logic is rooted.
+10. **★★ NEW — the patch channel is now the only candidate for the game
+    logic.** The Android package is *provably* Python-free (§2.3), and the
+    prerequisite list (§2.4) contains only assets + `patch.repository`.
+    Next actions:
+    (a) **decode `patch.repository`** (917,909 B, `Resources.mpk@22598706`) —
+        it is an MPK chunk whose payload begins `CCCCZZZ4…` and contains the
+        string table `Texture2D`, `icon_item_weapon_MP5v29_lonG`, … — it is
+        the **asset-type/repository index** for the patch system and should
+        name every patchable logical path;
+    (b) **re-scan the 65,422 `Patch*.mpk` records with the corrected
+        container/offset logic** (`analysis/scan_patch_modules.py` used the
+        old assumptions) for Python source / pyc / marshal / zlib;
+    (c) correlate the **`xx/<32 hex>` undashed** names in the prerequisite
+        list with the **`0a/`, `0d/` seed files** in `LocalData/Patch/`
+        (`71ad02b5-a3ec-4ec4-9c89-3b0979779444-1794371578-1794371578`) to
+        learn the engine's 128-bit name hash (§2.5) — the hash input is now
+        the only unknown for the GUID scheme.

@@ -21,7 +21,10 @@ is either a *script* or a *small text artifact* produced by those scripts.
 | Wire protocol (protobuf schemas, RPCs, handshake) | ✅ **Solved** |
 | MPK container formats (`Resources*.mpk`, `Patch*.mpk`, indexes) | ✅ **Solved** |
 | `.MESSIAH` asset container | ✅ **Solved** |
-| Complete Android package file table (41,376 names → byte ranges) | ✅ **Solved** |
+| Complete Android package file table (41,376 names → byte ranges) | ✅ **Solved** — **41,376/41,376 MD5 verified** |
+| `Resources.mpkinfo` container rule (`flags` → `Resources.mpk` / `Resources1.mpk`) | ✅ **Solved** |
+| `essential_py3` — the **prerequisite filelist** (153 files: path → md5, size) | ✅ **Solved** |
+| Pack manifest (`Resources1.mpk@0x0c172479`, `<md5>!|{` + JSON) | ✅ **Solved** |
 | MurmurHash3 x86_32 identification for `Resources.mpkinfo` | ✅ **Solved** |
 | UniSDK **domain** server list (32 domains, real IPs) | ✅ **Solved / fetched live** |
 | `regular_encode_*` environment SDK (Base64 → RC4 → LZMA) | ✅ **Solved** — it is *content moderation*, not the server list |
@@ -29,6 +32,17 @@ is either a *script* or a *small text artifact* produced by those scripts.
 | `LocalData/Config*` decryption | 🔴 **Open** |
 | **Game** gate/server list (`server_list_host`, `cli_gateway`) | 🔴 **Open** — lives inside the encrypted `Config` |
 | Transport choice (WebSocket vs KCP) | 🟡 **Partial** — both compiled in, decided at runtime |
+
+> **⚠ Two corrections worth knowing about (see `FINDINGS.md` §2.3):**
+> 1. The container of a package file is chosen by the mpkinfo **`flags`** field
+>    (`0` → `Resources.mpk`, `2` → `Resources1.mpk`), *not* by comparing the
+>    offset against the file lengths. Getting this wrong makes every
+>    `flags=0` payload look like garbage.
+> 2. Because of (1), the earlier hypothesis that the `xx/<uuid>` names form a
+>    second *encrypted* namespace inside the APK was **wrong**. A full rescan
+>    of all 41,376 correctly-located payloads finds **zero** Python source,
+>    `.pyc` magics or marshal code objects — the game logic arrives through
+>    the patch/CDN channel.
 
 ---
 
@@ -50,7 +64,7 @@ Everything else in the working tree is **git-ignored**:
 ```
 stock-files/     captured app data + downloaded 2 GB of patches
 decompiled/      apktool + jadx output
-analysis/apk-split-base/, analysis/extracted-*/, analysis/essential/,
+analysis/apk-split-base/, analysis/extracted-*/,
 analysis/messiah-records/            raw extracted game bytes
 analysis/*.bin, analysis/resources.json, analysis/*-records.jsonl,
 analysis/package-file-table.jsonl    large generated indexes
@@ -77,11 +91,20 @@ All scripts are plain Python 3 with **no third-party dependencies**
 | `parse_resources1.py` | `Resources1.mpk` record-layer walker |
 | `package_records.py` | `Resources1.mpk` record parser + LZ4 block-length walker |
 | `package_index.py` | joins `Resources.mpkinfo` with the pack manifest |
-| `build_file_table.py` | builds the complete name → byte-range → MD5 table |
+| **`rebuild_file_table.py`** | ★★ the **correct** name → byte-range → MD5 table (flags-based container rule) |
+| `build_file_table.py` | legacy builder (length-based container guess) — **superseded** |
+| `scan_package_python.py` | ★★ rescan every payload for Python source / `.pyc` / marshal / zlib |
 | `scan_mpk_blocks.py`, `scan_package_blocks.py`, `scan_package_chunks.py`, `scan_zzz4_chunks.py` | LZ4 chunk scanners (`liblz4` via ctypes) |
 | `scan_patch_records.py`, `scan_plain_patch_records.py` | brute-force record scanners for the patch archives |
 | `sample_guid_payloads.py`, `probe_multichunk.py` | payload fingerprinting |
 | `find_messiah_magic.py`, `dump_messiah_records.py`, `parse_messiah_container.py` | `.MESSIAH` container tools |
+
+### Config / tagged-binary grammars
+
+| Script | Purpose |
+|---|---|
+| `tagged_config2.py` | the **named-entry** tagged-config grammar (`s`/`p`/`v`/`M`/`i`) — validated on `TroyConfig/*.bin` |
+| **`tagged_essential.py`** | ★★ the **flat-dict** tagged grammar (`'s'`=string, `'H'`=dict) — the correct parser for `essential_py3` |
 
 ### Native / ARM64 analysis
 
@@ -137,9 +160,12 @@ Typical invocations (from the repo root):
 # protobuf schemas out of the engine
 python3 analysis/extract_protos.py
 
-# complete package file table (name → offset → md5)
+# complete package file table (name → offset → md5) — 41,376/41,376 MD5 verified
 python3 analysis/parse_resources_mpkinfo.py
-python3 analysis/build_file_table.py
+python3 analysis/rebuild_file_table.py
+
+# rescan every package payload for Python source / .pyc / marshal
+python3 analysis/scan_package_python.py
 
 # extract assets out of the patch archives by global offset
 python3 analysis/mpk_extract.py --all
