@@ -25,7 +25,16 @@ Targets: `decompiled/native/lib/arm64-v8a/libGame.so` (118,845,672 B),
 >   subsets of the patchlist with **0** value mismatches.
 > * **★ SOLVED — the GUID namespace has two flavours:** 20,472 **dashed**
 >   RFC-4122 v4/v5 UUIDs vs 10,484 **undashed** `xx/<32 hex>` raw-128-bit-hash
->   shard buckets (§2.5).
+>   shard buckets (§2.5). The undashed names are present in the **CDN
+>   patchlist** too (10,484/10,484 same md5+size) ⇒ they are the publisher's
+>   naming for 10,484 “sensitive” files (§2.6).
+> * **★ SOLVED — the package table is now COMPLETE**: 41,376 named files
+>   (all MD5-verified) + 3 `Resources.mpk` header records + 442 `.cache`
+>   files + 3,668 directory entries; 0 rows unresolved for lack of an
+>   explanation (§2.8).
+> * **★ SOLVED — `patch.repository` / `resource.repository` are cooked-asset
+>   indexes** (magic `CCCCZZZ4`), *not* the patch→file map: 0 `dlcid_`
+>   strings in either (§2.7).
 > * **★ SOLVED — the Android package contains NO Python.** A full re-scan of
 >   all 41,376 correctly-located payloads finds **0** Python source, **0**
 >   `.pyc` magics, **0** marshal code objects and only **1** zlib stream
@@ -541,6 +550,91 @@ sharded by its first byte) and the **dashed** form is the *publisher* UUID
 undashed flavour for its GUID entries, so the prerequisite list is keyed by
 the engine's own hash — which is exactly the identifier `MImporter` would
 have to resolve at runtime.
+
+### 2.6 ★ The undashed namespace is in the **CDN patchlist** too (NEW)
+
+The pack manifest has exactly **41,376** keys = the whole named package set:
+
+| manifest section | entries | name shapes |
+|---|---|---|
+| `common` | 27,750 | 10,419 logical + **10,484 undashed** + 6,847 dashed |
+| `android_common` | 721 | dashed |
+| `android_astc_512` | 12,905 | dashed (+1 logical) |
+
+The 10,484 undashed names are **also** present in the authoritative CDN
+patchlist (`spike_patchlist_android_astc_512_py3.txt`, section `common`) with
+the **same md5+size** (10,484/10,484) ⇒ the undashed namespace is *not* a
+package-local artefact, it is the **publisher's naming for 10,484
+“sensitive” files** whose logical path is deliberately not published.
+The remaining 19,751 dashed names cover the public assets.
+
+**Name-hash attacks — all negative** (`analysis/try_uuid5_names.py`,
+10,484 undashed + 379 dashed-v5 targets × 244,002 candidate logical names):
+
+| hypothesis | result |
+|---|---|
+| `md5(path)` = full 32 hex | **0** |
+| `md5(path)` = first 16 hex (64-bit prefix) | **0** |
+| `sha1(path)` / `sha256(path)` prefixes | **0** |
+| `sha1(ns‖path)[:16]` for the 4 RFC-4122 namespaces | **0** |
+| `uuid5(ns, path)` = the dashed **v5** UUIDs | **0** |
+
+⇒ the namespace and/or the digest are private. The hash must be recovered
+**from code**, not guessed (see §5.0.1).
+
+### 2.7 ★ `patch.repository` / `resource.repository` are **cooked-asset indexes** (NEW)
+
+Both are plain (not encrypted) MPK payloads in `Resources.mpk`:
+
+| file | offset | size | head |
+|---|---|---|---|
+| `patch.repository` | 22,598,706 | 917,909 | `CCCCZZZ4` + `Rt` + varint header |
+| `resource.repository` | 23,516,615 | 12,302,955 | `CCCCZZZ4` + varint header |
+
+* The 8-byte magic is **`CCCCZZZ4`**; the following fields are
+  `u32 A` (1,530,450 / 15,084,447), `u32 B` (81,905 / 89,329) and a
+  length-prefixed **type list** (`"Texture2D"`, `"Material;CollisionShape;
+  PhysicsRBTemplate;Model;Mesh;Texture2D;ParticleSystem;SkinSkeleton;Lod.…"`).
+* The body then interleaves **asset names** (`icon_item_weapon_MP5v29_lonG`,
+  `AKv538`, `ig_choice_role_37`, `img_og_activity_pass_reflux_di_03`, …) with
+  binary descriptor fields; `resource.repository` additionally carries **881
+  RFC-4122 UUIDs** and **171 raw 32-hex ids** (asset GUIDs — 0 of them match
+  the package file names).
+* **They are NOT the patch→file map**: `dlcid_` occurs **0** times in either
+  file and none of their asset names appear in the patchlist.
+* ⇒ the repositories are the *cooked asset* (mesh/material/shader) indexes
+  used by `Messiah::Repository` / `Messiah::ResourceModule`
+  (`_LoadRepository_on_io`, `PatchRepositoryInfo1(string,string,string,int const&,MpkInfo*)`),
+  not the file-name↔GUID mapping we need. The name hash therefore lives in the
+  packer/loader, not in these indexes.
+
+### 2.8 ★ The 445 `unresolved` table rows are explained (NEW)
+
+`analysis/resolve_unresolved.py` ⇒ their md5+size appear **nowhere** in the
+patchlist or the pack manifest (0/445). They are:
+
+* **3** records that are the `Resources.mpk` **file header** itself —
+  `"237"` (3 B @0), `"MPTZSTD1"+zstd frame` (9,766,931 B @3) and the
+  index md5 `1346744ef807cb3997e591c950ff1933` (32 B @9,766,934);
+* **442** platform-local **`.cache`** files (`suffix == "che"`, e.g. 4-byte
+  zero blobs and LZ4 shader caches containing `ARResolvePS`, `AdvectionMC`…).
+
+⇒ the package table is now **complete**: 41,376 named files (all MD5-verified)
++ 3 header records + 442 `.cache` files + 3,668 directory entries.
+
+### 2.9 ★ The patch-side seed filenames are **UUID v5** (NEW)
+
+`LocalData/Patch/0a/0a0ab8a4-df96-4d5-9a862-967c2adca6f` and
+`LocalData/Patch/0d/0d0ab9a4-df96-4d5-9a862-967c2adca6f` are
+**RFC-4122 v5** (name-based SHA-1) UUIDs whose 2-hex shard equals the first
+byte of the UUID (10,484/10,484 for the undashed namespace, same rule here).
+Both files contain the *same* ASCII seed
+`71ad02b5-a3ec-4ec4-9c89-3b0979779444-1794371578-1794371578`
+(the inner UUID is **v4**). The two v5 UUIDs differ in exactly **one bit**
+(`0ab8a4df…` vs `0ab9a4df…`) ⇒ they are two names hashed into the same
+namespace. `md5`/`sha1`/`sha256` of the inner UUID, of the seed string and of
+the file name do **not** reproduce `UIScript/4051BDD0000f042` (the `.pyo`
+name is 16 hex = 8 bytes).
 
 ## 2.3 The complete Android package file table (SOLVED)
 
@@ -1773,6 +1867,8 @@ essential/essential_py3.bin  # ★ extracted + MD5-verified package filelist blo
 essential/essential-list.json # ★★ the 153 prerequisite [path -> md5,size] entries
 pack-manifest.json         # ★★ the decoded pack manifest (8 keys, 3 sections)
 scan_package_python.py     # ★★ rescan ALL payloads for Python source/pyc/marshal
+resolve_unresolved.py      # ★★ explain/resolve the 445 remaining table rows
+try_uuid5_names.py         # ★★ uuid5 / raw-sha1 name-hash attack (negative)
 scan_globals_access.py     # ADRP+LDR/STR walker over the Cython global pages
                             #   (0x73cb000-0x73ce000) — found the salt object
 crack_env_rc4.py           # RC4-key cracker for the environment SDK (LZMA-header oracle)

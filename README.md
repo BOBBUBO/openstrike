@@ -25,6 +25,7 @@ is either a *script* or a *small text artifact* produced by those scripts.
 | `Resources.mpkinfo` container rule (`flags` → `Resources.mpk` / `Resources1.mpk`) | ✅ **Solved** |
 | `essential_py3` — the **prerequisite filelist** (153 files: path → md5, size) | ✅ **Solved** |
 | Pack manifest (`Resources1.mpk@0x0c172479`, `<md5>!|{` + JSON) | ✅ **Solved** |
+| `patch.repository` / `resource.repository` (cooked-asset indexes, `CCCCZZZ4`) | ✅ **Solved** (structure) |
 | MurmurHash3 x86_32 identification for `Resources.mpkinfo` | ✅ **Solved** |
 | UniSDK **domain** server list (32 domains, real IPs) | ✅ **Solved / fetched live** |
 | `regular_encode_*` environment SDK (Base64 → RC4 → LZMA) | ✅ **Solved** — it is *content moderation*, not the server list |
@@ -33,7 +34,7 @@ is either a *script* or a *small text artifact* produced by those scripts.
 | **Game** gate/server list (`server_list_host`, `cli_gateway`) | 🔴 **Open** — lives inside the encrypted `Config` |
 | Transport choice (WebSocket vs KCP) | 🟡 **Partial** — both compiled in, decided at runtime |
 
-> **⚠ Two corrections worth knowing about (see `FINDINGS.md` §2.3):**
+> **⚠ Three corrections worth knowing about (see `FINDINGS.md` §2.3):**
 > 1. The container of a package file is chosen by the mpkinfo **`flags`** field
 >    (`0` → `Resources.mpk`, `2` → `Resources1.mpk`), *not* by comparing the
 >    offset against the file lengths. Getting this wrong makes every
@@ -43,6 +44,9 @@ is either a *script* or a *small text artifact* produced by those scripts.
 >    of all 41,376 correctly-located payloads finds **zero** Python source,
 >    `.pyc` magics or marshal code objects — the game logic arrives through
 >    the patch/CDN channel.
+> 3. `patch.repository` / `resource.repository` are **cooked-asset indexes**
+>    (magic `CCCCZZZ4`), *not* the patch→file map — they contain no `dlcid_`
+>    identifier at all.
 
 ---
 
@@ -94,6 +98,8 @@ All scripts are plain Python 3 with **no third-party dependencies**
 | **`rebuild_file_table.py`** | ★★ the **correct** name → byte-range → MD5 table (flags-based container rule) |
 | `build_file_table.py` | legacy builder (length-based container guess) — **superseded** |
 | `scan_package_python.py` | ★★ rescan every payload for Python source / `.pyc` / marshal / zlib |
+| `resolve_unresolved.py` | ★★ explain + resolve the 445 remaining table rows |
+| `try_uuid5_names.py` | ★★ uuid5 / raw-SHA-1 name-hash attack on the undashed namespace (negative) |
 | `scan_mpk_blocks.py`, `scan_package_blocks.py`, `scan_package_chunks.py`, `scan_zzz4_chunks.py` | LZ4 chunk scanners (`liblz4` via ctypes) |
 | `scan_patch_records.py`, `scan_plain_patch_records.py` | brute-force record scanners for the patch archives |
 | `sample_guid_payloads.py`, `probe_multichunk.py` | payload fingerprinting |
